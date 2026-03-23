@@ -65,6 +65,9 @@ latest_rankings = latest[
     ]
 ].sort_values("trend_score", ascending=False)
 
+leaders = latest_rankings.head(10).copy()
+laggards = latest_rankings.sort_values("trend_score", ascending=True).head(10).copy()
+
 index_df = (
     df.groupby("date", as_index=False)
     .agg(
@@ -86,6 +89,8 @@ index_df["index_level"] = levels
 
 df.to_csv(OUT_DIR / "region_month_metrics.csv", index=False)
 latest_rankings.to_csv(OUT_DIR / "latest_rankings.csv", index=False)
+leaders.to_csv(OUT_DIR / "leaders.csv", index=False)
+laggards.to_csv(OUT_DIR / "laggards.csv", index=False)
 index_df.to_csv(OUT_DIR / "headline_index.csv", index=False)
 
 print("Saved metric outputs.")

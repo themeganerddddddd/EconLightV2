@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Econ Light Monitor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="stars stars-2"></div>
+  <div class="stars stars-3"></div>
+
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow">Satellite Economic Signal</div>
+        <h1>Econ Light Monitor</h1>
+        <p>Tracking economic momentum from space.</p>
+        <div class="hero-subtext" id="latestMonthText">Latest available month: --</div>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat glass">
+          <div class="stat-label">Headline Index</div>
+          <div class="stat-value" id="heroIndex">--</div>
+        </div>
+        <div class="hero-stat glass">
+          <div class="stat-label">Top Region</div>
+          <div class="stat-value small" id="heroTopRegion">--</div>
+        </div>
+        <div class="hero-stat glass">
+          <div class="stat-label">Weakest Region</div>
+          <div class="stat-value small" id="heroBottomRegion">--</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="city-glow"></div>
+  </header>
+
+  <main class="wrap">
+    <section id="statusMount"></section>
+
+    <section class="summary-grid">
+      <div class="summary-card">
+        <div class="summary-title">Average MoM</div>
+        <div class="summary-number" id="avgMom">--</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-title">Average YoY</div>
+        <div class="summary-number" id="avgYoy">--</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-title">Current Top Trend</div>
+        <div class="summary-number small" id="topTrendText">--</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <h2>Headline Index</h2>
+        <span class="badge">Monthly signal</span>
+      </div>
+      <div class="chart-box">
+        <canvas id="indexChart"></canvas>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <div class="card-header">
+          <h2>Top Brightening Regions</h2>
+          <span class="badge positive">Leaders</span>
+        </div>
+        <div class="table-wrap">
+          <table id="brightTable">
+            <thead>
+              <tr><th>Region</th><th>YoY</th><th>MoM</th><th>Trend</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Top Dimming Regions</h2>
+          <span class="badge negative">Laggards</span>
+        </div>
+        <div class="table-wrap">
+          <table id="dimTable">
+            <thead>
+              <tr><th>Region</th><th>YoY</th><th>MoM</th><th>Trend</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <h2 id="regionTitle">Region Explorer</h2>
+        <span class="badge">Interactive</span>
+      </div>
+      <div class="chart-box large">
+        <canvas id="regionChart"></canvas>
+      </div>
+    </section>
+
+    <section class="card method-card">
+      <div class="card-header">
+        <h2>Methodology</h2>
+        <span class="badge">Transparent</span>
+      </div>
+      <p>
+        This dashboard uses NASA Black Marble monthly nighttime lights to build a simple public signal for regional economic momentum.
+        It tracks changes in light density over time, ranks regions by momentum, and aggregates a headline index from the region-level signal.
+      </p>
+      <p>
+        The public version focuses on simple rankings and trend visibility. A future premium layer can add forecasts, alerts, downloads,
+        expanded region coverage, and blended public indicators.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-title">Econ Light Monitor</div>
+        <div class="footer-text">Tracking economic momentum from space.</div>
+      </div>
+      <div class="footer-text">Source: NASA Black Marble VNP46A3</div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

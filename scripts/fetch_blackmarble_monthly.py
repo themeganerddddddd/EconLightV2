@@ -8,12 +8,12 @@ from blackmarble import BlackMarble
 
 load_dotenv()
 
-REGIONS_PATH = Path("data/regions/us_test_regions.geojson")
+REGIONS_PATH = Path(os.environ.get("REGIONS_FILE", "data/regions/us_test_regions.geojson"))
 RAW_DIR = Path("data/raw")
 DERIVED_DIR = Path("data/derived")
 OUT_PATH = DERIVED_DIR / "region_month.csv"
 
-START = os.environ.get("DATA_START", "2022-01-01")
+START = os.environ.get("DATA_START", "2024-01-01")
 END = os.environ.get("DATA_END", "2026-02-01")
 
 RAW_DIR.mkdir(parents=True, exist_ok=True)
@@ -21,9 +21,12 @@ DERIVED_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def main():
-    token = os.environ.get("BLACKMARBLE_TOKEN")
+    token = os.environ.get("BLACKMARBLE_TOKEN", "").strip()
     if not token:
         raise RuntimeError("BLACKMARBLE_TOKEN is not set.")
+
+    if not REGIONS_PATH.exists():
+        raise RuntimeError(f"Region file not found: {REGIONS_PATH}")
 
     gdf = gpd.read_file(REGIONS_PATH).to_crs(4326)
 
@@ -37,6 +40,10 @@ def main():
     if len(dates) == 0:
         raise RuntimeError("No monthly dates generated. Check DATA_START and DATA_END.")
 
+    print(f"Using date range: {START} to {END}")
+    print(f"Using regions file: {REGIONS_PATH}")
+    print(f"Regions: {len(gdf)}")
+
     bm = BlackMarble(
         token=token,
         collection="5200",
@@ -44,11 +51,23 @@ def main():
         output_skip_if_exists=True,
     )
 
-    df = bm.extract(
-        gdf,
-        "VNP46A3",
-        dates,
-    )
+    try:
+        df = bm.extract(
+            gdf,
+            "VNP46A3",
+            dates,
+        )
+    except ValueError as e:
+        msg = str(e)
+        if "Received an HTML response" in msg or "invalid or expired NASA Earthdata token" in msg:
+            raise RuntimeError(
+                "NASA returned an HTML login page instead of data.\n"
+                "Try these fixes:\n"
+                "1. Generate a NEW Earthdata bearer token.\n"
+                "2. Make sure your Earthdata profile has Affiliation filled in.\n"
+                "3. Log into Earthdata in your browser once.\n"
+            ) from e
+        raise
 
     cols_lower = {c: c.lower() for c in df.columns}
     df = df.rename(columns=cols_lower)
@@ -68,7 +87,6 @@ def main():
     df["date"] = pd.to_datetime(df["date"])
     df["ntl_sum"] = pd.to_numeric(df["ntl_sum"], errors="coerce")
     df["area_km2"] = pd.to_numeric(df["area_km2"], errors="coerce")
-
     df["light_density"] = df["ntl_sum"] / df["area_km2"]
 
     out = df[
