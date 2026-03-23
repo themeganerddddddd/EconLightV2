@@ -1,0 +1,7 @@
+blackmarblepy
+geopandas
+pandas
+numpy
+pyarrow
+matplotlib
+python-dotenv

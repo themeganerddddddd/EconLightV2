@@ -1,0 +1,90 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "region_id": "AUS",
+        "region_name": "Austin"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-98.1, 30.0],
+          [-97.3, 30.0],
+          [-97.3, 30.7],
+          [-98.1, 30.7],
+          [-98.1, 30.0]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region_id": "PHX",
+        "region_name": "Phoenix"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-112.7, 33.1],
+          [-111.6, 33.1],
+          [-111.6, 33.9],
+          [-112.7, 33.9],
+          [-112.7, 33.1]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region_id": "RDU",
+        "region_name": "Raleigh"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-78.95, 35.55],
+          [-78.35, 35.55],
+          [-78.35, 36.05],
+          [-78.95, 36.05],
+          [-78.95, 35.55]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region_id": "DET",
+        "region_name": "Detroit"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-83.45, 42.15],
+          [-82.85, 42.15],
+          [-82.85, 42.60],
+          [-83.45, 42.60],
+          [-83.45, 42.15]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region_id": "CLE",
+        "region_name": "Cleveland"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-81.95, 41.25],
+          [-81.45, 41.25],
+          [-81.45, 41.75],
+          [-81.95, 41.75],
+          [-81.95, 41.25]
+        ]]
+      }
+    }
+  ]
+}
