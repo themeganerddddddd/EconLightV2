@@ -13,25 +13,31 @@ df = df.sort_values(["region_id", "date"]).reset_index(drop=True)
 metric_col = "light_density"
 g = df.groupby("region_id", group_keys=False)
 
-df["lag_1"] = g[metric_col].shift(1)
-df["lag_3"] = g[metric_col].shift(3)
-df["lag_12"] = g[metric_col].shift(12)
-
-df["mom_pct"] = np.where(
-    df["lag_1"] > 0,
-    (df[metric_col] - df["lag_1"]) / df["lag_1"],
-    np.nan,
+# Smooth the series first
+df["density_3m_smooth"] = g[metric_col].transform(
+    lambda s: s.rolling(3, min_periods=1).mean()
 )
 
-df["yoy_pct"] = np.where(
-    df["lag_12"] > 0,
-    (df[metric_col] - df["lag_12"]) / df["lag_12"],
-    np.nan,
-)
+df["lag_1"] = g["density_3m_smooth"].shift(1)
+df["lag_3"] = g["density_3m_smooth"].shift(3)
+df["lag_12"] = g["density_3m_smooth"].shift(12)
 
-df["mom_3m_avg"] = g["mom_pct"].transform(lambda s: s.rolling(3).mean())
-df["yoy_3m_avg"] = g["yoy_pct"].transform(lambda s: s.rolling(3).mean())
-df["vol_12m"] = g["mom_pct"].transform(lambda s: s.rolling(12).std())
+# Avoid absurd percent jumps from tiny baselines
+baseline_floor = max(df["density_3m_smooth"].quantile(0.10), 1e-9)
+df["lag_1_safe"] = df["lag_1"].where(df["lag_1"] > baseline_floor, np.nan)
+df["lag_12_safe"] = df["lag_12"].where(df["lag_12"] > baseline_floor, np.nan)
+
+df["mom_pct"] = (df["density_3m_smooth"] - df["lag_1_safe"]) / df["lag_1_safe"]
+df["yoy_pct"] = (df["density_3m_smooth"] - df["lag_12_safe"]) / df["lag_12_safe"]
+
+# Clip extremes
+df["mom_pct"] = df["mom_pct"].clip(-1.0, 1.0)
+df["yoy_pct"] = df["yoy_pct"].clip(-1.0, 1.0)
+
+df["mom_3m_avg"] = g["mom_pct"].transform(lambda s: s.rolling(3, min_periods=1).mean())
+df["yoy_3m_avg"] = g["yoy_pct"].transform(lambda s: s.rolling(3, min_periods=1).mean())
+df["vol_12m"] = g["mom_pct"].transform(lambda s: s.rolling(12, min_periods=6).std())
+df["months_seen"] = g.cumcount() + 1
 
 for col in ["mom_pct", "yoy_pct", "mom_3m_avg"]:
     mean = df[col].mean(skipna=True)
@@ -39,16 +45,19 @@ for col in ["mom_pct", "yoy_pct", "mom_3m_avg"]:
     if std and std > 0:
         df[f"{col}_z"] = (df[col] - mean) / std
     else:
-        df[f"{col}_z"] = 0
+        df[f"{col}_z"] = 0.0
 
 df["trend_score"] = (
-    0.5 * df["yoy_pct_z"].fillna(0)
-    + 0.3 * df["mom_pct_z"].fillna(0)
-    + 0.2 * df["mom_3m_avg_z"].fillna(0)
+    0.50 * df["yoy_pct_z"].fillna(0)
+    + 0.30 * df["mom_pct_z"].fillna(0)
+    + 0.20 * df["mom_3m_avg_z"].fillna(0)
 )
 
 latest_date = df["date"].max()
 latest = df[df["date"] == latest_date].copy()
+
+# Require enough history for meaningful ranks
+latest = latest[latest["months_seen"] >= 12].copy()
 
 latest_rankings = latest[
     [
@@ -57,11 +66,14 @@ latest_rankings = latest[
         "region_name",
         "ntl_sum",
         "light_density",
+        "density_3m_smooth",
         "mom_pct",
         "yoy_pct",
         "mom_3m_avg",
+        "yoy_3m_avg",
         "vol_12m",
         "trend_score",
+        "months_seen",
     ]
 ].sort_values("trend_score", ascending=False)
 
@@ -71,7 +83,7 @@ laggards = latest_rankings.sort_values("trend_score", ascending=True).head(10).c
 index_df = (
     df.groupby("date", as_index=False)
     .agg(
-        avg_density=("light_density", "mean"),
+        avg_density=("density_3m_smooth", "mean"),
         avg_yoy=("yoy_pct", "mean"),
         avg_mom=("mom_pct", "mean"),
     )

@@ -33,10 +33,7 @@ jobs:
           BLACKMARBLE_TOKEN: ${{ secrets.BLACKMARBLE_TOKEN }}
           DATA_START: 2024-01-01
           DATA_END: 2026-02-01
-<<<<<<< HEAD
-          REGIONS_FILE: data/regions/us_test_regions.geojson
-=======
->>>>>>> df987095b5a2132def2a9b63e9155cef00b4b901
+          REGIONS_FILE: data/regions/us_metros_top25.geojson
         run: |
           python scripts/fetch_blackmarble_monthly.py
           python scripts/build_metrics.py

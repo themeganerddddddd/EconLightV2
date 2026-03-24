@@ -1,18 +1,18 @@
 {
   "latest_month": "2026-01-01",
-  "headline_index": 199.48726131906523,
-  "avg_mom": 0.2917628127362744,
-  "avg_yoy": 0.3523136315073523,
+  "headline_index": 108.64998551059028,
+  "avg_mom": 0.0898741789754403,
+  "avg_yoy": 0.0238519637582666,
   "top_region": {
     "region_id": "DET",
     "region_name": "Detroit",
-    "trend_score": 7.091990983719992,
-    "yoy_pct": 1.1164935462613266
+    "trend_score": 4.142035496007932,
+    "yoy_pct": 0.3674681521943187
   },
   "bottom_region": {
-    "region_id": "PHX",
-    "region_name": "Phoenix",
-    "trend_score": -0.2880493851340348,
-    "yoy_pct": 0.0066036827343897
+    "region_id": "DEN",
+    "region_name": "Denver",
+    "trend_score": -0.6054944382995262,
+    "yoy_pct": -0.1553294663244578
   }
 }

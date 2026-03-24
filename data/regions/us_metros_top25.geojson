@@ -1,0 +1,130 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {"region_id": "NYC", "region_name": "New York"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-74.45,40.35],[-73.55,40.35],[-73.55,41.05],[-74.45,41.05],[-74.45,40.35]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "LAX", "region_name": "Los Angeles"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-118.95,33.55],[-117.55,33.55],[-117.55,34.45],[-118.95,34.45],[-118.95,33.55]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "CHI", "region_name": "Chicago"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-88.45,41.35],[-87.25,41.35],[-87.25,42.35],[-88.45,42.35],[-88.45,41.35]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "DFW", "region_name": "Dallas-Fort Worth"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-97.65,32.35],[-96.25,32.35],[-96.25,33.35],[-97.65,33.35],[-97.65,32.35]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "HOU", "region_name": "Houston"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-95.95,29.25],[-94.75,29.25],[-94.75,30.25],[-95.95,30.25],[-95.95,29.25]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "WAS", "region_name": "Washington"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-77.65,38.55],[-76.65,38.55],[-76.65,39.35],[-77.65,39.35],[-77.65,38.55]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "ATL", "region_name": "Atlanta"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-84.95,33.25],[-83.85,33.25],[-83.85,34.15],[-84.95,34.15],[-84.95,33.25]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "MIA", "region_name": "Miami"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-80.75,25.25],[-80.05,25.25],[-80.05,26.15],[-80.75,26.15],[-80.75,25.25]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "PHL", "region_name": "Philadelphia"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-75.65,39.65],[-74.75,39.65],[-74.75,40.35],[-75.65,40.35],[-75.65,39.65]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "PHX", "region_name": "Phoenix"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-112.85,33.05],[-111.45,33.05],[-111.45,34.05],[-112.85,34.05],[-112.85,33.05]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "BOS", "region_name": "Boston"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-71.55,42.05],[-70.75,42.05],[-70.75,42.75],[-71.55,42.75],[-71.55,42.05]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "SFO", "region_name": "San Francisco Bay Area"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-123.05,37.15],[-121.55,37.15],[-121.55,38.15],[-123.05,38.15],[-123.05,37.15]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "RIV", "region_name": "Riverside-San Bernardino"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-117.95,33.65],[-116.65,33.65],[-116.65,34.45],[-117.95,34.45],[-117.95,33.65]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "DET", "region_name": "Detroit"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-83.75,42.00],[-82.55,42.00],[-82.55,42.75],[-83.75,42.75],[-83.75,42.00]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "SEA", "region_name": "Seattle"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-122.85,47.15],[-121.75,47.15],[-121.75,48.00],[-122.85,48.00],[-122.85,47.15]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "MSP", "region_name": "Minneapolis-St. Paul"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-93.75,44.65],[-92.65,44.65],[-92.65,45.35],[-93.75,45.35],[-93.75,44.65]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "SDG", "region_name": "San Diego"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-117.65,32.45],[-116.75,32.45],[-116.75,33.25],[-117.65,33.25],[-117.65,32.45]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "TPA", "region_name": "Tampa"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-82.95,27.65],[-82.05,27.65],[-82.05,28.35],[-82.95,28.35],[-82.95,27.65]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "DEN", "region_name": "Denver"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-105.65,39.35],[-104.45,39.35],[-104.45,40.15],[-105.65,40.15],[-105.65,39.35]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "STL", "region_name": "St. Louis"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-90.75,38.35],[-89.85,38.35],[-89.85,39.05],[-90.75,39.05],[-90.75,38.35]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "BAL", "region_name": "Baltimore"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-77.15,39.00],[-76.15,39.00],[-76.15,39.55],[-77.15,39.55],[-77.15,39.00]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "CLT", "region_name": "Charlotte"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-81.25,35.00],[-80.45,35.00],[-80.45,35.65],[-81.25,35.65],[-81.25,35.00]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "ORL", "region_name": "Orlando"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-81.85,28.15],[-80.95,28.15],[-80.95,28.85],[-81.85,28.85],[-81.85,28.15]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "SAC", "region_name": "Sacramento"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-121.95,38.25],[-121.05,38.25],[-121.05,39.05],[-121.95,39.05],[-121.95,38.25]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"region_id": "RDU", "region_name": "Raleigh"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-79.15,35.45],[-78.15,35.45],[-78.15,36.20],[-79.15,36.20],[-79.15,35.45]]]}
+    }
+  ]
+}
