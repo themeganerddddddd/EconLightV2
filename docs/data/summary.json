@@ -1,0 +1,18 @@
+{
+  "latest_month": "2026-01-01",
+  "headline_index": 199.48726131906523,
+  "avg_mom": 0.2917628127362744,
+  "avg_yoy": 0.3523136315073523,
+  "top_region": {
+    "region_id": "DET",
+    "region_name": "Detroit",
+    "trend_score": 7.091990983719992,
+    "yoy_pct": 1.1164935462613266
+  },
+  "bottom_region": {
+    "region_id": "PHX",
+    "region_name": "Phoenix",
+    "trend_score": -0.2880493851340348,
+    "yoy_pct": 0.0066036827343897
+  }
+}
