@@ -4,7 +4,7 @@ let currentDataset = "metros";
 let store = {};
 
 function fmtPct(v) {
-  if (v === null || v === undefined || Number.isNaN(Number(v))) return "--";
+  if (v === null || v === undefined || Number.isNaN(Number(v))) return "N/A";
   const n = Number(v) * 100;
   return `${n >= 0 ? "+" : ""}${n.toFixed(1)}%`;
 }
@@ -68,11 +68,17 @@ function renderSummaryCards(summary) {
   if (summary?.avg_mom !== undefined && summary?.avg_mom !== null) {
     avgMom.textContent = fmtPct(summary.avg_mom);
     avgMom.className = `summary-number ${valueClass(summary.avg_mom)}`;
+  } else {
+    avgMom.textContent = "N/A";
+    avgMom.className = "summary-number neutral";
   }
 
   if (summary?.avg_yoy !== undefined && summary?.avg_yoy !== null) {
     avgYoy.textContent = fmtPct(summary.avg_yoy);
     avgYoy.className = `summary-number ${valueClass(summary.avg_yoy)}`;
+  } else {
+    avgYoy.textContent = "N/A";
+    avgYoy.className = "summary-number neutral";
   }
 
   if (summary?.top_region?.region_name) {
@@ -116,13 +122,17 @@ function renderIndexChart(indexData, datasetLabel) {
 function makeRow(row) {
   const yoyClass = valueClass(row.yoy_pct);
   const momClass = valueClass(row.mom_pct);
+  const trendLabel = row.trend_label || "N/A";
+  const trendScore = row.trend_score === null || row.trend_score === undefined
+    ? "N/A"
+    : Number(row.trend_score).toFixed(2);
 
   const tr = document.createElement("tr");
   tr.innerHTML = `
     <td>${row.region_name}</td>
     <td class="${yoyClass}">${fmtPct(row.yoy_pct)}</td>
     <td class="${momClass}">${fmtPct(row.mom_pct)}</td>
-    <td>${row.trend_score === null || row.trend_score === undefined ? "--" : Number(row.trend_score).toFixed(2)}</td>
+    <td title="Trend score: ${trendScore}">${trendLabel}</td>
   `;
   tr.addEventListener("click", () => {
     document.getElementById("regionPicker").value = row.region_id;

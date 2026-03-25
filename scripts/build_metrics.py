@@ -6,6 +6,20 @@ DERIVED_DIR = Path("data/derived")
 DERIVED_DIR.mkdir(parents=True, exist_ok=True)
 
 
+def classify_trend(score):
+    if pd.isna(score):
+        return "Insufficient data"
+    if score >= 1.25:
+        return "Very strong"
+    if score >= 0.5:
+        return "Strong"
+    if score >= -0.5:
+        return "Stable"
+    if score >= -1.25:
+        return "Weak"
+    return "Very weak"
+
+
 def build_for_dataset(dataset_name: str):
     in_path = DERIVED_DIR / f"{dataset_name}_region_month.csv"
     if not in_path.exists():
@@ -50,15 +64,26 @@ def build_for_dataset(dataset_name: str):
         else:
             df[f"{col}_z"] = 0.0
 
+    # Build trend score from available signals, even if one component is missing
     df["trend_score"] = (
         0.50 * df["yoy_pct_z"].fillna(0)
         + 0.30 * df["mom_pct_z"].fillna(0)
         + 0.20 * df["mom_3m_avg_z"].fillna(0)
     )
 
+    df["trend_label"] = df["trend_score"].apply(classify_trend)
+
     latest_date = df["date"].max()
     latest = df[df["date"] == latest_date].copy()
-    latest = latest[latest["months_seen"] >= 12].copy()
+
+    # Require enough history to be in the leaderboard at all
+    latest = latest[latest["months_seen"] >= 6].copy()
+
+    # Prefer regions with real trend scores and enough history, but do not drop
+    latest["rankable"] = (
+        latest["trend_score"].notna()
+        & (latest["months_seen"] >= 12)
+    )
 
     latest_rankings = latest[
         [
@@ -75,12 +100,20 @@ def build_for_dataset(dataset_name: str):
             "yoy_3m_avg",
             "vol_12m",
             "trend_score",
+            "trend_label",
             "months_seen",
+            "rankable",
         ]
-    ].sort_values("trend_score", ascending=False)
+    ].sort_values(
+        ["rankable", "trend_score", "region_name"],
+        ascending=[False, False, True]
+    )
 
     leaders = latest_rankings.head(15).copy()
-    laggards = latest_rankings.sort_values("trend_score", ascending=True).head(15).copy()
+    laggards = latest_rankings.sort_values(
+        ["rankable", "trend_score", "region_name"],
+        ascending=[False, True, True]
+    ).head(15).copy()
 
     index_df = (
         df.groupby("date", as_index=False)

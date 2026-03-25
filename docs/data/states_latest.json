@@ -13,7 +13,9 @@
     "yoy_3m_avg": 0.148976727314163,
     "vol_12m": 0.2705662725302343,
     "trend_score": 2.8268353138563715,
-    "months_seen": 49
+    "trend_label": "Very strong",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -29,7 +31,9 @@
     "yoy_3m_avg": 0.1141514821450731,
     "vol_12m": 0.2601217873035612,
     "trend_score": 2.5896479313146705,
-    "months_seen": 49
+    "trend_label": "Very strong",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -45,7 +49,9 @@
     "yoy_3m_avg": 0.1225476826202585,
     "vol_12m": 0.2237942097055583,
     "trend_score": 2.469791559823119,
-    "months_seen": 49
+    "trend_label": "Very strong",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -61,7 +67,9 @@
     "yoy_3m_avg": 0.0583691690708729,
     "vol_12m": 0.1322227633676419,
     "trend_score": 2.076494637327455,
-    "months_seen": 49
+    "trend_label": "Very strong",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -77,7 +85,9 @@
     "yoy_3m_avg": 0.0532759771048633,
     "vol_12m": 0.1403236338791603,
     "trend_score": 1.8717576597666723,
-    "months_seen": 49
+    "trend_label": "Very strong",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -93,7 +103,9 @@
     "yoy_3m_avg": 0.029442344983812,
     "vol_12m": 0.1964992266598825,
     "trend_score": 1.7680452619746505,
-    "months_seen": 49
+    "trend_label": "Very strong",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -109,7 +121,9 @@
     "yoy_3m_avg": 0.0249911770203134,
     "vol_12m": 0.1336514072458795,
     "trend_score": 1.766490170457785,
-    "months_seen": 49
+    "trend_label": "Very strong",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -125,7 +139,9 @@
     "yoy_3m_avg": 0.073501538229665,
     "vol_12m": 0.14483161786905,
     "trend_score": 1.6040457541163011,
-    "months_seen": 49
+    "trend_label": "Very strong",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -141,7 +157,9 @@
     "yoy_3m_avg": 0.1973175411601859,
     "vol_12m": 0.2014074610349283,
     "trend_score": 1.312322008831412,
-    "months_seen": 49
+    "trend_label": "Very strong",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -157,7 +175,9 @@
     "yoy_3m_avg": 0.0743161809216118,
     "vol_12m": 0.1116780560323072,
     "trend_score": 1.309267804200953,
-    "months_seen": 49
+    "trend_label": "Very strong",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -173,7 +193,9 @@
     "yoy_3m_avg": 0.1573156399253597,
     "vol_12m": 0.0922277378997784,
     "trend_score": 1.178172575569627,
-    "months_seen": 49
+    "trend_label": "Strong",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -189,7 +211,9 @@
     "yoy_3m_avg": -0.0027358655395019,
     "vol_12m": 0.1456154115582811,
     "trend_score": 1.0250098172759057,
-    "months_seen": 49
+    "trend_label": "Strong",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -205,7 +229,9 @@
     "yoy_3m_avg": 0.016825321359342,
     "vol_12m": 0.0938804911451403,
     "trend_score": 0.9642421960821742,
-    "months_seen": 49
+    "trend_label": "Strong",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -221,7 +247,9 @@
     "yoy_3m_avg": 0.0756783996486955,
     "vol_12m": 0.1244108759855996,
     "trend_score": 0.7942272562972597,
-    "months_seen": 49
+    "trend_label": "Strong",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -237,7 +265,9 @@
     "yoy_3m_avg": 0.0148514009200102,
     "vol_12m": 0.0992114348503464,
     "trend_score": 0.6944668519369276,
-    "months_seen": 49
+    "trend_label": "Strong",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -253,7 +283,9 @@
     "yoy_3m_avg": -0.0056140748177711,
     "vol_12m": 0.0723815594171719,
     "trend_score": 0.5486050513398578,
-    "months_seen": 49
+    "trend_label": "Strong",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -269,7 +301,9 @@
     "yoy_3m_avg": 0.0274740474167884,
     "vol_12m": 0.16706055072032,
     "trend_score": 0.4027119801205568,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -285,7 +319,9 @@
     "yoy_3m_avg": 0.0387852688083284,
     "vol_12m": 0.0792585908743202,
     "trend_score": 0.3923658231157219,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -301,7 +337,9 @@
     "yoy_3m_avg": 0.0061691856206709,
     "vol_12m": 0.0728407960245597,
     "trend_score": 0.2292813214259187,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -317,7 +355,9 @@
     "yoy_3m_avg": 0.0473601604260868,
     "vol_12m": 0.0561179100460447,
     "trend_score": 0.1222379485603864,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -333,7 +373,9 @@
     "yoy_3m_avg": 0.02225129858531,
     "vol_12m": 0.0396548412371228,
     "trend_score": 0.1107031932905777,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -349,7 +391,9 @@
     "yoy_3m_avg": 0.0513978526365047,
     "vol_12m": 0.0446175236169929,
     "trend_score": 0.1097408356318382,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -365,7 +409,9 @@
     "yoy_3m_avg": -0.0217386895880771,
     "vol_12m": 0.069310791288858,
     "trend_score": 0.1027125726688441,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -381,7 +427,9 @@
     "yoy_3m_avg": 0.0495283166751578,
     "vol_12m": 0.1667684416333123,
     "trend_score": 0.0961138189230826,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -397,7 +445,9 @@
     "yoy_3m_avg": 0.054398793056844,
     "vol_12m": 0.0355293698123876,
     "trend_score": 0.0958512385073939,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -413,7 +463,9 @@
     "yoy_3m_avg": 0.0215925161089507,
     "vol_12m": 0.0800740900660298,
     "trend_score": 0.0817797344084038,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -429,7 +481,9 @@
     "yoy_3m_avg": 0.0081189571338417,
     "vol_12m": 0.1059246436714591,
     "trend_score": 0.0741859992606324,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -445,7 +499,9 @@
     "yoy_3m_avg": -0.0023825024145347,
     "vol_12m": 0.1935724869567543,
     "trend_score": 0.071107479287265,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -461,7 +517,9 @@
     "yoy_3m_avg": 0.0491721073748329,
     "vol_12m": 0.0537579863695333,
     "trend_score": 0.0602131463092712,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -477,7 +535,9 @@
     "yoy_3m_avg": 0.0358630596176312,
     "vol_12m": 0.1112328175615039,
     "trend_score": 0.0592915052362263,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -493,7 +553,9 @@
     "yoy_3m_avg": 0.0146399656129699,
     "vol_12m": 0.0298612873740553,
     "trend_score": 0.0318190222037767,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -509,7 +571,9 @@
     "yoy_3m_avg": 0.0186996184089975,
     "vol_12m": 0.0476269154479366,
     "trend_score": 0.026881866766315,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -525,55 +589,9 @@
     "yoy_3m_avg": -0.0064885356470406,
     "vol_12m": 0.2094041615801114,
     "trend_score": 0.0066593379271221,
-    "months_seen": 49
-  },
-  {
-    "date": "2026-01-01",
-    "dataset_name": "states",
-    "region_id": "WY",
-    "region_name": "Wyoming",
-    "ntl_sum": 230380.390436396,
-    "light_density": 0.8745511538738141,
-    "density_3m_smooth": 0.8593880952984035,
-    "mom_pct": null,
-    "yoy_pct": null,
-    "mom_3m_avg": null,
-    "yoy_3m_avg": null,
-    "vol_12m": null,
-    "trend_score": 0.0,
-    "months_seen": 49
-  },
-  {
-    "date": "2026-01-01",
-    "dataset_name": "states",
-    "region_id": "MT",
-    "region_name": "Montana",
-    "ntl_sum": 549949.35611321,
-    "light_density": 1.0833802081106294,
-    "density_3m_smooth": 0.9493088151857196,
-    "mom_pct": null,
-    "yoy_pct": null,
-    "mom_3m_avg": null,
-    "yoy_3m_avg": null,
-    "vol_12m": null,
-    "trend_score": 0.0,
-    "months_seen": 49
-  },
-  {
-    "date": "2026-01-01",
-    "dataset_name": "states",
-    "region_id": "SD",
-    "region_name": "South Dakota",
-    "ntl_sum": 437946.8542050431,
-    "light_density": 1.8283007090059955,
-    "density_3m_smooth": 1.9366064305869777,
-    "mom_pct": null,
-    "yoy_pct": null,
-    "mom_3m_avg": null,
-    "yoy_3m_avg": null,
-    "vol_12m": null,
-    "trend_score": 0.0,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -589,7 +607,63 @@
     "yoy_3m_avg": null,
     "vol_12m": null,
     "trend_score": 0.0,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
+  },
+  {
+    "date": "2026-01-01",
+    "dataset_name": "states",
+    "region_id": "MT",
+    "region_name": "Montana",
+    "ntl_sum": 549949.35611321,
+    "light_density": 1.0833802081106294,
+    "density_3m_smooth": 0.9493088151857196,
+    "mom_pct": null,
+    "yoy_pct": null,
+    "mom_3m_avg": null,
+    "yoy_3m_avg": null,
+    "vol_12m": null,
+    "trend_score": 0.0,
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
+  },
+  {
+    "date": "2026-01-01",
+    "dataset_name": "states",
+    "region_id": "SD",
+    "region_name": "South Dakota",
+    "ntl_sum": 437946.8542050431,
+    "light_density": 1.8283007090059955,
+    "density_3m_smooth": 1.9366064305869777,
+    "mom_pct": null,
+    "yoy_pct": null,
+    "mom_3m_avg": null,
+    "yoy_3m_avg": null,
+    "vol_12m": null,
+    "trend_score": 0.0,
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
+  },
+  {
+    "date": "2026-01-01",
+    "dataset_name": "states",
+    "region_id": "WY",
+    "region_name": "Wyoming",
+    "ntl_sum": 230380.390436396,
+    "light_density": 0.8745511538738141,
+    "density_3m_smooth": 0.8593880952984035,
+    "mom_pct": null,
+    "yoy_pct": null,
+    "mom_3m_avg": null,
+    "yoy_3m_avg": null,
+    "vol_12m": null,
+    "trend_score": 0.0,
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -605,7 +679,9 @@
     "yoy_3m_avg": -0.0307666243770598,
     "vol_12m": 0.1372916672928531,
     "trend_score": -0.0090425652364165,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -621,7 +697,9 @@
     "yoy_3m_avg": 0.0507964180434269,
     "vol_12m": 0.0193793644882646,
     "trend_score": -0.0210372471698459,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -637,7 +715,9 @@
     "yoy_3m_avg": -0.0070466677340499,
     "vol_12m": 0.0854899187770153,
     "trend_score": -0.0372446922648627,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -653,7 +733,9 @@
     "yoy_3m_avg": 0.0382266165607368,
     "vol_12m": 0.0342448395328707,
     "trend_score": -0.0485057973468418,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -669,7 +751,9 @@
     "yoy_3m_avg": 0.0526024315344618,
     "vol_12m": 0.2059869081062073,
     "trend_score": -0.0707007636385176,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -685,7 +769,9 @@
     "yoy_3m_avg": 0.0204448834339407,
     "vol_12m": 0.0654343770978063,
     "trend_score": -0.0816424655449971,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -701,7 +787,9 @@
     "yoy_3m_avg": -0.0211392028535682,
     "vol_12m": 0.106909360105259,
     "trend_score": -0.0944585558046544,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -717,7 +805,9 @@
     "yoy_3m_avg": 0.0321916744019068,
     "vol_12m": 0.0940508825037435,
     "trend_score": -0.1046812390216773,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -733,7 +823,9 @@
     "yoy_3m_avg": -0.0053346019388684,
     "vol_12m": 0.091151020907119,
     "trend_score": -0.2150144069628786,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -749,7 +841,9 @@
     "yoy_3m_avg": -0.1002129920516562,
     "vol_12m": 0.1850450670587551,
     "trend_score": -0.2763184786963907,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -765,6 +859,8 @@
     "yoy_3m_avg": 0.0146737361244567,
     "vol_12m": 0.0988581177414123,
     "trend_score": -0.316997859830898,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   }
 ]

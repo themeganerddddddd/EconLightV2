@@ -337,8 +337,20 @@ tbody tr:hover {
   padding: 12px 14px;
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.08);
   color: white;
+}
+
+#regionPicker option {
+  background: #0f1c35;
+  color: white;
+}
+
+.table-note {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .chart-box {

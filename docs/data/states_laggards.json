@@ -13,7 +13,9 @@
     "yoy_3m_avg": 0.0146737361244567,
     "vol_12m": 0.0988581177414123,
     "trend_score": -0.316997859830898,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -29,7 +31,9 @@
     "yoy_3m_avg": -0.1002129920516562,
     "vol_12m": 0.1850450670587551,
     "trend_score": -0.2763184786963907,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -45,7 +49,9 @@
     "yoy_3m_avg": -0.0053346019388684,
     "vol_12m": 0.091151020907119,
     "trend_score": -0.2150144069628786,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -61,7 +67,9 @@
     "yoy_3m_avg": 0.0321916744019068,
     "vol_12m": 0.0940508825037435,
     "trend_score": -0.1046812390216773,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -77,7 +85,9 @@
     "yoy_3m_avg": -0.0211392028535682,
     "vol_12m": 0.106909360105259,
     "trend_score": -0.0944585558046544,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -93,7 +103,9 @@
     "yoy_3m_avg": 0.0204448834339407,
     "vol_12m": 0.0654343770978063,
     "trend_score": -0.0816424655449971,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -109,7 +121,9 @@
     "yoy_3m_avg": 0.0526024315344618,
     "vol_12m": 0.2059869081062073,
     "trend_score": -0.0707007636385176,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -125,7 +139,9 @@
     "yoy_3m_avg": 0.0382266165607368,
     "vol_12m": 0.0342448395328707,
     "trend_score": -0.0485057973468418,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -141,7 +157,9 @@
     "yoy_3m_avg": -0.0070466677340499,
     "vol_12m": 0.0854899187770153,
     "trend_score": -0.0372446922648627,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -157,7 +175,9 @@
     "yoy_3m_avg": 0.0507964180434269,
     "vol_12m": 0.0193793644882646,
     "trend_score": -0.0210372471698459,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -173,23 +193,9 @@
     "yoy_3m_avg": -0.0307666243770598,
     "vol_12m": 0.1372916672928531,
     "trend_score": -0.0090425652364165,
-    "months_seen": 49
-  },
-  {
-    "date": "2026-01-01",
-    "dataset_name": "states",
-    "region_id": "WY",
-    "region_name": "Wyoming",
-    "ntl_sum": 230380.390436396,
-    "light_density": 0.8745511538738141,
-    "density_3m_smooth": 0.8593880952984035,
-    "mom_pct": null,
-    "yoy_pct": null,
-    "mom_3m_avg": null,
-    "yoy_3m_avg": null,
-    "vol_12m": null,
-    "trend_score": 0.0,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -205,7 +211,9 @@
     "yoy_3m_avg": null,
     "vol_12m": null,
     "trend_score": 0.0,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -221,7 +229,9 @@
     "yoy_3m_avg": null,
     "vol_12m": null,
     "trend_score": 0.0,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   },
   {
     "date": "2026-01-01",
@@ -237,6 +247,26 @@
     "yoy_3m_avg": null,
     "vol_12m": null,
     "trend_score": 0.0,
-    "months_seen": 49
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
+  },
+  {
+    "date": "2026-01-01",
+    "dataset_name": "states",
+    "region_id": "WY",
+    "region_name": "Wyoming",
+    "ntl_sum": 230380.390436396,
+    "light_density": 0.8745511538738141,
+    "density_3m_smooth": 0.8593880952984035,
+    "mom_pct": null,
+    "yoy_pct": null,
+    "mom_3m_avg": null,
+    "yoy_3m_avg": null,
+    "vol_12m": null,
+    "trend_score": 0.0,
+    "trend_label": "Stable",
+    "months_seen": 49,
+    "rankable": true
   }
 ]
