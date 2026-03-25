@@ -8,6 +8,7 @@ on:
 jobs:
   build-site-data:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
 
     steps:
       - name: Check out repo
@@ -28,12 +29,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run pipeline
+      - name: Run incremental pipeline
         env:
           BLACKMARBLE_TOKEN: ${{ secrets.BLACKMARBLE_TOKEN }}
           DATA_START: 2024-01-01
           DATA_END: 2026-02-01
-          REGIONS_FILE: data/regions/us_metros_top25.geojson
+          METROS_FILE: data/regions/us_metros_top35.geojson
+          STATES_FILE: data/regions/us_states.geojson
+          INCREMENTAL: "true"
         run: |
           python scripts/fetch_blackmarble_monthly.py
           python scripts/build_metrics.py

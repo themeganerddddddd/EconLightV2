@@ -1,0 +1,146 @@
+[
+  {
+    "region_id": "ATL",
+    "region_name": "Atlanta"
+  },
+  {
+    "region_id": "AUS",
+    "region_name": "Austin"
+  },
+  {
+    "region_id": "BAL",
+    "region_name": "Baltimore"
+  },
+  {
+    "region_id": "BOS",
+    "region_name": "Boston"
+  },
+  {
+    "region_id": "CLT",
+    "region_name": "Charlotte"
+  },
+  {
+    "region_id": "CHI",
+    "region_name": "Chicago"
+  },
+  {
+    "region_id": "CIN",
+    "region_name": "Cincinnati"
+  },
+  {
+    "region_id": "CLE",
+    "region_name": "Cleveland"
+  },
+  {
+    "region_id": "COL",
+    "region_name": "Columbus"
+  },
+  {
+    "region_id": "DFW",
+    "region_name": "Dallas-Fort Worth"
+  },
+  {
+    "region_id": "DEN",
+    "region_name": "Denver"
+  },
+  {
+    "region_id": "DET",
+    "region_name": "Detroit"
+  },
+  {
+    "region_id": "HOU",
+    "region_name": "Houston"
+  },
+  {
+    "region_id": "IND",
+    "region_name": "Indianapolis"
+  },
+  {
+    "region_id": "KCY",
+    "region_name": "Kansas City"
+  },
+  {
+    "region_id": "LAS",
+    "region_name": "Las Vegas"
+  },
+  {
+    "region_id": "LAX",
+    "region_name": "Los Angeles"
+  },
+  {
+    "region_id": "MIA",
+    "region_name": "Miami"
+  },
+  {
+    "region_id": "MSP",
+    "region_name": "Minneapolis-St. Paul"
+  },
+  {
+    "region_id": "NSH",
+    "region_name": "Nashville"
+  },
+  {
+    "region_id": "NYC",
+    "region_name": "New York"
+  },
+  {
+    "region_id": "ORL",
+    "region_name": "Orlando"
+  },
+  {
+    "region_id": "PHL",
+    "region_name": "Philadelphia"
+  },
+  {
+    "region_id": "PHX",
+    "region_name": "Phoenix"
+  },
+  {
+    "region_id": "PIT",
+    "region_name": "Pittsburgh"
+  },
+  {
+    "region_id": "POR",
+    "region_name": "Portland"
+  },
+  {
+    "region_id": "RDU",
+    "region_name": "Raleigh"
+  },
+  {
+    "region_id": "RIV",
+    "region_name": "Riverside-San Bernardino"
+  },
+  {
+    "region_id": "SAC",
+    "region_name": "Sacramento"
+  },
+  {
+    "region_id": "SAT",
+    "region_name": "San Antonio"
+  },
+  {
+    "region_id": "SDG",
+    "region_name": "San Diego"
+  },
+  {
+    "region_id": "SFO",
+    "region_name": "San Francisco Bay Area"
+  },
+  {
+    "region_id": "SEA",
+    "region_name": "Seattle"
+  },
+  {
+    "region_id": "STL",
+    "region_name": "St. Louis"
+  },
+  {
+    "region_id": "TPA",
+    "region_name": "Tampa"
+  },
+  {
+    "region_id": "WAS",
+    "region_name": "Washington"
+  }
+]

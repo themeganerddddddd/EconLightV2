@@ -1,0 +1,394 @@
+[
+  {
+    "date": "2022-01-01",
+    "avg_density": 85.76236473544591,
+    "avg_yoy": null,
+    "avg_mom": null,
+    "index_level": 100.0,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2022-02-01",
+    "avg_density": 85.51403195241767,
+    "avg_yoy": null,
+    "avg_mom": 0.0006393688371255,
+    "index_level": 100.06393688371256,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2022-03-01",
+    "avg_density": 82.81494049013347,
+    "avg_yoy": null,
+    "avg_mom": -0.025565675680208,
+    "index_level": 97.50573472605876,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2022-04-01",
+    "avg_density": 78.90118183430825,
+    "avg_yoy": null,
+    "avg_mom": -0.0418372397786794,
+    "index_level": 93.42636392252832,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2022-05-01",
+    "avg_density": 74.20170071770147,
+    "avg_yoy": null,
+    "avg_mom": -0.0556187586794068,
+    "index_level": 88.23010553322676,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2022-06-01",
+    "avg_density": 71.81377458943442,
+    "avg_yoy": null,
+    "avg_mom": -0.0333097227917002,
+    "index_level": 85.29118517603251,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2022-07-01",
+    "avg_density": 70.79021520209976,
+    "avg_yoy": null,
+    "avg_mom": -0.0139596065189711,
+    "index_level": 84.10055379143839,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2022-08-01",
+    "avg_density": 70.09209576163474,
+    "avg_yoy": null,
+    "avg_mom": -0.0087845346601265,
+    "index_level": 83.36176956172166,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2022-09-01",
+    "avg_density": 69.83466217017555,
+    "avg_yoy": null,
+    "avg_mom": -0.0014103518542173,
+    "index_level": 83.24420013544945,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2022-10-01",
+    "avg_density": 69.54439736245727,
+    "avg_yoy": null,
+    "avg_mom": -0.0014670844273811,
+    "index_level": 83.12207386576092,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2022-11-01",
+    "avg_density": 71.28631273968617,
+    "avg_yoy": null,
+    "avg_mom": 0.0229853735654179,
+    "index_level": 85.0326657850977,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2022-12-01",
+    "avg_density": 77.36559133705083,
+    "avg_yoy": null,
+    "avg_mom": 0.0876744548756221,
+    "index_level": 92.48785840442712,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2023-01-01",
+    "avg_density": 81.25863363879846,
+    "avg_yoy": -0.0291012742629213,
+    "avg_mom": 0.0535972936093427,
+    "index_level": 97.44495730662852,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2023-02-01",
+    "avg_density": 83.39999048066807,
+    "avg_yoy": -0.0076305984974226,
+    "avg_mom": 0.0261306354132091,
+    "index_level": 99.99125595886376,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2023-03-01",
+    "avg_density": 81.30653051057169,
+    "avg_yoy": -0.0085487704494583,
+    "avg_mom": -0.0223005037828222,
+    "index_level": 97.76140057710396,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2023-04-01",
+    "avg_density": 79.39816130388924,
+    "avg_yoy": 0.0083034829691577,
+    "avg_mom": -0.0234411105074536,
+    "index_level": 95.46976478281262,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2023-05-01",
+    "avg_density": 77.05457596441896,
+    "avg_yoy": 0.0396063987181427,
+    "avg_mom": -0.0267643127660759,
+    "index_level": 92.91458213846172,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2023-06-01",
+    "avg_density": 74.31374126910387,
+    "avg_yoy": 0.0366153808966224,
+    "avg_mom": -0.0333264485253262,
+    "index_level": 89.81806909957209,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2023-07-01",
+    "avg_density": 73.11992123281249,
+    "avg_yoy": 0.0329542923655687,
+    "avg_mom": -0.0159201115469814,
+    "index_level": 88.3881554205724,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2023-08-01",
+    "avg_density": 72.74855273283293,
+    "avg_yoy": 0.0357224576224572,
+    "avg_mom": -0.0061601221444053,
+    "index_level": 87.84367358706298,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2023-09-01",
+    "avg_density": 72.36381670121324,
+    "avg_yoy": 0.0325721182690547,
+    "avg_mom": -0.0074611429346179,
+    "index_level": 87.18825938252797,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2023-10-01",
+    "avg_density": 72.13279736192902,
+    "avg_yoy": 0.0324575425204387,
+    "avg_mom": -0.0022652300026708,
+    "index_level": 86.99075792149404,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2023-11-01",
+    "avg_density": 73.11004064678347,
+    "avg_yoy": 0.0258293566523616,
+    "avg_mom": 0.0158352804648746,
+    "index_level": 88.36828097103292,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2023-12-01",
+    "avg_density": 75.75470734807355,
+    "avg_yoy": -0.0167899210806158,
+    "avg_mom": 0.0371720276233436,
+    "index_level": 91.65310915231554,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2024-01-01",
+    "avg_density": 80.56875348607848,
+    "avg_yoy": -0.0046137741401148,
+    "avg_mom": 0.0652981000371997,
+    "index_level": 97.63788304246384,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2024-02-01",
+    "avg_density": 83.77416901154841,
+    "avg_yoy": 0.0054086345058046,
+    "avg_mom": 0.0365781792872336,
+    "index_level": 101.20929903361704,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2024-03-01",
+    "avg_density": 83.97354330473462,
+    "avg_yoy": 0.0350889766888855,
+    "avg_mom": 0.0025942177437606,
+    "index_level": 101.4718579930036,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2024-04-01",
+    "avg_density": 81.17300875298915,
+    "avg_yoy": 0.0267521129257019,
+    "avg_mom": -0.0316057157790154,
+    "index_level": 98.26476728970812,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2024-05-01",
+    "avg_density": 76.26972831454516,
+    "avg_yoy": -0.0092795496729336,
+    "avg_mom": -0.0539273621191609,
+    "index_level": 92.96560760052095,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2024-06-01",
+    "avg_density": 72.35097724350926,
+    "avg_yoy": -0.0269053637739668,
+    "avg_mom": -0.050612462458919,
+    "index_level": 88.26038927586899,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2024-07-01",
+    "avg_density": 70.25722791414614,
+    "avg_yoy": -0.0443679154493954,
+    "avg_mom": -0.033274326878819,
+    "index_level": 85.32358423265191,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2024-08-01",
+    "avg_density": 72.09249936588544,
+    "avg_yoy": -0.0160173412054643,
+    "avg_mom": 0.024386306129904,
+    "index_level": 87.40431127785001,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2024-09-01",
+    "avg_density": 73.85286598359794,
+    "avg_yoy": 0.0176096671436526,
+    "avg_mom": 0.0244249487133565,
+    "index_level": 89.53915709813775,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2024-10-01",
+    "avg_density": 74.89688595139695,
+    "avg_yoy": 0.0353133059248319,
+    "avg_mom": 0.0150554888891384,
+    "index_level": 90.88721288297155,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2024-11-01",
+    "avg_density": 76.23308069988944,
+    "avg_yoy": 0.036906349756376,
+    "avg_mom": 0.0157548764334659,
+    "index_level": 92.31912969132487,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2024-12-01",
+    "avg_density": 80.89677651238834,
+    "avg_yoy": 0.0603731864272891,
+    "avg_mom": 0.0616217943026531,
+    "index_level": 98.00800011136369,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2025-01-01",
+    "avg_density": 89.34442160800398,
+    "avg_yoy": 0.1048726109697567,
+    "avg_mom": 0.1038929095651975,
+    "index_level": 108.19033640359945,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2025-02-01",
+    "avg_density": 93.31249744221124,
+    "avg_yoy": 0.1143011681412484,
+    "avg_mom": 0.0416304153895639,
+    "index_level": 112.69434504921794,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2025-03-01",
+    "avg_density": 91.94652856923672,
+    "avg_yoy": 0.0961381871350097,
+    "avg_mom": -0.0107958383746047,
+    "index_level": 111.47771511433464,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2025-04-01",
+    "avg_density": 86.60377692835178,
+    "avg_yoy": 0.0674373600146193,
+    "avg_mom": -0.0496086825207083,
+    "index_level": 105.94745253709364,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2025-05-01",
+    "avg_density": 82.88536643596288,
+    "avg_yoy": 0.0832393519202193,
+    "avg_mom": -0.0353156399901848,
+    "index_level": 102.20585044541644,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2025-06-01",
+    "avg_density": 82.21596092651664,
+    "avg_yoy": 0.1305385634626466,
+    "avg_mom": -0.0079169867184054,
+    "index_level": 101.39668808489677,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2025-07-01",
+    "avg_density": 80.64198326786436,
+    "avg_yoy": 0.1448565886793976,
+    "avg_mom": -0.0189675322024342,
+    "index_level": 99.4734431384263,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2025-08-01",
+    "avg_density": 79.50034724822167,
+    "avg_yoy": 0.1019761750385085,
+    "avg_mom": -0.0148613831262794,
+    "index_level": 97.99513018905596,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2025-09-01",
+    "avg_density": 77.66306780912375,
+    "avg_yoy": 0.0526217117859771,
+    "avg_mom": -0.0225716691232204,
+    "index_level": 95.78321653474168,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2025-10-01",
+    "avg_density": 77.42389418554117,
+    "avg_yoy": 0.0339417245817514,
+    "avg_mom": -0.0050907027724675,
+    "index_level": 95.2956126487724,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2025-11-01",
+    "avg_density": 78.7988748049312,
+    "avg_yoy": 0.0324397595487292,
+    "avg_mom": 0.0140004212557853,
+    "index_level": 96.62979136968336,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2025-12-01",
+    "avg_density": 84.43411141172754,
+    "avg_yoy": 0.0390194080559482,
+    "avg_mom": 0.0672155540885784,
+    "index_level": 103.1248163380604,
+    "dataset_name": "metros"
+  },
+  {
+    "date": "2026-01-01",
+    "avg_density": 92.06576383181228,
+    "avg_yoy": 0.0234140014022453,
+    "avg_mom": 0.084680381600592,
+    "index_level": 111.85746513805832,
+    "dataset_name": "metros"
+  }
+]

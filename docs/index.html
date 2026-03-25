@@ -20,6 +20,11 @@
         <h1>Econ Light Monitor</h1>
         <p>Tracking economic momentum from space.</p>
         <div class="hero-subtext" id="latestMonthText">Latest available month: --</div>
+
+        <div class="dataset-toggle">
+          <button class="dataset-btn active" data-dataset="metros">Metros</button>
+          <button class="dataset-btn" data-dataset="states">States</button>
+        </div>
       </div>
 
       <div class="hero-stats">
@@ -62,7 +67,7 @@
     <section class="card">
       <div class="card-header">
         <h2>Headline Index</h2>
-        <span class="badge">Monthly signal</span>
+        <span class="badge" id="indexBadge">Monthly signal</span>
       </div>
       <div class="chart-box">
         <canvas id="indexChart"></canvas>
@@ -106,6 +111,12 @@
         <h2 id="regionTitle">Region Explorer</h2>
         <span class="badge">Interactive</span>
       </div>
+
+      <div class="region-picker-wrap">
+        <label for="regionPicker">Choose region</label>
+        <select id="regionPicker"></select>
+      </div>
+
       <div class="chart-box large">
         <canvas id="regionChart"></canvas>
       </div>
@@ -117,12 +128,12 @@
         <span class="badge">Transparent</span>
       </div>
       <p>
-        This dashboard uses NASA Black Marble monthly nighttime lights to build a simple public signal for regional economic momentum.
-        It tracks changes in light density over time, ranks regions by momentum, and aggregates a headline index from the region-level signal.
+        This dashboard uses NASA Black Marble monthly nighttime lights to build a public signal for regional economic momentum.
+        It smooths the region-level signal, limits unstable percentage jumps, ranks regions by momentum, and aggregates a headline index.
       </p>
       <p>
-        The public version focuses on simple rankings and trend visibility. A future premium layer can add forecasts, alerts, downloads,
-        expanded region coverage, and blended public indicators.
+        The public version focuses on trend visibility and comparative rankings. A future premium layer can add forecasts, alerts,
+        downloads, expanded region coverage, and blended indicators.
       </p>
     </section>
   </main>

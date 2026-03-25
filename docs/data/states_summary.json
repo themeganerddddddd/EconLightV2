@@ -1,0 +1,19 @@
+{
+  "dataset_name": "states",
+  "latest_month": "2026-01-01",
+  "headline_index": 108.58391024525976,
+  "avg_mom": 0.1250475044500084,
+  "avg_yoy": 0.0360419068972162,
+  "top_region": {
+    "region_id": "ME",
+    "region_name": "Maine",
+    "trend_score": 2.8268353138563715,
+    "yoy_pct": 0.148976727314163
+  },
+  "bottom_region": {
+    "region_id": "KY",
+    "region_name": "Kentucky",
+    "trend_score": -0.316997859830898,
+    "yoy_pct": -0.0804877229838304
+  }
+}
