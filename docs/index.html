@@ -2,10 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Econ Light Monitor</title>
+  <title>Econ Light Monitor | U.S. Economic Growth Tracker from Nighttime Lights Data</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description" content="Econ Light Monitor is a U.S. economic growth tracker built from NASA nighttime lights data. Explore economic activity, growth signals, county trends, metro trends, state trends, city rankings, and satellite-based regional intelligence." />
+  <meta name="keywords" content="economic growth tracker, nighttime lights data, satellite economic indicators, US county economic data, metro growth tracker, state growth tracker, city growth tracker, regional economic intelligence, alternative economic data, AI economic forecasting, economic activity map, county growth map, NASA Black Marble, economic monitoring" />
+  <meta name="author" content="Econ Light Monitor" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Econ Light Monitor | U.S. Economic Growth Tracker from Nighttime Lights Data" />
+  <meta property="og:description" content="Track economic activity across U.S. counties, metros, states, and cities using NASA nighttime lights data and satellite economic indicators." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='100%25' height='100%25' fill='%23081223'/%3E%3Ctext x='60' y='180' font-size='64' fill='white' font-family='Arial'%3EEcon Light Monitor%3C/text%3E%3Ctext x='60' y='260' font-size='30' fill='%239fb0d0' font-family='Arial'%3EU.S. economic growth tracker from nighttime lights data%3C/text%3E%3C/svg%3E" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Econ Light Monitor | U.S. Economic Growth Tracker from Nighttime Lights Data" />
+  <meta name="twitter:description" content="Track economic activity across U.S. counties, metros, states, and cities using NASA nighttime lights data." />
+
+  <link rel="canonical" href="/" />
   <link rel="stylesheet" href="styles.css" />
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"Econ Light Monitor",
+    "applicationCategory":"BusinessApplication",
+    "description":"A U.S. economic growth tracker built from NASA nighttime lights data, satellite economic indicators, and regional economic monitoring across counties, metros, states, and cities.",
+    "operatingSystem":"Web",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
+  }
+  </script>
 </head>
 <body>
   <div class="stars"></div>
@@ -14,11 +44,17 @@
 
   <header class="hero">
     <div class="hero-overlay"></div>
+    <div class="hero-globe"></div>
+
     <div class="hero-inner">
       <div class="hero-copy">
-        <div class="eyebrow">Satellite Economic Signal</div>
+        <div class="eyebrow">Satellite Economic Intelligence</div>
         <h1>Econ Light Monitor</h1>
-        <p>Tracking economic momentum from space.</p>
+        <p class="hero-main-copy">
+          A U.S. economic growth tracker built from <strong>nighttime lights data</strong>, designed to monitor
+          <strong>economic activity</strong>, <strong>regional growth</strong>, and <strong>local momentum</strong>
+          across counties, metros, states, and cities.
+        </p>
         <div class="hero-subtext" id="latestMonthText">Latest available month: --</div>
 
         <div class="dataset-toggle">
@@ -51,7 +87,41 @@
   <main class="wrap">
     <section id="statusMount"></section>
 
+    <section class="intro-grid">
+      <div class="intro-card intro-card-wide">
+        <div class="card-header">
+          <h2>U.S. Economic Activity Map</h2>
+          <span class="badge">County signal</span>
+        </div>
+        <p class="intro-text">
+          This nationwide map shows county-level economic momentum using nighttime lights as a proxy for changing
+          activity, infrastructure intensity, and regional growth. Click a county to open its history in the explorer below.
+        </p>
+        <div id="countyMap" class="map-box"></div>
+      </div>
+
+      <div class="intro-card">
+        <div class="card-header">
+          <h2>How the Light Tracker Works</h2>
+        </div>
+        <p>
+          Econ Light Monitor uses NASA nighttime lights data to estimate shifts in economic activity over time.
+          It smooths the light-density signal, compares each region with its recent and year-ago levels, and produces
+          a trend label for fast interpretation.
+        </p>
+        <p>
+          This is best used as a <strong>directional economic indicator</strong>, not as a direct GDP replacement.
+          It is especially useful for spotting local momentum, regional divergence, and early changes in growth patterns.
+        </p>
+      </div>
+    </section>
+
     <section class="summary-grid">
+      <div class="summary-card">
+        <div class="summary-title">Estimated U.S. Light YoY</div>
+        <div class="summary-number" id="nationalLightYoy">--</div>
+        <div class="summary-sub">Using all contiguous U.S. counties as a nationwide proxy</div>
+      </div>
       <div class="summary-card">
         <div class="summary-title">Average MoM</div>
         <div class="summary-number" id="avgMom">--</div>
@@ -63,6 +133,68 @@
       <div class="summary-card">
         <div class="summary-title">Current Top Trend</div>
         <div class="summary-number small" id="topTrendText">--</div>
+      </div>
+    </section>
+
+    <section class="insight-grid">
+      <div class="insight-card">
+        <h3>Satellite Economic Indicators</h3>
+        <p>
+          This dashboard turns nighttime lights into a usable economic monitoring tool for counties, metros, states, and cities.
+          It is designed for analysts, investors, economic developers, researchers, and anyone interested in regional growth.
+        </p>
+      </div>
+      <div class="insight-card">
+        <h3>AI-Ready Economic Data Layer</h3>
+        <p>
+          This creates a structured geographic signal that can later be combined with BLS employment data, population trends,
+          construction, permits, and other public indicators for AI-assisted economic forecasting and growth prediction.
+        </p>
+      </div>
+      <div class="insight-card">
+        <h3>Why Some Values Show 50%+</h3>
+        <p>
+          Very large changes are capped for leaderboard stability. That prevents unusual months from dominating the rankings,
+          while still preserving the underlying direction and trend in the region explorer.
+        </p>
+      </div>
+    </section>
+
+    <section class="homepage-lists">
+      <div class="home-list-card">
+        <div class="card-header">
+          <h2>Top 5 Metros</h2>
+        </div>
+        <ol id="top5Metros" class="mini-list"></ol>
+        <h3 class="subhead">Bottom 5</h3>
+        <ol id="bottom5Metros" class="mini-list"></ol>
+      </div>
+
+      <div class="home-list-card">
+        <div class="card-header">
+          <h2>Top 5 States</h2>
+        </div>
+        <ol id="top5States" class="mini-list"></ol>
+        <h3 class="subhead">Bottom 5</h3>
+        <ol id="bottom5States" class="mini-list"></ol>
+      </div>
+
+      <div class="home-list-card">
+        <div class="card-header">
+          <h2>Top 5 Counties</h2>
+        </div>
+        <ol id="top5Counties" class="mini-list"></ol>
+        <h3 class="subhead">Bottom 5</h3>
+        <ol id="bottom5Counties" class="mini-list"></ol>
+      </div>
+
+      <div class="home-list-card">
+        <div class="card-header">
+          <h2>Top 5 Cities</h2>
+        </div>
+        <ol id="top5Cities" class="mini-list"></ol>
+        <h3 class="subhead">Bottom 5</h3>
+        <ol id="bottom5Cities" class="mini-list"></ol>
       </div>
     </section>
 
@@ -116,9 +248,16 @@
         <span class="badge">Interactive</span>
       </div>
 
-      <div class="region-picker-wrap">
-        <label for="regionPicker">Choose region</label>
-        <select id="regionPicker"></select>
+      <div class="region-controls">
+        <div class="region-picker-wrap">
+          <label for="regionSearch">Search region</label>
+          <input id="regionSearch" type="text" placeholder="Type a metro, state, county, or city..." />
+        </div>
+
+        <div class="region-picker-wrap">
+          <label for="regionPicker">Choose region</label>
+          <select id="regionPicker"></select>
+        </div>
       </div>
 
       <div class="chart-box large">

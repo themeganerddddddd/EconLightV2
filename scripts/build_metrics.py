@@ -26,40 +26,60 @@ def build_for_dataset(dataset_name: str):
         print(f"{dataset_name}: input file not found, skipping")
         return
 
-    df = pd.read_csv(in_path)
+    df = pd.read_csv(in_path, low_memory=False)
     df["date"] = pd.to_datetime(df["date"])
+    df["region_id"] = df["region_id"].astype(str)
     df = df.sort_values(["region_id", "date"]).reset_index(drop=True)
 
-    metric_col = "light_density"
     g = df.groupby("region_id", group_keys=False)
 
-    df["density_3m_smooth"] = g[metric_col].transform(lambda s: s.rolling(3, min_periods=1).mean())
+    # Stable signal used for display and comparison
+    df["density_3m_smooth"] = g["light_density"].transform(
+        lambda s: s.rolling(3, min_periods=1).mean()
+    )
 
     df["lag_1"] = g["density_3m_smooth"].shift(1)
     df["lag_12"] = g["density_3m_smooth"].shift(12)
 
-    baseline_floor = max(df["density_3m_smooth"].quantile(0.10), 1e-9)
-    df["lag_1_safe"] = df["lag_1"].where(df["lag_1"] > baseline_floor, np.nan)
-    df["lag_12_safe"] = df["lag_12"].where(df["lag_12"] > baseline_floor, np.nan)
+    # Display percentages come directly from the displayed smoothed density
+    df["mom_pct_display"] = np.where(
+        df["lag_1"] > 0,
+        (df["density_3m_smooth"] - df["lag_1"]) / df["lag_1"],
+        np.nan,
+    )
+    df["yoy_pct_display"] = np.where(
+        df["lag_12"] > 0,
+        (df["density_3m_smooth"] - df["lag_12"]) / df["lag_12"],
+        np.nan,
+    )
 
-    df["mom_pct"] = (df["density_3m_smooth"] - df["lag_1_safe"]) / df["lag_1_safe"]
-    df["yoy_pct"] = (df["density_3m_smooth"] - df["lag_12_safe"]) / df["lag_12_safe"]
+    # Rank versions are clipped for stability
+    cap = 0.5
+    df["mom_capped"] = df["mom_pct_display"].abs() >= cap
+    df["yoy_capped"] = df["yoy_pct_display"].abs() >= cap
 
-    df["mom_pct"] = df["mom_pct"].clip(-1.0, 1.0)
-    df["yoy_pct"] = df["yoy_pct"].clip(-1.0, 1.0)
+    df["mom_pct_rank"] = df["mom_pct_display"].clip(-cap, cap)
+    df["yoy_pct_rank"] = df["yoy_pct_display"].clip(-cap, cap)
 
-    df["mom_3m_avg"] = g["mom_pct"].transform(lambda s: s.rolling(3, min_periods=1).mean())
-    df["vol_12m"] = g["mom_pct"].transform(lambda s: s.rolling(12, min_periods=6).std())
+    df["mom_3m_avg"] = g["mom_pct_rank"].transform(
+        lambda s: s.rolling(3, min_periods=1).mean()
+    )
+    df["vol_12m"] = g["mom_pct_rank"].transform(
+        lambda s: s.rolling(12, min_periods=6).std()
+    )
     df["months_seen"] = g.cumcount() + 1
 
-    for col in ["mom_pct", "yoy_pct", "mom_3m_avg"]:
+    for col in ["mom_pct_rank", "yoy_pct_rank", "mom_3m_avg"]:
         mean = df[col].mean(skipna=True)
         std = df[col].std(skipna=True)
-        df[f"{col}_z"] = (df[col] - mean) / std if std and std > 0 else 0.0
+        if std and std > 0:
+            df[f"{col}_z"] = (df[col] - mean) / std
+        else:
+            df[f"{col}_z"] = 0.0
 
     df["trend_score"] = (
-        0.50 * df["yoy_pct_z"].fillna(0)
-        + 0.30 * df["mom_pct_z"].fillna(0)
+        0.50 * df["yoy_pct_rank_z"].fillna(0)
+        + 0.30 * df["mom_pct_rank_z"].fillna(0)
         + 0.20 * df["mom_3m_avg_z"].fillna(0)
     )
     df["trend_label"] = df["trend_score"].apply(classify_trend)
@@ -71,26 +91,54 @@ def build_for_dataset(dataset_name: str):
 
     latest_rankings = latest[
         [
-            "date", "dataset_name", "region_id", "region_name", "ntl_sum",
-            "light_density", "density_3m_smooth", "mom_pct", "yoy_pct",
-            "mom_3m_avg", "vol_12m", "trend_score", "trend_label",
-            "months_seen", "rankable"
+            "date",
+            "dataset_name",
+            "region_id",
+            "region_name",
+            "ntl_sum",
+            "light_density",
+            "density_3m_smooth",
+            "mom_pct_display",
+            "yoy_pct_display",
+            "mom_pct_rank",
+            "yoy_pct_rank",
+            "mom_capped",
+            "yoy_capped",
+            "mom_3m_avg",
+            "vol_12m",
+            "trend_score",
+            "trend_label",
+            "months_seen",
+            "rankable",
         ]
-    ].sort_values(["rankable", "trend_score", "region_name"], ascending=[False, False, True])
+    ].sort_values(
+        ["rankable", "trend_score", "region_name"],
+        ascending=[False, False, True]
+    )
 
     leaders = latest_rankings.head(20).copy()
     laggards = latest_rankings.sort_values(
-        ["rankable", "trend_score", "region_name"], ascending=[False, True, True]
+        ["rankable", "trend_score", "region_name"],
+        ascending=[False, True, True]
     ).head(20).copy()
 
+    # National / dataset-level index
     index_df = (
         df.groupby("date", as_index=False)
         .agg(
             avg_density=("density_3m_smooth", "mean"),
-            avg_yoy=("yoy_pct", "mean"),
-            avg_mom=("mom_pct", "mean"),
+            avg_yoy=("yoy_pct_display", "mean"),
+            avg_mom=("mom_pct_display", "mean"),
+            total_ntl=("ntl_sum", "sum"),
         )
         .sort_values("date")
+    )
+
+    index_df["total_ntl_lag_12"] = index_df["total_ntl"].shift(12)
+    index_df["national_yoy_pct"] = np.where(
+        index_df["total_ntl_lag_12"] > 0,
+        (index_df["total_ntl"] - index_df["total_ntl_lag_12"]) / index_df["total_ntl_lag_12"],
+        np.nan,
     )
 
     levels = [100.0]
@@ -99,7 +147,6 @@ def build_for_dataset(dataset_name: str):
         growth = index_df.iloc[i]["avg_mom"]
         growth = 0 if pd.isna(growth) else growth
         levels.append(prev * (1 + growth))
-
     index_df["index_level"] = levels
     index_df["dataset_name"] = dataset_name
 

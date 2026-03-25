@@ -16,24 +16,19 @@ COUNTY_SHARDS_DIR.mkdir(parents=True, exist_ok=True)
 def clean_value(x):
     if pd.isna(x):
         return None
-
     if isinstance(x, np.integer):
         return int(x)
-
     if isinstance(x, np.floating):
         xf = float(x)
         if math.isnan(xf) or math.isinf(xf):
             return None
         return xf
-
     if isinstance(x, float):
         if math.isnan(x) or math.isinf(x):
             return None
         return x
-
     if isinstance(x, pd.Timestamp):
         return str(x)
-
     return x
 
 
@@ -45,6 +40,36 @@ def write_json(path: Path, payload):
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2, allow_nan=False)
+
+
+def build_summary(latest, index_df, dataset_name):
+    if len(index_df) == 0 or len(latest) == 0:
+        return {}
+
+    latest_index = index_df.iloc[-1]
+    top_region = latest.sort_values("trend_score", ascending=False).iloc[0]
+    bottom_region = latest.sort_values("trend_score", ascending=True).iloc[0]
+
+    return {
+        "dataset_name": dataset_name,
+        "latest_month": clean_value(latest_index["date"]),
+        "headline_index": clean_value(latest_index["index_level"]),
+        "avg_mom": clean_value(latest_index.get("avg_mom")),
+        "avg_yoy": clean_value(latest_index.get("avg_yoy")),
+        "national_yoy_pct": clean_value(latest_index.get("national_yoy_pct")),
+        "top_region": {
+            "region_id": clean_value(top_region["region_id"]),
+            "region_name": clean_value(top_region["region_name"]),
+            "trend_score": clean_value(top_region["trend_score"]),
+            "yoy_pct_display": clean_value(top_region.get("yoy_pct_display")),
+        },
+        "bottom_region": {
+            "region_id": clean_value(bottom_region["region_id"]),
+            "region_name": clean_value(bottom_region["region_name"]),
+            "trend_score": clean_value(bottom_region["trend_score"]),
+            "yoy_pct_display": clean_value(bottom_region.get("yoy_pct_display")),
+        },
+    }
 
 
 def export_standard_dataset(dataset_name: str):
@@ -91,32 +116,7 @@ def export_standard_dataset(dataset_name: str):
         })
 
     regions = sorted(regions, key=lambda x: x["region_name"])
-
-    summary = {}
-    if len(index_df) > 0 and len(latest) > 0:
-        latest_index = index_df.iloc[-1]
-        top_region = latest.sort_values("trend_score", ascending=False).iloc[0]
-        bottom_region = latest.sort_values("trend_score", ascending=True).iloc[0]
-
-        summary = {
-            "dataset_name": dataset_name,
-            "latest_month": clean_value(latest_index["date"]),
-            "headline_index": clean_value(latest_index["index_level"]),
-            "avg_mom": clean_value(latest_index.get("avg_mom")),
-            "avg_yoy": clean_value(latest_index.get("avg_yoy")),
-            "top_region": {
-                "region_id": clean_value(top_region["region_id"]),
-                "region_name": clean_value(top_region["region_name"]),
-                "trend_score": clean_value(top_region["trend_score"]),
-                "yoy_pct": clean_value(top_region["yoy_pct"]),
-            },
-            "bottom_region": {
-                "region_id": clean_value(bottom_region["region_id"]),
-                "region_name": clean_value(bottom_region["region_name"]),
-                "trend_score": clean_value(bottom_region["trend_score"]),
-                "yoy_pct": clean_value(bottom_region["yoy_pct"]),
-            },
-        }
+    summary = build_summary(latest, index_df, dataset_name)
 
     write_json(DOCS_DATA / f"{dataset_name}_latest.json", latest_records)
     write_json(DOCS_DATA / f"{dataset_name}_leaders.json", leaders_records)
@@ -166,7 +166,6 @@ def export_counties_dataset():
     regions = []
     shard_index = {}
 
-    # Clear old shard files
     for old_file in COUNTY_SHARDS_DIR.glob("*.json"):
         old_file.unlink()
 
@@ -184,43 +183,18 @@ def export_counties_dataset():
 
     regions = sorted(regions, key=lambda x: x["region_name"])
 
-    # Write one file per state shard
-    for statefp, sub in hist.groupby(hist["region_id"].astype(str).str.zfill(5).str[:2]):
-        shard_payload = {}
-        sub = sub.copy()
-        sub["region_id"] = sub["region_id"].astype(str).str.zfill(5)
+    hist_copy = hist.copy()
+    hist_copy["region_id"] = hist_copy["region_id"].astype(str).str.zfill(5)
+    hist_copy["statefp"] = hist_copy["region_id"].str[:2]
 
+    for statefp, sub in hist_copy.groupby("statefp"):
+        shard_payload = {}
         for region_id, region_sub in sub.groupby("region_id"):
             region_sub = region_sub.sort_values("date")
             shard_payload[str(region_id)] = clean_records(region_sub.to_dict(orient="records"))
-
         write_json(COUNTY_SHARDS_DIR / f"{statefp}.json", shard_payload)
 
-    summary = {}
-    if len(index_df) > 0 and len(latest) > 0:
-        latest_index = index_df.iloc[-1]
-        top_region = latest.sort_values("trend_score", ascending=False).iloc[0]
-        bottom_region = latest.sort_values("trend_score", ascending=True).iloc[0]
-
-        summary = {
-            "dataset_name": dataset_name,
-            "latest_month": clean_value(latest_index["date"]),
-            "headline_index": clean_value(latest_index["index_level"]),
-            "avg_mom": clean_value(latest_index.get("avg_mom")),
-            "avg_yoy": clean_value(latest_index.get("avg_yoy")),
-            "top_region": {
-                "region_id": clean_value(str(top_region["region_id"]).zfill(5)),
-                "region_name": clean_value(top_region["region_name"]),
-                "trend_score": clean_value(top_region["trend_score"]),
-                "yoy_pct": clean_value(top_region["yoy_pct"]),
-            },
-            "bottom_region": {
-                "region_id": clean_value(str(bottom_region["region_id"]).zfill(5)),
-                "region_name": clean_value(bottom_region["region_name"]),
-                "trend_score": clean_value(bottom_region["trend_score"]),
-                "yoy_pct": clean_value(bottom_region["yoy_pct"]),
-            },
-        }
+    summary = build_summary(latest, index_df, dataset_name)
 
     write_json(DOCS_DATA / "counties_latest.json", latest_records)
     write_json(DOCS_DATA / "counties_leaders.json", leaders_records)
@@ -233,10 +207,38 @@ def export_counties_dataset():
     print("counties: exported site data with sharded histories")
 
 
+def export_homepage_summary():
+    sections = {}
+    for dataset in ["metros", "states", "counties", "cities"]:
+        latest_path = DERIVED / f"{dataset}_latest_rankings.csv"
+        index_path = DERIVED / f"{dataset}_headline_index.csv"
+        if not latest_path.exists() or not index_path.exists():
+            continue
+
+        latest = pd.read_csv(latest_path, low_memory=False)
+        index_df = pd.read_csv(index_path, low_memory=False)
+
+        latest["region_id"] = latest["region_id"].astype(str)
+        latest["region_name"] = latest["region_name"].astype(str)
+
+        top5 = latest.sort_values("trend_score", ascending=False).head(5)
+        bottom5 = latest.sort_values("trend_score", ascending=True).head(5)
+
+        sections[dataset] = {
+            "summary": build_summary(latest, index_df, dataset),
+            "top5": clean_records(top5.to_dict(orient="records")),
+            "bottom5": clean_records(bottom5.to_dict(orient="records")),
+        }
+
+    write_json(DOCS_DATA / "homepage_summary.json", sections)
+    print("homepage: exported summary")
+
+
 def main():
     for dataset in ["metros", "states", "cities"]:
         export_standard_dataset(dataset)
     export_counties_dataset()
+    export_homepage_summary()
 
 
 if __name__ == "__main__":

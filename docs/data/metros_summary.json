@@ -1,19 +1,20 @@
 {
   "dataset_name": "metros",
   "latest_month": "2026-01-01",
-  "headline_index": 125.50130665672503,
-  "avg_mom": 0.1057437153152441,
-  "avg_yoy": 0.0240702568437983,
+  "headline_index": 154.90289513511456,
+  "avg_mom": 0.102466529983118,
+  "avg_yoy": 0.0311557365538259,
+  "national_yoy_pct": 0.0278939047271201,
   "top_region": {
-    "region_id": "42780",
-    "region_name": "Selinsgrove, PA",
-    "trend_score": 5.254268063922576,
-    "yoy_pct": 1.0
+    "region_id": "21820",
+    "region_name": "Fairbanks-College, AK",
+    "trend_score": 3.154309181647992,
+    "yoy_pct_display": 1.1301534833910454
   },
   "bottom_region": {
-    "region_id": "47580",
-    "region_name": "Warner Robins, GA",
-    "trend_score": -1.1357607093785898,
-    "yoy_pct": -0.3018402639717071
+    "region_id": "46620",
+    "region_name": "Uvalde, TX",
+    "trend_score": -1.4954587225931324,
+    "yoy_pct_display": -0.4463496756244014
   }
 }

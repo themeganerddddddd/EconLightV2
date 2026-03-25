@@ -1,19 +1,20 @@
 {
   "dataset_name": "counties",
   "latest_month": "2026-01-01",
-  "headline_index": 141.4345541925078,
-  "avg_mom": 0.0987374311097127,
-  "avg_yoy": -0.0099049233986522,
+  "headline_index": 364.0024979330221,
+  "avg_mom": 0.1128937461755073,
+  "avg_yoy": 0.0098216898430099,
+  "national_yoy_pct": 0.0225583990517531,
   "top_region": {
-    "region_id": "26003",
-    "region_name": "Alger, Michigan",
-    "trend_score": 3.839189629732905,
-    "yoy_pct": 1.0
+    "region_id": "50009",
+    "region_name": "Essex, Vermont",
+    "trend_score": 2.4799101784995354,
+    "yoy_pct_display": 0.7536692294355299
   },
   "bottom_region": {
     "region_id": "13225",
     "region_name": "Peach, Georgia",
-    "trend_score": -1.5982298384593625,
-    "yoy_pct": -0.5730002177526506
+    "trend_score": -1.721434990232792,
+    "yoy_pct_display": -0.5730002177526506
   }
 }

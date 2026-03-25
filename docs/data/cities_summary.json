@@ -1,19 +1,20 @@
 {
   "dataset_name": "cities",
   "latest_month": "2026-01-01",
-  "headline_index": 113.46008365700064,
-  "avg_mom": 0.0630263904933132,
-  "avg_yoy": 0.030068796360362,
+  "headline_index": 114.54112488806982,
+  "avg_mom": 0.0595991403285708,
+  "avg_yoy": 0.0305633134584643,
+  "national_yoy_pct": 0.0111693090531771,
   "top_region": {
-    "region_id": "2622000",
-    "region_name": "Detroit",
-    "trend_score": 8.104837557844085,
-    "yoy_pct": 0.6062301271754275
+    "region_id": "1825000",
+    "region_name": "Fort Wayne",
+    "trend_score": 6.4978408277917925,
+    "yoy_pct_display": 0.5159488616351264
   },
   "bottom_region": {
     "region_id": "816000",
     "region_name": "Colorado Springs",
-    "trend_score": -0.944952991110512,
-    "yoy_pct": -0.2585611315223446
+    "trend_score": -1.0198299900942944,
+    "yoy_pct_display": -0.2585611315223446
   }
 }

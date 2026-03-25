@@ -1,19 +1,20 @@
 {
   "dataset_name": "states",
   "latest_month": "2026-01-01",
-  "headline_index": 107.36407947968148,
-  "avg_mom": 0.1270115533066884,
-  "avg_yoy": 0.0343223991788327,
+  "headline_index": 121.54176327449832,
+  "avg_mom": 0.1269932757162733,
+  "avg_yoy": 0.0274107341763829,
+  "national_yoy_pct": 0.0189775717129123,
   "top_region": {
     "region_id": "23",
     "region_name": "Maine",
-    "trend_score": 2.90644265040852,
-    "yoy_pct": 0.1897747006536453
+    "trend_score": 2.706619671692547,
+    "yoy_pct_display": 0.1897747006536453
   },
   "bottom_region": {
-    "region_id": "KY",
-    "region_name": "Kentucky",
-    "trend_score": -0.3203077831123487,
-    "yoy_pct": -0.0804877229838304
+    "region_id": "08",
+    "region_name": "Colorado",
+    "trend_score": -0.407720140634745,
+    "yoy_pct_display": -0.1721433422052554
   }
 }

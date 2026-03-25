@@ -3,11 +3,15 @@ let regionChart = null;
 let currentDataset = "metros";
 let store = {};
 let countyShardCache = {};
+let filteredRegions = [];
+let homepageSummary = {};
 
-function fmtPct(v) {
+function fmtPct(v, capped = false) {
   if (v === null || v === undefined || Number.isNaN(Number(v))) return "N/A";
   const n = Number(v) * 100;
-  return `${n >= 0 ? "+" : ""}${n.toFixed(1)}%`;
+  const prefix = n >= 0 ? "+" : "";
+  if (capped) return `${prefix}${Math.abs(n).toFixed(0)}%+`;
+  return `${prefix}${n.toFixed(1)}%`;
 }
 
 function numOrNull(v) {
@@ -99,6 +103,7 @@ function renderSummaryCards(summary) {
   const avgMom = document.getElementById("avgMom");
   const avgYoy = document.getElementById("avgYoy");
   const topTrendText = document.getElementById("topTrendText");
+  const nationalLightYoy = document.getElementById("nationalLightYoy");
 
   if (summary?.avg_mom !== undefined && summary?.avg_mom !== null) {
     avgMom.textContent = fmtPct(summary.avg_mom);
@@ -117,10 +122,19 @@ function renderSummaryCards(summary) {
   }
 
   if (summary?.top_region?.region_name) {
-    const yoy = summary.top_region.yoy_pct;
+    const yoy = summary.top_region.yoy_pct_display ?? summary.top_region.yoy_pct;
     topTrendText.innerHTML = `${summary.top_region.region_name} <span class="${valueClass(yoy)}">${fmtPct(yoy)}</span>`;
   } else {
     topTrendText.textContent = "--";
+  }
+
+  const national = homepageSummary?.counties?.summary?.national_yoy_pct;
+  if (national !== undefined && national !== null) {
+    nationalLightYoy.textContent = fmtPct(national);
+    nationalLightYoy.className = `summary-number ${valueClass(national)}`;
+  } else {
+    nationalLightYoy.textContent = "N/A";
+    nationalLightYoy.className = "summary-number neutral";
   }
 }
 
@@ -155,8 +169,8 @@ function renderIndexChart(indexData, datasetLabel) {
 }
 
 function makeRow(row) {
-  const yoyClass = valueClass(row.yoy_pct);
-  const momClass = valueClass(row.mom_pct);
+  const yoyClass = valueClass(row.yoy_pct_display ?? row.yoy_pct);
+  const momClass = valueClass(row.mom_pct_display ?? row.mom_pct);
   const trendLabel = row.trend_label || "N/A";
   const trendScore = row.trend_score === null || row.trend_score === undefined
     ? "N/A"
@@ -165,8 +179,8 @@ function makeRow(row) {
   const tr = document.createElement("tr");
   tr.innerHTML = `
     <td>${row.region_name}</td>
-    <td class="${yoyClass}">${fmtPct(row.yoy_pct)}</td>
-    <td class="${momClass}">${fmtPct(row.mom_pct)}</td>
+    <td class="${yoyClass}">${fmtPct(row.yoy_pct_display ?? row.yoy_pct, row.yoy_capped)}</td>
+    <td class="${momClass}">${fmtPct(row.mom_pct_display ?? row.mom_pct, row.mom_capped)}</td>
     <td title="Trend score: ${trendScore}">${trendLabel}</td>
   `;
   tr.addEventListener("click", async () => {
@@ -186,7 +200,7 @@ function renderTables(leaders, laggards) {
   (laggards || []).slice(0, 20).forEach(r => dimBody.appendChild(makeRow(r)));
 }
 
-function renderRegionPicker(regions) {
+function populatePicker(regions) {
   const picker = document.getElementById("regionPicker");
   picker.innerHTML = "";
 
@@ -196,10 +210,25 @@ function renderRegionPicker(regions) {
     opt.textContent = r.region_name;
     picker.appendChild(opt);
   });
+}
+
+function renderRegionPicker(regions) {
+  filteredRegions = [...regions];
+  populatePicker(filteredRegions);
+
+  const picker = document.getElementById("regionPicker");
+  const search = document.getElementById("regionSearch");
 
   picker.onchange = async () => {
-    const selected = regions.find(r => r.region_id === picker.value);
+    const selected = filteredRegions.find(r => r.region_id === picker.value);
     if (selected) await renderRegion(currentDataset, selected.region_id, selected.region_name);
+  };
+
+  search.value = "";
+  search.oninput = () => {
+    const q = search.value.trim().toLowerCase();
+    filteredRegions = regions.filter(r => r.region_name.toLowerCase().includes(q));
+    populatePicker(filteredRegions);
   };
 }
 
@@ -243,6 +272,98 @@ async function renderRegion(dataset, regionId, regionName) {
   document.getElementById("regionTitle").textContent = `Region Explorer — ${regionName}`;
 }
 
+function renderMiniList(elementId, rows) {
+  const el = document.getElementById(elementId);
+  if (!el) return;
+  el.innerHTML = "";
+
+  (rows || []).slice(0, 5).forEach(row => {
+    const li = document.createElement("li");
+    const yoy = row.yoy_pct_display ?? row.yoy_pct;
+    li.innerHTML = `<span>${row.region_name}</span><span class="${valueClass(yoy)}">${fmtPct(yoy, row.yoy_capped)}</span>`;
+    el.appendChild(li);
+  });
+}
+
+function renderHomepageLists() {
+  renderMiniList("top5Metros", homepageSummary?.metros?.top5 || []);
+  renderMiniList("bottom5Metros", homepageSummary?.metros?.bottom5 || []);
+  renderMiniList("top5States", homepageSummary?.states?.top5 || []);
+  renderMiniList("bottom5States", homepageSummary?.states?.bottom5 || []);
+  renderMiniList("top5Counties", homepageSummary?.counties?.top5 || []);
+  renderMiniList("bottom5Counties", homepageSummary?.counties?.bottom5 || []);
+  renderMiniList("top5Cities", homepageSummary?.cities?.top5 || []);
+  renderMiniList("bottom5Cities", homepageSummary?.cities?.bottom5 || []);
+}
+
+function renderCountyMap() {
+  const countyRows = store?.counties?.latest || [];
+  const usable = countyRows.filter(r => r.region_id && r.trend_score !== null && r.trend_score !== undefined);
+
+  const trace = {
+    type: "choropleth",
+    geojson: "https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json",
+    featureidkey: "id",
+    locations: usable.map(r => String(r.region_id).padStart(5, "0")),
+    z: usable.map(r => Number(r.trend_score)),
+    text: usable.map(r => `${r.region_name}<br>Trend: ${r.trend_label || "N/A"}<br>YoY: ${fmtPct(r.yoy_pct_display ?? r.yoy_pct, r.yoy_capped)}`),
+    hovertemplate: "%{text}<extra></extra>",
+    colorscale: [
+      [0.0, "#fb7185"],
+      [0.35, "#f59e0b"],
+      [0.5, "#cbd5e1"],
+      [0.65, "#60a5fa"],
+      [1.0, "#4ade80"]
+    ],
+    zmid: 0,
+    marker: {
+      line: {
+        color: "rgba(255,255,255,0.08)",
+        width: 0.15
+      }
+    },
+    colorbar: {
+      title: "Trend",
+      tickfont: { color: "#e5ecff" },
+      titlefont: { color: "#e5ecff" }
+    }
+  };
+
+  const layout = {
+    geo: {
+      scope: "usa",
+      bgcolor: "rgba(0,0,0,0)",
+      lakecolor: "rgba(0,0,0,0)",
+      showlakes: false,
+      showland: true,
+      landcolor: "rgba(255,255,255,0.02)"
+    },
+    paper_bgcolor: "rgba(0,0,0,0)",
+    plot_bgcolor: "rgba(0,0,0,0)",
+    margin: { t: 0, r: 0, b: 0, l: 0 },
+    font: { color: "#e5ecff" }
+  };
+
+  Plotly.newPlot("countyMap", [trace], layout, {
+    responsive: true,
+    displayModeBar: false
+  });
+
+  const mapEl = document.getElementById("countyMap");
+  mapEl.on("plotly_click", async (data) => {
+    const point = data.points?.[0];
+    if (!point) return;
+
+    const fips = String(point.location).padStart(5, "0");
+    const row = usable.find(r => String(r.region_id).padStart(5, "0") === fips);
+    if (!row) return;
+
+    await renderDataset("counties");
+    document.getElementById("regionPicker").value = fips;
+    await renderRegion("counties", fips, row.region_name);
+  });
+}
+
 function activateDatasetButton(dataset) {
   document.querySelectorAll(".dataset-btn").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.dataset === dataset);
@@ -270,10 +391,15 @@ async function renderDataset(dataset) {
 
 async function init() {
   try {
+    homepageSummary = await loadJson("data/homepage_summary.json");
+
     await loadDataset("metros");
     await loadDataset("states");
     await loadDataset("counties");
     await loadDataset("cities");
+
+    renderHomepageLists();
+    renderCountyMap();
 
     document.querySelectorAll(".dataset-btn").forEach(btn => {
       btn.addEventListener("click", async () => renderDataset(btn.dataset.dataset));
