@@ -2127,7 +2127,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "9160",
+    "region_id": "09160",
     "region_name": "Northwest Hills, Connecticut",
     "ntl_sum": 22609.1578957811,
     "light_density": 10.802127540217452,
@@ -2722,7 +2722,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "9150",
+    "region_id": "09150",
     "region_name": "Northeastern Connecticut, Connecticut",
     "ntl_sum": 23426.460814788938,
     "light_density": 16.06299069291617,
@@ -3623,7 +3623,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "9180",
+    "region_id": "09180",
     "region_name": "Southeastern Connecticut, Connecticut",
     "ntl_sum": 74676.99906548858,
     "light_density": 46.04915872096594,
@@ -3878,7 +3878,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "9140",
+    "region_id": "09140",
     "region_name": "Naugatuck Valley, Connecticut",
     "ntl_sum": 78784.32593166828,
     "light_density": 72.16230562686553,
@@ -4065,7 +4065,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5099",
+    "region_id": "05099",
     "region_name": "Nevada, Arkansas",
     "ntl_sum": 3033.581265777349,
     "light_density": 1.8873387536246955,
@@ -4116,7 +4116,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "9130",
+    "region_id": "09130",
     "region_name": "Lower Connecticut River Valley, Connecticut",
     "ntl_sum": 34729.683514148,
     "light_density": 30.11477461473708,
@@ -4830,7 +4830,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8125",
+    "region_id": "08125",
     "region_name": "Yuma, Colorado",
     "ntl_sum": 6230.563047111034,
     "light_density": 1.0155627544046868,
@@ -5187,7 +5187,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5019",
+    "region_id": "05019",
     "region_name": "Clark, Arkansas",
     "ntl_sum": 8147.978911116719,
     "light_density": 3.562434697573674,
@@ -5289,7 +5289,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5081",
+    "region_id": "05081",
     "region_name": "Little River, Arkansas",
     "ntl_sum": 6505.41489084065,
     "light_density": 4.458580727843874,
@@ -6309,7 +6309,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5105",
+    "region_id": "05105",
     "region_name": "Perry, Arkansas",
     "ntl_sum": 2410.5503055751324,
     "light_density": 1.6592448402725033,
@@ -6666,7 +6666,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "9170",
+    "region_id": "09170",
     "region_name": "South Central Connecticut, Connecticut",
     "ntl_sum": 96105.8737180531,
     "light_density": 98.27678731081812,
@@ -6802,7 +6802,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5025",
+    "region_id": "05025",
     "region_name": "Cleveland, Arkansas",
     "ntl_sum": 1818.6404829025269,
     "light_density": 1.172591641515586,
@@ -6921,7 +6921,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "9110",
+    "region_id": "09110",
     "region_name": "Capitol, Connecticut",
     "ntl_sum": 187366.5993262529,
     "light_density": 69.16231689026124,
@@ -7023,7 +7023,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "9190",
+    "region_id": "09190",
     "region_name": "Western Connecticut, Connecticut",
     "ntl_sum": 89982.71633809805,
     "light_density": 62.371773174153766,
@@ -7244,7 +7244,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5061",
+    "region_id": "05061",
     "region_name": "Howard, Arkansas",
     "ntl_sum": 4034.700299203396,
     "light_density": 2.615032897243011,
@@ -7703,7 +7703,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5043",
+    "region_id": "05043",
     "region_name": "Drew, Arkansas",
     "ntl_sum": 6421.210739850998,
     "light_density": 2.9659898444776576,
@@ -8298,7 +8298,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5011",
+    "region_id": "05011",
     "region_name": "Bradley, Arkansas",
     "ntl_sum": 2882.423897266388,
     "light_density": 1.7046872074924002,
@@ -8451,7 +8451,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5057",
+    "region_id": "05057",
     "region_name": "Hempstead, Arkansas",
     "ntl_sum": 7697.0743377655745,
     "light_density": 4.010397325869888,
@@ -8706,7 +8706,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5003",
+    "region_id": "05003",
     "region_name": "Ashley, Arkansas",
     "ntl_sum": 6429.0605236291885,
     "light_density": 2.6393620665112643,
@@ -8791,7 +8791,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8075",
+    "region_id": "08075",
     "region_name": "Logan, Colorado",
     "ntl_sum": 10244.687756955624,
     "light_density": 2.1439528058791195,
@@ -8859,7 +8859,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8099",
+    "region_id": "08099",
     "region_name": "Prowers, Colorado",
     "ntl_sum": 2475.532967925072,
     "light_density": 0.581274299399228,
@@ -9301,7 +9301,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5013",
+    "region_id": "05013",
     "region_name": "Calhoun, Arkansas",
     "ntl_sum": 3194.894859492779,
     "light_density": 1.9506239905756708,
@@ -9981,7 +9981,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5029",
+    "region_id": "05029",
     "region_name": "Conway, Arkansas",
     "ntl_sum": 6452.265708774328,
     "light_density": 4.398440925505293,
@@ -10253,7 +10253,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5109",
+    "region_id": "05109",
     "region_name": "Pike, Arkansas",
     "ntl_sum": 2381.0736837387085,
     "light_density": 1.4976415675836297,
@@ -10491,7 +10491,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5053",
+    "region_id": "05053",
     "region_name": "Grant, Arkansas",
     "ntl_sum": 5297.145154714584,
     "light_density": 3.2309748158788683,
@@ -10542,7 +10542,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "9120",
+    "region_id": "09120",
     "region_name": "Greater Bridgeport, Connecticut",
     "ntl_sum": 37164.77330750227,
     "light_density": 98.86273240089956,
@@ -10576,7 +10576,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5039",
+    "region_id": "05039",
     "region_name": "Dallas, Arkansas",
     "ntl_sum": 1853.4926578998568,
     "light_density": 1.0716154097199797,
@@ -11086,7 +11086,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8047",
+    "region_id": "08047",
     "region_name": "Gilpin, Colorado",
     "ntl_sum": 3903.2903446555138,
     "light_density": 10.019472629635588,
@@ -11171,7 +11171,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5059",
+    "region_id": "05059",
     "region_name": "Hot Spring, Arkansas",
     "ntl_sum": 8425.289694666862,
     "light_density": 5.227588039094194,
@@ -11222,7 +11222,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5141",
+    "region_id": "05141",
     "region_name": "Van Buren, Arkansas",
     "ntl_sum": 3005.8757959753275,
     "light_density": 1.6029998905057576,
@@ -11443,7 +11443,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5051",
+    "region_id": "05051",
     "region_name": "Garland, Arkansas",
     "ntl_sum": 29692.06950005889,
     "light_density": 15.61214756454346,
@@ -11460,7 +11460,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5103",
+    "region_id": "05103",
     "region_name": "Ouachita, Arkansas",
     "ntl_sum": 6015.794088765979,
     "light_density": 3.1393141166508203,
@@ -12361,7 +12361,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5087",
+    "region_id": "05087",
     "region_name": "Madison, Arkansas",
     "ntl_sum": 2622.25875800848,
     "light_density": 1.2097962878175612,
@@ -13160,7 +13160,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5149",
+    "region_id": "05149",
     "region_name": "Yell, Arkansas",
     "ntl_sum": 3786.350806057453,
     "light_density": 1.541157031294765,
@@ -13262,7 +13262,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1031",
+    "region_id": "01031",
     "region_name": "Coffee, Alabama",
     "ntl_sum": 10777.560853898523,
     "light_density": 6.113930991030746,
@@ -13330,7 +13330,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5091",
+    "region_id": "05091",
     "region_name": "Miller, Arkansas",
     "ntl_sum": 12545.205923378468,
     "light_density": 7.587377748786556,
@@ -13772,7 +13772,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5023",
+    "region_id": "05023",
     "region_name": "Cleburne, Arkansas",
     "ntl_sum": 6046.051250092685,
     "light_density": 3.942027624496173,
@@ -14010,7 +14010,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5083",
+    "region_id": "05083",
     "region_name": "Logan, Arkansas",
     "ntl_sum": 3613.030156940222,
     "light_density": 1.9113343846661563,
@@ -14537,7 +14537,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1053",
+    "region_id": "01053",
     "region_name": "Escambia, Alabama",
     "ntl_sum": 10622.71973156929,
     "light_density": 4.304971680582565,
@@ -15098,7 +15098,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5113",
+    "region_id": "05113",
     "region_name": "Polk, Arkansas",
     "ntl_sum": 3099.275328576565,
     "light_density": 1.3888016613133565,
@@ -15149,7 +15149,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8097",
+    "region_id": "08097",
     "region_name": "Pitkin, Colorado",
     "ntl_sum": 1728.750406742096,
     "light_density": 0.6859549990833665,
@@ -15166,7 +15166,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1061",
+    "region_id": "01061",
     "region_name": "Geneva, Alabama",
     "ntl_sum": 3955.1854168772697,
     "light_density": 2.6378753843436265,
@@ -15965,7 +15965,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5045",
+    "region_id": "05045",
     "region_name": "Faulkner, Arkansas",
     "ntl_sum": 30038.857973992825,
     "light_density": 17.465838387585784,
@@ -15982,7 +15982,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8049",
+    "region_id": "08049",
     "region_name": "Grand, Colorado",
     "ntl_sum": 3842.098666787148,
     "light_density": 0.7935160213957271,
@@ -16543,7 +16543,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5079",
+    "region_id": "05079",
     "region_name": "Lincoln, Arkansas",
     "ntl_sum": 3022.85764837265,
     "light_density": 2.04862263568486,
@@ -16713,7 +16713,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5085",
+    "region_id": "05085",
     "region_name": "Lonoke, Arkansas",
     "ntl_sum": 15192.188965171576,
     "light_density": 7.301778084959318,
@@ -16917,7 +16917,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5115",
+    "region_id": "05115",
     "region_name": "Pope, Arkansas",
     "ntl_sum": 13758.3898678571,
     "light_density": 6.395413452655145,
@@ -17087,7 +17087,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5117",
+    "region_id": "05117",
     "region_name": "Prairie, Arkansas",
     "ntl_sum": 2793.253504216671,
     "light_density": 1.5965001836492152,
@@ -17189,7 +17189,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5133",
+    "region_id": "05133",
     "region_name": "Sevier, Arkansas",
     "ntl_sum": 2391.3015172332525,
     "light_density": 1.5886563110082708,
@@ -17393,7 +17393,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5137",
+    "region_id": "05137",
     "region_name": "Stone, Arkansas",
     "ntl_sum": 2067.307951629162,
     "light_density": 1.3092681243334614,
@@ -17801,7 +17801,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5097",
+    "region_id": "05097",
     "region_name": "Montgomery, Arkansas",
     "ntl_sum": 1813.18143555522,
     "light_density": 0.8740525679803832,
@@ -17886,7 +17886,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5139",
+    "region_id": "05139",
     "region_name": "Union, Arkansas",
     "ntl_sum": 13923.376333475111,
     "light_density": 5.09251947315104,
@@ -17937,7 +17937,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1099",
+    "region_id": "01099",
     "region_name": "Monroe, Alabama",
     "ntl_sum": 6319.320579409599,
     "light_density": 2.3582068771697147,
@@ -18124,7 +18124,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5089",
+    "region_id": "05089",
     "region_name": "Marion, Arkansas",
     "ntl_sum": 2532.270541846752,
     "light_density": 1.5276158404678226,
@@ -18192,7 +18192,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5073",
+    "region_id": "05073",
     "region_name": "Lafayette, Arkansas",
     "ntl_sum": 1103.9724994301796,
     "light_density": 0.7805093642062816,
@@ -18566,7 +18566,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8117",
+    "region_id": "08117",
     "region_name": "Summit, Colorado",
     "ntl_sum": 5397.140435755253,
     "light_density": 3.364926485696725,
@@ -18872,7 +18872,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5125",
+    "region_id": "05125",
     "region_name": "Saline, Arkansas",
     "ntl_sum": 26028.948839128017,
     "light_density": 13.758175526691934,
@@ -19263,7 +19263,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1069",
+    "region_id": "01069",
     "region_name": "Houston, Alabama",
     "ntl_sum": 25335.952710330486,
     "light_density": 16.820232455778807,
@@ -20079,7 +20079,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5071",
+    "region_id": "05071",
     "region_name": "Johnson, Arkansas",
     "ntl_sum": 5514.783688813448,
     "light_density": 3.1126322852180244,
@@ -20130,7 +20130,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8085",
+    "region_id": "08085",
     "region_name": "Montrose, Colorado",
     "ntl_sum": 5608.233565509319,
     "light_density": 0.9657846544130618,
@@ -20266,7 +20266,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6057",
+    "region_id": "06057",
     "region_name": "Nevada, California",
     "ntl_sum": 6130.624500453472,
     "light_density": 2.43132112710637,
@@ -20521,7 +20521,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6099",
+    "region_id": "06099",
     "region_name": "Stanislaus, California",
     "ntl_sum": 75687.12048566341,
     "light_density": 19.301748862019743,
@@ -20793,7 +20793,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5047",
+    "region_id": "05047",
     "region_name": "Franklin, Arkansas",
     "ntl_sum": 3483.6375846266747,
     "light_density": 2.168842386951046,
@@ -20912,7 +20912,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6047",
+    "region_id": "06047",
     "region_name": "Merced, California",
     "ntl_sum": 41862.15998542309,
     "light_density": 8.168152524460004,
@@ -20929,7 +20929,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1085",
+    "region_id": "01085",
     "region_name": "Lowndes, Alabama",
     "ntl_sum": 3552.8002074956894,
     "light_density": 1.891982935378281,
@@ -21082,7 +21082,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1091",
+    "region_id": "01091",
     "region_name": "Marengo, Alabama",
     "ntl_sum": 5559.486927300692,
     "light_density": 2.1846648541286373,
@@ -21303,7 +21303,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1081",
+    "region_id": "01081",
     "region_name": "Lee, Alabama",
     "ntl_sum": 42535.71208459139,
     "light_density": 26.66460395662405,
@@ -21354,7 +21354,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6087",
+    "region_id": "06087",
     "region_name": "Santa Cruz, California",
     "ntl_sum": 13977.797624528408,
     "light_density": 12.084597368353077,
@@ -21439,7 +21439,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5131",
+    "region_id": "05131",
     "region_name": "Sebastian, Arkansas",
     "ntl_sum": 29729.80340451002,
     "light_density": 21.07807013284535,
@@ -21677,7 +21677,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1043",
+    "region_id": "01043",
     "region_name": "Cullman, Alabama",
     "ntl_sum": 20917.8717096746,
     "light_density": 10.698335040769296,
@@ -22187,7 +22187,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1083",
+    "region_id": "01083",
     "region_name": "Limestone, Alabama",
     "ntl_sum": 32057.03395918012,
     "light_density": 20.38385871281476,
@@ -22391,7 +22391,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5007",
+    "region_id": "05007",
     "region_name": "Benton, Arkansas",
     "ntl_sum": 67458.7361305356,
     "light_density": 29.456147567459976,
@@ -22510,7 +22510,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5027",
+    "region_id": "05027",
     "region_name": "Columbia, Arkansas",
     "ntl_sum": 7037.486574947834,
     "light_density": 3.542819262899337,
@@ -22561,7 +22561,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6017",
+    "region_id": "06017",
     "region_name": "El Dorado, California",
     "ntl_sum": 15285.81116271019,
     "light_density": 3.3038135989698394,
@@ -22663,7 +22663,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5143",
+    "region_id": "05143",
     "region_name": "Washington, Arkansas",
     "ntl_sum": 51149.51501917839,
     "light_density": 20.738289967231207,
@@ -22816,7 +22816,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6003",
+    "region_id": "06003",
     "region_name": "Alpine, California",
     "ntl_sum": 252.86008989810944,
     "light_density": 0.1313897364446472,
@@ -22833,7 +22833,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8007",
+    "region_id": "08007",
     "region_name": "Archuleta, Colorado",
     "ntl_sum": 1185.2329480051994,
     "light_density": 0.337771776212169,
@@ -22867,7 +22867,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8009",
+    "region_id": "08009",
     "region_name": "Baca, Colorado",
     "ntl_sum": 619.58805590868,
     "light_density": 0.0935305997800093,
@@ -23003,7 +23003,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8011",
+    "region_id": "08011",
     "region_name": "Bent, Colorado",
     "ntl_sum": 699.9956128150225,
     "light_density": 0.1753462752130775,
@@ -23190,7 +23190,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8017",
+    "region_id": "08017",
     "region_name": "Cheyenne, Colorado",
     "ntl_sum": 666.1259368658066,
     "light_density": 0.144306640662428,
@@ -23292,7 +23292,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "4005",
+    "region_id": "04005",
     "region_name": "Coconino, Arizona",
     "ntl_sum": 16634.01289397478,
     "light_density": 0.3441550771326591,
@@ -23360,7 +23360,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8021",
+    "region_id": "08021",
     "region_name": "Conejos, Colorado",
     "ntl_sum": 741.379006922245,
     "light_density": 0.2217026128628436,
@@ -23394,7 +23394,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8023",
+    "region_id": "08023",
     "region_name": "Costilla, Colorado",
     "ntl_sum": 625.828553467989,
     "light_density": 0.1963424814295252,
@@ -23428,7 +23428,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8027",
+    "region_id": "08027",
     "region_name": "Custer, Colorado",
     "ntl_sum": 297.82133716344833,
     "light_density": 0.1554442336637299,
@@ -23598,7 +23598,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8033",
+    "region_id": "08033",
     "region_name": "Dolores, Colorado",
     "ntl_sum": 206.3544494509697,
     "light_density": 0.0746346638491238,
@@ -24023,7 +24023,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8051",
+    "region_id": "08051",
     "region_name": "Gunnison, Colorado",
     "ntl_sum": 2305.779721558094,
     "light_density": 0.2730625245889966,
@@ -24227,7 +24227,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8053",
+    "region_id": "08053",
     "region_name": "Hinsdale, Colorado",
     "ntl_sum": 107.17965549230576,
     "light_density": 0.0368324709258358,
@@ -24312,7 +24312,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8055",
+    "region_id": "08055",
     "region_name": "Huerfano, Colorado",
     "ntl_sum": 877.8230254650116,
     "light_density": 0.2127336797420529,
@@ -24380,7 +24380,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6027",
+    "region_id": "06027",
     "region_name": "Inyo, California",
     "ntl_sum": 2461.4747170209885,
     "light_density": 0.0929128508807334,
@@ -24414,7 +24414,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8057",
+    "region_id": "08057",
     "region_name": "Jackson, Colorado",
     "ntl_sum": 702.8558599948883,
     "light_density": 0.1674029670923103,
@@ -24567,7 +24567,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8061",
+    "region_id": "08061",
     "region_name": "Kiowa, Colorado",
     "ntl_sum": 263.43242287635803,
     "light_density": 0.0569808860630261,
@@ -24584,7 +24584,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8063",
+    "region_id": "08063",
     "region_name": "Kit Carson, Colorado",
     "ntl_sum": 1806.440496861935,
     "light_density": 0.3226802359813531,
@@ -24669,7 +24669,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6035",
+    "region_id": "06035",
     "region_name": "Lassen, California",
     "ntl_sum": 3991.01941794157,
     "light_density": 0.3264272612285595,
@@ -24873,7 +24873,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6043",
+    "region_id": "06043",
     "region_name": "Mariposa, California",
     "ntl_sum": 1280.7147238254547,
     "light_density": 0.3379720740831248,
@@ -24958,7 +24958,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8079",
+    "region_id": "08079",
     "region_name": "Mineral, Colorado",
     "ntl_sum": 220.9404872059822,
     "light_density": 0.097168900967569,
@@ -24992,7 +24992,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6049",
+    "region_id": "06049",
     "region_name": "Modoc, California",
     "ntl_sum": 1106.3978923782706,
     "light_density": 0.1016320294401308,
@@ -25009,7 +25009,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6051",
+    "region_id": "06051",
     "region_name": "Mono, California",
     "ntl_sum": 1769.4267458617687,
     "light_density": 0.2181779475695917,
@@ -25094,7 +25094,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5101",
+    "region_id": "05101",
     "region_name": "Newton, Arkansas",
     "ntl_sum": 1053.1352608203888,
     "light_density": 0.4938502201496459,
@@ -25179,7 +25179,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8091",
+    "region_id": "08091",
     "region_name": "Ouray, Colorado",
     "ntl_sum": 362.6011402159929,
     "light_density": 0.258218925758969,
@@ -25230,7 +25230,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8093",
+    "region_id": "08093",
     "region_name": "Park, Colorado",
     "ntl_sum": 888.6518154740334,
     "light_density": 0.1551935079153512,
@@ -25315,7 +25315,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6063",
+    "region_id": "06063",
     "region_name": "Plumas, California",
     "ntl_sum": 1836.012548089028,
     "light_density": 0.2712585829741613,
@@ -25451,7 +25451,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8109",
+    "region_id": "08109",
     "region_name": "Saguache, Colorado",
     "ntl_sum": 464.0282977819443,
     "light_density": 0.0565231294305029,
@@ -25468,7 +25468,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8111",
+    "region_id": "08111",
     "region_name": "San Juan, Colorado",
     "ntl_sum": 136.26343017816544,
     "light_density": 0.1355044231684728,
@@ -25502,7 +25502,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8113",
+    "region_id": "08113",
     "region_name": "San Miguel, Colorado",
     "ntl_sum": 447.1853874325752,
     "light_density": 0.1339761447080959,
@@ -25604,7 +25604,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6091",
+    "region_id": "06091",
     "region_name": "Sierra, California",
     "ntl_sum": 378.5597111582756,
     "light_density": 0.1519171225158704,
@@ -25655,7 +25655,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6093",
+    "region_id": "06093",
     "region_name": "Siskiyou, California",
     "ntl_sum": 4483.148394048214,
     "light_density": 0.2726748326564958,
@@ -25808,7 +25808,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6105",
+    "region_id": "06105",
     "region_name": "Trinity, California",
     "ntl_sum": 1015.1450611650944,
     "light_density": 0.1221929369579155,
@@ -25910,7 +25910,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8121",
+    "region_id": "08121",
     "region_name": "Washington, Colorado",
     "ntl_sum": 665.8783356547356,
     "light_density": 0.101879562108494,
@@ -26267,7 +26267,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6069",
+    "region_id": "06069",
     "region_name": "San Benito, California",
     "ntl_sum": 6779.625998675823,
     "light_density": 1.8825946386208987,
@@ -26352,7 +26352,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1001",
+    "region_id": "01001",
     "region_name": "Autauga, Alabama",
     "ntl_sum": 13076.843257784843,
     "light_density": 8.35414529205359,
@@ -26454,7 +26454,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6033",
+    "region_id": "06033",
     "region_name": "Lake, California",
     "ntl_sum": 3448.4980837106705,
     "light_density": 1.002590002112755,
@@ -26590,7 +26590,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8095",
+    "region_id": "08095",
     "region_name": "Phillips, Colorado",
     "ntl_sum": 1062.3712655305862,
     "light_density": 0.5962153987666631,
@@ -26641,7 +26641,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1003",
+    "region_id": "01003",
     "region_name": "Baldwin, Alabama",
     "ntl_sum": 58558.59811187536,
     "light_density": 13.459448556009582,
@@ -27151,7 +27151,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5005",
+    "region_id": "05005",
     "region_name": "Baxter, Arkansas",
     "ntl_sum": 8141.642523556948,
     "light_density": 5.356961860758364,
@@ -27270,7 +27270,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1131",
+    "region_id": "01131",
     "region_name": "Wilcox, Alabama",
     "ntl_sum": 2994.0452781915665,
     "light_density": 1.274030480325524,
@@ -27355,7 +27355,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8037",
+    "region_id": "08037",
     "region_name": "Eagle, Colorado",
     "ntl_sum": 5911.770299017429,
     "light_density": 1.348829761694028,
@@ -27406,7 +27406,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1101",
+    "region_id": "01101",
     "region_name": "Montgomery, Alabama",
     "ntl_sum": 64569.51676118374,
     "light_density": 31.169175981631938,
@@ -27423,7 +27423,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5095",
+    "region_id": "05095",
     "region_name": "Monroe, Arkansas",
     "ntl_sum": 2562.1239348948,
     "light_density": 1.592280754468263,
@@ -27508,7 +27508,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8115",
+    "region_id": "08115",
     "region_name": "Sedgwick, Colorado",
     "ntl_sum": 931.3170270323752,
     "light_density": 0.654655230180484,
@@ -27610,7 +27610,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8029",
+    "region_id": "08029",
     "region_name": "Delta, Colorado",
     "ntl_sum": 2169.635937988758,
     "light_density": 0.7293142115589236,
@@ -27797,7 +27797,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1067",
+    "region_id": "01067",
     "region_name": "Henry, Alabama",
     "ntl_sum": 3554.833926975727,
     "light_density": 2.4147689532455408,
@@ -29140,7 +29140,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5033",
+    "region_id": "05033",
     "region_name": "Crawford, Arkansas",
     "ntl_sum": 10709.313209980726,
     "light_density": 6.82745854404954,
@@ -29174,7 +29174,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1095",
+    "region_id": "01095",
     "region_name": "Marshall, Alabama",
     "ntl_sum": 21503.834318438545,
     "light_density": 13.322787300685276,
@@ -29225,7 +29225,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1113",
+    "region_id": "01113",
     "region_name": "Russell, Alabama",
     "ntl_sum": 11561.89496177435,
     "light_density": 6.896612061389772,
@@ -29242,7 +29242,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5065",
+    "region_id": "05065",
     "region_name": "Izard, Arkansas",
     "ntl_sum": 1679.3640564084053,
     "light_density": 1.110445543080325,
@@ -29259,7 +29259,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1035",
+    "region_id": "01035",
     "region_name": "Conecuh, Alabama",
     "ntl_sum": 5841.251846671104,
     "light_density": 2.6443468306252225,
@@ -29633,7 +29633,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1009",
+    "region_id": "01009",
     "region_name": "Blount, Alabama",
     "ntl_sum": 10340.39017611742,
     "light_density": 6.136134692514443,
@@ -29650,7 +29650,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1089",
+    "region_id": "01089",
     "region_name": "Madison, Alabama",
     "ntl_sum": 101377.59291654824,
     "light_density": 48.16000268690542,
@@ -29820,7 +29820,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1057",
+    "region_id": "01057",
     "region_name": "Fayette, Alabama",
     "ntl_sum": 3067.978976130485,
     "light_density": 1.8819248040855845,
@@ -29854,7 +29854,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6041",
+    "region_id": "06041",
     "region_name": "Marin, California",
     "ntl_sum": 12867.177339732649,
     "light_density": 9.14747584195724,
@@ -29871,7 +29871,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "4015",
+    "region_id": "04015",
     "region_name": "Mohave, Arizona",
     "ntl_sum": 43373.10182842612,
     "light_density": 1.2440914805714705,
@@ -29939,7 +29939,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8123",
+    "region_id": "08123",
     "region_name": "Weld, Colorado",
     "ntl_sum": 83004.29299241304,
     "light_density": 7.977826058719946,
@@ -29973,7 +29973,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1021",
+    "region_id": "01021",
     "region_name": "Chilton, Alabama",
     "ntl_sum": 11698.178411066532,
     "light_density": 6.446141703852713,
@@ -30024,7 +30024,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1029",
+    "region_id": "01029",
     "region_name": "Cleburne, Alabama",
     "ntl_sum": 3170.511653482914,
     "light_density": 2.181356264717041,
@@ -30296,7 +30296,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1045",
+    "region_id": "01045",
     "region_name": "Dale, Alabama",
     "ntl_sum": 9834.912482619286,
     "light_density": 6.750862681995601,
@@ -30449,7 +30449,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8003",
+    "region_id": "08003",
     "region_name": "Alamosa, Colorado",
     "ntl_sum": 3563.195188343525,
     "light_density": 1.902500234694847,
@@ -30568,7 +30568,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6081",
+    "region_id": "06081",
     "region_name": "San Mateo, California",
     "ntl_sum": 56174.2838845551,
     "light_density": 47.385132380231866,
@@ -30636,7 +30636,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8069",
+    "region_id": "08069",
     "region_name": "Larimer, Colorado",
     "ntl_sum": 52168.61568653584,
     "light_density": 7.648546811226783,
@@ -30721,7 +30721,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5119",
+    "region_id": "05119",
     "region_name": "Pulaski, Arkansas",
     "ntl_sum": 113926.08247610928,
     "light_density": 54.476940328807245,
@@ -31061,7 +31061,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1013",
+    "region_id": "01013",
     "region_name": "Butler, Alabama",
     "ntl_sum": 3961.270124495029,
     "light_density": 1.9664384658778848,
@@ -31129,7 +31129,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1123",
+    "region_id": "01123",
     "region_name": "Tallapoosa, Alabama",
     "ntl_sum": 8714.55245295167,
     "light_density": 4.390526175755888,
@@ -31146,7 +31146,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1055",
+    "region_id": "01055",
     "region_name": "Etowah, Alabama",
     "ntl_sum": 21502.80044144392,
     "light_density": 15.130580308870934,
@@ -31333,7 +31333,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1115",
+    "region_id": "01115",
     "region_name": "St. Clair, Alabama",
     "ntl_sum": 17375.85162317753,
     "light_density": 10.26843972425885,
@@ -31435,7 +31435,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5041",
+    "region_id": "05041",
     "region_name": "Desha, Arkansas",
     "ntl_sum": 3224.1480935513973,
     "light_density": 1.532448047885777,
@@ -31622,7 +31622,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1047",
+    "region_id": "01047",
     "region_name": "Dallas, Alabama",
     "ntl_sum": 9200.99865141511,
     "light_density": 3.574377225686144,
@@ -31843,7 +31843,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6085",
+    "region_id": "06085",
     "region_name": "Santa Clara, California",
     "ntl_sum": 156824.03769004345,
     "light_density": 46.56634780105259,
@@ -32013,7 +32013,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1077",
+    "region_id": "01077",
     "region_name": "Lauderdale, Alabama",
     "ntl_sum": 17129.29512771964,
     "light_density": 9.18841280558478,
@@ -32234,7 +32234,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5129",
+    "region_id": "05129",
     "region_name": "Searcy, Arkansas",
     "ntl_sum": 1065.2023618221283,
     "light_density": 0.6151241666486232,
@@ -32489,7 +32489,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1127",
+    "region_id": "01127",
     "region_name": "Walker, Alabama",
     "ntl_sum": 15443.148084819317,
     "light_density": 7.406681067251557,
@@ -32540,7 +32540,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5015",
+    "region_id": "05015",
     "region_name": "Carroll, Arkansas",
     "ntl_sum": 4539.689793527126,
     "light_density": 2.7459152852407547,
@@ -32863,7 +32863,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6073",
+    "region_id": "06073",
     "region_name": "San Diego, California",
     "ntl_sum": 306537.9121427536,
     "light_density": 27.79911975310815,
@@ -32931,7 +32931,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1117",
+    "region_id": "01117",
     "region_name": "Shelby, Alabama",
     "ntl_sum": 45029.799110114574,
     "light_density": 21.47844612549566,
@@ -33016,7 +33016,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8077",
+    "region_id": "08077",
     "region_name": "Mesa, Colorado",
     "ntl_sum": 21229.90270662308,
     "light_density": 2.4532466015573564,
@@ -33067,7 +33067,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1049",
+    "region_id": "01049",
     "region_name": "DeKalb, Alabama",
     "ntl_sum": 12357.62800425291,
     "light_density": 6.127583099546875,
@@ -33118,7 +33118,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6075",
+    "region_id": "06075",
     "region_name": "San Francisco, California",
     "ntl_sum": 34246.92239153385,
     "light_density": 279.6836676633988,
@@ -33152,7 +33152,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6009",
+    "region_id": "06009",
     "region_name": "Calaveras, California",
     "ntl_sum": 3111.140598267317,
     "light_density": 1.158406940908116,
@@ -33254,7 +33254,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1025",
+    "region_id": "01025",
     "region_name": "Clarke, Alabama",
     "ntl_sum": 8565.815331816673,
     "light_density": 2.640179782540524,
@@ -33373,7 +33373,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6097",
+    "region_id": "06097",
     "region_name": "Sonoma, California",
     "ntl_sum": 33947.77531057596,
     "light_density": 8.250317689662731,
@@ -33509,7 +33509,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1039",
+    "region_id": "01039",
     "region_name": "Covington, Alabama",
     "ntl_sum": 6675.55513471365,
     "light_density": 2.4692923922701566,
@@ -33628,7 +33628,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6037",
+    "region_id": "06037",
     "region_name": "Los Angeles, California",
     "ntl_sum": 1011367.1686162652,
     "light_density": 95.4237881264106,
@@ -33645,7 +33645,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1023",
+    "region_id": "01023",
     "region_name": "Choctaw, Alabama",
     "ntl_sum": 3393.158675581217,
     "light_density": 1.422412102678009,
@@ -33679,7 +33679,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6083",
+    "region_id": "06083",
     "region_name": "Santa Barbara, California",
     "ntl_sum": 35184.0342746675,
     "light_density": 4.940553438528668,
@@ -34053,7 +34053,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1097",
+    "region_id": "01097",
     "region_name": "Mobile, Alabama",
     "ntl_sum": 102245.30828353764,
     "light_density": 31.14645745244972,
@@ -34121,7 +34121,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5077",
+    "region_id": "05077",
     "region_name": "Lee, Arkansas",
     "ntl_sum": 2560.9282030165195,
     "light_density": 1.588671904327926,
@@ -34172,7 +34172,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5145",
+    "region_id": "05145",
     "region_name": "White, Arkansas",
     "ntl_sum": 18914.650175243616,
     "light_density": 7.008551826729087,
@@ -34274,7 +34274,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6015",
+    "region_id": "06015",
     "region_name": "Del Norte, California",
     "ntl_sum": 2293.599411636591,
     "light_density": 0.8723360178404327,
@@ -34563,7 +34563,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1051",
+    "region_id": "01051",
     "region_name": "Elmore, Alabama",
     "ntl_sum": 17037.777954153717,
     "light_density": 10.011909864195166,
@@ -34631,7 +34631,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6039",
+    "region_id": "06039",
     "region_name": "Madera, California",
     "ntl_sum": 27135.78568583727,
     "light_density": 4.867212581598341,
@@ -34733,7 +34733,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1033",
+    "region_id": "01033",
     "region_name": "Colbert, Alabama",
     "ntl_sum": 16577.348747953773,
     "light_density": 10.266444311377606,
@@ -34801,7 +34801,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1071",
+    "region_id": "01071",
     "region_name": "Jackson, Alabama",
     "ntl_sum": 11830.266836091876,
     "light_density": 4.052869491547263,
@@ -34971,7 +34971,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1119",
+    "region_id": "01119",
     "region_name": "Sumter, Alabama",
     "ntl_sum": 3905.262705847621,
     "light_density": 1.6514459976466378,
@@ -35005,7 +35005,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6111",
+    "region_id": "06111",
     "region_name": "Ventura, California",
     "ntl_sum": 85875.59870064259,
     "light_density": 17.866463480568733,
@@ -35022,7 +35022,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5135",
+    "region_id": "05135",
     "region_name": "Sharp, Arkansas",
     "ntl_sum": 2985.215214192868,
     "light_density": 1.9004476608249228,
@@ -35243,7 +35243,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5069",
+    "region_id": "05069",
     "region_name": "Jefferson, Arkansas",
     "ntl_sum": 19657.079059273005,
     "light_density": 8.283836494296215,
@@ -35430,7 +35430,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5049",
+    "region_id": "05049",
     "region_name": "Fulton, Arkansas",
     "ntl_sum": 1393.609647899866,
     "light_density": 0.8672921870508336,
@@ -35464,7 +35464,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1041",
+    "region_id": "01041",
     "region_name": "Crenshaw, Alabama",
     "ntl_sum": 2055.2609780430794,
     "light_density": 1.2989885914537622,
@@ -35753,7 +35753,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1079",
+    "region_id": "01079",
     "region_name": "Lawrence, Alabama",
     "ntl_sum": 7265.095374912023,
     "light_density": 3.912188230495256,
@@ -35923,7 +35923,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1109",
+    "region_id": "01109",
     "region_name": "Pike, Alabama",
     "ntl_sum": 10052.6813955307,
     "light_density": 5.767164383038351,
@@ -36008,7 +36008,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6061",
+    "region_id": "06061",
     "region_name": "Placer, California",
     "ntl_sum": 51704.100269168615,
     "light_density": 13.289978125941609,
@@ -36348,7 +36348,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6019",
+    "region_id": "06019",
     "region_name": "Fresno, California",
     "ntl_sum": 133265.11831606925,
     "light_density": 8.559652403668682,
@@ -36450,7 +36450,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "4019",
+    "region_id": "04019",
     "region_name": "Pima, Arizona",
     "ntl_sum": 125764.28272628784,
     "light_density": 5.283657804628018,
@@ -36501,7 +36501,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8065",
+    "region_id": "08065",
     "region_name": "Lake, Colorado",
     "ntl_sum": 1139.4968820512297,
     "light_density": 1.1470187110396168,
@@ -36569,7 +36569,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6045",
+    "region_id": "06045",
     "region_name": "Mendocino, California",
     "ntl_sum": 5103.415267392993,
     "light_density": 0.5606768072768803,
@@ -36722,7 +36722,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5009",
+    "region_id": "05009",
     "region_name": "Boone, Arkansas",
     "ntl_sum": 6471.191038817167,
     "light_density": 4.149936071032113,
@@ -36739,7 +36739,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6065",
+    "region_id": "06065",
     "region_name": "Riverside, California",
     "ntl_sum": 390098.8057087213,
     "light_density": 20.624008512531567,
@@ -36807,7 +36807,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6071",
+    "region_id": "06071",
     "region_name": "San Bernardino, California",
     "ntl_sum": 358379.48895457387,
     "light_density": 6.882400245223094,
@@ -36909,7 +36909,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1059",
+    "region_id": "01059",
     "region_name": "Franklin, Alabama",
     "ntl_sum": 5972.179167985916,
     "light_density": 3.565393181367514,
@@ -37011,7 +37011,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6023",
+    "region_id": "06023",
     "region_name": "Humboldt, California",
     "ntl_sum": 6421.540013760328,
     "light_density": 0.6866547442686174,
@@ -37130,7 +37130,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1015",
+    "region_id": "01015",
     "region_name": "Calhoun, Alabama",
     "ntl_sum": 26585.48618003726,
     "light_density": 16.765258206638013,
@@ -37164,7 +37164,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6001",
+    "region_id": "06001",
     "region_name": "Alameda, California",
     "ntl_sum": 135779.87761354446,
     "light_density": 69.87032464148008,
@@ -37283,7 +37283,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "4027",
+    "region_id": "04027",
     "region_name": "Yuma, Arizona",
     "ntl_sum": 48558.81676161289,
     "light_density": 3.396189620451014,
@@ -37334,7 +37334,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6013",
+    "region_id": "06013",
     "region_name": "Contra Costa, California",
     "ntl_sum": 86865.4894040525,
     "light_density": 44.1111215090742,
@@ -37351,7 +37351,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1133",
+    "region_id": "01133",
     "region_name": "Winston, Alabama",
     "ntl_sum": 4486.193846732378,
     "light_density": 2.740488366973203,
@@ -37368,7 +37368,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6077",
+    "region_id": "06077",
     "region_name": "San Joaquin, California",
     "ntl_sum": 119084.87839919329,
     "light_density": 32.23126711222997,
@@ -37436,7 +37436,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1073",
+    "region_id": "01073",
     "region_name": "Jefferson, Alabama",
     "ntl_sum": 151764.55493855476,
     "light_density": 52.1240041875845,
@@ -37521,7 +37521,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8014",
+    "region_id": "08014",
     "region_name": "Broomfield, Colorado",
     "ntl_sum": 13018.941400289536,
     "light_density": 149.72067934099192,
@@ -37691,7 +37691,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6055",
+    "region_id": "06055",
     "region_name": "Napa, California",
     "ntl_sum": 13101.270915329456,
     "light_density": 6.385016847582595,
@@ -37742,7 +37742,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1125",
+    "region_id": "01125",
     "region_name": "Tuscaloosa, Alabama",
     "ntl_sum": 54287.5238057971,
     "light_density": 15.508930791769751,
@@ -38116,7 +38116,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6067",
+    "region_id": "06067",
     "region_name": "Sacramento, California",
     "ntl_sum": 158256.11370566487,
     "light_density": 61.449712846476544,
@@ -38201,7 +38201,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5001",
+    "region_id": "05001",
     "region_name": "Arkansas, Arkansas",
     "ntl_sum": 5099.856096684933,
     "light_density": 1.8958678551872248,
@@ -38235,7 +38235,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5107",
+    "region_id": "05107",
     "region_name": "Phillips, Arkansas",
     "ntl_sum": 4851.110154360533,
     "light_density": 2.574013021550644,
@@ -38439,7 +38439,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "4013",
+    "region_id": "04013",
     "region_name": "Maricopa, Arizona",
     "ntl_sum": 814679.1081296802,
     "light_density": 34.09672089008608,
@@ -38609,7 +38609,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "4025",
+    "region_id": "04025",
     "region_name": "Yavapai, Arizona",
     "ntl_sum": 23672.80919629336,
     "light_density": 1.124580678651586,
@@ -38643,7 +38643,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8089",
+    "region_id": "08089",
     "region_name": "Otero, Colorado",
     "ntl_sum": 3492.11786493659,
     "light_density": 1.0613056064059456,
@@ -38779,7 +38779,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1065",
+    "region_id": "01065",
     "region_name": "Hale, Alabama",
     "ntl_sum": 2921.989572137594,
     "light_density": 1.719122644888046,
@@ -38830,7 +38830,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6059",
+    "region_id": "06059",
     "region_name": "Orange, California",
     "ntl_sum": 326198.11500149965,
     "light_density": 157.76305344637146,
@@ -39034,7 +39034,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "4021",
+    "region_id": "04021",
     "region_name": "Pinal, Arizona",
     "ntl_sum": 72577.6421098113,
     "light_density": 5.213778121701407,
@@ -39051,7 +39051,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1121",
+    "region_id": "01121",
     "region_name": "Talladega, Alabama",
     "ntl_sum": 24728.81829947233,
     "light_density": 12.557557600018,
@@ -39153,7 +39153,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5123",
+    "region_id": "05123",
     "region_name": "St. Francis, Arkansas",
     "ntl_sum": 9085.787809193134,
     "light_density": 5.461437444025988,
@@ -39170,7 +39170,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5035",
+    "region_id": "05035",
     "region_name": "Crittenden, Arkansas",
     "ntl_sum": 19815.578055784103,
     "light_density": 11.87502617120104,
@@ -39476,7 +39476,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1005",
+    "region_id": "01005",
     "region_name": "Barbour, Alabama",
     "ntl_sum": 4588.468309998512,
     "light_density": 1.9587340445733268,
@@ -39680,7 +39680,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5063",
+    "region_id": "05063",
     "region_name": "Independence, Arkansas",
     "ntl_sum": 9128.203430473804,
     "light_density": 4.567864540084426,
@@ -39714,7 +39714,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1103",
+    "region_id": "01103",
     "region_name": "Morgan, Alabama",
     "ntl_sum": 31271.061037659645,
     "light_density": 20.15419504310168,
@@ -39816,7 +39816,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6053",
+    "region_id": "06053",
     "region_name": "Monterey, California",
     "ntl_sum": 40300.14698803425,
     "light_density": 4.696518415483926,
@@ -39850,7 +39850,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8087",
+    "region_id": "08087",
     "region_name": "Morgan, Colorado",
     "ntl_sum": 9208.99244633317,
     "light_density": 2.748086933541733,
@@ -40020,7 +40020,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8067",
+    "region_id": "08067",
     "region_name": "La Plata, Colorado",
     "ntl_sum": 5038.522059362382,
     "light_density": 1.1445026490577934,
@@ -40241,7 +40241,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1087",
+    "region_id": "01087",
     "region_name": "Macon, Alabama",
     "ntl_sum": 6494.168808817864,
     "light_density": 4.089557898557017,
@@ -40496,7 +40496,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6031",
+    "region_id": "06031",
     "region_name": "Kings, California",
     "ntl_sum": 24618.802104592323,
     "light_density": 6.828125140584253,
@@ -40530,7 +40530,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1019",
+    "region_id": "01019",
     "region_name": "Cherokee, Alabama",
     "ntl_sum": 3728.350733766332,
     "light_density": 2.399627341671015,
@@ -40836,7 +40836,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8031",
+    "region_id": "08031",
     "region_name": "Denver, Colorado",
     "ntl_sum": 116971.74839693308,
     "light_density": 291.90167519804777,
@@ -40870,7 +40870,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6107",
+    "region_id": "06107",
     "region_name": "Tulare, California",
     "ntl_sum": 67277.57802075148,
     "light_density": 5.368514603722144,
@@ -40955,7 +40955,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6079",
+    "region_id": "06079",
     "region_name": "San Luis Obispo, California",
     "ntl_sum": 24296.806120961905,
     "light_density": 2.823579352627864,
@@ -40972,7 +40972,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6005",
+    "region_id": "06005",
     "region_name": "Amador, California",
     "ntl_sum": 4188.061975121498,
     "light_density": 2.66841919629304,
@@ -41227,7 +41227,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6095",
+    "region_id": "06095",
     "region_name": "Solano, California",
     "ntl_sum": 46080.82296872139,
     "light_density": 19.99046920037507,
@@ -41261,7 +41261,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1107",
+    "region_id": "01107",
     "region_name": "Pickens, Alabama",
     "ntl_sum": 4480.133325338364,
     "light_density": 1.9444671929531712,
@@ -41482,7 +41482,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8013",
+    "region_id": "08013",
     "region_name": "Boulder, Colorado",
     "ntl_sum": 36621.30828440189,
     "light_density": 19.093206250557497,
@@ -41686,7 +41686,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6021",
+    "region_id": "06021",
     "region_name": "Glenn, California",
     "ntl_sum": 2735.389738798141,
     "light_density": 0.7966507693404796,
@@ -41890,7 +41890,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8001",
+    "region_id": "08001",
     "region_name": "Adams, Colorado",
     "ntl_sum": 105445.10648095608,
     "light_density": 34.39378465593923,
@@ -41907,7 +41907,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8045",
+    "region_id": "08045",
     "region_name": "Garfield, Colorado",
     "ntl_sum": 7668.524244189262,
     "light_density": 1.0017492049012982,
@@ -41975,7 +41975,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6109",
+    "region_id": "06109",
     "region_name": "Tuolumne, California",
     "ntl_sum": 4847.431872427464,
     "light_density": 0.8228873338808566,
@@ -42077,7 +42077,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6007",
+    "region_id": "06007",
     "region_name": "Butte, California",
     "ntl_sum": 17511.696495115757,
     "light_density": 4.031447460432849,
@@ -42162,7 +42162,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8059",
+    "region_id": "08059",
     "region_name": "Jefferson, Colorado",
     "ntl_sum": 69364.12967216969,
     "light_density": 34.60019417067055,
@@ -42281,7 +42281,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5031",
+    "region_id": "05031",
     "region_name": "Craighead, Arkansas",
     "ntl_sum": 32341.816338837147,
     "light_density": 17.52387028049487,
@@ -42315,7 +42315,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1093",
+    "region_id": "01093",
     "region_name": "Marion, Alabama",
     "ntl_sum": 6199.046464025974,
     "light_density": 3.219471497836038,
@@ -42349,7 +42349,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "4012",
+    "region_id": "04012",
     "region_name": "La Paz, Arizona",
     "ntl_sum": 6645.761391252279,
     "light_density": 0.5688243432047323,
@@ -42587,7 +42587,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6025",
+    "region_id": "06025",
     "region_name": "Imperial, California",
     "ntl_sum": 46560.04974741675,
     "light_density": 4.011467597289538,
@@ -42672,7 +42672,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1017",
+    "region_id": "01017",
     "region_name": "Chambers, Alabama",
     "ntl_sum": 6929.714771807194,
     "light_density": 4.435550094943278,
@@ -42859,7 +42859,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8083",
+    "region_id": "08083",
     "region_name": "Montezuma, Colorado",
     "ntl_sum": 3311.353368222713,
     "light_density": 0.6265310179730694,
@@ -42893,7 +42893,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6011",
+    "region_id": "06011",
     "region_name": "Colusa, California",
     "ntl_sum": 3725.948496431112,
     "light_density": 1.243997624865381,
@@ -42927,7 +42927,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1129",
+    "region_id": "01129",
     "region_name": "Washington, Alabama",
     "ntl_sum": 5260.767032265663,
     "light_density": 1.865619121053776,
@@ -43012,7 +43012,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1105",
+    "region_id": "01105",
     "region_name": "Perry, Alabama",
     "ntl_sum": 2116.505583167076,
     "light_density": 1.1286523127830963,
@@ -43131,7 +43131,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6089",
+    "region_id": "06089",
     "region_name": "Shasta, California",
     "ntl_sum": 21698.31952473521,
     "light_density": 2.177500496485344,
@@ -43233,7 +43233,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "4009",
+    "region_id": "04009",
     "region_name": "Graham, Arizona",
     "ntl_sum": 7236.130951702595,
     "light_density": 0.6020982379663606,
@@ -43250,7 +43250,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8005",
+    "region_id": "08005",
     "region_name": "Arapahoe, Colorado",
     "ntl_sum": 98077.24007099868,
     "light_density": 47.01131286158671,
@@ -43624,7 +43624,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1063",
+    "region_id": "01063",
     "region_name": "Greene, Alabama",
     "ntl_sum": 2547.907778978348,
     "light_density": 1.4907492991860838,
@@ -43692,7 +43692,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1007",
+    "region_id": "01007",
     "region_name": "Bibb, Alabama",
     "ntl_sum": 5059.504197478294,
     "light_density": 3.118805351209981,
@@ -43879,7 +43879,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "4023",
+    "region_id": "04023",
     "region_name": "Santa Cruz, Arizona",
     "ntl_sum": 7296.197045087814,
     "light_density": 2.276494916758545,
@@ -44032,7 +44032,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1027",
+    "region_id": "01027",
     "region_name": "Clay, Alabama",
     "ntl_sum": 1858.8418177962303,
     "light_density": 1.1845775211007905,
@@ -44100,7 +44100,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8035",
+    "region_id": "08035",
     "region_name": "Douglas, Colorado",
     "ntl_sum": 53788.58644556999,
     "light_density": 24.61909997045208,
@@ -44134,7 +44134,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6115",
+    "region_id": "06115",
     "region_name": "Yuba, California",
     "ntl_sum": 8066.685848385096,
     "light_density": 4.836311730536223,
@@ -44202,7 +44202,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5017",
+    "region_id": "05017",
     "region_name": "Chicot, Arkansas",
     "ntl_sum": 2882.79569247365,
     "light_density": 1.6100579336123249,
@@ -44338,7 +44338,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8105",
+    "region_id": "08105",
     "region_name": "Rio Grande, Colorado",
     "ntl_sum": 1788.9598276019096,
     "light_density": 0.757146805606784,
@@ -44559,7 +44559,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "4011",
+    "region_id": "04011",
     "region_name": "Greenlee, Arizona",
     "ntl_sum": 4953.051034927368,
     "light_density": 1.0344335260430368,
@@ -44678,7 +44678,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8025",
+    "region_id": "08025",
     "region_name": "Crowley, Colorado",
     "ntl_sum": 1545.5019672513008,
     "light_density": 0.7464348349854836,
@@ -45001,7 +45001,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6101",
+    "region_id": "06101",
     "region_name": "Sutter, California",
     "ntl_sum": 9261.449464827776,
     "light_density": 5.877106095426156,
@@ -45188,7 +45188,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5127",
+    "region_id": "05127",
     "region_name": "Scott, Arkansas",
     "ntl_sum": 1278.5228826999664,
     "light_density": 0.5494600035027818,
@@ -45256,7 +45256,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5093",
+    "region_id": "05093",
     "region_name": "Mississippi, Arkansas",
     "ntl_sum": 24202.60404007137,
     "light_density": 10.051851223479044,
@@ -45324,7 +45324,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8041",
+    "region_id": "08041",
     "region_name": "El Paso, Colorado",
     "ntl_sum": 132489.47021484375,
     "light_density": 24.025565468006324,
@@ -45358,7 +45358,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8043",
+    "region_id": "08043",
     "region_name": "Fremont, Colorado",
     "ntl_sum": 8626.103626132011,
     "light_density": 2.1703862264710843,
@@ -45392,7 +45392,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "4003",
+    "region_id": "04003",
     "region_name": "Cochise, Arizona",
     "ntl_sum": 21438.046660780907,
     "light_density": 1.3310399150511645,
@@ -45409,7 +45409,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5055",
+    "region_id": "05055",
     "region_name": "Greene, Arkansas",
     "ntl_sum": 9833.62541168928,
     "light_density": 6.552962142568267,
@@ -45562,7 +45562,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1011",
+    "region_id": "01011",
     "region_name": "Bullock, Alabama",
     "ntl_sum": 1363.7020010352137,
     "light_density": 0.8422266289001412,
@@ -45647,7 +45647,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1075",
+    "region_id": "01075",
     "region_name": "Lamar, Alabama",
     "ntl_sum": 2409.6454218029976,
     "light_density": 1.5357262793146178,
@@ -45783,7 +45783,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5037",
+    "region_id": "05037",
     "region_name": "Cross, Arkansas",
     "ntl_sum": 4070.707115352154,
     "light_density": 2.5266377939566143,
@@ -46140,7 +46140,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6103",
+    "region_id": "06103",
     "region_name": "Tehama, California",
     "ntl_sum": 6652.71091529727,
     "light_density": 0.8667299130201048,
@@ -46174,7 +46174,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1037",
+    "region_id": "01037",
     "region_name": "Coosa, Alabama",
     "ntl_sum": 1577.1775761544704,
     "light_density": 0.9137556537765502,
@@ -46225,7 +46225,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8101",
+    "region_id": "08101",
     "region_name": "Pueblo, Colorado",
     "ntl_sum": 31499.39654162526,
     "light_density": 5.069060493166639,
@@ -46242,7 +46242,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8019",
+    "region_id": "08019",
     "region_name": "Clear Creek, Colorado",
     "ntl_sum": 1507.9925809502602,
     "light_density": 1.4701271151315132,
@@ -46327,7 +46327,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6113",
+    "region_id": "06113",
     "region_name": "Yolo, California",
     "ntl_sum": 27040.39025771618,
     "light_density": 10.21945406924258,
@@ -46463,7 +46463,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "6029",
+    "region_id": "06029",
     "region_name": "Kern, California",
     "ntl_sum": 149439.45138666034,
     "light_density": 7.066791678360902,
@@ -46480,7 +46480,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8039",
+    "region_id": "08039",
     "region_name": "Elbert, Colorado",
     "ntl_sum": 3500.799030959606,
     "light_density": 0.7307252381602701,
@@ -46616,7 +46616,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "4017",
+    "region_id": "04017",
     "region_name": "Navajo, Arizona",
     "ntl_sum": 14349.751059770584,
     "light_density": 0.5562976981366922,
@@ -47279,7 +47279,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8119",
+    "region_id": "08119",
     "region_name": "Teller, Colorado",
     "ntl_sum": 2935.518976390362,
     "light_density": 2.0277980372226208,
@@ -47296,7 +47296,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "4007",
+    "region_id": "04007",
     "region_name": "Gila, Arizona",
     "ntl_sum": 7242.437691777945,
     "light_density": 0.583185034942762,
@@ -47483,7 +47483,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5147",
+    "region_id": "05147",
     "region_name": "Woodruff, Arkansas",
     "ntl_sum": 1467.4013671278954,
     "light_density": 0.9535836357008504,
@@ -47857,7 +47857,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8015",
+    "region_id": "08015",
     "region_name": "Chaffee, Colorado",
     "ntl_sum": 2056.910369217396,
     "light_density": 0.7822801719860504,
@@ -47891,7 +47891,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5121",
+    "region_id": "05121",
     "region_name": "Randolph, Arkansas",
     "ntl_sum": 2647.495223939419,
     "light_density": 1.5584282769294624,
@@ -48588,7 +48588,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "1111",
+    "region_id": "01111",
     "region_name": "Randolph, Alabama",
     "ntl_sum": 3652.689087495208,
     "light_density": 2.4153115117463586,
@@ -48758,7 +48758,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5111",
+    "region_id": "05111",
     "region_name": "Poinsett, Arkansas",
     "ntl_sum": 4618.277370333672,
     "light_density": 2.334441015094079,
@@ -48911,7 +48911,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "4001",
+    "region_id": "04001",
     "region_name": "Apache, Arizona",
     "ntl_sum": 10929.551354527472,
     "light_density": 0.3761289155729231,
@@ -49387,7 +49387,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8107",
+    "region_id": "08107",
     "region_name": "Routt, Colorado",
     "ntl_sum": 3695.785490691662,
     "light_density": 0.6025032426480474,
@@ -49880,7 +49880,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5075",
+    "region_id": "05075",
     "region_name": "Lawrence, Arkansas",
     "ntl_sum": 2812.5965505242348,
     "light_density": 1.833533969803404,
@@ -49931,7 +49931,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5067",
+    "region_id": "05067",
     "region_name": "Jackson, Arkansas",
     "ntl_sum": 4231.403337597847,
     "light_density": 2.546965791604227,
@@ -51070,7 +51070,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8103",
+    "region_id": "08103",
     "region_name": "Rio Blanco, Colorado",
     "ntl_sum": 3034.6082684397697,
     "light_density": 0.3636026393575776,
@@ -51291,7 +51291,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "5021",
+    "region_id": "05021",
     "region_name": "Clay, Arkansas",
     "ntl_sum": 1788.5458021759987,
     "light_density": 1.0765967756486543,
@@ -51427,7 +51427,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8073",
+    "region_id": "08073",
     "region_name": "Lincoln, Colorado",
     "ntl_sum": 2009.4253551363945,
     "light_density": 0.299994018800595,
@@ -51784,7 +51784,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8081",
+    "region_id": "08081",
     "region_name": "Moffat, Colorado",
     "ntl_sum": 4387.11254632473,
     "light_density": 0.356534369952691,
@@ -52073,7 +52073,7 @@
   {
     "date": "2026-01-01",
     "dataset_name": "counties",
-    "region_id": "8071",
+    "region_id": "08071",
     "region_name": "Las Animas, Colorado",
     "ntl_sum": 3285.0176421403885,
     "light_density": 0.2656581865568934,

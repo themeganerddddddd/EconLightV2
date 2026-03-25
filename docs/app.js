@@ -2,6 +2,7 @@ let indexChart = null;
 let regionChart = null;
 let currentDataset = "metros";
 let store = {};
+let countyShardCache = {};
 
 function fmtPct(v) {
   if (v === null || v === undefined || Number.isNaN(Number(v))) return "N/A";
@@ -34,6 +35,21 @@ function showMessage(msg) {
 }
 
 async function loadDataset(dataset) {
+  if (dataset === "counties") {
+    const [latest, leaders, laggards, indexData, summary, regions, historiesIndex] = await Promise.all([
+      loadJson(`data/${dataset}_latest.json`),
+      loadJson(`data/${dataset}_leaders.json`),
+      loadJson(`data/${dataset}_laggards.json`),
+      loadJson(`data/${dataset}_index.json`),
+      loadJson(`data/${dataset}_summary.json`),
+      loadJson(`data/${dataset}_regions.json`),
+      loadJson(`data/${dataset}_histories_index.json`)
+    ]);
+
+    store[dataset] = { latest, leaders, laggards, indexData, summary, regions, historiesIndex };
+    return;
+  }
+
   const [latest, leaders, laggards, indexData, histories, summary, regions] = await Promise.all([
     loadJson(`data/${dataset}_latest.json`),
     loadJson(`data/${dataset}_leaders.json`),
@@ -45,6 +61,18 @@ async function loadDataset(dataset) {
   ]);
 
   store[dataset] = { latest, leaders, laggards, indexData, histories, summary, regions };
+}
+
+async function getCountyHistory(regionId) {
+  const dataset = store["counties"];
+  const statefp = dataset.historiesIndex[String(regionId)];
+  if (!statefp) return [];
+
+  if (!countyShardCache[statefp]) {
+    countyShardCache[statefp] = await loadJson(`data/counties_histories_shards/${statefp}.json`);
+  }
+
+  return countyShardCache[statefp][String(regionId)] || [];
 }
 
 function renderHero(summary, dataset) {
@@ -141,9 +169,9 @@ function makeRow(row) {
     <td class="${momClass}">${fmtPct(row.mom_pct)}</td>
     <td title="Trend score: ${trendScore}">${trendLabel}</td>
   `;
-  tr.addEventListener("click", () => {
+  tr.addEventListener("click", async () => {
     document.getElementById("regionPicker").value = row.region_id;
-    renderRegion(currentDataset, row.region_id, row.region_name);
+    await renderRegion(currentDataset, row.region_id, row.region_name);
   });
   return tr;
 }
@@ -169,14 +197,21 @@ function renderRegionPicker(regions) {
     picker.appendChild(opt);
   });
 
-  picker.onchange = () => {
+  picker.onchange = async () => {
     const selected = regions.find(r => r.region_id === picker.value);
-    if (selected) renderRegion(currentDataset, selected.region_id, selected.region_name);
+    if (selected) await renderRegion(currentDataset, selected.region_id, selected.region_name);
   };
 }
 
-function renderRegion(dataset, regionId, regionName) {
-  const rows = store[dataset].histories[String(regionId)] || [];
+async function renderRegion(dataset, regionId, regionName) {
+  let rows = [];
+
+  if (dataset === "counties") {
+    rows = await getCountyHistory(regionId);
+  } else {
+    rows = store[dataset].histories[String(regionId)] || [];
+  }
+
   const ctx = document.getElementById("regionChart").getContext("2d");
   if (regionChart) regionChart.destroy();
 
@@ -214,7 +249,7 @@ function activateDatasetButton(dataset) {
   });
 }
 
-function renderDataset(dataset) {
+async function renderDataset(dataset) {
   currentDataset = dataset;
   activateDatasetButton(dataset);
 
@@ -227,7 +262,7 @@ function renderDataset(dataset) {
 
   if (data.regions.length > 0) {
     document.getElementById("regionPicker").value = data.regions[0].region_id;
-    renderRegion(dataset, data.regions[0].region_id, data.regions[0].region_name);
+    await renderRegion(dataset, data.regions[0].region_id, data.regions[0].region_name);
   }
 
   showMessage(`Loaded ${dataset} dataset.`);
@@ -241,10 +276,10 @@ async function init() {
     await loadDataset("cities");
 
     document.querySelectorAll(".dataset-btn").forEach(btn => {
-      btn.addEventListener("click", () => renderDataset(btn.dataset.dataset));
+      btn.addEventListener("click", async () => renderDataset(btn.dataset.dataset));
     });
 
-    renderDataset("metros");
+    await renderDataset("metros");
   } catch (err) {
     console.error(err);
     showMessage(`Error loading site data: ${err.message}`);
