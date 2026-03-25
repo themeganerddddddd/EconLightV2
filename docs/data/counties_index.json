@@ -1,0 +1,394 @@
+[
+  {
+    "date": "2022-01-01",
+    "avg_density": 15.33777123677418,
+    "avg_yoy": null,
+    "avg_mom": null,
+    "index_level": 100.0,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2022-02-01",
+    "avg_density": 15.067674422859008,
+    "avg_yoy": null,
+    "avg_mom": 0.0306656723212389,
+    "index_level": 103.06656723212387,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2022-03-01",
+    "avg_density": 14.423658692348354,
+    "avg_yoy": null,
+    "avg_mom": -0.0296888758214292,
+    "index_level": 100.00663671622836,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2022-04-01",
+    "avg_density": 13.539077688757509,
+    "avg_yoy": null,
+    "avg_mom": -0.0071967798796693,
+    "index_level": 99.28691096527562,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2022-05-01",
+    "avg_density": 12.732761608538558,
+    "avg_yoy": null,
+    "avg_mom": -0.0303144335642738,
+    "index_level": 96.2770844990168,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2022-06-01",
+    "avg_density": 12.554469147163177,
+    "avg_yoy": null,
+    "avg_mom": 0.0541889435764017,
+    "index_level": 101.49423799863447,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2022-07-01",
+    "avg_density": 12.40689007612396,
+    "avg_yoy": null,
+    "avg_mom": -0.0029723315792657,
+    "index_level": 101.19256346991764,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2022-08-01",
+    "avg_density": 12.09565351991201,
+    "avg_yoy": null,
+    "avg_mom": -0.0628342982627701,
+    "index_level": 94.83419975487456,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2022-09-01",
+    "avg_density": 11.691043927328336,
+    "avg_yoy": null,
+    "avg_mom": -0.1020732963903813,
+    "index_level": 85.15416037535061,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2022-10-01",
+    "avg_density": 11.545836415180744,
+    "avg_yoy": null,
+    "avg_mom": -0.0515658624737014,
+    "index_level": 80.76311265237177,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2022-11-01",
+    "avg_density": 12.001319814576734,
+    "avg_yoy": null,
+    "avg_mom": 0.1056232814894642,
+    "index_level": 89.29357763401855,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2022-12-01",
+    "avg_density": 13.446945935665765,
+    "avg_yoy": null,
+    "avg_mom": 0.2407149988016237,
+    "index_level": 110.78788106718402,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2023-01-01",
+    "avg_density": 14.255090527092884,
+    "avg_yoy": 0.2084978411692913,
+    "avg_mom": 0.1194398418503409,
+    "index_level": 124.02036806078284,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2023-02-01",
+    "avg_density": 14.6524024248706,
+    "avg_yoy": 0.2133219079459226,
+    "avg_mom": 0.0453312286013461,
+    "index_level": 129.6423637165693,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2023-03-01",
+    "avg_density": 14.06223411395034,
+    "avg_yoy": 0.1497763786866646,
+    "avg_mom": -0.0715575785070469,
+    "index_level": 120.36547009708175,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2023-04-01",
+    "avg_density": 13.63829615623635,
+    "avg_yoy": 0.0947081911381727,
+    "avg_mom": -0.0540966329959667,
+    "index_level": 113.8541034358529,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2023-05-01",
+    "avg_density": 13.341588225125316,
+    "avg_yoy": 0.1391416920714665,
+    "avg_mom": 0.0064335515989718,
+    "index_level": 114.58658968506214,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2023-06-01",
+    "avg_density": 13.153243527603356,
+    "avg_yoy": 0.1421581869510558,
+    "avg_mom": 0.0633937753322436,
+    "index_level": 121.85066620764496,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2023-07-01",
+    "avg_density": 13.127767512162547,
+    "avg_yoy": 0.1835383622384563,
+    "avg_mom": 0.0324825100514218,
+    "index_level": 125.80868169750724,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2023-08-01",
+    "avg_density": 12.944464813494225,
+    "avg_yoy": 0.1991587425001575,
+    "avg_mom": -0.044767862324675,
+    "index_level": 120.17649595602435,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2023-09-01",
+    "avg_density": 12.489930155813488,
+    "avg_yoy": 0.1685042943725151,
+    "avg_mom": -0.1269882994130172,
+    "index_level": 104.91548710515347,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2023-10-01",
+    "avg_density": 12.321175696954027,
+    "avg_yoy": 0.1593121214504912,
+    "avg_mom": -0.0610182862811539,
+    "index_level": 98.51372387764452,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2023-11-01",
+    "avg_density": 12.669889423787575,
+    "avg_yoy": 0.1470273690913055,
+    "avg_mom": 0.0930451028364111,
+    "index_level": 107.67994344663778,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2023-12-01",
+    "avg_density": 13.231475737190545,
+    "avg_yoy": 0.0113458475169391,
+    "avg_mom": 0.0791868167883724,
+    "index_level": 116.206775400129,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2024-01-01",
+    "avg_density": 14.320303950084565,
+    "avg_yoy": 0.0262326729257752,
+    "avg_mom": 0.1294957918261788,
+    "index_level": 131.2550637961356,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2024-02-01",
+    "avg_density": 14.574150524405104,
+    "avg_yoy": -0.0710866054053219,
+    "avg_mom": -0.0645530746212378,
+    "index_level": 122.78214586848831,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2024-03-01",
+    "avg_density": 14.609744899303925,
+    "avg_yoy": -0.0010142806368634,
+    "avg_mom": -0.0103938220581796,
+    "index_level": 121.5059700924098,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2024-04-01",
+    "avg_density": 13.736322959559391,
+    "avg_yoy": -0.066923598824808,
+    "avg_mom": -0.1117459189132567,
+    "index_level": 107.92817381098678,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2024-05-01",
+    "avg_density": 12.88801323080441,
+    "avg_yoy": -0.1327452002428209,
+    "avg_mom": -0.0683394690666319,
+    "index_level": 100.55241971541275,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2024-06-01",
+    "avg_density": 11.972993653893583,
+    "avg_yoy": -0.2803467076010513,
+    "avg_mom": -0.1312587379519606,
+    "index_level": 87.35403600555185,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2024-07-01",
+    "avg_density": 11.42939470355518,
+    "avg_yoy": -0.3533929371489885,
+    "avg_mom": -0.0914432876435078,
+    "index_level": 79.36609576427483,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2024-08-01",
+    "avg_density": 11.788582311397386,
+    "avg_yoy": -0.2805091562699949,
+    "avg_mom": 0.0829519707714258,
+    "index_level": 85.94966982035514,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2024-09-01",
+    "avg_density": 12.22773864184594,
+    "avg_yoy": -0.1166093800231354,
+    "avg_mom": 0.0922799190849762,
+    "index_level": 93.88109839675796,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2024-10-01",
+    "avg_density": 12.66245175190041,
+    "avg_yoy": 0.0227075085482513,
+    "avg_mom": 0.0914787429982123,
+    "index_level": 102.46922326938488,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2024-11-01",
+    "avg_density": 12.886579096647468,
+    "avg_yoy": -0.0732220331485006,
+    "avg_mom": 0.0023819856736445,
+    "index_level": 102.713303491202,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2024-12-01",
+    "avg_density": 14.061936734327748,
+    "avg_yoy": 0.0391200491888467,
+    "avg_mom": 0.2029346642311728,
+    "index_level": 123.55739324726363,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2025-01-01",
+    "avg_density": 15.88737603670741,
+    "avg_yoy": 0.0392603369083855,
+    "avg_mom": 0.1226857816914945,
+    "index_level": 138.71612862156758,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2025-02-01",
+    "avg_density": 16.817139915259304,
+    "avg_yoy": 0.1912741191595215,
+    "avg_mom": 0.0768233760182636,
+    "index_level": 149.3727699304601,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2025-03-01",
+    "avg_density": 16.44553088847786,
+    "avg_yoy": 0.1183957544558332,
+    "avg_mom": -0.0748030945997737,
+    "index_level": 138.19922449072166,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2025-04-01",
+    "avg_density": 15.192349440634644,
+    "avg_yoy": 0.1742499185253146,
+    "avg_mom": -0.0679175424117553,
+    "index_level": 128.81307280010137,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2025-05-01",
+    "avg_density": 14.621580214380854,
+    "avg_yoy": 0.2968987136189516,
+    "avg_mom": 0.040000131714994,
+    "index_level": 133.96561267871854,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2025-06-01",
+    "avg_density": 15.338249317915867,
+    "avg_yoy": 0.6305894437517099,
+    "avg_mom": 0.3339793242338303,
+    "index_level": 178.70735747172802,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2025-07-01",
+    "avg_density": 15.356774019265464,
+    "avg_yoy": 0.6774200722921814,
+    "avg_mom": 0.079534741823905,
+    "index_level": 192.9208010102742,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2025-08-01",
+    "avg_density": 14.74793507731602,
+    "avg_yoy": 0.5987923624320967,
+    "avg_mom": -0.0840728761866309,
+    "index_level": 176.70139439311174,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2025-09-01",
+    "avg_density": 13.313609951164302,
+    "avg_yoy": 0.2653470508057218,
+    "avg_mom": -0.2966335606606117,
+    "index_level": 124.28583060058794,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2025-10-01",
+    "avg_density": 12.864984331895792,
+    "avg_yoy": -0.0096508086555284,
+    "avg_mom": -0.1601722768666264,
+    "index_level": 104.37868613103194,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2025-11-01",
+    "avg_density": 13.22366275586636,
+    "avg_yoy": 0.0715806692620638,
+    "avg_mom": 0.0837282246639685,
+    "index_level": 113.11812821354084,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2025-12-01",
+    "avg_density": 14.4243853261315,
+    "avg_yoy": 0.0078281244456929,
+    "avg_mom": 0.1379662861746863,
+    "index_level": 128.7246162621951,
+    "dataset_name": "counties"
+  },
+  {
+    "date": "2026-01-01",
+    "avg_density": 15.924050511498136,
+    "avg_yoy": -0.0099049233986522,
+    "avg_mom": 0.0987374311097127,
+    "index_level": 141.4345541925078,
+    "dataset_name": "counties"
+  }
+]

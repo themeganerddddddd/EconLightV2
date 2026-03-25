@@ -1,0 +1,802 @@
+[
+  {
+    "region_id": "3901000",
+    "region_name": "Akron"
+  },
+  {
+    "region_id": "3502000",
+    "region_name": "Albuquerque"
+  },
+  {
+    "region_id": "5101000",
+    "region_name": "Alexandria"
+  },
+  {
+    "region_id": "4803000",
+    "region_name": "Amarillo"
+  },
+  {
+    "region_id": "602000",
+    "region_name": "Anaheim"
+  },
+  {
+    "region_id": "4804000",
+    "region_name": "Arlington"
+  },
+  {
+    "region_id": "5103000",
+    "region_name": "Arlington"
+  },
+  {
+    "region_id": "1304000",
+    "region_name": "Atlanta"
+  },
+  {
+    "region_id": "1304204",
+    "region_name": "Augusta-Richmond County consolidated government (balance)"
+  },
+  {
+    "region_id": "1703012",
+    "region_name": "Aurora"
+  },
+  {
+    "region_id": "804000",
+    "region_name": "Aurora"
+  },
+  {
+    "region_id": "4805000",
+    "region_name": "Austin"
+  },
+  {
+    "region_id": "603526",
+    "region_name": "Bakersfield"
+  },
+  {
+    "region_id": "2404000",
+    "region_name": "Baltimore"
+  },
+  {
+    "region_id": "2205000",
+    "region_name": "Baton Rouge"
+  },
+  {
+    "region_id": "5305210",
+    "region_name": "Bellevue"
+  },
+  {
+    "region_id": "107000",
+    "region_name": "Birmingham"
+  },
+  {
+    "region_id": "1608830",
+    "region_name": "Boise City"
+  },
+  {
+    "region_id": "2507000",
+    "region_name": "Boston"
+  },
+  {
+    "region_id": "908000",
+    "region_name": "Bridgeport"
+  },
+  {
+    "region_id": "4810768",
+    "region_name": "Brownsville"
+  },
+  {
+    "region_id": "3611000",
+    "region_name": "Buffalo"
+  },
+  {
+    "region_id": "1210275",
+    "region_name": "Cape Coral"
+  },
+  {
+    "region_id": "3710740",
+    "region_name": "Cary"
+  },
+  {
+    "region_id": "412000",
+    "region_name": "Chandler"
+  },
+  {
+    "region_id": "4513330",
+    "region_name": "Charleston"
+  },
+  {
+    "region_id": "3712000",
+    "region_name": "Charlotte"
+  },
+  {
+    "region_id": "4714000",
+    "region_name": "Chattanooga"
+  },
+  {
+    "region_id": "5116000",
+    "region_name": "Chesapeake"
+  },
+  {
+    "region_id": "1714000",
+    "region_name": "Chicago"
+  },
+  {
+    "region_id": "613392",
+    "region_name": "Chula Vista"
+  },
+  {
+    "region_id": "3915000",
+    "region_name": "Cincinnati"
+  },
+  {
+    "region_id": "4715160",
+    "region_name": "Clarksville"
+  },
+  {
+    "region_id": "3916000",
+    "region_name": "Cleveland"
+  },
+  {
+    "region_id": "816000",
+    "region_name": "Colorado Springs"
+  },
+  {
+    "region_id": "1319000",
+    "region_name": "Columbus"
+  },
+  {
+    "region_id": "3918000",
+    "region_name": "Columbus"
+  },
+  {
+    "region_id": "616350",
+    "region_name": "Corona"
+  },
+  {
+    "region_id": "4817000",
+    "region_name": "Corpus Christi"
+  },
+  {
+    "region_id": "4819000",
+    "region_name": "Dallas"
+  },
+  {
+    "region_id": "4819972",
+    "region_name": "Denton"
+  },
+  {
+    "region_id": "820000",
+    "region_name": "Denver"
+  },
+  {
+    "region_id": "1921000",
+    "region_name": "Des Moines"
+  },
+  {
+    "region_id": "2622000",
+    "region_name": "Detroit"
+  },
+  {
+    "region_id": "3719000",
+    "region_name": "Durham"
+  },
+  {
+    "region_id": "4824000",
+    "region_name": "El Paso"
+  },
+  {
+    "region_id": "622020",
+    "region_name": "Elk Grove"
+  },
+  {
+    "region_id": "3223770",
+    "region_name": "Enterprise"
+  },
+  {
+    "region_id": "622804",
+    "region_name": "Escondido"
+  },
+  {
+    "region_id": "4123850",
+    "region_name": "Eugene"
+  },
+  {
+    "region_id": "3722920",
+    "region_name": "Fayetteville"
+  },
+  {
+    "region_id": "624680",
+    "region_name": "Fontana"
+  },
+  {
+    "region_id": "827425",
+    "region_name": "Fort Collins"
+  },
+  {
+    "region_id": "1224000",
+    "region_name": "Fort Lauderdale"
+  },
+  {
+    "region_id": "1825000",
+    "region_name": "Fort Wayne"
+  },
+  {
+    "region_id": "4827000",
+    "region_name": "Fort Worth"
+  },
+  {
+    "region_id": "626000",
+    "region_name": "Fremont"
+  },
+  {
+    "region_id": "627000",
+    "region_name": "Fresno"
+  },
+  {
+    "region_id": "4827684",
+    "region_name": "Frisco"
+  },
+  {
+    "region_id": "628000",
+    "region_name": "Fullerton"
+  },
+  {
+    "region_id": "1225175",
+    "region_name": "Gainesville"
+  },
+  {
+    "region_id": "629000",
+    "region_name": "Garden Grove"
+  },
+  {
+    "region_id": "4829000",
+    "region_name": "Garland"
+  },
+  {
+    "region_id": "427400",
+    "region_name": "Gilbert"
+  },
+  {
+    "region_id": "427820",
+    "region_name": "Glendale"
+  },
+  {
+    "region_id": "630000",
+    "region_name": "Glendale"
+  },
+  {
+    "region_id": "4830464",
+    "region_name": "Grand Prairie"
+  },
+  {
+    "region_id": "2634000",
+    "region_name": "Grand Rapids"
+  },
+  {
+    "region_id": "3728000",
+    "region_name": "Greensboro"
+  },
+  {
+    "region_id": "633000",
+    "region_name": "Hayward"
+  },
+  {
+    "region_id": "3231900",
+    "region_name": "Henderson"
+  },
+  {
+    "region_id": "1230000",
+    "region_name": "Hialeah"
+  },
+  {
+    "region_id": "1232000",
+    "region_name": "Hollywood"
+  },
+  {
+    "region_id": "4835000",
+    "region_name": "Houston"
+  },
+  {
+    "region_id": "636000",
+    "region_name": "Huntington Beach"
+  },
+  {
+    "region_id": "137000",
+    "region_name": "Huntsville"
+  },
+  {
+    "region_id": "1836003",
+    "region_name": "Indianapolis city (balance)"
+  },
+  {
+    "region_id": "636770",
+    "region_name": "Irvine"
+  },
+  {
+    "region_id": "4837000",
+    "region_name": "Irving"
+  },
+  {
+    "region_id": "2836000",
+    "region_name": "Jackson"
+  },
+  {
+    "region_id": "1235000",
+    "region_name": "Jacksonville"
+  },
+  {
+    "region_id": "3436000",
+    "region_name": "Jersey City"
+  },
+  {
+    "region_id": "1738570",
+    "region_name": "Joliet"
+  },
+  {
+    "region_id": "2036000",
+    "region_name": "Kansas City"
+  },
+  {
+    "region_id": "2938000",
+    "region_name": "Kansas City"
+  },
+  {
+    "region_id": "4839148",
+    "region_name": "Killeen"
+  },
+  {
+    "region_id": "4740000",
+    "region_name": "Knoxville"
+  },
+  {
+    "region_id": "843000",
+    "region_name": "Lakewood"
+  },
+  {
+    "region_id": "640130",
+    "region_name": "Lancaster"
+  },
+  {
+    "region_id": "4841464",
+    "region_name": "Laredo"
+  },
+  {
+    "region_id": "3240000",
+    "region_name": "Las Vegas"
+  },
+  {
+    "region_id": "2146027",
+    "region_name": "Lexington-Fayette"
+  },
+  {
+    "region_id": "3128000",
+    "region_name": "Lincoln"
+  },
+  {
+    "region_id": "541000",
+    "region_name": "Little Rock"
+  },
+  {
+    "region_id": "643000",
+    "region_name": "Long Beach"
+  },
+  {
+    "region_id": "644000",
+    "region_name": "Los Angeles"
+  },
+  {
+    "region_id": "2148006",
+    "region_name": "Louisville/Jefferson County metro government (balance)"
+  },
+  {
+    "region_id": "4845000",
+    "region_name": "Lubbock"
+  },
+  {
+    "region_id": "1349008",
+    "region_name": "Macon-Bibb County"
+  },
+  {
+    "region_id": "5548000",
+    "region_name": "Madison"
+  },
+  {
+    "region_id": "4845384",
+    "region_name": "McAllen"
+  },
+  {
+    "region_id": "4845744",
+    "region_name": "McKinney"
+  },
+  {
+    "region_id": "4748000",
+    "region_name": "Memphis"
+  },
+  {
+    "region_id": "446000",
+    "region_name": "Mesa"
+  },
+  {
+    "region_id": "4847892",
+    "region_name": "Mesquite"
+  },
+  {
+    "region_id": "2250115",
+    "region_name": "Metairie"
+  },
+  {
+    "region_id": "1245000",
+    "region_name": "Miami"
+  },
+  {
+    "region_id": "5553000",
+    "region_name": "Milwaukee"
+  },
+  {
+    "region_id": "2743000",
+    "region_name": "Minneapolis"
+  },
+  {
+    "region_id": "150000",
+    "region_name": "Mobile"
+  },
+  {
+    "region_id": "648354",
+    "region_name": "Modesto"
+  },
+  {
+    "region_id": "151000",
+    "region_name": "Montgomery"
+  },
+  {
+    "region_id": "649270",
+    "region_name": "Moreno Valley"
+  },
+  {
+    "region_id": "4751560",
+    "region_name": "Murfreesboro"
+  },
+  {
+    "region_id": "1751622",
+    "region_name": "Naperville"
+  },
+  {
+    "region_id": "4752006",
+    "region_name": "Nashville-Davidson metropolitan government (balance)"
+  },
+  {
+    "region_id": "2255000",
+    "region_name": "New Orleans"
+  },
+  {
+    "region_id": "3651000",
+    "region_name": "New York"
+  },
+  {
+    "region_id": "3451000",
+    "region_name": "Newark"
+  },
+  {
+    "region_id": "5156000",
+    "region_name": "Newport News"
+  },
+  {
+    "region_id": "5157000",
+    "region_name": "Norfolk"
+  },
+  {
+    "region_id": "3251800",
+    "region_name": "North Las Vegas"
+  },
+  {
+    "region_id": "653000",
+    "region_name": "Oakland"
+  },
+  {
+    "region_id": "653322",
+    "region_name": "Oceanside"
+  },
+  {
+    "region_id": "4055000",
+    "region_name": "Oklahoma City"
+  },
+  {
+    "region_id": "2052575",
+    "region_name": "Olathe"
+  },
+  {
+    "region_id": "3137000",
+    "region_name": "Omaha"
+  },
+  {
+    "region_id": "653896",
+    "region_name": "Ontario"
+  },
+  {
+    "region_id": "1253000",
+    "region_name": "Orlando"
+  },
+  {
+    "region_id": "2053775",
+    "region_name": "Overland Park"
+  },
+  {
+    "region_id": "654652",
+    "region_name": "Oxnard"
+  },
+  {
+    "region_id": "655156",
+    "region_name": "Palmdale"
+  },
+  {
+    "region_id": "3254600",
+    "region_name": "Paradise"
+  },
+  {
+    "region_id": "4856000",
+    "region_name": "Pasadena"
+  },
+  {
+    "region_id": "3457000",
+    "region_name": "Paterson"
+  },
+  {
+    "region_id": "1255775",
+    "region_name": "Pembroke Pines"
+  },
+  {
+    "region_id": "454050",
+    "region_name": "Peoria"
+  },
+  {
+    "region_id": "4260000",
+    "region_name": "Philadelphia"
+  },
+  {
+    "region_id": "455000",
+    "region_name": "Phoenix"
+  },
+  {
+    "region_id": "4261000",
+    "region_name": "Pittsburgh"
+  },
+  {
+    "region_id": "4858016",
+    "region_name": "Plano"
+  },
+  {
+    "region_id": "658072",
+    "region_name": "Pomona"
+  },
+  {
+    "region_id": "1258715",
+    "region_name": "Port St. Lucie"
+  },
+  {
+    "region_id": "4159000",
+    "region_name": "Portland"
+  },
+  {
+    "region_id": "4459000",
+    "region_name": "Providence"
+  },
+  {
+    "region_id": "3755000",
+    "region_name": "Raleigh"
+  },
+  {
+    "region_id": "659451",
+    "region_name": "Rancho Cucamonga"
+  },
+  {
+    "region_id": "3260600",
+    "region_name": "Reno"
+  },
+  {
+    "region_id": "5167000",
+    "region_name": "Richmond"
+  },
+  {
+    "region_id": "662000",
+    "region_name": "Riverside"
+  },
+  {
+    "region_id": "3663000",
+    "region_name": "Rochester"
+  },
+  {
+    "region_id": "1765000",
+    "region_name": "Rockford"
+  },
+  {
+    "region_id": "662938",
+    "region_name": "Roseville"
+  },
+  {
+    "region_id": "664000",
+    "region_name": "Sacramento"
+  },
+  {
+    "region_id": "4164900",
+    "region_name": "Salem"
+  },
+  {
+    "region_id": "664224",
+    "region_name": "Salinas"
+  },
+  {
+    "region_id": "4967000",
+    "region_name": "Salt Lake City"
+  },
+  {
+    "region_id": "4865000",
+    "region_name": "San Antonio"
+  },
+  {
+    "region_id": "665000",
+    "region_name": "San Bernardino"
+  },
+  {
+    "region_id": "666000",
+    "region_name": "San Diego"
+  },
+  {
+    "region_id": "667000",
+    "region_name": "San Francisco"
+  },
+  {
+    "region_id": "668000",
+    "region_name": "San Jose"
+  },
+  {
+    "region_id": "669000",
+    "region_name": "Santa Ana"
+  },
+  {
+    "region_id": "669088",
+    "region_name": "Santa Clarita"
+  },
+  {
+    "region_id": "670098",
+    "region_name": "Santa Rosa"
+  },
+  {
+    "region_id": "1369000",
+    "region_name": "Savannah"
+  },
+  {
+    "region_id": "465000",
+    "region_name": "Scottsdale"
+  },
+  {
+    "region_id": "5363000",
+    "region_name": "Seattle"
+  },
+  {
+    "region_id": "2270000",
+    "region_name": "Shreveport"
+  },
+  {
+    "region_id": "4659020",
+    "region_name": "Sioux Falls"
+  },
+  {
+    "region_id": "5367000",
+    "region_name": "Spokane"
+  },
+  {
+    "region_id": "3268585",
+    "region_name": "Spring Valley"
+  },
+  {
+    "region_id": "2567000",
+    "region_name": "Springfield"
+  },
+  {
+    "region_id": "2970000",
+    "region_name": "Springfield"
+  },
+  {
+    "region_id": "2965000",
+    "region_name": "St. Louis"
+  },
+  {
+    "region_id": "2758000",
+    "region_name": "St. Paul"
+  },
+  {
+    "region_id": "1263000",
+    "region_name": "St. Petersburg"
+  },
+  {
+    "region_id": "675000",
+    "region_name": "Stockton"
+  },
+  {
+    "region_id": "677000",
+    "region_name": "Sunnyvale"
+  },
+  {
+    "region_id": "3271400",
+    "region_name": "Sunrise Manor"
+  },
+  {
+    "region_id": "471510",
+    "region_name": "Surprise"
+  },
+  {
+    "region_id": "3673000",
+    "region_name": "Syracuse"
+  },
+  {
+    "region_id": "5370000",
+    "region_name": "Tacoma"
+  },
+  {
+    "region_id": "1270600",
+    "region_name": "Tallahassee"
+  },
+  {
+    "region_id": "1271000",
+    "region_name": "Tampa"
+  },
+  {
+    "region_id": "473000",
+    "region_name": "Tempe"
+  },
+  {
+    "region_id": "877290",
+    "region_name": "Thornton"
+  },
+  {
+    "region_id": "3977000",
+    "region_name": "Toledo"
+  },
+  {
+    "region_id": "680000",
+    "region_name": "Torrance"
+  },
+  {
+    "region_id": "477000",
+    "region_name": "Tucson"
+  },
+  {
+    "region_id": "4075000",
+    "region_name": "Tulsa"
+  },
+  {
+    "region_id": "5374060",
+    "region_name": "Vancouver"
+  },
+  {
+    "region_id": "5182000",
+    "region_name": "Virginia Beach"
+  },
+  {
+    "region_id": "682954",
+    "region_name": "Visalia"
+  },
+  {
+    "region_id": "4876000",
+    "region_name": "Waco"
+  },
+  {
+    "region_id": "1150000",
+    "region_name": "Washington"
+  },
+  {
+    "region_id": "2079000",
+    "region_name": "Wichita"
+  },
+  {
+    "region_id": "3775000",
+    "region_name": "Winston-Salem"
+  },
+  {
+    "region_id": "2582000",
+    "region_name": "Worcester"
+  },
+  {
+    "region_id": "3684000",
+    "region_name": "Yonkers"
+  }
+]

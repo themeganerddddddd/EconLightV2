@@ -1,0 +1,19 @@
+{
+  "dataset_name": "counties",
+  "latest_month": "2026-01-01",
+  "headline_index": 141.4345541925078,
+  "avg_mom": 0.0987374311097127,
+  "avg_yoy": -0.0099049233986522,
+  "top_region": {
+    "region_id": "26003",
+    "region_name": "Alger, Michigan",
+    "trend_score": 3.839189629732905,
+    "yoy_pct": 1.0
+  },
+  "bottom_region": {
+    "region_id": "13225",
+    "region_name": "Peach, Georgia",
+    "trend_score": -1.5982298384593625,
+    "yoy_pct": -0.5730002177526506
+  }
+}

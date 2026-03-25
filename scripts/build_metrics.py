@@ -33,12 +33,9 @@ def build_for_dataset(dataset_name: str):
     metric_col = "light_density"
     g = df.groupby("region_id", group_keys=False)
 
-    df["density_3m_smooth"] = g[metric_col].transform(
-        lambda s: s.rolling(3, min_periods=1).mean()
-    )
+    df["density_3m_smooth"] = g[metric_col].transform(lambda s: s.rolling(3, min_periods=1).mean())
 
     df["lag_1"] = g["density_3m_smooth"].shift(1)
-    df["lag_3"] = g["density_3m_smooth"].shift(3)
     df["lag_12"] = g["density_3m_smooth"].shift(12)
 
     baseline_floor = max(df["density_3m_smooth"].quantile(0.10), 1e-9)
@@ -52,68 +49,39 @@ def build_for_dataset(dataset_name: str):
     df["yoy_pct"] = df["yoy_pct"].clip(-1.0, 1.0)
 
     df["mom_3m_avg"] = g["mom_pct"].transform(lambda s: s.rolling(3, min_periods=1).mean())
-    df["yoy_3m_avg"] = g["yoy_pct"].transform(lambda s: s.rolling(3, min_periods=1).mean())
     df["vol_12m"] = g["mom_pct"].transform(lambda s: s.rolling(12, min_periods=6).std())
     df["months_seen"] = g.cumcount() + 1
 
     for col in ["mom_pct", "yoy_pct", "mom_3m_avg"]:
         mean = df[col].mean(skipna=True)
         std = df[col].std(skipna=True)
-        if std and std > 0:
-            df[f"{col}_z"] = (df[col] - mean) / std
-        else:
-            df[f"{col}_z"] = 0.0
+        df[f"{col}_z"] = (df[col] - mean) / std if std and std > 0 else 0.0
 
-    # Build trend score from available signals, even if one component is missing
     df["trend_score"] = (
         0.50 * df["yoy_pct_z"].fillna(0)
         + 0.30 * df["mom_pct_z"].fillna(0)
         + 0.20 * df["mom_3m_avg_z"].fillna(0)
     )
-
     df["trend_label"] = df["trend_score"].apply(classify_trend)
 
     latest_date = df["date"].max()
     latest = df[df["date"] == latest_date].copy()
-
-    # Require enough history to be in the leaderboard at all
     latest = latest[latest["months_seen"] >= 6].copy()
-
-    # Prefer regions with real trend scores and enough history, but do not drop
-    latest["rankable"] = (
-        latest["trend_score"].notna()
-        & (latest["months_seen"] >= 12)
-    )
+    latest["rankable"] = latest["months_seen"] >= 12
 
     latest_rankings = latest[
         [
-            "date",
-            "dataset_name",
-            "region_id",
-            "region_name",
-            "ntl_sum",
-            "light_density",
-            "density_3m_smooth",
-            "mom_pct",
-            "yoy_pct",
-            "mom_3m_avg",
-            "yoy_3m_avg",
-            "vol_12m",
-            "trend_score",
-            "trend_label",
-            "months_seen",
-            "rankable",
+            "date", "dataset_name", "region_id", "region_name", "ntl_sum",
+            "light_density", "density_3m_smooth", "mom_pct", "yoy_pct",
+            "mom_3m_avg", "vol_12m", "trend_score", "trend_label",
+            "months_seen", "rankable"
         ]
-    ].sort_values(
-        ["rankable", "trend_score", "region_name"],
-        ascending=[False, False, True]
-    )
+    ].sort_values(["rankable", "trend_score", "region_name"], ascending=[False, False, True])
 
-    leaders = latest_rankings.head(15).copy()
+    leaders = latest_rankings.head(20).copy()
     laggards = latest_rankings.sort_values(
-        ["rankable", "trend_score", "region_name"],
-        ascending=[False, True, True]
-    ).head(15).copy()
+        ["rankable", "trend_score", "region_name"], ascending=[False, True, True]
+    ).head(20).copy()
 
     index_df = (
         df.groupby("date", as_index=False)
@@ -145,8 +113,8 @@ def build_for_dataset(dataset_name: str):
 
 
 def main():
-    build_for_dataset("metros")
-    build_for_dataset("states")
+    for dataset in ["metros", "states", "counties", "cities"]:
+        build_for_dataset(dataset)
 
 
 if __name__ == "__main__":

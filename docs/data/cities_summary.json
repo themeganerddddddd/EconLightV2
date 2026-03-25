@@ -1,0 +1,19 @@
+{
+  "dataset_name": "cities",
+  "latest_month": "2026-01-01",
+  "headline_index": 113.46008365700064,
+  "avg_mom": 0.0630263904933132,
+  "avg_yoy": 0.030068796360362,
+  "top_region": {
+    "region_id": "2622000",
+    "region_name": "Detroit",
+    "trend_score": 8.104837557844085,
+    "yoy_pct": 0.6062301271754275
+  },
+  "bottom_region": {
+    "region_id": "816000",
+    "region_name": "Colorado Springs",
+    "trend_score": -0.944952991110512,
+    "yoy_pct": -0.2585611315223446
+  }
+}

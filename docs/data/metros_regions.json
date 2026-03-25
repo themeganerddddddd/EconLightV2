@@ -1,146 +1,3886 @@
 [
   {
+    "region_id": "10100",
+    "region_name": "Aberdeen, SD"
+  },
+  {
+    "region_id": "10140",
+    "region_name": "Aberdeen, WA"
+  },
+  {
+    "region_id": "10180",
+    "region_name": "Abilene, TX"
+  },
+  {
+    "region_id": "10220",
+    "region_name": "Ada, OK"
+  },
+  {
+    "region_id": "10300",
+    "region_name": "Adrian, MI"
+  },
+  {
+    "region_id": "10380",
+    "region_name": "Aguadilla, PR"
+  },
+  {
+    "region_id": "10420",
+    "region_name": "Akron, OH"
+  },
+  {
+    "region_id": "10460",
+    "region_name": "Alamogordo, NM"
+  },
+  {
+    "region_id": "10480",
+    "region_name": "Alamosa, CO"
+  },
+  {
+    "region_id": "10500",
+    "region_name": "Albany, GA"
+  },
+  {
+    "region_id": "10540",
+    "region_name": "Albany, OR"
+  },
+  {
+    "region_id": "10580",
+    "region_name": "Albany-Schenectady-Troy, NY"
+  },
+  {
+    "region_id": "10620",
+    "region_name": "Albemarle, NC"
+  },
+  {
+    "region_id": "10660",
+    "region_name": "Albert Lea, MN"
+  },
+  {
+    "region_id": "10700",
+    "region_name": "Albertville, AL"
+  },
+  {
+    "region_id": "10740",
+    "region_name": "Albuquerque, NM"
+  },
+  {
+    "region_id": "10760",
+    "region_name": "Alexander City, AL"
+  },
+  {
+    "region_id": "10780",
+    "region_name": "Alexandria, LA"
+  },
+  {
+    "region_id": "10820",
+    "region_name": "Alexandria, MN"
+  },
+  {
+    "region_id": "10860",
+    "region_name": "Alice, TX"
+  },
+  {
+    "region_id": "10900",
+    "region_name": "Allentown-Bethlehem-Easton, PA-NJ"
+  },
+  {
+    "region_id": "10940",
+    "region_name": "Alma, MI"
+  },
+  {
+    "region_id": "10980",
+    "region_name": "Alpena, MI"
+  },
+  {
+    "region_id": "11020",
+    "region_name": "Altoona, PA"
+  },
+  {
+    "region_id": "11060",
+    "region_name": "Altus, OK"
+  },
+  {
+    "region_id": "11100",
+    "region_name": "Amarillo, TX"
+  },
+  {
+    "region_id": "11140",
+    "region_name": "Americus, GA"
+  },
+  {
+    "region_id": "11180",
+    "region_name": "Ames, IA"
+  },
+  {
+    "region_id": "11200",
+    "region_name": "Amherst Town-Northampton, MA"
+  },
+  {
+    "region_id": "11220",
+    "region_name": "Amsterdam, NY"
+  },
+  {
+    "region_id": "11260",
+    "region_name": "Anchorage, AK"
+  },
+  {
+    "region_id": "11360",
+    "region_name": "Anderson Creek, NC"
+  },
+  {
+    "region_id": "11380",
+    "region_name": "Andrews, TX"
+  },
+  {
+    "region_id": "11420",
+    "region_name": "Angola, IN"
+  },
+  {
+    "region_id": "11460",
+    "region_name": "Ann Arbor, MI"
+  },
+  {
+    "region_id": "11500",
+    "region_name": "Anniston-Oxford, AL"
+  },
+  {
+    "region_id": "11540",
+    "region_name": "Appleton, WI"
+  },
+  {
+    "region_id": "11580",
+    "region_name": "Arcadia, FL"
+  },
+  {
+    "region_id": "11620",
+    "region_name": "Ardmore, OK"
+  },
+  {
+    "region_id": "11640",
+    "region_name": "Arecibo, PR"
+  },
+  {
+    "region_id": "11660",
+    "region_name": "Arkadelphia, AR"
+  },
+  {
+    "region_id": "11680",
+    "region_name": "Arkansas City-Winfield, KS"
+  },
+  {
+    "region_id": "11700",
+    "region_name": "Asheville, NC"
+  },
+  {
+    "region_id": "11740",
+    "region_name": "Ashland, OH"
+  },
+  {
+    "region_id": "11820",
+    "region_name": "Astoria, OR"
+  },
+  {
+    "region_id": "11860",
+    "region_name": "Atchison, KS"
+  },
+  {
+    "region_id": "11900",
+    "region_name": "Athens, OH"
+  },
+  {
+    "region_id": "11940",
+    "region_name": "Athens, TN"
+  },
+  {
+    "region_id": "11980",
+    "region_name": "Athens, TX"
+  },
+  {
+    "region_id": "12020",
+    "region_name": "Athens-Clarke County, GA"
+  },
+  {
     "region_id": "ATL",
     "region_name": "Atlanta"
+  },
+  {
+    "region_id": "12060",
+    "region_name": "Atlanta-Sandy Springs-Roswell, GA"
+  },
+  {
+    "region_id": "12100",
+    "region_name": "Atlantic City-Hammonton, NJ"
+  },
+  {
+    "region_id": "12140",
+    "region_name": "Auburn, IN"
+  },
+  {
+    "region_id": "12180",
+    "region_name": "Auburn, NY"
+  },
+  {
+    "region_id": "12220",
+    "region_name": "Auburn-Opelika, AL"
+  },
+  {
+    "region_id": "12260",
+    "region_name": "Augusta-Richmond County, GA-SC"
+  },
+  {
+    "region_id": "12300",
+    "region_name": "Augusta-Waterville, ME"
   },
   {
     "region_id": "AUS",
     "region_name": "Austin"
   },
   {
+    "region_id": "12380",
+    "region_name": "Austin, MN"
+  },
+  {
+    "region_id": "12420",
+    "region_name": "Austin-Round Rock-San Marcos, TX"
+  },
+  {
+    "region_id": "12460",
+    "region_name": "Bainbridge, GA"
+  },
+  {
+    "region_id": "12520",
+    "region_name": "Baker City, OR"
+  },
+  {
+    "region_id": "12540",
+    "region_name": "Bakersfield-Delano, CA"
+  },
+  {
     "region_id": "BAL",
     "region_name": "Baltimore"
+  },
+  {
+    "region_id": "12580",
+    "region_name": "Baltimore-Columbia-Towson, MD"
+  },
+  {
+    "region_id": "12620",
+    "region_name": "Bangor, ME"
+  },
+  {
+    "region_id": "12660",
+    "region_name": "Baraboo, WI"
+  },
+  {
+    "region_id": "12700",
+    "region_name": "Barnstable Town, MA"
+  },
+  {
+    "region_id": "12740",
+    "region_name": "Barre, VT"
+  },
+  {
+    "region_id": "12780",
+    "region_name": "Bartlesville, OK"
+  },
+  {
+    "region_id": "12860",
+    "region_name": "Batavia, NY"
+  },
+  {
+    "region_id": "12900",
+    "region_name": "Batesville, AR"
+  },
+  {
+    "region_id": "12940",
+    "region_name": "Baton Rouge, LA"
+  },
+  {
+    "region_id": "12980",
+    "region_name": "Battle Creek, MI"
+  },
+  {
+    "region_id": "13020",
+    "region_name": "Bay City, MI"
+  },
+  {
+    "region_id": "13060",
+    "region_name": "Bay City, TX"
+  },
+  {
+    "region_id": "13100",
+    "region_name": "Beatrice, NE"
+  },
+  {
+    "region_id": "13140",
+    "region_name": "Beaumont-Port Arthur, TX"
+  },
+  {
+    "region_id": "13180",
+    "region_name": "Beaver Dam, WI"
+  },
+  {
+    "region_id": "13220",
+    "region_name": "Beckley, WV"
+  },
+  {
+    "region_id": "13260",
+    "region_name": "Bedford, IN"
+  },
+  {
+    "region_id": "13300",
+    "region_name": "Beeville, TX"
+  },
+  {
+    "region_id": "13340",
+    "region_name": "Bellefontaine, OH"
+  },
+  {
+    "region_id": "13380",
+    "region_name": "Bellingham, WA"
+  },
+  {
+    "region_id": "13420",
+    "region_name": "Bemidji, MN"
+  },
+  {
+    "region_id": "13460",
+    "region_name": "Bend, OR"
+  },
+  {
+    "region_id": "13540",
+    "region_name": "Bennington, VT"
+  },
+  {
+    "region_id": "13660",
+    "region_name": "Big Rapids, MI"
+  },
+  {
+    "region_id": "13700",
+    "region_name": "Big Spring, TX"
+  },
+  {
+    "region_id": "13740",
+    "region_name": "Billings, MT"
+  },
+  {
+    "region_id": "13780",
+    "region_name": "Binghamton, NY"
+  },
+  {
+    "region_id": "13820",
+    "region_name": "Birmingham, AL"
+  },
+  {
+    "region_id": "13860",
+    "region_name": "Bishop, CA"
+  },
+  {
+    "region_id": "13900",
+    "region_name": "Bismarck, ND"
+  },
+  {
+    "region_id": "13940",
+    "region_name": "Blackfoot, ID"
+  },
+  {
+    "region_id": "13980",
+    "region_name": "Blacksburg-Christiansburg-Radford, VA"
+  },
+  {
+    "region_id": "14010",
+    "region_name": "Bloomington, IL"
+  },
+  {
+    "region_id": "14020",
+    "region_name": "Bloomington, IN"
+  },
+  {
+    "region_id": "14100",
+    "region_name": "Bloomsburg-Berwick, PA"
+  },
+  {
+    "region_id": "14140",
+    "region_name": "Bluefield, WV-VA"
+  },
+  {
+    "region_id": "14180",
+    "region_name": "Blytheville, AR"
+  },
+  {
+    "region_id": "14220",
+    "region_name": "Bogalusa, LA"
+  },
+  {
+    "region_id": "14260",
+    "region_name": "Boise City, ID"
+  },
+  {
+    "region_id": "14300",
+    "region_name": "Bonham, TX"
+  },
+  {
+    "region_id": "14380",
+    "region_name": "Boone, NC"
+  },
+  {
+    "region_id": "14420",
+    "region_name": "Borger, TX"
   },
   {
     "region_id": "BOS",
     "region_name": "Boston"
   },
   {
+    "region_id": "14460",
+    "region_name": "Boston-Cambridge-Newton, MA-NH"
+  },
+  {
+    "region_id": "14500",
+    "region_name": "Boulder, CO"
+  },
+  {
+    "region_id": "14540",
+    "region_name": "Bowling Green, KY"
+  },
+  {
+    "region_id": "14580",
+    "region_name": "Bozeman, MT"
+  },
+  {
+    "region_id": "14620",
+    "region_name": "Bradford, PA"
+  },
+  {
+    "region_id": "14660",
+    "region_name": "Brainerd, MN"
+  },
+  {
+    "region_id": "14700",
+    "region_name": "Branson, MO"
+  },
+  {
+    "region_id": "14710",
+    "region_name": "Brattleboro, VT"
+  },
+  {
+    "region_id": "14720",
+    "region_name": "Breckenridge, CO"
+  },
+  {
+    "region_id": "14740",
+    "region_name": "Bremerton-Silverdale-Port Orchard, WA"
+  },
+  {
+    "region_id": "14780",
+    "region_name": "Brenham, TX"
+  },
+  {
+    "region_id": "14820",
+    "region_name": "Brevard, NC"
+  },
+  {
+    "region_id": "14860",
+    "region_name": "Bridgeport-Stamford-Danbury, CT"
+  },
+  {
+    "region_id": "14940",
+    "region_name": "Brigham City, UT-ID"
+  },
+  {
+    "region_id": "15020",
+    "region_name": "Brookhaven, MS"
+  },
+  {
+    "region_id": "15060",
+    "region_name": "Brookings, OR"
+  },
+  {
+    "region_id": "15100",
+    "region_name": "Brookings, SD"
+  },
+  {
+    "region_id": "15180",
+    "region_name": "Brownsville-Harlingen, TX"
+  },
+  {
+    "region_id": "15220",
+    "region_name": "Brownwood, TX"
+  },
+  {
+    "region_id": "15260",
+    "region_name": "Brunswick-St. Simons, GA"
+  },
+  {
+    "region_id": "15340",
+    "region_name": "Bucyrus, OH"
+  },
+  {
+    "region_id": "15380",
+    "region_name": "Buffalo-Cheektowaga, NY"
+  },
+  {
+    "region_id": "15420",
+    "region_name": "Burley, ID"
+  },
+  {
+    "region_id": "15460",
+    "region_name": "Burlington, IA-IL"
+  },
+  {
+    "region_id": "15500",
+    "region_name": "Burlington, NC"
+  },
+  {
+    "region_id": "15540",
+    "region_name": "Burlington-South Burlington, VT"
+  },
+  {
+    "region_id": "15580",
+    "region_name": "Butte-Silver Bow, MT"
+  },
+  {
+    "region_id": "15620",
+    "region_name": "Cadillac, MI"
+  },
+  {
+    "region_id": "15660",
+    "region_name": "Calhoun, GA"
+  },
+  {
+    "region_id": "15700",
+    "region_name": "Cambridge, MD"
+  },
+  {
+    "region_id": "15740",
+    "region_name": "Cambridge, OH"
+  },
+  {
+    "region_id": "15780",
+    "region_name": "Camden, AR"
+  },
+  {
+    "region_id": "15820",
+    "region_name": "Campbellsville, KY"
+  },
+  {
+    "region_id": "15900",
+    "region_name": "Canton, IL"
+  },
+  {
+    "region_id": "15940",
+    "region_name": "Canton-Massillon, OH"
+  },
+  {
+    "region_id": "15980",
+    "region_name": "Cape Coral-Fort Myers, FL"
+  },
+  {
+    "region_id": "16020",
+    "region_name": "Cape Girardeau, MO-IL"
+  },
+  {
+    "region_id": "16060",
+    "region_name": "Carbondale, IL"
+  },
+  {
+    "region_id": "16100",
+    "region_name": "Carlsbad-Artesia, NM"
+  },
+  {
+    "region_id": "16140",
+    "region_name": "Carroll, IA"
+  },
+  {
+    "region_id": "16180",
+    "region_name": "Carson City, NV"
+  },
+  {
+    "region_id": "16220",
+    "region_name": "Casper, WY"
+  },
+  {
+    "region_id": "15860",
+    "region_name": "Ca\u00f1on City, CO"
+  },
+  {
+    "region_id": "16260",
+    "region_name": "Cedar City, UT"
+  },
+  {
+    "region_id": "16300",
+    "region_name": "Cedar Rapids, IA"
+  },
+  {
+    "region_id": "16340",
+    "region_name": "Cedartown, GA"
+  },
+  {
+    "region_id": "16380",
+    "region_name": "Celina, OH"
+  },
+  {
+    "region_id": "16460",
+    "region_name": "Centralia, IL"
+  },
+  {
+    "region_id": "16500",
+    "region_name": "Centralia, WA"
+  },
+  {
+    "region_id": "16540",
+    "region_name": "Chambersburg, PA"
+  },
+  {
+    "region_id": "16580",
+    "region_name": "Champaign-Urbana, IL"
+  },
+  {
+    "region_id": "16620",
+    "region_name": "Charleston, WV"
+  },
+  {
+    "region_id": "16660",
+    "region_name": "Charleston-Mattoon, IL"
+  },
+  {
+    "region_id": "16700",
+    "region_name": "Charleston-North Charleston, SC"
+  },
+  {
     "region_id": "CLT",
     "region_name": "Charlotte"
+  },
+  {
+    "region_id": "16740",
+    "region_name": "Charlotte-Concord-Gastonia, NC-SC"
+  },
+  {
+    "region_id": "16820",
+    "region_name": "Charlottesville, VA"
+  },
+  {
+    "region_id": "16860",
+    "region_name": "Chattanooga, TN-GA"
+  },
+  {
+    "region_id": "16940",
+    "region_name": "Cheyenne, WY"
   },
   {
     "region_id": "CHI",
     "region_name": "Chicago"
   },
   {
+    "region_id": "16980",
+    "region_name": "Chicago-Naperville-Elgin, IL-IN"
+  },
+  {
+    "region_id": "17020",
+    "region_name": "Chico, CA"
+  },
+  {
+    "region_id": "17060",
+    "region_name": "Chillicothe, OH"
+  },
+  {
     "region_id": "CIN",
     "region_name": "Cincinnati"
+  },
+  {
+    "region_id": "17140",
+    "region_name": "Cincinnati, OH-KY-IN"
+  },
+  {
+    "region_id": "17220",
+    "region_name": "Clarksburg, WV"
+  },
+  {
+    "region_id": "17260",
+    "region_name": "Clarksdale, MS"
+  },
+  {
+    "region_id": "17300",
+    "region_name": "Clarksville, TN-KY"
+  },
+  {
+    "region_id": "17340",
+    "region_name": "Clearlake, CA"
   },
   {
     "region_id": "CLE",
     "region_name": "Cleveland"
   },
   {
+    "region_id": "17380",
+    "region_name": "Cleveland, MS"
+  },
+  {
+    "region_id": "17410",
+    "region_name": "Cleveland, OH"
+  },
+  {
+    "region_id": "17420",
+    "region_name": "Cleveland, TN"
+  },
+  {
+    "region_id": "17500",
+    "region_name": "Clewiston, FL"
+  },
+  {
+    "region_id": "17540",
+    "region_name": "Clinton, IA"
+  },
+  {
+    "region_id": "17580",
+    "region_name": "Clovis, NM"
+  },
+  {
+    "region_id": "17620",
+    "region_name": "Coamo, PR"
+  },
+  {
+    "region_id": "17640",
+    "region_name": "Coco, PR"
+  },
+  {
+    "region_id": "17650",
+    "region_name": "Cody, WY"
+  },
+  {
+    "region_id": "17660",
+    "region_name": "Coeur d'Alene, ID"
+  },
+  {
+    "region_id": "17740",
+    "region_name": "Coldwater, MI"
+  },
+  {
+    "region_id": "17780",
+    "region_name": "College Station-Bryan, TX"
+  },
+  {
+    "region_id": "17820",
+    "region_name": "Colorado Springs, CO"
+  },
+  {
+    "region_id": "17860",
+    "region_name": "Columbia, MO"
+  },
+  {
+    "region_id": "17900",
+    "region_name": "Columbia, SC"
+  },
+  {
     "region_id": "COL",
     "region_name": "Columbus"
+  },
+  {
+    "region_id": "17980",
+    "region_name": "Columbus, GA-AL"
+  },
+  {
+    "region_id": "18020",
+    "region_name": "Columbus, IN"
+  },
+  {
+    "region_id": "18060",
+    "region_name": "Columbus, MS"
+  },
+  {
+    "region_id": "18100",
+    "region_name": "Columbus, NE"
+  },
+  {
+    "region_id": "18140",
+    "region_name": "Columbus, OH"
+  },
+  {
+    "region_id": "18180",
+    "region_name": "Concord, NH"
+  },
+  {
+    "region_id": "18220",
+    "region_name": "Connersville, IN"
+  },
+  {
+    "region_id": "18260",
+    "region_name": "Cookeville, TN"
+  },
+  {
+    "region_id": "18300",
+    "region_name": "Coos Bay-North Bend, OR"
+  },
+  {
+    "region_id": "18340",
+    "region_name": "Corbin, KY"
+  },
+  {
+    "region_id": "18380",
+    "region_name": "Cordele, GA"
+  },
+  {
+    "region_id": "18420",
+    "region_name": "Corinth, MS"
+  },
+  {
+    "region_id": "18460",
+    "region_name": "Cornelia, GA"
+  },
+  {
+    "region_id": "18500",
+    "region_name": "Corning, NY"
+  },
+  {
+    "region_id": "18580",
+    "region_name": "Corpus Christi, TX"
+  },
+  {
+    "region_id": "18620",
+    "region_name": "Corsicana, TX"
+  },
+  {
+    "region_id": "18660",
+    "region_name": "Cortland, NY"
+  },
+  {
+    "region_id": "18700",
+    "region_name": "Corvallis, OR"
+  },
+  {
+    "region_id": "18740",
+    "region_name": "Coshocton, OH"
+  },
+  {
+    "region_id": "18820",
+    "region_name": "Crawfordsville, IN"
+  },
+  {
+    "region_id": "18860",
+    "region_name": "Crescent City, CA"
+  },
+  {
+    "region_id": "18880",
+    "region_name": "Crestview-Fort Walton Beach-Destin, FL"
+  },
+  {
+    "region_id": "18900",
+    "region_name": "Crossville, TN"
+  },
+  {
+    "region_id": "18980",
+    "region_name": "Cullman, AL"
+  },
+  {
+    "region_id": "19060",
+    "region_name": "Cumberland, MD-WV"
   },
   {
     "region_id": "DFW",
     "region_name": "Dallas-Fort Worth"
   },
   {
+    "region_id": "19100",
+    "region_name": "Dallas-Fort Worth-Arlington, TX"
+  },
+  {
+    "region_id": "19140",
+    "region_name": "Dalton, GA"
+  },
+  {
+    "region_id": "19180",
+    "region_name": "Danville, IL"
+  },
+  {
+    "region_id": "19220",
+    "region_name": "Danville, KY"
+  },
+  {
+    "region_id": "19260",
+    "region_name": "Danville, VA"
+  },
+  {
+    "region_id": "19300",
+    "region_name": "Daphne-Fairhope-Foley, AL"
+  },
+  {
+    "region_id": "19340",
+    "region_name": "Davenport-Moline-Rock Island, IA-IL"
+  },
+  {
+    "region_id": "19430",
+    "region_name": "Dayton-Kettering-Beavercreek, OH"
+  },
+  {
+    "region_id": "19760",
+    "region_name": "DeRidder, LA"
+  },
+  {
+    "region_id": "19460",
+    "region_name": "Decatur, AL"
+  },
+  {
+    "region_id": "19500",
+    "region_name": "Decatur, IL"
+  },
+  {
+    "region_id": "19540",
+    "region_name": "Decatur, IN"
+  },
+  {
+    "region_id": "19580",
+    "region_name": "Defiance, OH"
+  },
+  {
+    "region_id": "19620",
+    "region_name": "Del Rio, TX"
+  },
+  {
+    "region_id": "19660",
+    "region_name": "Deltona-Daytona Beach-Ormond Beach, FL"
+  },
+  {
+    "region_id": "19700",
+    "region_name": "Deming, NM"
+  },
+  {
     "region_id": "DEN",
     "region_name": "Denver"
+  },
+  {
+    "region_id": "19740",
+    "region_name": "Denver-Aurora-Centennial, CO"
+  },
+  {
+    "region_id": "19780",
+    "region_name": "Des Moines-West Des Moines, IA"
   },
   {
     "region_id": "DET",
     "region_name": "Detroit"
   },
   {
+    "region_id": "19810",
+    "region_name": "Detroit Lakes, MN"
+  },
+  {
+    "region_id": "19820",
+    "region_name": "Detroit-Warren-Dearborn, MI"
+  },
+  {
+    "region_id": "19860",
+    "region_name": "Dickinson, ND"
+  },
+  {
+    "region_id": "19940",
+    "region_name": "Dixon, IL"
+  },
+  {
+    "region_id": "19980",
+    "region_name": "Dodge City, KS"
+  },
+  {
+    "region_id": "20020",
+    "region_name": "Dothan, AL"
+  },
+  {
+    "region_id": "20060",
+    "region_name": "Douglas, GA"
+  },
+  {
+    "region_id": "20100",
+    "region_name": "Dover, DE"
+  },
+  {
+    "region_id": "20180",
+    "region_name": "DuBois, PA"
+  },
+  {
+    "region_id": "20140",
+    "region_name": "Dublin, GA"
+  },
+  {
+    "region_id": "20220",
+    "region_name": "Dubuque, IA"
+  },
+  {
+    "region_id": "20260",
+    "region_name": "Duluth, MN-WI"
+  },
+  {
+    "region_id": "20300",
+    "region_name": "Dumas, TX"
+  },
+  {
+    "region_id": "20340",
+    "region_name": "Duncan, OK"
+  },
+  {
+    "region_id": "20420",
+    "region_name": "Durango, CO"
+  },
+  {
+    "region_id": "20460",
+    "region_name": "Durant, OK"
+  },
+  {
+    "region_id": "20500",
+    "region_name": "Durham-Chapel Hill, NC"
+  },
+  {
+    "region_id": "20540",
+    "region_name": "Dyersburg, TN"
+  },
+  {
+    "region_id": "20580",
+    "region_name": "Eagle Pass, TX"
+  },
+  {
+    "region_id": "20700",
+    "region_name": "East Stroudsburg, PA"
+  },
+  {
+    "region_id": "20660",
+    "region_name": "Easton, MD"
+  },
+  {
+    "region_id": "20740",
+    "region_name": "Eau Claire, WI"
+  },
+  {
+    "region_id": "20780",
+    "region_name": "Edwards, CO"
+  },
+  {
+    "region_id": "20820",
+    "region_name": "Effingham, IL"
+  },
+  {
+    "region_id": "20900",
+    "region_name": "El Campo, TX"
+  },
+  {
+    "region_id": "20940",
+    "region_name": "El Centro, CA"
+  },
+  {
+    "region_id": "20980",
+    "region_name": "El Dorado, AR"
+  },
+  {
+    "region_id": "21340",
+    "region_name": "El Paso, TX"
+  },
+  {
+    "region_id": "21020",
+    "region_name": "Elizabeth City, NC"
+  },
+  {
+    "region_id": "21060",
+    "region_name": "Elizabethtown, KY"
+  },
+  {
+    "region_id": "21120",
+    "region_name": "Elk City, OK"
+  },
+  {
+    "region_id": "21140",
+    "region_name": "Elkhart-Goshen, IN"
+  },
+  {
+    "region_id": "21180",
+    "region_name": "Elkins, WV"
+  },
+  {
+    "region_id": "21220",
+    "region_name": "Elko, NV"
+  },
+  {
+    "region_id": "21260",
+    "region_name": "Ellensburg, WA"
+  },
+  {
+    "region_id": "21300",
+    "region_name": "Elmira, NY"
+  },
+  {
+    "region_id": "21380",
+    "region_name": "Emporia, KS"
+  },
+  {
+    "region_id": "21420",
+    "region_name": "Enid, OK"
+  },
+  {
+    "region_id": "21460",
+    "region_name": "Enterprise, AL"
+  },
+  {
+    "region_id": "21500",
+    "region_name": "Erie, PA"
+  },
+  {
+    "region_id": "21540",
+    "region_name": "Escanaba, MI"
+  },
+  {
+    "region_id": "21580",
+    "region_name": "Espa\u00f1ola, NM"
+  },
+  {
+    "region_id": "21640",
+    "region_name": "Eufaula, AL-GA"
+  },
+  {
+    "region_id": "21660",
+    "region_name": "Eugene-Springfield, OR"
+  },
+  {
+    "region_id": "21700",
+    "region_name": "Eureka-Arcata, CA"
+  },
+  {
+    "region_id": "21740",
+    "region_name": "Evanston, WY-UT"
+  },
+  {
+    "region_id": "21780",
+    "region_name": "Evansville, IN"
+  },
+  {
+    "region_id": "21820",
+    "region_name": "Fairbanks-College, AK"
+  },
+  {
+    "region_id": "21860",
+    "region_name": "Fairmont, MN"
+  },
+  {
+    "region_id": "21900",
+    "region_name": "Fairmont, WV"
+  },
+  {
+    "region_id": "21980",
+    "region_name": "Fallon, NV"
+  },
+  {
+    "region_id": "22020",
+    "region_name": "Fargo, ND-MN"
+  },
+  {
+    "region_id": "22060",
+    "region_name": "Faribault-Northfield, MN"
+  },
+  {
+    "region_id": "22100",
+    "region_name": "Farmington, MO"
+  },
+  {
+    "region_id": "22140",
+    "region_name": "Farmington, NM"
+  },
+  {
+    "region_id": "22180",
+    "region_name": "Fayetteville, NC"
+  },
+  {
+    "region_id": "22190",
+    "region_name": "Fayetteville, TN"
+  },
+  {
+    "region_id": "22220",
+    "region_name": "Fayetteville-Springdale-Rogers, AR"
+  },
+  {
+    "region_id": "22260",
+    "region_name": "Fergus Falls, MN"
+  },
+  {
+    "region_id": "22300",
+    "region_name": "Findlay, OH"
+  },
+  {
+    "region_id": "22340",
+    "region_name": "Fitzgerald, GA"
+  },
+  {
+    "region_id": "22380",
+    "region_name": "Flagstaff, AZ"
+  },
+  {
+    "region_id": "22420",
+    "region_name": "Flint, MI"
+  },
+  {
+    "region_id": "22500",
+    "region_name": "Florence, SC"
+  },
+  {
+    "region_id": "22520",
+    "region_name": "Florence-Muscle Shoals, AL"
+  },
+  {
+    "region_id": "22540",
+    "region_name": "Fond du Lac, WI"
+  },
+  {
+    "region_id": "22580",
+    "region_name": "Forest City, NC"
+  },
+  {
+    "region_id": "22620",
+    "region_name": "Forrest City, AR"
+  },
+  {
+    "region_id": "22660",
+    "region_name": "Fort Collins-Loveland, CO"
+  },
+  {
+    "region_id": "22700",
+    "region_name": "Fort Dodge, IA"
+  },
+  {
+    "region_id": "22780",
+    "region_name": "Fort Leonard Wood, MO"
+  },
+  {
+    "region_id": "22800",
+    "region_name": "Fort Madison, IA"
+  },
+  {
+    "region_id": "22820",
+    "region_name": "Fort Morgan, CO"
+  },
+  {
+    "region_id": "22840",
+    "region_name": "Fort Payne, AL"
+  },
+  {
+    "region_id": "22900",
+    "region_name": "Fort Smith, AR-OK"
+  },
+  {
+    "region_id": "23060",
+    "region_name": "Fort Wayne, IN"
+  },
+  {
+    "region_id": "23140",
+    "region_name": "Frankfort, IN"
+  },
+  {
+    "region_id": "23180",
+    "region_name": "Frankfort, KY"
+  },
+  {
+    "region_id": "23190",
+    "region_name": "Franklin, KY"
+  },
+  {
+    "region_id": "23240",
+    "region_name": "Fredericksburg, TX"
+  },
+  {
+    "region_id": "23300",
+    "region_name": "Freeport, IL"
+  },
+  {
+    "region_id": "23340",
+    "region_name": "Fremont, NE"
+  },
+  {
+    "region_id": "23380",
+    "region_name": "Fremont, OH"
+  },
+  {
+    "region_id": "23420",
+    "region_name": "Fresno, CA"
+  },
+  {
+    "region_id": "23460",
+    "region_name": "Gadsden, AL"
+  },
+  {
+    "region_id": "23500",
+    "region_name": "Gaffney, SC"
+  },
+  {
+    "region_id": "23540",
+    "region_name": "Gainesville, FL"
+  },
+  {
+    "region_id": "23580",
+    "region_name": "Gainesville, GA"
+  },
+  {
+    "region_id": "23620",
+    "region_name": "Gainesville, TX"
+  },
+  {
+    "region_id": "23660",
+    "region_name": "Galesburg, IL"
+  },
+  {
+    "region_id": "23680",
+    "region_name": "Gallipolis, OH"
+  },
+  {
+    "region_id": "23700",
+    "region_name": "Gallup, NM"
+  },
+  {
+    "region_id": "23780",
+    "region_name": "Garden City, KS"
+  },
+  {
+    "region_id": "23820",
+    "region_name": "Gardnerville Ranchos, NV-CA"
+  },
+  {
+    "region_id": "23900",
+    "region_name": "Gettysburg, PA"
+  },
+  {
+    "region_id": "23940",
+    "region_name": "Gillette, WY"
+  },
+  {
+    "region_id": "23980",
+    "region_name": "Glasgow, KY"
+  },
+  {
+    "region_id": "24020",
+    "region_name": "Glens Falls, NY"
+  },
+  {
+    "region_id": "24100",
+    "region_name": "Gloversville, NY"
+  },
+  {
+    "region_id": "24140",
+    "region_name": "Goldsboro, NC"
+  },
+  {
+    "region_id": "24180",
+    "region_name": "Granbury, TX"
+  },
+  {
+    "region_id": "24220",
+    "region_name": "Grand Forks, ND-MN"
+  },
+  {
+    "region_id": "24260",
+    "region_name": "Grand Island, NE"
+  },
+  {
+    "region_id": "24300",
+    "region_name": "Grand Junction, CO"
+  },
+  {
+    "region_id": "24330",
+    "region_name": "Grand Rapids, MN"
+  },
+  {
+    "region_id": "24340",
+    "region_name": "Grand Rapids-Wyoming-Kentwood, MI"
+  },
+  {
+    "region_id": "24420",
+    "region_name": "Grants Pass, OR"
+  },
+  {
+    "region_id": "24460",
+    "region_name": "Great Bend, KS"
+  },
+  {
+    "region_id": "24500",
+    "region_name": "Great Falls, MT"
+  },
+  {
+    "region_id": "24540",
+    "region_name": "Greeley, CO"
+  },
+  {
+    "region_id": "24580",
+    "region_name": "Green Bay, WI"
+  },
+  {
+    "region_id": "24600",
+    "region_name": "Greencastle, IN"
+  },
+  {
+    "region_id": "24620",
+    "region_name": "Greeneville, TN"
+  },
+  {
+    "region_id": "24640",
+    "region_name": "Greenfield, MA"
+  },
+  {
+    "region_id": "24660",
+    "region_name": "Greensboro-High Point, NC"
+  },
+  {
+    "region_id": "24700",
+    "region_name": "Greensburg, IN"
+  },
+  {
+    "region_id": "24740",
+    "region_name": "Greenville, MS"
+  },
+  {
+    "region_id": "24780",
+    "region_name": "Greenville, NC"
+  },
+  {
+    "region_id": "24820",
+    "region_name": "Greenville, OH"
+  },
+  {
+    "region_id": "24860",
+    "region_name": "Greenville-Anderson-Greer, SC"
+  },
+  {
+    "region_id": "24900",
+    "region_name": "Greenwood, MS"
+  },
+  {
+    "region_id": "24940",
+    "region_name": "Greenwood, SC"
+  },
+  {
+    "region_id": "24980",
+    "region_name": "Grenada, MS"
+  },
+  {
+    "region_id": "25020",
+    "region_name": "Guayama, PR"
+  },
+  {
+    "region_id": "25060",
+    "region_name": "Gulfport-Biloxi, MS"
+  },
+  {
+    "region_id": "25100",
+    "region_name": "Guymon, OK"
+  },
+  {
+    "region_id": "25180",
+    "region_name": "Hagerstown-Martinsburg, MD-WV"
+  },
+  {
+    "region_id": "25200",
+    "region_name": "Hailey, ID"
+  },
+  {
+    "region_id": "25220",
+    "region_name": "Hammond, LA"
+  },
+  {
+    "region_id": "25260",
+    "region_name": "Hanford-Corcoran, CA"
+  },
+  {
+    "region_id": "25300",
+    "region_name": "Hannibal, MO"
+  },
+  {
+    "region_id": "25420",
+    "region_name": "Harrisburg-Carlisle, PA"
+  },
+  {
+    "region_id": "25460",
+    "region_name": "Harrison, AR"
+  },
+  {
+    "region_id": "25500",
+    "region_name": "Harrisonburg, VA"
+  },
+  {
+    "region_id": "25540",
+    "region_name": "Hartford-West Hartford-East Hartford, CT"
+  },
+  {
+    "region_id": "25580",
+    "region_name": "Hastings, NE"
+  },
+  {
+    "region_id": "25620",
+    "region_name": "Hattiesburg, MS"
+  },
+  {
+    "region_id": "25700",
+    "region_name": "Hays, KS"
+  },
+  {
+    "region_id": "25720",
+    "region_name": "Heber, UT"
+  },
+  {
+    "region_id": "25740",
+    "region_name": "Helena, MT"
+  },
+  {
+    "region_id": "25770",
+    "region_name": "Hemlock Farms, PA"
+  },
+  {
+    "region_id": "25775",
+    "region_name": "Henderson, KY"
+  },
+  {
+    "region_id": "25780",
+    "region_name": "Henderson, NC"
+  },
+  {
+    "region_id": "25820",
+    "region_name": "Hereford, TX"
+  },
+  {
+    "region_id": "25840",
+    "region_name": "Hermiston-Pendleton, OR"
+  },
+  {
+    "region_id": "25850",
+    "region_name": "Hermitage, PA"
+  },
+  {
+    "region_id": "25860",
+    "region_name": "Hickory-Lenoir-Morganton, NC"
+  },
+  {
+    "region_id": "25880",
+    "region_name": "Hillsdale, MI"
+  },
+  {
+    "region_id": "25900",
+    "region_name": "Hilo-Kailua, HI"
+  },
+  {
+    "region_id": "25940",
+    "region_name": "Hilton Head Island-Bluffton-Port Royal, SC"
+  },
+  {
+    "region_id": "25980",
+    "region_name": "Hinesville, GA"
+  },
+  {
+    "region_id": "26020",
+    "region_name": "Hobbs, NM"
+  },
+  {
+    "region_id": "26090",
+    "region_name": "Holland, MI"
+  },
+  {
+    "region_id": "26140",
+    "region_name": "Homosassa Springs, FL"
+  },
+  {
+    "region_id": "26220",
+    "region_name": "Hood River, OR"
+  },
+  {
+    "region_id": "26300",
+    "region_name": "Hot Springs, AR"
+  },
+  {
+    "region_id": "26340",
+    "region_name": "Houghton, MI"
+  },
+  {
+    "region_id": "26380",
+    "region_name": "Houma-Bayou Cane-Thibodaux, LA"
+  },
+  {
     "region_id": "HOU",
     "region_name": "Houston"
+  },
+  {
+    "region_id": "26420",
+    "region_name": "Houston-Pasadena-The Woodlands, TX"
+  },
+  {
+    "region_id": "26460",
+    "region_name": "Hudson, NY"
+  },
+  {
+    "region_id": "26500",
+    "region_name": "Huntingdon, PA"
+  },
+  {
+    "region_id": "26540",
+    "region_name": "Huntington, IN"
+  },
+  {
+    "region_id": "26580",
+    "region_name": "Huntington-Ashland, WV-KY-OH"
+  },
+  {
+    "region_id": "26620",
+    "region_name": "Huntsville, AL"
+  },
+  {
+    "region_id": "26660",
+    "region_name": "Huntsville, TX"
+  },
+  {
+    "region_id": "26700",
+    "region_name": "Huron, SD"
+  },
+  {
+    "region_id": "26740",
+    "region_name": "Hutchinson, KS"
+  },
+  {
+    "region_id": "26780",
+    "region_name": "Hutchinson, MN"
+  },
+  {
+    "region_id": "26820",
+    "region_name": "Idaho Falls, ID"
+  },
+  {
+    "region_id": "26860",
+    "region_name": "Indiana, PA"
   },
   {
     "region_id": "IND",
     "region_name": "Indianapolis"
   },
   {
+    "region_id": "26900",
+    "region_name": "Indianapolis-Carmel-Greenwood, IN"
+  },
+  {
+    "region_id": "26980",
+    "region_name": "Iowa City, IA"
+  },
+  {
+    "region_id": "27020",
+    "region_name": "Iron Mountain, MI-WI"
+  },
+  {
+    "region_id": "27060",
+    "region_name": "Ithaca, NY"
+  },
+  {
+    "region_id": "27100",
+    "region_name": "Jackson, MI"
+  },
+  {
+    "region_id": "27140",
+    "region_name": "Jackson, MS"
+  },
+  {
+    "region_id": "27180",
+    "region_name": "Jackson, TN"
+  },
+  {
+    "region_id": "27220",
+    "region_name": "Jackson, WY-ID"
+  },
+  {
+    "region_id": "27260",
+    "region_name": "Jacksonville, FL"
+  },
+  {
+    "region_id": "27300",
+    "region_name": "Jacksonville, IL"
+  },
+  {
+    "region_id": "27340",
+    "region_name": "Jacksonville, NC"
+  },
+  {
+    "region_id": "27380",
+    "region_name": "Jacksonville, TX"
+  },
+  {
+    "region_id": "27420",
+    "region_name": "Jamestown, ND"
+  },
+  {
+    "region_id": "27460",
+    "region_name": "Jamestown-Dunkirk, NY"
+  },
+  {
+    "region_id": "27500",
+    "region_name": "Janesville-Beloit, WI"
+  },
+  {
+    "region_id": "27540",
+    "region_name": "Jasper, IN"
+  },
+  {
+    "region_id": "27620",
+    "region_name": "Jefferson City, MO"
+  },
+  {
+    "region_id": "27600",
+    "region_name": "Jefferson, GA"
+  },
+  {
+    "region_id": "27700",
+    "region_name": "Jesup, GA"
+  },
+  {
+    "region_id": "27740",
+    "region_name": "Johnson City, TN"
+  },
+  {
+    "region_id": "27780",
+    "region_name": "Johnstown, PA"
+  },
+  {
+    "region_id": "27860",
+    "region_name": "Jonesboro, AR"
+  },
+  {
+    "region_id": "27900",
+    "region_name": "Joplin, MO-KS"
+  },
+  {
+    "region_id": "27940",
+    "region_name": "Juneau, AK"
+  },
+  {
+    "region_id": "27980",
+    "region_name": "Kahului-Wailuku, HI"
+  },
+  {
+    "region_id": "28020",
+    "region_name": "Kalamazoo-Portage, MI"
+  },
+  {
+    "region_id": "28060",
+    "region_name": "Kalispell, MT"
+  },
+  {
+    "region_id": "28100",
+    "region_name": "Kankakee, IL"
+  },
+  {
     "region_id": "KCY",
     "region_name": "Kansas City"
+  },
+  {
+    "region_id": "28140",
+    "region_name": "Kansas City, MO-KS"
+  },
+  {
+    "region_id": "28180",
+    "region_name": "Kapaa, HI"
+  },
+  {
+    "region_id": "28260",
+    "region_name": "Kearney, NE"
+  },
+  {
+    "region_id": "28300",
+    "region_name": "Keene, NH"
+  },
+  {
+    "region_id": "28340",
+    "region_name": "Kendallville, IN"
+  },
+  {
+    "region_id": "28380",
+    "region_name": "Kennett, MO"
+  },
+  {
+    "region_id": "28420",
+    "region_name": "Kennewick-Richland, WA"
+  },
+  {
+    "region_id": "28450",
+    "region_name": "Kenosha, WI"
+  },
+  {
+    "region_id": "28500",
+    "region_name": "Kerrville, TX"
+  },
+  {
+    "region_id": "28540",
+    "region_name": "Ketchikan, AK"
+  },
+  {
+    "region_id": "28580",
+    "region_name": "Key West-Key Largo, FL"
+  },
+  {
+    "region_id": "28620",
+    "region_name": "Kill Devil Hills, NC"
+  },
+  {
+    "region_id": "28660",
+    "region_name": "Killeen-Temple, TX"
+  },
+  {
+    "region_id": "28680",
+    "region_name": "Kingsland, GA"
+  },
+  {
+    "region_id": "28700",
+    "region_name": "Kingsport-Bristol, TN-VA"
+  },
+  {
+    "region_id": "28740",
+    "region_name": "Kingston, NY"
+  },
+  {
+    "region_id": "28780",
+    "region_name": "Kingsville, TX"
+  },
+  {
+    "region_id": "28820",
+    "region_name": "Kinston, NC"
+  },
+  {
+    "region_id": "28860",
+    "region_name": "Kirksville, MO"
+  },
+  {
+    "region_id": "28880",
+    "region_name": "Kiryas Joel-Poughkeepsie-Newburgh, NY"
+  },
+  {
+    "region_id": "28900",
+    "region_name": "Klamath Falls, OR"
+  },
+  {
+    "region_id": "28940",
+    "region_name": "Knoxville, TN"
+  },
+  {
+    "region_id": "29020",
+    "region_name": "Kokomo, IN"
+  },
+  {
+    "region_id": "29100",
+    "region_name": "La Crosse-Onalaska, WI-MN"
+  },
+  {
+    "region_id": "29260",
+    "region_name": "La Grande, OR"
+  },
+  {
+    "region_id": "29300",
+    "region_name": "LaGrange, GA-AL"
+  },
+  {
+    "region_id": "29060",
+    "region_name": "Laconia, NH"
+  },
+  {
+    "region_id": "29180",
+    "region_name": "Lafayette, LA"
+  },
+  {
+    "region_id": "29200",
+    "region_name": "Lafayette-West Lafayette, IN"
+  },
+  {
+    "region_id": "29340",
+    "region_name": "Lake Charles, LA"
+  },
+  {
+    "region_id": "29380",
+    "region_name": "Lake City, FL"
+  },
+  {
+    "region_id": "29420",
+    "region_name": "Lake Havasu City-Kingman, AZ"
+  },
+  {
+    "region_id": "29470",
+    "region_name": "Lake of the Woods, VA"
+  },
+  {
+    "region_id": "29460",
+    "region_name": "Lakeland-Winter Haven, FL"
+  },
+  {
+    "region_id": "29540",
+    "region_name": "Lancaster, PA"
+  },
+  {
+    "region_id": "29620",
+    "region_name": "Lansing-East Lansing, MI"
+  },
+  {
+    "region_id": "29660",
+    "region_name": "Laramie, WY"
+  },
+  {
+    "region_id": "29700",
+    "region_name": "Laredo, TX"
+  },
+  {
+    "region_id": "29720",
+    "region_name": "Lares, PR"
+  },
+  {
+    "region_id": "29740",
+    "region_name": "Las Cruces, NM"
   },
   {
     "region_id": "LAS",
     "region_name": "Las Vegas"
   },
   {
+    "region_id": "29780",
+    "region_name": "Las Vegas, NM"
+  },
+  {
+    "region_id": "29820",
+    "region_name": "Las Vegas-Henderson-North Las Vegas, NV"
+  },
+  {
+    "region_id": "29860",
+    "region_name": "Laurel, MS"
+  },
+  {
+    "region_id": "29900",
+    "region_name": "Laurinburg, NC"
+  },
+  {
+    "region_id": "29940",
+    "region_name": "Lawrence, KS"
+  },
+  {
+    "region_id": "29980",
+    "region_name": "Lawrenceburg, TN"
+  },
+  {
+    "region_id": "30020",
+    "region_name": "Lawton, OK"
+  },
+  {
+    "region_id": "30180",
+    "region_name": "Le Mars, IA"
+  },
+  {
+    "region_id": "30060",
+    "region_name": "Lebanon, MO"
+  },
+  {
+    "region_id": "30140",
+    "region_name": "Lebanon, PA"
+  },
+  {
+    "region_id": "30150",
+    "region_name": "Lebanon-Claremont, NH-VT"
+  },
+  {
+    "region_id": "30260",
+    "region_name": "Lewisburg, PA"
+  },
+  {
+    "region_id": "30280",
+    "region_name": "Lewisburg, TN"
+  },
+  {
+    "region_id": "30300",
+    "region_name": "Lewiston, ID-WA"
+  },
+  {
+    "region_id": "30340",
+    "region_name": "Lewiston-Auburn, ME"
+  },
+  {
+    "region_id": "30380",
+    "region_name": "Lewistown, PA"
+  },
+  {
+    "region_id": "30500",
+    "region_name": "Lexington Park, MD"
+  },
+  {
+    "region_id": "30420",
+    "region_name": "Lexington, NE"
+  },
+  {
+    "region_id": "30460",
+    "region_name": "Lexington-Fayette, KY"
+  },
+  {
+    "region_id": "30580",
+    "region_name": "Liberal, KS"
+  },
+  {
+    "region_id": "30620",
+    "region_name": "Lima, OH"
+  },
+  {
+    "region_id": "30660",
+    "region_name": "Lincoln, IL"
+  },
+  {
+    "region_id": "30700",
+    "region_name": "Lincoln, NE"
+  },
+  {
+    "region_id": "30780",
+    "region_name": "Little Rock-North Little Rock-Conway, AR"
+  },
+  {
+    "region_id": "30820",
+    "region_name": "Lock Haven, PA"
+  },
+  {
+    "region_id": "30860",
+    "region_name": "Logan, UT-ID"
+  },
+  {
+    "region_id": "30900",
+    "region_name": "Logansport, IN"
+  },
+  {
+    "region_id": "30980",
+    "region_name": "Longview, TX"
+  },
+  {
+    "region_id": "31020",
+    "region_name": "Longview-Kelso, WA"
+  },
+  {
+    "region_id": "31060",
+    "region_name": "Los Alamos, NM"
+  },
+  {
     "region_id": "LAX",
     "region_name": "Los Angeles"
+  },
+  {
+    "region_id": "31080",
+    "region_name": "Los Angeles-Long Beach-Anaheim, CA"
+  },
+  {
+    "region_id": "31140",
+    "region_name": "Louisville/Jefferson County, KY-IN"
+  },
+  {
+    "region_id": "31180",
+    "region_name": "Lubbock, TX"
+  },
+  {
+    "region_id": "31220",
+    "region_name": "Ludington, MI"
+  },
+  {
+    "region_id": "31260",
+    "region_name": "Lufkin, TX"
+  },
+  {
+    "region_id": "31300",
+    "region_name": "Lumberton, NC"
+  },
+  {
+    "region_id": "31340",
+    "region_name": "Lynchburg, VA"
+  },
+  {
+    "region_id": "31380",
+    "region_name": "Macomb, IL"
+  },
+  {
+    "region_id": "31420",
+    "region_name": "Macon-Bibb County, GA"
+  },
+  {
+    "region_id": "31500",
+    "region_name": "Madison, IN"
+  },
+  {
+    "region_id": "31540",
+    "region_name": "Madison, WI"
+  },
+  {
+    "region_id": "31580",
+    "region_name": "Madisonville, KY"
+  },
+  {
+    "region_id": "31620",
+    "region_name": "Magnolia, AR"
+  },
+  {
+    "region_id": "31680",
+    "region_name": "Malvern, AR"
+  },
+  {
+    "region_id": "31700",
+    "region_name": "Manchester-Nashua, NH"
+  },
+  {
+    "region_id": "31740",
+    "region_name": "Manhattan, KS"
+  },
+  {
+    "region_id": "31820",
+    "region_name": "Manitowoc, WI"
+  },
+  {
+    "region_id": "31860",
+    "region_name": "Mankato, MN"
+  },
+  {
+    "region_id": "31900",
+    "region_name": "Mansfield, OH"
+  },
+  {
+    "region_id": "31930",
+    "region_name": "Marietta, OH"
+  },
+  {
+    "region_id": "31940",
+    "region_name": "Marinette, WI-MI"
+  },
+  {
+    "region_id": "31980",
+    "region_name": "Marion, IN"
+  },
+  {
+    "region_id": "32000",
+    "region_name": "Marion, NC"
+  },
+  {
+    "region_id": "32020",
+    "region_name": "Marion, OH"
+  },
+  {
+    "region_id": "32060",
+    "region_name": "Marion-Herrin, IL"
+  },
+  {
+    "region_id": "32100",
+    "region_name": "Marquette, MI"
+  },
+  {
+    "region_id": "32140",
+    "region_name": "Marshall, MN"
+  },
+  {
+    "region_id": "32180",
+    "region_name": "Marshall, MO"
+  },
+  {
+    "region_id": "32260",
+    "region_name": "Marshalltown, IA"
+  },
+  {
+    "region_id": "32280",
+    "region_name": "Martin, TN"
+  },
+  {
+    "region_id": "32300",
+    "region_name": "Martinsville, VA"
+  },
+  {
+    "region_id": "32340",
+    "region_name": "Maryville, MO"
+  },
+  {
+    "region_id": "32380",
+    "region_name": "Mason City, IA"
+  },
+  {
+    "region_id": "32390",
+    "region_name": "Massena-Ogdensburg, NY"
+  },
+  {
+    "region_id": "32420",
+    "region_name": "Mayag\u00fcez, PR"
+  },
+  {
+    "region_id": "32460",
+    "region_name": "Mayfield, KY"
+  },
+  {
+    "region_id": "32540",
+    "region_name": "McAlester, OK"
+  },
+  {
+    "region_id": "32580",
+    "region_name": "McAllen-Edinburg-Mission, TX"
+  },
+  {
+    "region_id": "32620",
+    "region_name": "McComb, MS"
+  },
+  {
+    "region_id": "32660",
+    "region_name": "McMinnville, TN"
+  },
+  {
+    "region_id": "32700",
+    "region_name": "McPherson, KS"
+  },
+  {
+    "region_id": "32740",
+    "region_name": "Meadville, PA"
+  },
+  {
+    "region_id": "32780",
+    "region_name": "Medford, OR"
+  },
+  {
+    "region_id": "32820",
+    "region_name": "Memphis, TN-MS-AR"
+  },
+  {
+    "region_id": "32860",
+    "region_name": "Menomonie, WI"
+  },
+  {
+    "region_id": "32900",
+    "region_name": "Merced, CA"
+  },
+  {
+    "region_id": "32940",
+    "region_name": "Meridian, MS"
+  },
+  {
+    "region_id": "33020",
+    "region_name": "Mexico, MO"
   },
   {
     "region_id": "MIA",
     "region_name": "Miami"
   },
   {
+    "region_id": "33060",
+    "region_name": "Miami, OK"
+  },
+  {
+    "region_id": "33100",
+    "region_name": "Miami-Fort Lauderdale-West Palm Beach, FL"
+  },
+  {
+    "region_id": "33140",
+    "region_name": "Michigan City-La Porte, IN"
+  },
+  {
+    "region_id": "33180",
+    "region_name": "Middlesborough, KY"
+  },
+  {
+    "region_id": "33220",
+    "region_name": "Midland, MI"
+  },
+  {
+    "region_id": "33260",
+    "region_name": "Midland, TX"
+  },
+  {
+    "region_id": "33300",
+    "region_name": "Milledgeville, GA"
+  },
+  {
+    "region_id": "33340",
+    "region_name": "Milwaukee-Waukesha, WI"
+  },
+  {
+    "region_id": "33380",
+    "region_name": "Minden, LA"
+  },
+  {
+    "region_id": "33420",
+    "region_name": "Mineral Wells, TX"
+  },
+  {
     "region_id": "MSP",
     "region_name": "Minneapolis-St. Paul"
+  },
+  {
+    "region_id": "33460",
+    "region_name": "Minneapolis-St. Paul-Bloomington, MN-WI"
+  },
+  {
+    "region_id": "33500",
+    "region_name": "Minot, ND"
+  },
+  {
+    "region_id": "33540",
+    "region_name": "Missoula, MT"
+  },
+  {
+    "region_id": "33580",
+    "region_name": "Mitchell, SD"
+  },
+  {
+    "region_id": "33620",
+    "region_name": "Moberly, MO"
+  },
+  {
+    "region_id": "33660",
+    "region_name": "Mobile, AL"
+  },
+  {
+    "region_id": "33700",
+    "region_name": "Modesto, CA"
+  },
+  {
+    "region_id": "33740",
+    "region_name": "Monroe, LA"
+  },
+  {
+    "region_id": "33780",
+    "region_name": "Monroe, MI"
+  },
+  {
+    "region_id": "33860",
+    "region_name": "Montgomery, AL"
+  },
+  {
+    "region_id": "33900",
+    "region_name": "Monticello, IN"
+  },
+  {
+    "region_id": "33910",
+    "region_name": "Monticello, NY"
+  },
+  {
+    "region_id": "33940",
+    "region_name": "Montrose, CO"
+  },
+  {
+    "region_id": "33980",
+    "region_name": "Morehead City, NC"
+  },
+  {
+    "region_id": "34020",
+    "region_name": "Morgan City, LA"
+  },
+  {
+    "region_id": "34060",
+    "region_name": "Morgantown, WV"
+  },
+  {
+    "region_id": "34100",
+    "region_name": "Morristown, TN"
+  },
+  {
+    "region_id": "34140",
+    "region_name": "Moscow, ID"
+  },
+  {
+    "region_id": "34180",
+    "region_name": "Moses Lake, WA"
+  },
+  {
+    "region_id": "34220",
+    "region_name": "Moultrie, GA"
+  },
+  {
+    "region_id": "34340",
+    "region_name": "Mount Airy, NC"
+  },
+  {
+    "region_id": "34380",
+    "region_name": "Mount Pleasant, MI"
+  },
+  {
+    "region_id": "34420",
+    "region_name": "Mount Pleasant, TX"
+  },
+  {
+    "region_id": "34460",
+    "region_name": "Mount Sterling, KY"
+  },
+  {
+    "region_id": "34500",
+    "region_name": "Mount Vernon, IL"
+  },
+  {
+    "region_id": "34540",
+    "region_name": "Mount Vernon, OH"
+  },
+  {
+    "region_id": "34580",
+    "region_name": "Mount Vernon-Anacortes, WA"
+  },
+  {
+    "region_id": "34260",
+    "region_name": "Mountain Home, AR"
+  },
+  {
+    "region_id": "34300",
+    "region_name": "Mountain Home, ID"
+  },
+  {
+    "region_id": "34620",
+    "region_name": "Muncie, IN"
+  },
+  {
+    "region_id": "34660",
+    "region_name": "Murray, KY"
+  },
+  {
+    "region_id": "34680",
+    "region_name": "Murrells Inlet, SC"
+  },
+  {
+    "region_id": "34700",
+    "region_name": "Muscatine, IA"
+  },
+  {
+    "region_id": "34740",
+    "region_name": "Muskegon-Norton Shores, MI"
+  },
+  {
+    "region_id": "34780",
+    "region_name": "Muskogee, OK"
+  },
+  {
+    "region_id": "34820",
+    "region_name": "Myrtle Beach-Conway-North Myrtle Beach, SC"
+  },
+  {
+    "region_id": "34860",
+    "region_name": "Nacogdoches, TX"
+  },
+  {
+    "region_id": "34880",
+    "region_name": "Nantucket, MA"
+  },
+  {
+    "region_id": "34900",
+    "region_name": "Napa, CA"
+  },
+  {
+    "region_id": "34940",
+    "region_name": "Naples-Marco Island, FL"
   },
   {
     "region_id": "NSH",
     "region_name": "Nashville"
   },
   {
+    "region_id": "34980",
+    "region_name": "Nashville-Davidson--Murfreesboro--Franklin, TN"
+  },
+  {
+    "region_id": "35020",
+    "region_name": "Natchez, MS-LA"
+  },
+  {
+    "region_id": "35060",
+    "region_name": "Natchitoches, LA"
+  },
+  {
+    "region_id": "35100",
+    "region_name": "New Bern, NC"
+  },
+  {
+    "region_id": "35220",
+    "region_name": "New Castle, IN"
+  },
+  {
+    "region_id": "35300",
+    "region_name": "New Haven, CT"
+  },
+  {
+    "region_id": "35340",
+    "region_name": "New Iberia, LA"
+  },
+  {
+    "region_id": "35380",
+    "region_name": "New Orleans-Metairie, LA"
+  },
+  {
+    "region_id": "35420",
+    "region_name": "New Philadelphia-Dover, OH"
+  },
+  {
+    "region_id": "35580",
+    "region_name": "New Ulm, MN"
+  },
+  {
     "region_id": "NYC",
     "region_name": "New York"
+  },
+  {
+    "region_id": "35620",
+    "region_name": "New York-Newark-Jersey City, NY-NJ"
+  },
+  {
+    "region_id": "35140",
+    "region_name": "Newberry, SC"
+  },
+  {
+    "region_id": "35440",
+    "region_name": "Newport, OR"
+  },
+  {
+    "region_id": "35460",
+    "region_name": "Newport, TN"
+  },
+  {
+    "region_id": "35660",
+    "region_name": "Niles, MI"
+  },
+  {
+    "region_id": "35700",
+    "region_name": "Nogales, AZ"
+  },
+  {
+    "region_id": "35740",
+    "region_name": "Norfolk, NE"
+  },
+  {
+    "region_id": "35820",
+    "region_name": "North Platte, NE"
+  },
+  {
+    "region_id": "35840",
+    "region_name": "North Port-Bradenton-Sarasota, FL"
+  },
+  {
+    "region_id": "35900",
+    "region_name": "North Wilkesboro, NC"
+  },
+  {
+    "region_id": "35940",
+    "region_name": "Norwalk, OH"
+  },
+  {
+    "region_id": "35980",
+    "region_name": "Norwich-New London-Willimantic, CT"
+  },
+  {
+    "region_id": "36020",
+    "region_name": "Oak Harbor, WA"
+  },
+  {
+    "region_id": "36100",
+    "region_name": "Ocala, FL"
+  },
+  {
+    "region_id": "36180",
+    "region_name": "Ocean Pines, MD"
+  },
+  {
+    "region_id": "36220",
+    "region_name": "Odessa, TX"
+  },
+  {
+    "region_id": "36260",
+    "region_name": "Ogden, UT"
+  },
+  {
+    "region_id": "36340",
+    "region_name": "Oil City, PA"
+  },
+  {
+    "region_id": "36380",
+    "region_name": "Okeechobee, FL"
+  },
+  {
+    "region_id": "36420",
+    "region_name": "Oklahoma City, OK"
+  },
+  {
+    "region_id": "36460",
+    "region_name": "Olean, NY"
+  },
+  {
+    "region_id": "36500",
+    "region_name": "Olympia-Lacey-Tumwater, WA"
+  },
+  {
+    "region_id": "36540",
+    "region_name": "Omaha, NE-IA"
+  },
+  {
+    "region_id": "36580",
+    "region_name": "Oneonta, NY"
+  },
+  {
+    "region_id": "36620",
+    "region_name": "Ontario, OR-ID"
+  },
+  {
+    "region_id": "36660",
+    "region_name": "Opelousas, LA"
+  },
+  {
+    "region_id": "36700",
+    "region_name": "Orangeburg, SC"
   },
   {
     "region_id": "ORL",
     "region_name": "Orlando"
   },
   {
+    "region_id": "36740",
+    "region_name": "Orlando-Kissimmee-Sanford, FL"
+  },
+  {
+    "region_id": "36780",
+    "region_name": "Oshkosh-Neenah, WI"
+  },
+  {
+    "region_id": "36820",
+    "region_name": "Oskaloosa, IA"
+  },
+  {
+    "region_id": "36830",
+    "region_name": "Othello, WA"
+  },
+  {
+    "region_id": "36837",
+    "region_name": "Ottawa, IL"
+  },
+  {
+    "region_id": "36840",
+    "region_name": "Ottawa, KS"
+  },
+  {
+    "region_id": "36900",
+    "region_name": "Ottumwa, IA"
+  },
+  {
+    "region_id": "36940",
+    "region_name": "Owatonna, MN"
+  },
+  {
+    "region_id": "36980",
+    "region_name": "Owensboro, KY"
+  },
+  {
+    "region_id": "37020",
+    "region_name": "Owosso, MI"
+  },
+  {
+    "region_id": "37060",
+    "region_name": "Oxford, MS"
+  },
+  {
+    "region_id": "37100",
+    "region_name": "Oxnard-Thousand Oaks-Ventura, CA"
+  },
+  {
+    "region_id": "37120",
+    "region_name": "Ozark, AL"
+  },
+  {
+    "region_id": "37140",
+    "region_name": "Paducah, KY-IL"
+  },
+  {
+    "region_id": "37220",
+    "region_name": "Pahrump, NV"
+  },
+  {
+    "region_id": "37260",
+    "region_name": "Palatka, FL"
+  },
+  {
+    "region_id": "37300",
+    "region_name": "Palestine, TX"
+  },
+  {
+    "region_id": "37340",
+    "region_name": "Palm Bay-Melbourne-Titusville, FL"
+  },
+  {
+    "region_id": "37420",
+    "region_name": "Pampa, TX"
+  },
+  {
+    "region_id": "37460",
+    "region_name": "Panama City-Panama City Beach, FL"
+  },
+  {
+    "region_id": "37500",
+    "region_name": "Paragould, AR"
+  },
+  {
+    "region_id": "37540",
+    "region_name": "Paris, TN"
+  },
+  {
+    "region_id": "37580",
+    "region_name": "Paris, TX"
+  },
+  {
+    "region_id": "37620",
+    "region_name": "Parkersburg-Vienna, WV"
+  },
+  {
+    "region_id": "37740",
+    "region_name": "Payson, AZ"
+  },
+  {
+    "region_id": "37800",
+    "region_name": "Pella, IA"
+  },
+  {
+    "region_id": "37860",
+    "region_name": "Pensacola-Ferry Pass-Brent, FL"
+  },
+  {
+    "region_id": "37900",
+    "region_name": "Peoria, IL"
+  },
+  {
+    "region_id": "37940",
+    "region_name": "Peru, IN"
+  },
+  {
+    "region_id": "37950",
+    "region_name": "Petoskey, MI"
+  },
+  {
     "region_id": "PHL",
     "region_name": "Philadelphia"
+  },
+  {
+    "region_id": "37980",
+    "region_name": "Philadelphia-Camden-Wilmington, PA-NJ-DE-MD"
   },
   {
     "region_id": "PHX",
     "region_name": "Phoenix"
   },
   {
+    "region_id": "38060",
+    "region_name": "Phoenix-Mesa-Chandler, AZ"
+  },
+  {
+    "region_id": "38100",
+    "region_name": "Picayune, MS"
+  },
+  {
+    "region_id": "38180",
+    "region_name": "Pierre, SD"
+  },
+  {
+    "region_id": "38210",
+    "region_name": "Pikeville, KY"
+  },
+  {
+    "region_id": "38220",
+    "region_name": "Pine Bluff, AR"
+  },
+  {
+    "region_id": "38240",
+    "region_name": "Pinehurst-Southern Pines, NC"
+  },
+  {
+    "region_id": "38260",
+    "region_name": "Pittsburg, KS"
+  },
+  {
     "region_id": "PIT",
     "region_name": "Pittsburgh"
+  },
+  {
+    "region_id": "38300",
+    "region_name": "Pittsburgh, PA"
+  },
+  {
+    "region_id": "38340",
+    "region_name": "Pittsfield, MA"
+  },
+  {
+    "region_id": "38380",
+    "region_name": "Plainview, TX"
+  },
+  {
+    "region_id": "38420",
+    "region_name": "Platteville, WI"
+  },
+  {
+    "region_id": "38460",
+    "region_name": "Plattsburgh, NY"
+  },
+  {
+    "region_id": "38500",
+    "region_name": "Plymouth, IN"
+  },
+  {
+    "region_id": "38540",
+    "region_name": "Pocatello, ID"
+  },
+  {
+    "region_id": "38620",
+    "region_name": "Ponca City, OK"
+  },
+  {
+    "region_id": "38660",
+    "region_name": "Ponce, PR"
+  },
+  {
+    "region_id": "38700",
+    "region_name": "Pontiac, IL"
+  },
+  {
+    "region_id": "38740",
+    "region_name": "Poplar Bluff, MO"
+  },
+  {
+    "region_id": "38820",
+    "region_name": "Port Angeles, WA"
+  },
+  {
+    "region_id": "38920",
+    "region_name": "Port Lavaca, TX"
+  },
+  {
+    "region_id": "38940",
+    "region_name": "Port St. Lucie, FL"
+  },
+  {
+    "region_id": "39040",
+    "region_name": "Port Townsend, WA"
   },
   {
     "region_id": "POR",
     "region_name": "Portland"
   },
   {
+    "region_id": "38860",
+    "region_name": "Portland-South Portland, ME"
+  },
+  {
+    "region_id": "38900",
+    "region_name": "Portland-Vancouver-Hillsboro, OR-WA"
+  },
+  {
+    "region_id": "39020",
+    "region_name": "Portsmouth, OH"
+  },
+  {
+    "region_id": "39060",
+    "region_name": "Pottsville, PA"
+  },
+  {
+    "region_id": "39150",
+    "region_name": "Prescott Valley-Prescott, AZ"
+  },
+  {
+    "region_id": "39220",
+    "region_name": "Price, UT"
+  },
+  {
+    "region_id": "39300",
+    "region_name": "Providence-Warwick, RI-MA"
+  },
+  {
+    "region_id": "39340",
+    "region_name": "Provo-Orem-Lehi, UT"
+  },
+  {
+    "region_id": "39380",
+    "region_name": "Pueblo, CO"
+  },
+  {
+    "region_id": "39420",
+    "region_name": "Pullman, WA"
+  },
+  {
+    "region_id": "39460",
+    "region_name": "Punta Gorda, FL"
+  },
+  {
+    "region_id": "39480",
+    "region_name": "Putnam, CT"
+  },
+  {
+    "region_id": "39500",
+    "region_name": "Quincy, IL-MO"
+  },
+  {
+    "region_id": "39540",
+    "region_name": "Racine-Mount Pleasant, WI"
+  },
+  {
     "region_id": "RDU",
     "region_name": "Raleigh"
+  },
+  {
+    "region_id": "39580",
+    "region_name": "Raleigh-Cary, NC"
+  },
+  {
+    "region_id": "39660",
+    "region_name": "Rapid City, SD"
+  },
+  {
+    "region_id": "39700",
+    "region_name": "Raymondville, TX"
+  },
+  {
+    "region_id": "39740",
+    "region_name": "Reading, PA"
+  },
+  {
+    "region_id": "39780",
+    "region_name": "Red Bluff, CA"
+  },
+  {
+    "region_id": "39860",
+    "region_name": "Red Wing, MN"
+  },
+  {
+    "region_id": "39820",
+    "region_name": "Redding, CA"
+  },
+  {
+    "region_id": "39900",
+    "region_name": "Reno, NV"
+  },
+  {
+    "region_id": "39940",
+    "region_name": "Rexburg, ID"
+  },
+  {
+    "region_id": "39960",
+    "region_name": "Rice Lake, WI"
+  },
+  {
+    "region_id": "39980",
+    "region_name": "Richmond, IN"
+  },
+  {
+    "region_id": "40060",
+    "region_name": "Richmond, VA"
+  },
+  {
+    "region_id": "40080",
+    "region_name": "Richmond-Berea, KY"
+  },
+  {
+    "region_id": "40090",
+    "region_name": "Rifle, CO"
+  },
+  {
+    "region_id": "40100",
+    "region_name": "Rio Grande City-Roma, TX"
   },
   {
     "region_id": "RIV",
     "region_name": "Riverside-San Bernardino"
   },
   {
+    "region_id": "40140",
+    "region_name": "Riverside-San Bernardino-Ontario, CA"
+  },
+  {
+    "region_id": "40180",
+    "region_name": "Riverton, WY"
+  },
+  {
+    "region_id": "40260",
+    "region_name": "Roanoke Rapids, NC"
+  },
+  {
+    "region_id": "40220",
+    "region_name": "Roanoke, VA"
+  },
+  {
+    "region_id": "40300",
+    "region_name": "Rochelle, IL"
+  },
+  {
+    "region_id": "40340",
+    "region_name": "Rochester, MN"
+  },
+  {
+    "region_id": "40380",
+    "region_name": "Rochester, NY"
+  },
+  {
+    "region_id": "40540",
+    "region_name": "Rock Springs, WY"
+  },
+  {
+    "region_id": "40420",
+    "region_name": "Rockford, IL"
+  },
+  {
+    "region_id": "40460",
+    "region_name": "Rockingham, NC"
+  },
+  {
+    "region_id": "40580",
+    "region_name": "Rocky Mount, NC"
+  },
+  {
+    "region_id": "40620",
+    "region_name": "Rolla, MO"
+  },
+  {
+    "region_id": "40660",
+    "region_name": "Rome, GA"
+  },
+  {
+    "region_id": "40700",
+    "region_name": "Roseburg, OR"
+  },
+  {
+    "region_id": "40740",
+    "region_name": "Roswell, NM"
+  },
+  {
+    "region_id": "40760",
+    "region_name": "Ruidoso, NM"
+  },
+  {
+    "region_id": "40770",
+    "region_name": "Russellville, AL"
+  },
+  {
+    "region_id": "40780",
+    "region_name": "Russellville, AR"
+  },
+  {
+    "region_id": "40820",
+    "region_name": "Ruston, LA"
+  },
+  {
+    "region_id": "40860",
+    "region_name": "Rutland, VT"
+  },
+  {
     "region_id": "SAC",
     "region_name": "Sacramento"
+  },
+  {
+    "region_id": "40900",
+    "region_name": "Sacramento-Roseville-Folsom, CA"
+  },
+  {
+    "region_id": "40940",
+    "region_name": "Safford, AZ"
+  },
+  {
+    "region_id": "40980",
+    "region_name": "Saginaw, MI"
+  },
+  {
+    "region_id": "41400",
+    "region_name": "Salem, OH"
+  },
+  {
+    "region_id": "41420",
+    "region_name": "Salem, OR"
+  },
+  {
+    "region_id": "41460",
+    "region_name": "Salina, KS"
+  },
+  {
+    "region_id": "41500",
+    "region_name": "Salinas, CA"
+  },
+  {
+    "region_id": "41540",
+    "region_name": "Salisbury, MD"
+  },
+  {
+    "region_id": "41620",
+    "region_name": "Salt Lake City-Murray, UT"
+  },
+  {
+    "region_id": "41660",
+    "region_name": "San Angelo, TX"
   },
   {
     "region_id": "SAT",
     "region_name": "San Antonio"
   },
   {
+    "region_id": "41700",
+    "region_name": "San Antonio-New Braunfels, TX"
+  },
+  {
     "region_id": "SDG",
     "region_name": "San Diego"
+  },
+  {
+    "region_id": "41740",
+    "region_name": "San Diego-Chula Vista-Carlsbad, CA"
   },
   {
     "region_id": "SFO",
     "region_name": "San Francisco Bay Area"
   },
   {
+    "region_id": "41860",
+    "region_name": "San Francisco-Oakland-Fremont, CA"
+  },
+  {
+    "region_id": "41940",
+    "region_name": "San Jose-Sunnyvale-Santa Clara, CA"
+  },
+  {
+    "region_id": "41980",
+    "region_name": "San Juan-Bayam\u00f3n-Caguas, PR"
+  },
+  {
+    "region_id": "42020",
+    "region_name": "San Luis Obispo-Paso Robles, CA"
+  },
+  {
+    "region_id": "41760",
+    "region_name": "Sandpoint, ID"
+  },
+  {
+    "region_id": "41780",
+    "region_name": "Sandusky, OH"
+  },
+  {
+    "region_id": "41820",
+    "region_name": "Sanford, NC"
+  },
+  {
+    "region_id": "42100",
+    "region_name": "Santa Cruz-Watsonville, CA"
+  },
+  {
+    "region_id": "42140",
+    "region_name": "Santa Fe, NM"
+  },
+  {
+    "region_id": "42200",
+    "region_name": "Santa Maria-Santa Barbara, CA"
+  },
+  {
+    "region_id": "42220",
+    "region_name": "Santa Rosa-Petaluma, CA"
+  },
+  {
+    "region_id": "42300",
+    "region_name": "Sault Ste. Marie, MI"
+  },
+  {
+    "region_id": "42340",
+    "region_name": "Savannah, GA"
+  },
+  {
+    "region_id": "42380",
+    "region_name": "Sayre, PA"
+  },
+  {
+    "region_id": "42420",
+    "region_name": "Scottsbluff, NE"
+  },
+  {
+    "region_id": "42460",
+    "region_name": "Scottsboro, AL"
+  },
+  {
+    "region_id": "42540",
+    "region_name": "Scranton--Wilkes-Barre, PA"
+  },
+  {
+    "region_id": "42580",
+    "region_name": "Seaford, DE"
+  },
+  {
+    "region_id": "42620",
+    "region_name": "Searcy, AR"
+  },
+  {
     "region_id": "SEA",
     "region_name": "Seattle"
+  },
+  {
+    "region_id": "42660",
+    "region_name": "Seattle-Tacoma-Bellevue, WA"
+  },
+  {
+    "region_id": "42680",
+    "region_name": "Sebastian-Vero Beach-West Vero Corridor, FL"
+  },
+  {
+    "region_id": "42700",
+    "region_name": "Sebring, FL"
+  },
+  {
+    "region_id": "42740",
+    "region_name": "Sedalia, MO"
+  },
+  {
+    "region_id": "42780",
+    "region_name": "Selinsgrove, PA"
+  },
+  {
+    "region_id": "42820",
+    "region_name": "Selma, AL"
+  },
+  {
+    "region_id": "42900",
+    "region_name": "Seneca Falls, NY"
+  },
+  {
+    "region_id": "42860",
+    "region_name": "Seneca, SC"
+  },
+  {
+    "region_id": "42940",
+    "region_name": "Sevierville, TN"
+  },
+  {
+    "region_id": "42980",
+    "region_name": "Seymour, IN"
+  },
+  {
+    "region_id": "43020",
+    "region_name": "Shawano, WI"
+  },
+  {
+    "region_id": "43060",
+    "region_name": "Shawnee, OK"
+  },
+  {
+    "region_id": "43100",
+    "region_name": "Sheboygan, WI"
+  },
+  {
+    "region_id": "43140",
+    "region_name": "Shelby-Kings Mountain, NC"
+  },
+  {
+    "region_id": "43180",
+    "region_name": "Shelbyville, TN"
+  },
+  {
+    "region_id": "43220",
+    "region_name": "Shelton, WA"
+  },
+  {
+    "region_id": "43260",
+    "region_name": "Sheridan, WY"
+  },
+  {
+    "region_id": "43300",
+    "region_name": "Sherman-Denison, TX"
+  },
+  {
+    "region_id": "43320",
+    "region_name": "Show Low, AZ"
+  },
+  {
+    "region_id": "43340",
+    "region_name": "Shreveport-Bossier City, LA"
+  },
+  {
+    "region_id": "43380",
+    "region_name": "Sidney, OH"
+  },
+  {
+    "region_id": "43420",
+    "region_name": "Sierra Vista-Douglas, AZ"
+  },
+  {
+    "region_id": "43460",
+    "region_name": "Sikeston, MO"
+  },
+  {
+    "region_id": "43500",
+    "region_name": "Silver City, NM"
+  },
+  {
+    "region_id": "43580",
+    "region_name": "Sioux City, IA-NE-SD"
+  },
+  {
+    "region_id": "43620",
+    "region_name": "Sioux Falls, SD-MN"
+  },
+  {
+    "region_id": "43640",
+    "region_name": "Slidell-Mandeville-Covington, LA"
+  },
+  {
+    "region_id": "43660",
+    "region_name": "Snyder, TX"
+  },
+  {
+    "region_id": "43700",
+    "region_name": "Somerset, KY"
+  },
+  {
+    "region_id": "43740",
+    "region_name": "Somerset, PA"
+  },
+  {
+    "region_id": "43760",
+    "region_name": "Sonora, CA"
+  },
+  {
+    "region_id": "43780",
+    "region_name": "South Bend-Mishawaka, IN-MI"
+  },
+  {
+    "region_id": "43890",
+    "region_name": "Sparta, WI"
+  },
+  {
+    "region_id": "43900",
+    "region_name": "Spartanburg, SC"
+  },
+  {
+    "region_id": "43940",
+    "region_name": "Spearfish, SD"
+  },
+  {
+    "region_id": "43980",
+    "region_name": "Spencer, IA"
+  },
+  {
+    "region_id": "44020",
+    "region_name": "Spirit Lake, IA"
+  },
+  {
+    "region_id": "44060",
+    "region_name": "Spokane-Spokane Valley, WA"
+  },
+  {
+    "region_id": "44100",
+    "region_name": "Springfield, IL"
+  },
+  {
+    "region_id": "44140",
+    "region_name": "Springfield, MA"
+  },
+  {
+    "region_id": "44180",
+    "region_name": "Springfield, MO"
+  },
+  {
+    "region_id": "44220",
+    "region_name": "Springfield, OH"
+  },
+  {
+    "region_id": "41060",
+    "region_name": "St. Cloud, MN"
+  },
+  {
+    "region_id": "41100",
+    "region_name": "St. George, UT"
+  },
+  {
+    "region_id": "41140",
+    "region_name": "St. Joseph, MO-KS"
   },
   {
     "region_id": "STL",
     "region_name": "St. Louis"
   },
   {
+    "region_id": "41180",
+    "region_name": "St. Louis, MO-IL"
+  },
+  {
+    "region_id": "41260",
+    "region_name": "St. Marys, PA"
+  },
+  {
+    "region_id": "44260",
+    "region_name": "Starkville, MS"
+  },
+  {
+    "region_id": "44300",
+    "region_name": "State College, PA"
+  },
+  {
+    "region_id": "44340",
+    "region_name": "Statesboro, GA"
+  },
+  {
+    "region_id": "44420",
+    "region_name": "Staunton-Stuarts Draft, VA"
+  },
+  {
+    "region_id": "44460",
+    "region_name": "Steamboat Springs, CO"
+  },
+  {
+    "region_id": "44500",
+    "region_name": "Stephenville, TX"
+  },
+  {
+    "region_id": "44540",
+    "region_name": "Sterling, CO"
+  },
+  {
+    "region_id": "44580",
+    "region_name": "Sterling, IL"
+  },
+  {
+    "region_id": "44620",
+    "region_name": "Stevens Point-Plover, WI"
+  },
+  {
+    "region_id": "44660",
+    "region_name": "Stillwater, OK"
+  },
+  {
+    "region_id": "44700",
+    "region_name": "Stockton-Lodi, CA"
+  },
+  {
+    "region_id": "44740",
+    "region_name": "Storm Lake, IA"
+  },
+  {
+    "region_id": "44780",
+    "region_name": "Sturgis, MI"
+  },
+  {
+    "region_id": "44860",
+    "region_name": "Sulphur Springs, TX"
+  },
+  {
+    "region_id": "44900",
+    "region_name": "Summerville, GA"
+  },
+  {
+    "region_id": "44940",
+    "region_name": "Sumter, SC"
+  },
+  {
+    "region_id": "44980",
+    "region_name": "Sunbury, PA"
+  },
+  {
+    "region_id": "45000",
+    "region_name": "Susanville, CA"
+  },
+  {
+    "region_id": "45020",
+    "region_name": "Sweetwater, TX"
+  },
+  {
+    "region_id": "45060",
+    "region_name": "Syracuse, NY"
+  },
+  {
+    "region_id": "45140",
+    "region_name": "Tahlequah, OK"
+  },
+  {
+    "region_id": "45180",
+    "region_name": "Talladega-Sylacauga, AL"
+  },
+  {
+    "region_id": "45220",
+    "region_name": "Tallahassee, FL"
+  },
+  {
     "region_id": "TPA",
     "region_name": "Tampa"
   },
   {
+    "region_id": "45300",
+    "region_name": "Tampa-St. Petersburg-Clearwater, FL"
+  },
+  {
+    "region_id": "45340",
+    "region_name": "Taos, NM"
+  },
+  {
+    "region_id": "45380",
+    "region_name": "Taylorville, IL"
+  },
+  {
+    "region_id": "45460",
+    "region_name": "Terre Haute, IN"
+  },
+  {
+    "region_id": "45500",
+    "region_name": "Texarkana, TX-AR"
+  },
+  {
+    "region_id": "45520",
+    "region_name": "The Dalles, OR"
+  },
+  {
+    "region_id": "45580",
+    "region_name": "Thomaston, GA"
+  },
+  {
+    "region_id": "45620",
+    "region_name": "Thomasville, GA"
+  },
+  {
+    "region_id": "45660",
+    "region_name": "Tiffin, OH"
+  },
+  {
+    "region_id": "45700",
+    "region_name": "Tifton, GA"
+  },
+  {
+    "region_id": "45740",
+    "region_name": "Toccoa, GA"
+  },
+  {
+    "region_id": "45780",
+    "region_name": "Toledo, OH"
+  },
+  {
+    "region_id": "45820",
+    "region_name": "Topeka, KS"
+  },
+  {
+    "region_id": "45860",
+    "region_name": "Torrington, CT"
+  },
+  {
+    "region_id": "45880",
+    "region_name": "Town of Pecos, TX"
+  },
+  {
+    "region_id": "45900",
+    "region_name": "Traverse City, MI"
+  },
+  {
+    "region_id": "45940",
+    "region_name": "Trenton-Princeton, NJ"
+  },
+  {
+    "region_id": "45980",
+    "region_name": "Troy, AL"
+  },
+  {
+    "region_id": "46020",
+    "region_name": "Truckee-Grass Valley, CA"
+  },
+  {
+    "region_id": "46060",
+    "region_name": "Tucson, AZ"
+  },
+  {
+    "region_id": "46100",
+    "region_name": "Tullahoma-Manchester, TN"
+  },
+  {
+    "region_id": "46140",
+    "region_name": "Tulsa, OK"
+  },
+  {
+    "region_id": "46180",
+    "region_name": "Tupelo, MS"
+  },
+  {
+    "region_id": "46220",
+    "region_name": "Tuscaloosa, AL"
+  },
+  {
+    "region_id": "46300",
+    "region_name": "Twin Falls, ID"
+  },
+  {
+    "region_id": "46340",
+    "region_name": "Tyler, TX"
+  },
+  {
+    "region_id": "46380",
+    "region_name": "Ukiah, CA"
+  },
+  {
+    "region_id": "46460",
+    "region_name": "Union City, TN"
+  },
+  {
+    "region_id": "46520",
+    "region_name": "Urban Honolulu, HI"
+  },
+  {
+    "region_id": "46500",
+    "region_name": "Urbana, OH"
+  },
+  {
+    "region_id": "46540",
+    "region_name": "Utica-Rome, NY"
+  },
+  {
+    "region_id": "46580",
+    "region_name": "Utuado, PR"
+  },
+  {
+    "region_id": "46620",
+    "region_name": "Uvalde, TX"
+  },
+  {
+    "region_id": "46660",
+    "region_name": "Valdosta, GA"
+  },
+  {
+    "region_id": "46700",
+    "region_name": "Vallejo, CA"
+  },
+  {
+    "region_id": "46780",
+    "region_name": "Van Wert, OH"
+  },
+  {
+    "region_id": "46820",
+    "region_name": "Vermillion, SD"
+  },
+  {
+    "region_id": "46860",
+    "region_name": "Vernal, UT"
+  },
+  {
+    "region_id": "46900",
+    "region_name": "Vernon, TX"
+  },
+  {
+    "region_id": "46980",
+    "region_name": "Vicksburg, MS"
+  },
+  {
+    "region_id": "47020",
+    "region_name": "Victoria, TX"
+  },
+  {
+    "region_id": "47080",
+    "region_name": "Vidalia, GA"
+  },
+  {
+    "region_id": "47180",
+    "region_name": "Vincennes, IN"
+  },
+  {
+    "region_id": "47220",
+    "region_name": "Vineland, NJ"
+  },
+  {
+    "region_id": "47240",
+    "region_name": "Vineyard Haven, MA"
+  },
+  {
+    "region_id": "47260",
+    "region_name": "Virginia Beach-Chesapeake-Norfolk, VA-NC"
+  },
+  {
+    "region_id": "47300",
+    "region_name": "Visalia, CA"
+  },
+  {
+    "region_id": "47340",
+    "region_name": "Wabash, IN"
+  },
+  {
+    "region_id": "47380",
+    "region_name": "Waco, TX"
+  },
+  {
+    "region_id": "47420",
+    "region_name": "Wahpeton, ND-MN"
+  },
+  {
+    "region_id": "47460",
+    "region_name": "Walla Walla, WA"
+  },
+  {
+    "region_id": "47540",
+    "region_name": "Wapakoneta, OH"
+  },
+  {
+    "region_id": "47580",
+    "region_name": "Warner Robins, GA"
+  },
+  {
+    "region_id": "47620",
+    "region_name": "Warren, PA"
+  },
+  {
+    "region_id": "47660",
+    "region_name": "Warrensburg, MO"
+  },
+  {
+    "region_id": "47700",
+    "region_name": "Warsaw, IN"
+  },
+  {
     "region_id": "WAS",
     "region_name": "Washington"
+  },
+  {
+    "region_id": "47920",
+    "region_name": "Washington Court House, OH"
+  },
+  {
+    "region_id": "47780",
+    "region_name": "Washington, IN"
+  },
+  {
+    "region_id": "47820",
+    "region_name": "Washington, NC"
+  },
+  {
+    "region_id": "47900",
+    "region_name": "Washington-Arlington-Alexandria, DC-VA-MD-WV"
+  },
+  {
+    "region_id": "47930",
+    "region_name": "Waterbury-Shelton, CT"
+  },
+  {
+    "region_id": "47940",
+    "region_name": "Waterloo-Cedar Falls, IA"
+  },
+  {
+    "region_id": "47980",
+    "region_name": "Watertown, SD"
+  },
+  {
+    "region_id": "48020",
+    "region_name": "Watertown-Fort Atkinson, WI"
+  },
+  {
+    "region_id": "48060",
+    "region_name": "Watertown-Fort Drum, NY"
+  },
+  {
+    "region_id": "48140",
+    "region_name": "Wausau, WI"
+  },
+  {
+    "region_id": "48180",
+    "region_name": "Waycross, GA"
+  },
+  {
+    "region_id": "48200",
+    "region_name": "Waynesville, NC"
+  },
+  {
+    "region_id": "48220",
+    "region_name": "Weatherford, OK"
+  },
+  {
+    "region_id": "48260",
+    "region_name": "Weirton-Steubenville, WV-OH"
+  },
+  {
+    "region_id": "48300",
+    "region_name": "Wenatchee-East Wenatchee, WA"
+  },
+  {
+    "region_id": "48460",
+    "region_name": "West Plains, MO"
+  },
+  {
+    "region_id": "48540",
+    "region_name": "Wheeling, WV-OH"
+  },
+  {
+    "region_id": "48580",
+    "region_name": "Whitewater-Elkhorn, WI"
+  },
+  {
+    "region_id": "48660",
+    "region_name": "Wichita Falls, TX"
+  },
+  {
+    "region_id": "48620",
+    "region_name": "Wichita, KS"
+  },
+  {
+    "region_id": "48680",
+    "region_name": "Wildwood-The Villages, FL"
+  },
+  {
+    "region_id": "48700",
+    "region_name": "Williamsport, PA"
+  },
+  {
+    "region_id": "48780",
+    "region_name": "Williston, ND"
+  },
+  {
+    "region_id": "48820",
+    "region_name": "Willmar, MN"
+  },
+  {
+    "region_id": "48900",
+    "region_name": "Wilmington, NC"
+  },
+  {
+    "region_id": "48940",
+    "region_name": "Wilmington, OH"
+  },
+  {
+    "region_id": "48980",
+    "region_name": "Wilson, NC"
+  },
+  {
+    "region_id": "49010",
+    "region_name": "Winchester, TN"
+  },
+  {
+    "region_id": "49020",
+    "region_name": "Winchester, VA-WV"
+  },
+  {
+    "region_id": "49080",
+    "region_name": "Winnemucca, NV"
+  },
+  {
+    "region_id": "49100",
+    "region_name": "Winona, MN"
+  },
+  {
+    "region_id": "49180",
+    "region_name": "Winston-Salem, NC"
+  },
+  {
+    "region_id": "49220",
+    "region_name": "Wisconsin Rapids-Marshfield, WI"
+  },
+  {
+    "region_id": "49260",
+    "region_name": "Woodward, OK"
+  },
+  {
+    "region_id": "49300",
+    "region_name": "Wooster, OH"
+  },
+  {
+    "region_id": "49340",
+    "region_name": "Worcester, MA"
+  },
+  {
+    "region_id": "49380",
+    "region_name": "Worthington, MN"
+  },
+  {
+    "region_id": "49420",
+    "region_name": "Yakima, WA"
+  },
+  {
+    "region_id": "49460",
+    "region_name": "Yankton, SD"
+  },
+  {
+    "region_id": "49620",
+    "region_name": "York-Hanover, PA"
+  },
+  {
+    "region_id": "49660",
+    "region_name": "Youngstown-Warren, OH"
+  },
+  {
+    "region_id": "49700",
+    "region_name": "Yuba City, CA"
+  },
+  {
+    "region_id": "49740",
+    "region_name": "Yuma, AZ"
+  },
+  {
+    "region_id": "49780",
+    "region_name": "Zanesville, OH"
+  },
+  {
+    "region_id": "49820",
+    "region_name": "Zapata, TX"
   }
 ]

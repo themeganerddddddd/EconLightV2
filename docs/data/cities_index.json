@@ -1,0 +1,394 @@
+[
+  {
+    "date": "2022-01-01",
+    "avg_density": 236.5172900979425,
+    "avg_yoy": null,
+    "avg_mom": null,
+    "index_level": 100.0,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2022-02-01",
+    "avg_density": 239.5045909109081,
+    "avg_yoy": null,
+    "avg_mom": 0.0139026897816865,
+    "index_level": 101.39026897816863,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2022-03-01",
+    "avg_density": 230.7401456497876,
+    "avg_yoy": null,
+    "avg_mom": -0.0221932261544344,
+    "index_level": 99.14009180887722,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2022-04-01",
+    "avg_density": 222.48569229596305,
+    "avg_yoy": null,
+    "avg_mom": -0.0278825060212749,
+    "index_level": 96.37581760206643,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2022-05-01",
+    "avg_density": 209.30550876877197,
+    "avg_yoy": null,
+    "avg_mom": -0.0429427739745153,
+    "index_level": 92.2371726501718,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2022-06-01",
+    "avg_density": 205.31033252424328,
+    "avg_yoy": null,
+    "avg_mom": -0.0160721937683338,
+    "index_level": 90.75471893869496,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2022-07-01",
+    "avg_density": 203.0946451194317,
+    "avg_yoy": null,
+    "avg_mom": -0.0093249841552689,
+    "index_level": 89.90843262257575,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2022-08-01",
+    "avg_density": 201.95845242235347,
+    "avg_yoy": null,
+    "avg_mom": -0.004574335232313,
+    "index_level": 89.49716131154825,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2022-09-01",
+    "avg_density": 200.77448597463533,
+    "avg_yoy": null,
+    "avg_mom": -0.0084282890746515,
+    "index_level": 88.74285336465381,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2022-10-01",
+    "avg_density": 198.38325857955888,
+    "avg_yoy": null,
+    "avg_mom": -0.00545244187604,
+    "index_level": 88.2589881147691,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2022-11-01",
+    "avg_density": 202.49081797068655,
+    "avg_yoy": null,
+    "avg_mom": 0.0157684922454342,
+    "index_level": 89.6506992844467,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2022-12-01",
+    "avg_density": 213.91511971623748,
+    "avg_yoy": null,
+    "avg_mom": 0.0545300773155528,
+    "index_level": 94.53935884782096,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2023-01-01",
+    "avg_density": 222.20445537306995,
+    "avg_yoy": -0.0241812942242482,
+    "avg_mom": 0.0317973193257462,
+    "index_level": 97.54545702995644,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2023-02-01",
+    "avg_density": 225.8206060753032,
+    "avg_yoy": -0.0202080754218941,
+    "avg_mom": 0.0193152363767267,
+    "index_level": 99.42957058996588,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2023-03-01",
+    "avg_density": 223.8332923087598,
+    "avg_yoy": -0.010886848357235,
+    "avg_mom": -0.0088788418645274,
+    "index_level": 98.54675115603972,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2023-04-01",
+    "avg_density": 220.32595141931432,
+    "avg_yoy": 0.010104876307767,
+    "avg_mom": -0.0041356853647447,
+    "index_level": 98.13919279954054,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2023-05-01",
+    "avg_density": 214.76050243262975,
+    "avg_yoy": 0.0354139704557833,
+    "avg_mom": -0.0187699056278513,
+    "index_level": 96.29712941229964,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2023-06-01",
+    "avg_density": 207.51523737045383,
+    "avg_yoy": 0.0250286617479927,
+    "avg_mom": -0.0251721284790553,
+    "index_level": 93.87312569856904,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2023-07-01",
+    "avg_density": 205.0190420750127,
+    "avg_yoy": 0.0223886946865157,
+    "avg_mom": -0.0116206244377626,
+    "index_level": 92.78226136002708,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2023-08-01",
+    "avg_density": 204.74049576413063,
+    "avg_yoy": 0.0235674753919494,
+    "avg_mom": -0.0032659166768837,
+    "index_level": 92.47924222533238,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2023-09-01",
+    "avg_density": 204.54719897376964,
+    "avg_yoy": 0.0310925613545088,
+    "avg_mom": -0.0015257485922581,
+    "index_level": 92.338142151694,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2023-10-01",
+    "avg_density": 203.5032316375593,
+    "avg_yoy": 0.0312587948816261,
+    "avg_mom": -0.0051304900303894,
+    "index_level": 91.86440223396004,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2023-11-01",
+    "avg_density": 204.9207946144987,
+    "avg_yoy": 0.0243058712401237,
+    "avg_mom": 0.0079786143075381,
+    "index_level": 92.59735286797736,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2023-12-01",
+    "avg_density": 209.72676226563723,
+    "avg_yoy": -0.0062014643686914,
+    "avg_mom": 0.0197527650649543,
+    "index_level": 94.42640662481516,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2024-01-01",
+    "avg_density": 219.99959841271277,
+    "avg_yoy": 0.0045980101035999,
+    "avg_mom": 0.0414315179948312,
+    "index_level": 98.33863599007846,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2024-02-01",
+    "avg_density": 229.64173038218868,
+    "avg_yoy": 0.0165258839251411,
+    "avg_mom": 0.0287519235572254,
+    "index_level": 101.16606093478704,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2024-03-01",
+    "avg_density": 231.1107657946511,
+    "avg_yoy": 0.0346062533795058,
+    "avg_mom": 0.009385740907285,
+    "index_level": 102.11557937133156,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2024-04-01",
+    "avg_density": 226.25110707774476,
+    "avg_yoy": 0.0251500349470168,
+    "avg_mom": -0.0112416202171496,
+    "index_level": 100.96763480978484,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2024-05-01",
+    "avg_density": 213.6436168264997,
+    "avg_yoy": -0.0003115103627438,
+    "avg_mom": -0.0412779701260363,
+    "index_level": 96.79989579640998,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2024-06-01",
+    "avg_density": 206.17631485109237,
+    "avg_yoy": -0.0080846587776546,
+    "avg_mom": -0.0328623610207387,
+    "index_level": 93.61882267397846,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2024-07-01",
+    "avg_density": 204.56678958995323,
+    "avg_yoy": -0.0143414783264959,
+    "avg_mom": -0.0179840657559433,
+    "index_level": 91.93517561101562,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2024-08-01",
+    "avg_density": 210.06393945772336,
+    "avg_yoy": 0.0117532415235318,
+    "avg_mom": 0.0232274445859895,
+    "index_level": 94.0705948080237,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2024-09-01",
+    "avg_density": 213.31273210762697,
+    "avg_yoy": 0.0275813562620523,
+    "avg_mom": 0.013903675899555,
+    "index_level": 95.37852186991282,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2024-10-01",
+    "avg_density": 212.3836084315488,
+    "avg_yoy": 0.036493593432435,
+    "avg_mom": 0.0044625634017764,
+    "index_level": 95.80415457092504,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2024-11-01",
+    "avg_density": 214.43893760683693,
+    "avg_yoy": 0.0386573334117862,
+    "avg_mom": 0.0106209954708808,
+    "index_level": 96.8216900627144,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2024-12-01",
+    "avg_density": 224.53570412798376,
+    "avg_yoy": 0.062972428672322,
+    "avg_mom": 0.0441623358742826,
+    "index_level": 101.0975620591797,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2025-01-01",
+    "avg_density": 242.29138727460148,
+    "avg_yoy": 0.103681970353521,
+    "avg_mom": 0.0769443265130984,
+    "index_level": 108.87644588393944,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2025-02-01",
+    "avg_density": 250.5490950418112,
+    "avg_yoy": 0.1077273533853275,
+    "avg_mom": 0.0320119332062256,
+    "index_level": 112.36179139730736,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2025-03-01",
+    "avg_density": 247.0986309004883,
+    "avg_yoy": 0.090312461176123,
+    "avg_mom": -0.0043299459599396,
+    "index_level": 111.875270912595,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2025-04-01",
+    "avg_density": 237.7060558896095,
+    "avg_yoy": 0.0596506329090371,
+    "avg_mom": -0.034321672735251,
+    "index_level": 108.03552447716535,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2025-05-01",
+    "avg_density": 230.4864777987833,
+    "avg_yoy": 0.0793523890599833,
+    "avg_mom": -0.0208438149054557,
+    "index_level": 105.7836520017495,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2025-06-01",
+    "avg_density": 230.9316936204043,
+    "avg_yoy": 0.1061865383127035,
+    "avg_mom": -0.0088753609741461,
+    "index_level": 104.84478390507051,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2025-07-01",
+    "avg_density": 226.8764726273428,
+    "avg_yoy": 0.1098186082687298,
+    "avg_mom": -0.0141347397610231,
+    "index_level": 103.36283016927166,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2025-08-01",
+    "avg_density": 224.07914589524665,
+    "avg_yoy": 0.0717052679870887,
+    "avg_mom": -0.012159079694772,
+    "index_level": 102.1060332797663,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2025-09-01",
+    "avg_density": 219.474802927802,
+    "avg_yoy": 0.0443894194806274,
+    "avg_mom": -0.0123318738266951,
+    "index_level": 100.84687456041588,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2025-10-01",
+    "avg_density": 218.50601830838207,
+    "avg_yoy": 0.0343650700037422,
+    "avg_mom": -0.00508410586395,
+    "index_level": 100.33415837410224,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2025-11-01",
+    "avg_density": 221.94214799475137,
+    "avg_yoy": 0.0300433432330442,
+    "avg_mom": 0.0061004679261574,
+    "index_level": 100.94624368916143,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2025-12-01",
+    "avg_density": 235.92341716638396,
+    "avg_yoy": 0.0417305556203018,
+    "avg_mom": 0.0573259470294617,
+    "index_level": 106.73308270770946,
+    "dataset_name": "cities"
+  },
+  {
+    "date": "2026-01-01",
+    "avg_density": 251.76522789214837,
+    "avg_yoy": 0.030068796360362,
+    "avg_mom": 0.0630263904933132,
+    "index_level": 113.46008365700064,
+    "dataset_name": "cities"
+  }
+]

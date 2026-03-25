@@ -1,19 +1,19 @@
 {
   "dataset_name": "metros",
   "latest_month": "2026-01-01",
-  "headline_index": 111.85746513805832,
-  "avg_mom": 0.084680381600592,
-  "avg_yoy": 0.0234140014022453,
+  "headline_index": 125.50130665672503,
+  "avg_mom": 0.1057437153152441,
+  "avg_yoy": 0.0240702568437983,
   "top_region": {
-    "region_id": "CLE",
-    "region_name": "Cleveland",
-    "trend_score": 4.8903246854230895,
-    "yoy_pct": 0.3307632899105338
+    "region_id": "42780",
+    "region_name": "Selinsgrove, PA",
+    "trend_score": 5.254268063922576,
+    "yoy_pct": 1.0
   },
   "bottom_region": {
-    "region_id": "DEN",
-    "region_name": "Denver",
-    "trend_score": -0.6441218739661765,
-    "yoy_pct": -0.1553294663244578
+    "region_id": "47580",
+    "region_name": "Warner Robins, GA",
+    "trend_score": -1.1357607093785898,
+    "yoy_pct": -0.3018402639717071
   }
 }

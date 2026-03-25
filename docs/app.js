@@ -29,8 +29,8 @@ async function loadJson(path) {
 }
 
 function showMessage(msg) {
-  const mount = document.getElementById("statusMount");
-  mount.innerHTML = `<div class="status-card"><strong>Status:</strong> ${msg}</div>`;
+  document.getElementById("statusMount").innerHTML =
+    `<div class="status-card"><strong>Status:</strong> ${msg}</div>`;
 }
 
 async function loadDataset(dataset) {
@@ -57,7 +57,14 @@ function renderHero(summary, dataset) {
   document.getElementById("heroBottomRegion").textContent = summary?.bottom_region?.region_name || "--";
   document.getElementById("latestMonthText").textContent =
     summary?.latest_month ? `Latest available month: ${String(summary.latest_month).slice(0, 7)}` : "Latest available month: --";
-  document.getElementById("indexBadge").textContent = dataset === "metros" ? "Metro signal" : "State signal";
+
+  const labels = {
+    metros: "Metro signal",
+    states: "State signal",
+    counties: "County signal",
+    cities: "City signal"
+  };
+  document.getElementById("indexBadge").textContent = labels[dataset] || "Monthly signal";
 }
 
 function renderSummaryCards(summary) {
@@ -144,12 +151,11 @@ function makeRow(row) {
 function renderTables(leaders, laggards) {
   const brightBody = document.querySelector("#brightTable tbody");
   const dimBody = document.querySelector("#dimTable tbody");
-
   brightBody.innerHTML = "";
   dimBody.innerHTML = "";
 
-  (leaders || []).slice(0, 15).forEach(r => brightBody.appendChild(makeRow(r)));
-  (laggards || []).slice(0, 15).forEach(r => dimBody.appendChild(makeRow(r)));
+  (leaders || []).slice(0, 20).forEach(r => brightBody.appendChild(makeRow(r)));
+  (laggards || []).slice(0, 20).forEach(r => dimBody.appendChild(makeRow(r)));
 }
 
 function renderRegionPicker(regions) {
@@ -165,16 +171,13 @@ function renderRegionPicker(regions) {
 
   picker.onchange = () => {
     const selected = regions.find(r => r.region_id === picker.value);
-    if (selected) {
-      renderRegion(currentDataset, selected.region_id, selected.region_name);
-    }
+    if (selected) renderRegion(currentDataset, selected.region_id, selected.region_name);
   };
 }
 
 function renderRegion(dataset, regionId, regionName) {
   const rows = store[dataset].histories[String(regionId)] || [];
   const ctx = document.getElementById("regionChart").getContext("2d");
-
   if (regionChart) regionChart.destroy();
 
   regionChart = new Chart(ctx, {
@@ -218,7 +221,7 @@ function renderDataset(dataset) {
   const data = store[dataset];
   renderHero(data.summary, dataset);
   renderSummaryCards(data.summary);
-  renderIndexChart(data.indexData, dataset === "metros" ? "Metro" : "State");
+  renderIndexChart(data.indexData, dataset.charAt(0).toUpperCase() + dataset.slice(1));
   renderTables(data.leaders, data.laggards);
   renderRegionPicker(data.regions);
 
@@ -234,6 +237,8 @@ async function init() {
   try {
     await loadDataset("metros");
     await loadDataset("states");
+    await loadDataset("counties");
+    await loadDataset("cities");
 
     document.querySelectorAll(".dataset-btn").forEach(btn => {
       btn.addEventListener("click", () => renderDataset(btn.dataset.dataset));

@@ -8,7 +8,7 @@ on:
 jobs:
   build-site-data:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 240
 
     steps:
       - name: Check out repo
@@ -29,24 +29,33 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Build region files
+        env:
+          ACS_YEAR: 2022
+          CARTO_YEAR: 2024
+          CITIES_TOP_N: 200
+        run: |
+          python scripts/build_region_files.py
+
       - name: Run incremental pipeline
         env:
           BLACKMARBLE_TOKEN: ${{ secrets.BLACKMARBLE_TOKEN }}
-          DATA_START: 2024-01-01
+          DATA_START: 2022-01-01
           DATA_END: 2026-02-01
-          METROS_FILE: data/regions/us_metros_top35.geojson
-          STATES_FILE: data/regions/us_states.geojson
+          METROS_FILE: data/regions/us_metros_all.geojson
+          STATES_FILE: data/regions/us_states_contiguous.geojson
+          COUNTIES_FILE: data/regions/us_counties_contiguous.geojson
+          CITIES_FILE: data/regions/us_cities_top200.geojson
           INCREMENTAL: "true"
         run: |
           python scripts/fetch_blackmarble_monthly.py
           python scripts/build_metrics.py
           python scripts/export_site_data.py
-          python scripts/make_social_card.py
 
       - name: Commit updated outputs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/derived docs/data outputs/social
+          git add data/derived data/regions docs/data
           git diff --staged --quiet || git commit -m "Update econ light data"
           git push
