@@ -1,0 +1,8 @@
+Top metro employment nowcasts from Econ Light Monitor:
+Greenville, MS: 1.7%
+Coldwater, MI: 1.7%
+El Paso, TX: 1.7%
+Elkhart-Goshen, IN: 1.7%
+Boston: 1.6%
+
+Built from nighttime lights + BLS labor data.

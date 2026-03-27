@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Econ Light Monitor Premium</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="sub-hero">
+    <div class="wrap sub-hero-inner">
+      <div>
+        <a class="back-link" href="index.html">← Home</a>
+        <h1>Premium Preview</h1>
+        <p class="body-copy">Advanced downloads, alerts, watchlists, and API access.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <div class="card-header">
+        <h2>What the paid layer can include</h2>
+      </div>
+      <ul id="premiumFeatures" class="body-copy"></ul>
+    </section>
+  </main>
+
+  <script>
+    fetch("data/premium_preview.json")
+      .then(r => r.json())
+      .then(data => {
+        const ul = document.getElementById("premiumFeatures");
+        (data.features || []).forEach(f => {
+          const li = document.createElement("li");
+          li.textContent = f;
+          ul.appendChild(li);
+        });
+      });
+  </script>
+</body>
+</html>

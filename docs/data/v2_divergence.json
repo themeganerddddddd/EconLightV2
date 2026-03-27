@@ -1,0 +1,986 @@
+{
+  "cities": {
+    "top_positive_divergence": [
+      {
+        "region_id": "816000",
+        "region_name": "Colorado Springs",
+        "divergence_score": 0.2544934085928636,
+        "employment_yoy_nowcast": -0.004067722929480995,
+        "yoy_pct_display": -0.2585611315223446,
+        "confidence": "High"
+      },
+      {
+        "region_id": "843000",
+        "region_name": "Lakewood",
+        "divergence_score": 0.19028577063965885,
+        "employment_yoy_nowcast": 0.0008566732171957417,
+        "yoy_pct_display": -0.1894290974224631,
+        "confidence": "High"
+      },
+      {
+        "region_id": "804000",
+        "region_name": "Aurora",
+        "divergence_score": 0.16571822860531885,
+        "employment_yoy_nowcast": 0.0025431780978982573,
+        "yoy_pct_display": -0.1631750505074206,
+        "confidence": "High"
+      },
+      {
+        "region_id": "4803000",
+        "region_name": "Amarillo",
+        "divergence_score": 0.14735067256615164,
+        "employment_yoy_nowcast": 0.0007865105880903538,
+        "yoy_pct_display": -0.1465641619780613,
+        "confidence": "High"
+      },
+      {
+        "region_id": "3651000",
+        "region_name": "New York",
+        "divergence_score": 0.13886832937511387,
+        "employment_yoy_nowcast": 0.001610969357758485,
+        "yoy_pct_display": -0.1372573600173554,
+        "confidence": "High"
+      },
+      {
+        "region_id": "820000",
+        "region_name": "Denver",
+        "divergence_score": 0.1359842678226634,
+        "employment_yoy_nowcast": 0.0017789121636843006,
+        "yoy_pct_display": -0.1342053556589791,
+        "confidence": "High"
+      },
+      {
+        "region_id": "5103000",
+        "region_name": "Arlington",
+        "divergence_score": 0.13411010916710164,
+        "employment_yoy_nowcast": 0.0038352110829631535,
+        "yoy_pct_display": -0.1302748980841385,
+        "confidence": "High"
+      },
+      {
+        "region_id": "877290",
+        "region_name": "Thornton",
+        "divergence_score": 0.13301191272999177,
+        "employment_yoy_nowcast": -0.008614721726808218,
+        "yoy_pct_display": -0.1416266344568,
+        "confidence": "High"
+      },
+      {
+        "region_id": "1150000",
+        "region_name": "Washington",
+        "divergence_score": 0.11120864584191302,
+        "employment_yoy_nowcast": 0.0028106665291993296,
+        "yoy_pct_display": -0.1083979793127137,
+        "confidence": "High"
+      },
+      {
+        "region_id": "5101000",
+        "region_name": "Alexandria",
+        "divergence_score": 0.10752288312001315,
+        "employment_yoy_nowcast": 0.0017603662267134577,
+        "yoy_pct_display": -0.1057625168932997,
+        "confidence": "High"
+      },
+      {
+        "region_id": "2036000",
+        "region_name": "Kansas City",
+        "divergence_score": 0.1035453777779668,
+        "employment_yoy_nowcast": -0.00045320390494170057,
+        "yoy_pct_display": -0.1039985816829085,
+        "confidence": "High"
+      },
+      {
+        "region_id": "3436000",
+        "region_name": "Jersey City",
+        "divergence_score": 0.10332768885369978,
+        "employment_yoy_nowcast": 0.0018926203485497826,
+        "yoy_pct_display": -0.10143506850515,
+        "confidence": "High"
+      },
+      {
+        "region_id": "2965000",
+        "region_name": "St. Louis",
+        "divergence_score": 0.09973117658197676,
+        "employment_yoy_nowcast": 0.0021612554350176594,
+        "yoy_pct_display": -0.0975699211469591,
+        "confidence": "High"
+      },
+      {
+        "region_id": "4261000",
+        "region_name": "Pittsburgh",
+        "divergence_score": 0.09617293966429503,
+        "employment_yoy_nowcast": 0.007273146440776842,
+        "yoy_pct_display": -0.0888997932235182,
+        "confidence": "High"
+      },
+      {
+        "region_id": "5363000",
+        "region_name": "Seattle",
+        "divergence_score": 0.0851382673416741,
+        "employment_yoy_nowcast": 0.012740959951577988,
+        "yoy_pct_display": -0.0723973073900961,
+        "confidence": "High"
+      }
+    ],
+    "top_negative_divergence": [
+      {
+        "region_id": "2622000",
+        "region_name": "Detroit",
+        "divergence_score": -0.6032237920644329,
+        "employment_yoy_nowcast": 0.0030063351109945336,
+        "yoy_pct_display": 0.6062301271754275,
+        "confidence": "High"
+      },
+      {
+        "region_id": "1825000",
+        "region_name": "Fort Wayne",
+        "divergence_score": -0.5108820336160903,
+        "employment_yoy_nowcast": 0.005066828019036156,
+        "yoy_pct_display": 0.5159488616351264,
+        "confidence": "High"
+      },
+      {
+        "region_id": "3673000",
+        "region_name": "Syracuse",
+        "divergence_score": -0.37296701623733364,
+        "employment_yoy_nowcast": 0.003009629249198447,
+        "yoy_pct_display": 0.3759766454865321,
+        "confidence": "High"
+      },
+      {
+        "region_id": "2758000",
+        "region_name": "St. Paul",
+        "divergence_score": -0.2981609562495002,
+        "employment_yoy_nowcast": 0.004385946871450426,
+        "yoy_pct_display": 0.3025469031209506,
+        "confidence": "High"
+      },
+      {
+        "region_id": "3611000",
+        "region_name": "Buffalo",
+        "divergence_score": -0.28490147723409837,
+        "employment_yoy_nowcast": 0.005455555857700127,
+        "yoy_pct_display": 0.2903570330917985,
+        "confidence": "High"
+      },
+      {
+        "region_id": "3916000",
+        "region_name": "Cleveland",
+        "divergence_score": -0.2644326137031966,
+        "employment_yoy_nowcast": 0.0030063351109945336,
+        "yoy_pct_display": 0.2674389488141911,
+        "confidence": "High"
+      },
+      {
+        "region_id": "4659020",
+        "region_name": "Sioux Falls",
+        "divergence_score": -0.24547387421997363,
+        "employment_yoy_nowcast": 0.005201412466146693,
+        "yoy_pct_display": 0.2506752866861203,
+        "confidence": "High"
+      },
+      {
+        "region_id": "2567000",
+        "region_name": "Springfield",
+        "divergence_score": -0.24291307859373074,
+        "employment_yoy_nowcast": 0.0023307325731705816,
+        "yoy_pct_display": 0.2452438111669013,
+        "confidence": "High"
+      },
+      {
+        "region_id": "3128000",
+        "region_name": "Lincoln",
+        "divergence_score": -0.2328191751167567,
+        "employment_yoy_nowcast": 0.0029198068407508947,
+        "yoy_pct_display": 0.2357389819575076,
+        "confidence": "High"
+      },
+      {
+        "region_id": "3254600",
+        "region_name": "Paradise",
+        "divergence_score": -0.21381594433301013,
+        "employment_yoy_nowcast": 0.00416564432014495,
+        "yoy_pct_display": 0.2179815886531551,
+        "confidence": "High"
+      },
+      {
+        "region_id": "3457000",
+        "region_name": "Paterson",
+        "divergence_score": -0.20612803905335608,
+        "employment_yoy_nowcast": 0.005849807483519418,
+        "yoy_pct_display": 0.2119778465368755,
+        "confidence": "High"
+      },
+      {
+        "region_id": "2255000",
+        "region_name": "New Orleans",
+        "divergence_score": -0.18955298272798904,
+        "employment_yoy_nowcast": 0.00919652410877696,
+        "yoy_pct_display": 0.198749506836766,
+        "confidence": "High"
+      },
+      {
+        "region_id": "3137000",
+        "region_name": "Omaha",
+        "divergence_score": -0.18484743347382052,
+        "employment_yoy_nowcast": 0.0061789642771141766,
+        "yoy_pct_display": 0.1910263977509347,
+        "confidence": "High"
+      },
+      {
+        "region_id": "1921000",
+        "region_name": "Des Moines",
+        "divergence_score": -0.18157733773608023,
+        "employment_yoy_nowcast": 0.0046386894164233755,
+        "yoy_pct_display": 0.1862160271525036,
+        "confidence": "High"
+      },
+      {
+        "region_id": "3901000",
+        "region_name": "Akron",
+        "divergence_score": -0.18094015210336425,
+        "employment_yoy_nowcast": 0.00548082707668116,
+        "yoy_pct_display": 0.1864209791800454,
+        "confidence": "High"
+      }
+    ]
+  },
+  "counties": {
+    "top_positive_divergence": [
+      {
+        "region_id": "48137",
+        "region_name": "Edwards, Texas",
+        "divergence_score": 0.9379676297486937,
+        "employment_yoy_nowcast": 0.00209007034511609,
+        "yoy_pct_display": -0.9358775594035776,
+        "confidence": "High"
+      },
+      {
+        "region_id": "30069",
+        "region_name": "Petroleum, Montana",
+        "divergence_score": 0.8860060659364927,
+        "employment_yoy_nowcast": -0.007060483077220979,
+        "yoy_pct_display": -0.8930665490137136,
+        "confidence": "High"
+      },
+      {
+        "region_id": "48319",
+        "region_name": "Mason, Texas",
+        "divergence_score": 0.869859189983968,
+        "employment_yoy_nowcast": 0.005897627052432722,
+        "yoy_pct_display": -0.8639615629315354,
+        "confidence": "High"
+      },
+      {
+        "region_id": "30033",
+        "region_name": "Garfield, Montana",
+        "divergence_score": 0.8652095235885084,
+        "employment_yoy_nowcast": -0.006432764021532939,
+        "yoy_pct_display": -0.8716422876100414,
+        "confidence": "High"
+      },
+      {
+        "region_id": "46021",
+        "region_name": "Campbell, South Dakota",
+        "divergence_score": 0.8318901365124657,
+        "employment_yoy_nowcast": 0.01070553277579468,
+        "yoy_pct_display": -0.821184603736671,
+        "confidence": "High"
+      },
+      {
+        "region_id": "30103",
+        "region_name": "Treasure, Montana",
+        "divergence_score": 0.8314382676462365,
+        "employment_yoy_nowcast": -0.0042795729744559904,
+        "yoy_pct_display": -0.8357178406206925,
+        "confidence": "High"
+      },
+      {
+        "region_id": "48385",
+        "region_name": "Real, Texas",
+        "divergence_score": 0.8260067245291679,
+        "employment_yoy_nowcast": 0.005897627052432722,
+        "yoy_pct_display": -0.8201090974767352,
+        "confidence": "High"
+      },
+      {
+        "region_id": "35003",
+        "region_name": "Catron, New Mexico",
+        "divergence_score": 0.8169516693566828,
+        "employment_yoy_nowcast": 0.004403713015618462,
+        "yoy_pct_display": -0.8125479563410644,
+        "confidence": "High"
+      },
+      {
+        "region_id": "48327",
+        "region_name": "Menard, Texas",
+        "divergence_score": 0.8100829763466986,
+        "employment_yoy_nowcast": 0.006439680229766899,
+        "yoy_pct_display": -0.8036432961169316,
+        "confidence": "High"
+      },
+      {
+        "region_id": "38037",
+        "region_name": "Grant, North Dakota",
+        "divergence_score": 0.8041557707499383,
+        "employment_yoy_nowcast": -0.006432764021532939,
+        "yoy_pct_display": -0.8105885347714712,
+        "confidence": "High"
+      },
+      {
+        "region_id": "31007",
+        "region_name": "Banner, Nebraska",
+        "divergence_score": 0.8018960268217644,
+        "employment_yoy_nowcast": -0.0072307377496668174,
+        "yoy_pct_display": -0.8091267645714313,
+        "confidence": "High"
+      },
+      {
+        "region_id": "48443",
+        "region_name": "Terrell, Texas",
+        "divergence_score": 0.7917146665570495,
+        "employment_yoy_nowcast": 0.00019521400105240283,
+        "yoy_pct_display": -0.7915194525559971,
+        "confidence": "High"
+      },
+      {
+        "region_id": "48271",
+        "region_name": "Kinney, Texas",
+        "divergence_score": 0.7828844284690549,
+        "employment_yoy_nowcast": 0.0062335328259981995,
+        "yoy_pct_display": -0.7766508956430568,
+        "confidence": "High"
+      },
+      {
+        "region_id": "48413",
+        "region_name": "Schleicher, Texas",
+        "divergence_score": 0.7732017414942198,
+        "employment_yoy_nowcast": 0.00610238161205917,
+        "yoy_pct_display": -0.7670993598821607,
+        "confidence": "High"
+      },
+      {
+        "region_id": "48435",
+        "region_name": "Sutton, Texas",
+        "divergence_score": 0.715218224458581,
+        "employment_yoy_nowcast": 0.005637096316626256,
+        "yoy_pct_display": -0.7095811281419547,
+        "confidence": "High"
+      }
+    ],
+    "top_negative_divergence": [
+      {
+        "region_id": "31009",
+        "region_name": "Blaine, Nebraska",
+        "divergence_score": -9.324538452055299,
+        "employment_yoy_nowcast": -0.0019130913450692284,
+        "yoy_pct_display": 9.32262536071023,
+        "confidence": "High"
+      },
+      {
+        "region_id": "18171",
+        "region_name": "Warren, Indiana",
+        "divergence_score": -5.914329842711781,
+        "employment_yoy_nowcast": 0.010704745180603142,
+        "yoy_pct_display": 5.925034587892384,
+        "confidence": "High"
+      },
+      {
+        "region_id": "26083",
+        "region_name": "Keweenaw, Michigan",
+        "divergence_score": -3.233916765952236,
+        "employment_yoy_nowcast": -0.002354233396455059,
+        "yoy_pct_display": 3.231562532555781,
+        "confidence": "High"
+      },
+      {
+        "region_id": "31183",
+        "region_name": "Wheeler, Nebraska",
+        "divergence_score": -3.139184822418768,
+        "employment_yoy_nowcast": -0.0016961570694234347,
+        "yoy_pct_display": 3.1374886653493443,
+        "confidence": "High"
+      },
+      {
+        "region_id": "48011",
+        "region_name": "Armstrong, Texas",
+        "divergence_score": -3.040462677355614,
+        "employment_yoy_nowcast": 0.005422524760911679,
+        "yoy_pct_display": 3.045885202116526,
+        "confidence": "High"
+      },
+      {
+        "region_id": "31103",
+        "region_name": "Keya Paha, Nebraska",
+        "divergence_score": -2.9023644036882277,
+        "employment_yoy_nowcast": -0.0016961570694234347,
+        "yoy_pct_display": 2.900668246618804,
+        "confidence": "High"
+      },
+      {
+        "region_id": "31115",
+        "region_name": "Loup, Nebraska",
+        "divergence_score": -2.706311524447679,
+        "employment_yoy_nowcast": -0.0019038347105579567,
+        "yoy_pct_display": 2.704407689737121,
+        "confidence": "High"
+      },
+      {
+        "region_id": "31113",
+        "region_name": "Logan, Nebraska",
+        "divergence_score": -2.253993452146356,
+        "employment_yoy_nowcast": 0.0024617195212234193,
+        "yoy_pct_display": 2.256455171667579,
+        "confidence": "High"
+      },
+      {
+        "region_id": "8061",
+        "region_name": "Kiowa, Colorado",
+        "divergence_score": -2.1675702731891278,
+        "employment_yoy_nowcast": 0.003268253686708338,
+        "yoy_pct_display": 2.170838526875836,
+        "confidence": "High"
+      },
+      {
+        "region_id": "31149",
+        "region_name": "Rock, Nebraska",
+        "divergence_score": -1.9975064212823004,
+        "employment_yoy_nowcast": -0.0019038347105579567,
+        "yoy_pct_display": 1.9956025865717424,
+        "confidence": "High"
+      },
+      {
+        "region_id": "46123",
+        "region_name": "Tripp, South Dakota",
+        "divergence_score": -1.9246415575445779,
+        "employment_yoy_nowcast": 0.003605047798710206,
+        "yoy_pct_display": 1.928246605343288,
+        "confidence": "High"
+      },
+      {
+        "region_id": "31163",
+        "region_name": "Sherman, Nebraska",
+        "divergence_score": -1.9065074507694528,
+        "employment_yoy_nowcast": -0.0002670389608967626,
+        "yoy_pct_display": 1.906240411808556,
+        "confidence": "High"
+      },
+      {
+        "region_id": "46003",
+        "region_name": "Aurora, South Dakota",
+        "divergence_score": -1.6652504285232526,
+        "employment_yoy_nowcast": 0.003605047798710206,
+        "yoy_pct_display": 1.6688554763219627,
+        "confidence": "High"
+      },
+      {
+        "region_id": "53069",
+        "region_name": "Wahkiakum, Washington",
+        "divergence_score": -1.638963562228747,
+        "employment_yoy_nowcast": 0.003343382864689033,
+        "yoy_pct_display": 1.642306945093436,
+        "confidence": "High"
+      },
+      {
+        "region_id": "27031",
+        "region_name": "Cook, Minnesota",
+        "divergence_score": -1.6335275452853724,
+        "employment_yoy_nowcast": -0.0024898674724019806,
+        "yoy_pct_display": 1.6310376778129705,
+        "confidence": "High"
+      }
+    ]
+  },
+  "metros": {
+    "top_positive_divergence": [
+      {
+        "region_id": "46620",
+        "region_name": "Uvalde, TX",
+        "divergence_score": 0.4345365980954799,
+        "employment_yoy_nowcast": -0.011813077528921535,
+        "yoy_pct_display": -0.4463496756244014,
+        "confidence": "High"
+      },
+      {
+        "region_id": "21180",
+        "region_name": "Elkins, WV",
+        "divergence_score": 0.4266809411572305,
+        "employment_yoy_nowcast": -0.016894147752125097,
+        "yoy_pct_display": -0.4435750889093556,
+        "confidence": "High"
+      },
+      {
+        "region_id": "44460",
+        "region_name": "Steamboat Springs, CO",
+        "divergence_score": 0.42151263354605173,
+        "employment_yoy_nowcast": -0.005310954264608385,
+        "yoy_pct_display": -0.4268235878106601,
+        "confidence": "High"
+      },
+      {
+        "region_id": "19220",
+        "region_name": "Danville, KY",
+        "divergence_score": 0.3844899419413738,
+        "employment_yoy_nowcast": -0.007249131131064282,
+        "yoy_pct_display": -0.3917390730724381,
+        "confidence": "High"
+      },
+      {
+        "region_id": "40180",
+        "region_name": "Riverton, WY",
+        "divergence_score": 0.3755043798757599,
+        "employment_yoy_nowcast": -0.0017930305914495687,
+        "yoy_pct_display": -0.3772974104672095,
+        "confidence": "High"
+      },
+      {
+        "region_id": "17650",
+        "region_name": "Cody, WY",
+        "divergence_score": 0.3702707962212972,
+        "employment_yoy_nowcast": -0.0010230362457988485,
+        "yoy_pct_display": -0.3712938324670961,
+        "confidence": "High"
+      },
+      {
+        "region_id": "24100",
+        "region_name": "Gloversville, NY",
+        "divergence_score": 0.3647941309697207,
+        "employment_yoy_nowcast": -0.014275594423325938,
+        "yoy_pct_display": -0.3790697253930466,
+        "confidence": "High"
+      },
+      {
+        "region_id": "39420",
+        "region_name": "Pullman, WA",
+        "divergence_score": 0.3568696936259231,
+        "employment_yoy_nowcast": -0.00486676884971252,
+        "yoy_pct_display": -0.3617364624756356,
+        "confidence": "High"
+      },
+      {
+        "region_id": "14420",
+        "region_name": "Borger, TX",
+        "divergence_score": 0.32578998940076126,
+        "employment_yoy_nowcast": -0.013355764238593647,
+        "yoy_pct_display": -0.3391457536393549,
+        "confidence": "High"
+      },
+      {
+        "region_id": "34500",
+        "region_name": "Mount Vernon, IL",
+        "divergence_score": 0.3086041721668846,
+        "employment_yoy_nowcast": -0.010146912724808799,
+        "yoy_pct_display": -0.3187510848916934,
+        "confidence": "High"
+      },
+      {
+        "region_id": "14140",
+        "region_name": "Bluefield, WV-VA",
+        "divergence_score": 0.30486891069882277,
+        "employment_yoy_nowcast": -0.013333148795251923,
+        "yoy_pct_display": -0.3182020594940747,
+        "confidence": "High"
+      },
+      {
+        "region_id": "47580",
+        "region_name": "Warner Robins, GA",
+        "divergence_score": 0.3041263794512555,
+        "employment_yoy_nowcast": 0.002286115479548381,
+        "yoy_pct_display": -0.3018402639717071,
+        "confidence": "High"
+      },
+      {
+        "region_id": "34060",
+        "region_name": "Morgantown, WV",
+        "divergence_score": 0.29366499008240543,
+        "employment_yoy_nowcast": -0.013320189049569869,
+        "yoy_pct_display": -0.3069851791319753,
+        "confidence": "High"
+      },
+      {
+        "region_id": "41660",
+        "region_name": "San Angelo, TX",
+        "divergence_score": 0.28809422359813136,
+        "employment_yoy_nowcast": -0.007517484284148319,
+        "yoy_pct_display": -0.2956117078822797,
+        "confidence": "High"
+      },
+      {
+        "region_id": "11220",
+        "region_name": "Amsterdam, NY",
+        "divergence_score": 0.2835558550062361,
+        "employment_yoy_nowcast": -0.009994833287166474,
+        "yoy_pct_display": -0.2935506882934026,
+        "confidence": "High"
+      }
+    ],
+    "top_negative_divergence": [
+      {
+        "region_id": "25900",
+        "region_name": "Hilo-Kailua, HI",
+        "divergence_score": -9.499710833822279,
+        "employment_yoy_nowcast": -0.010274319414247538,
+        "yoy_pct_display": 9.489436514408032,
+        "confidence": "High"
+      },
+      {
+        "region_id": "39040",
+        "region_name": "Port Townsend, WA",
+        "divergence_score": -1.3584473445004002,
+        "employment_yoy_nowcast": -0.006848638115521958,
+        "yoy_pct_display": 1.3515987063848782,
+        "confidence": "High"
+      },
+      {
+        "region_id": "21820",
+        "region_name": "Fairbanks-College, AK",
+        "divergence_score": -1.1287073892344508,
+        "employment_yoy_nowcast": 0.0014460941565945578,
+        "yoy_pct_display": 1.1301534833910454,
+        "confidence": "High"
+      },
+      {
+        "region_id": "11260",
+        "region_name": "Anchorage, AK",
+        "divergence_score": -1.1051458097435864,
+        "employment_yoy_nowcast": 0.0008379937632612936,
+        "yoy_pct_display": 1.1059838035068477,
+        "confidence": "High"
+      },
+      {
+        "region_id": "42780",
+        "region_name": "Selinsgrove, PA",
+        "divergence_score": -1.0004626428325674,
+        "employment_yoy_nowcast": 0.001730724525896923,
+        "yoy_pct_display": 1.0021933673584642,
+        "confidence": "High"
+      },
+      {
+        "region_id": "26340",
+        "region_name": "Houghton, MI",
+        "divergence_score": -0.8649725845630812,
+        "employment_yoy_nowcast": -0.002731010458966661,
+        "yoy_pct_display": 0.8622415741041146,
+        "confidence": "High"
+      },
+      {
+        "region_id": "17740",
+        "region_name": "Coldwater, MI",
+        "divergence_score": -0.8083116140577623,
+        "employment_yoy_nowcast": 0.017480080646245,
+        "yoy_pct_display": 0.8257916947040073,
+        "confidence": "High"
+      },
+      {
+        "region_id": "27940",
+        "region_name": "Juneau, AK",
+        "divergence_score": -0.7809376409308402,
+        "employment_yoy_nowcast": -0.003129235420398036,
+        "yoy_pct_display": 0.7778084055104422,
+        "confidence": "High"
+      },
+      {
+        "region_id": "10140",
+        "region_name": "Aberdeen, WA",
+        "divergence_score": -0.6959559814336499,
+        "employment_yoy_nowcast": -0.006373931525991454,
+        "yoy_pct_display": 0.6895820499076585,
+        "confidence": "High"
+      },
+      {
+        "region_id": "35580",
+        "region_name": "New Ulm, MN",
+        "divergence_score": -0.6611025003317507,
+        "employment_yoy_nowcast": 0.004223988473688078,
+        "yoy_pct_display": 0.6653264888054388,
+        "confidence": "High"
+      },
+      {
+        "region_id": "33580",
+        "region_name": "Mitchell, SD",
+        "divergence_score": -0.6263941649055265,
+        "employment_yoy_nowcast": -0.003016214035400731,
+        "yoy_pct_display": 0.6233779508701257,
+        "confidence": "High"
+      },
+      {
+        "region_id": "38820",
+        "region_name": "Port Angeles, WA",
+        "divergence_score": -0.6071789943026307,
+        "employment_yoy_nowcast": -0.0071222307389393665,
+        "yoy_pct_display": 0.6000567635636913,
+        "confidence": "High"
+      },
+      {
+        "region_id": "30180",
+        "region_name": "Le Mars, IA",
+        "divergence_score": -0.5901884363511204,
+        "employment_yoy_nowcast": 0.0033319112959048444,
+        "yoy_pct_display": 0.5935203476470252,
+        "confidence": "High"
+      },
+      {
+        "region_id": "28540",
+        "region_name": "Ketchikan, AK",
+        "divergence_score": -0.5862057483083027,
+        "employment_yoy_nowcast": -0.00364063239626769,
+        "yoy_pct_display": 0.5825651159120351,
+        "confidence": "High"
+      },
+      {
+        "region_id": "47540",
+        "region_name": "Wapakoneta, OH",
+        "divergence_score": -0.5634552887589547,
+        "employment_yoy_nowcast": 0.004952786019818089,
+        "yoy_pct_display": 0.5684080747787728,
+        "confidence": "High"
+      }
+    ]
+  },
+  "states": {
+    "top_positive_divergence": [
+      {
+        "region_id": "MT",
+        "region_name": "Montana",
+        "divergence_score": 0.20949260092964594,
+        "employment_yoy_nowcast": 0.00312567552346084,
+        "yoy_pct_display": -0.2063669254061851,
+        "confidence": "High"
+      },
+      {
+        "region_id": "30",
+        "region_name": "Montana",
+        "divergence_score": 0.20870374958810284,
+        "employment_yoy_nowcast": 0.005968593817999317,
+        "yoy_pct_display": -0.2027351557701035,
+        "confidence": "High"
+      },
+      {
+        "region_id": "08",
+        "region_name": "Colorado",
+        "divergence_score": 0.17652229832497712,
+        "employment_yoy_nowcast": 0.004378956119721717,
+        "yoy_pct_display": -0.1721433422052554,
+        "confidence": "High"
+      },
+      {
+        "region_id": "CO",
+        "region_name": "Colorado",
+        "divergence_score": 0.17531497214186198,
+        "employment_yoy_nowcast": 0.004710182381122598,
+        "yoy_pct_display": -0.1706047897607394,
+        "confidence": "High"
+      },
+      {
+        "region_id": "WY",
+        "region_name": "Wyoming",
+        "divergence_score": 0.14489678724012367,
+        "employment_yoy_nowcast": 0.0009336993552741911,
+        "yoy_pct_display": -0.1439630878848495,
+        "confidence": "High"
+      },
+      {
+        "region_id": "56",
+        "region_name": "Wyoming",
+        "divergence_score": 0.1431737829360654,
+        "employment_yoy_nowcast": 0.0009336993552741911,
+        "yoy_pct_display": -0.1422400835807912,
+        "confidence": "High"
+      },
+      {
+        "region_id": "54",
+        "region_name": "West Virginia",
+        "divergence_score": 0.13052979859557973,
+        "employment_yoy_nowcast": 0.004204630805399309,
+        "yoy_pct_display": -0.1263251677901804,
+        "confidence": "High"
+      },
+      {
+        "region_id": "11",
+        "region_name": "District of Columbia",
+        "divergence_score": 0.11907387449188243,
+        "employment_yoy_nowcast": 0.009233222368838636,
+        "yoy_pct_display": -0.1098406521230438,
+        "confidence": "High"
+      },
+      {
+        "region_id": "MD",
+        "region_name": "Maryland",
+        "divergence_score": 0.09452676732000986,
+        "employment_yoy_nowcast": 0.008394931579016163,
+        "yoy_pct_display": -0.0861318357409937,
+        "confidence": "High"
+      },
+      {
+        "region_id": "VA",
+        "region_name": "Virginia",
+        "divergence_score": 0.09296457252763689,
+        "employment_yoy_nowcast": 0.0032000839240258886,
+        "yoy_pct_display": -0.089764488603611,
+        "confidence": "High"
+      },
+      {
+        "region_id": "24",
+        "region_name": "Maryland",
+        "divergence_score": 0.0915404101903805,
+        "employment_yoy_nowcast": 0.0051544188844643065,
+        "yoy_pct_display": -0.0863859913059162,
+        "confidence": "High"
+      },
+      {
+        "region_id": "WV",
+        "region_name": "West Virginia",
+        "divergence_score": 0.08899101833989628,
+        "employment_yoy_nowcast": 0.007337042897033874,
+        "yoy_pct_display": -0.0816539754428624,
+        "confidence": "High"
+      },
+      {
+        "region_id": "51",
+        "region_name": "Virginia",
+        "divergence_score": 0.08601609767497521,
+        "employment_yoy_nowcast": -0.0002926396844369857,
+        "yoy_pct_display": -0.0863087373594122,
+        "confidence": "High"
+      },
+      {
+        "region_id": "KY",
+        "region_name": "Kentucky",
+        "divergence_score": 0.0817935539871741,
+        "employment_yoy_nowcast": 0.0013058310033436874,
+        "yoy_pct_display": -0.0804877229838304,
+        "confidence": "High"
+      },
+      {
+        "region_id": "29",
+        "region_name": "Missouri",
+        "divergence_score": 0.07855083364391653,
+        "employment_yoy_nowcast": 0.001424567773808526,
+        "yoy_pct_display": -0.077126265870108,
+        "confidence": "High"
+      }
+    ],
+    "top_negative_divergence": [
+      {
+        "region_id": "31",
+        "region_name": "Nebraska",
+        "divergence_score": -0.29537370543651703,
+        "employment_yoy_nowcast": 0.000954355208713315,
+        "yoy_pct_display": 0.2963280606452304,
+        "confidence": "High"
+      },
+      {
+        "region_id": "NE",
+        "region_name": "Nebraska",
+        "divergence_score": -0.2823086225850773,
+        "employment_yoy_nowcast": 0.0008925628908350256,
+        "yoy_pct_display": 0.2832011854759123,
+        "confidence": "High"
+      },
+      {
+        "region_id": "33",
+        "region_name": "New Hampshire",
+        "divergence_score": -0.25146691921718495,
+        "employment_yoy_nowcast": 0.0026321775932683345,
+        "yoy_pct_display": 0.2540990968104533,
+        "confidence": "High"
+      },
+      {
+        "region_id": "RI",
+        "region_name": "Rhode Island",
+        "divergence_score": -0.2237590578051982,
+        "employment_yoy_nowcast": 0.007064752699564797,
+        "yoy_pct_display": 0.230823810504763,
+        "confidence": "High"
+      },
+      {
+        "region_id": "SD",
+        "region_name": "South Dakota",
+        "divergence_score": -0.19512875843923227,
+        "employment_yoy_nowcast": 0.007875969951958321,
+        "yoy_pct_display": 0.2030047283911906,
+        "confidence": "High"
+      },
+      {
+        "region_id": "23",
+        "region_name": "Maine",
+        "divergence_score": -0.1868508346931329,
+        "employment_yoy_nowcast": 0.0029238659605123887,
+        "yoy_pct_display": 0.1897747006536453,
+        "confidence": "High"
+      },
+      {
+        "region_id": "44",
+        "region_name": "Rhode Island",
+        "divergence_score": -0.18418412014950158,
+        "employment_yoy_nowcast": 0.00390372275455142,
+        "yoy_pct_display": 0.188087842904053,
+        "confidence": "High"
+      },
+      {
+        "region_id": "26",
+        "region_name": "Michigan",
+        "divergence_score": -0.1831294610921917,
+        "employment_yoy_nowcast": 0.003525306561213002,
+        "yoy_pct_display": 0.1866547676534047,
+        "confidence": "High"
+      },
+      {
+        "region_id": "NH",
+        "region_name": "New Hampshire",
+        "divergence_score": -0.17568696036806064,
+        "employment_yoy_nowcast": 0.0015307211752450495,
+        "yoy_pct_display": 0.1772176815433057,
+        "confidence": "High"
+      },
+      {
+        "region_id": "39",
+        "region_name": "Ohio",
+        "divergence_score": -0.1746477646661471,
+        "employment_yoy_nowcast": 0.0027889182154593297,
+        "yoy_pct_display": 0.1774366828816064,
+        "confidence": "High"
+      },
+      {
+        "region_id": "OH",
+        "region_name": "Ohio",
+        "divergence_score": -0.1639451311372166,
+        "employment_yoy_nowcast": 0.0065575325143239025,
+        "yoy_pct_display": 0.1705026636515405,
+        "confidence": "High"
+      },
+      {
+        "region_id": "VT",
+        "region_name": "Vermont",
+        "divergence_score": -0.16389584558806644,
+        "employment_yoy_nowcast": 0.003184430775417757,
+        "yoy_pct_display": 0.1670802763634842,
+        "confidence": "High"
+      },
+      {
+        "region_id": "46",
+        "region_name": "South Dakota",
+        "divergence_score": -0.1493907141280999,
+        "employment_yoy_nowcast": 0.01088719788189349,
+        "yoy_pct_display": 0.1602779120099934,
+        "confidence": "High"
+      },
+      {
+        "region_id": "MA",
+        "region_name": "Massachusetts",
+        "divergence_score": -0.1479890453912487,
+        "employment_yoy_nowcast": 0.008180301247236477,
+        "yoy_pct_display": 0.1561693466384852,
+        "confidence": "High"
+      },
+      {
+        "region_id": "ME",
+        "region_name": "Maine",
+        "divergence_score": -0.14231498070595974,
+        "employment_yoy_nowcast": 0.0066617466082032565,
+        "yoy_pct_display": 0.148976727314163,
+        "confidence": "High"
+      }
+    ]
+  }
+}

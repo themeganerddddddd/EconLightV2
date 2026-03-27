@@ -533,3 +533,19 @@ tbody tr:hover {
     grid-template-columns: 1fr;
   }
 }
+.nowcast-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.body-copy {
+  color: #d7e1f5;
+  line-height: 1.6;
+}
+
+@media (max-width: 1100px) {
+  .nowcast-grid {
+    grid-template-columns: 1fr;
+  }
+}

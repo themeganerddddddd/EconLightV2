@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Econ Light Monitor Nowcasts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Economic growth nowcasts for U.S. states, metros, and counties using nighttime lights and BLS labor market data." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="sub-hero">
+    <div class="wrap sub-hero-inner">
+      <div>
+        <a class="back-link" href="index.html">← Home</a>
+        <h1>Economic Growth Nowcasts</h1>
+        <p class="body-copy">Implied employment, labor-force, and unemployment-rate direction from nighttime lights and BLS-linked modeling.</p>
+      </div>
+      <div class="homepage-nav">
+        <a class="dataset-link" href="dashboard.html?dataset=metros">Metros</a>
+        <a class="dataset-link" href="dashboard.html?dataset=states">States</a>
+        <a class="dataset-link" href="dashboard.html?dataset=counties">Counties</a>
+        <a class="dataset-link" href="dashboard.html?dataset=cities">Cities</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="dataset-toggle">
+      <button class="dataset-btn active" data-dataset="metros">Metros</button>
+      <button class="dataset-btn" data-dataset="states">States</button>
+      <button class="dataset-btn" data-dataset="counties">Counties</button>
+      <button class="dataset-btn" data-dataset="cities">Cities</button>
+    </section>
+
+    <section class="summary-grid">
+      <div class="summary-card">
+        <div class="summary-title">Top Implied Employment Growth</div>
+        <div class="summary-number small" id="topNowcastName">--</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-title">Implied Employment YoY</div>
+        <div class="summary-number" id="topNowcastValue">--</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-title">Confidence</div>
+        <div class="summary-number small" id="topNowcastConfidence">--</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-title">Industry Proxy</div>
+        <div class="summary-number small" id="topIndustryProxy">--</div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <div class="card-header">
+          <h2>Top Employment Nowcasts</h2>
+        </div>
+        <div class="table-wrap">
+          <table id="topNowcastsTable">
+            <thead>
+              <tr><th>Region</th><th>Employment</th><th>Labor force</th><th>Confidence</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Bottom Employment Nowcasts</h2>
+        </div>
+        <div class="table-wrap">
+          <table id="bottomNowcastsTable">
+            <thead>
+              <tr><th>Region</th><th>Employment</th><th>Labor force</th><th>Confidence</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <div class="card-header">
+          <h2>Positive Divergence</h2>
+        </div>
+        <div class="table-wrap">
+          <table id="positiveDivTable">
+            <thead>
+              <tr><th>Region</th><th>Divergence</th><th>Employment</th><th>Light YoY</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Negative Divergence</h2>
+        </div>
+        <div class="table-wrap">
+          <table id="negativeDivTable">
+            <thead>
+              <tr><th>Region</th><th>Divergence</th><th>Employment</th><th>Light YoY</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="nowcast.js"></script>
+</body>
+</html>

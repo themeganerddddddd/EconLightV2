@@ -1,8 +1,8 @@
 from pathlib import Path
+import json
 import re
 import requests
 import pandas as pd
-import json
 
 DATA_DIR = Path("data/bls")
 DATA_DIR.mkdir(parents=True, exist_ok=True)
@@ -25,6 +25,110 @@ HEADERS = {
 
 SESSION = requests.Session()
 SESSION.headers.update(HEADERS)
+
+STATE_NAME_TO_ABBR = {
+    "alabama": "AL",
+    "arizona": "AZ",
+    "arkansas": "AR",
+    "california": "CA",
+    "colorado": "CO",
+    "connecticut": "CT",
+    "delaware": "DE",
+    "district of columbia": "DC",
+    "florida": "FL",
+    "georgia": "GA",
+    "idaho": "ID",
+    "illinois": "IL",
+    "indiana": "IN",
+    "iowa": "IA",
+    "kansas": "KS",
+    "kentucky": "KY",
+    "louisiana": "LA",
+    "maine": "ME",
+    "maryland": "MD",
+    "massachusetts": "MA",
+    "michigan": "MI",
+    "minnesota": "MN",
+    "mississippi": "MS",
+    "missouri": "MO",
+    "montana": "MT",
+    "nebraska": "NE",
+    "nevada": "NV",
+    "new hampshire": "NH",
+    "new jersey": "NJ",
+    "new mexico": "NM",
+    "new york": "NY",
+    "north carolina": "NC",
+    "north dakota": "ND",
+    "ohio": "OH",
+    "oklahoma": "OK",
+    "oregon": "OR",
+    "pennsylvania": "PA",
+    "rhode island": "RI",
+    "south carolina": "SC",
+    "south dakota": "SD",
+    "tennessee": "TN",
+    "texas": "TX",
+    "utah": "UT",
+    "vermont": "VT",
+    "virginia": "VA",
+    "washington": "WA",
+    "west virginia": "WV",
+    "wisconsin": "WI",
+    "wyoming": "WY",
+}
+
+STATE_FIPS_TO_ABBR = {
+    "01": "AL",
+    "04": "AZ",
+    "05": "AR",
+    "06": "CA",
+    "08": "CO",
+    "09": "CT",
+    "10": "DE",
+    "11": "DC",
+    "12": "FL",
+    "13": "GA",
+    "16": "ID",
+    "17": "IL",
+    "18": "IN",
+    "19": "IA",
+    "20": "KS",
+    "21": "KY",
+    "22": "LA",
+    "23": "ME",
+    "24": "MD",
+    "25": "MA",
+    "26": "MI",
+    "27": "MN",
+    "28": "MS",
+    "29": "MO",
+    "30": "MT",
+    "31": "NE",
+    "32": "NV",
+    "33": "NH",
+    "34": "NJ",
+    "35": "NM",
+    "36": "NY",
+    "37": "NC",
+    "38": "ND",
+    "39": "OH",
+    "40": "OK",
+    "41": "OR",
+    "42": "PA",
+    "44": "RI",
+    "45": "SC",
+    "46": "SD",
+    "47": "TN",
+    "48": "TX",
+    "49": "UT",
+    "50": "VT",
+    "51": "VA",
+    "53": "WA",
+    "54": "WV",
+    "55": "WI",
+    "56": "WY",
+}
 
 
 def resolve_local_file(name: str) -> Path | None:
@@ -63,24 +167,40 @@ def read_bls_tsv(path: Path) -> pd.DataFrame:
 def normalize(text: str) -> str:
     if text is None:
         return ""
+
     t = str(text).lower().strip()
     t = t.replace("&", "and")
+    t = t.replace("st.", "saint")
+    t = t.replace("ste.", "sainte")
     t = t.replace("metropolitan statistical area", "")
     t = t.replace("micropolitan statistical area", "")
-    t = t.replace(" metropolitan division", "")
+    t = t.replace("metropolitan division", "")
+    t = t.replace(" city and borough", "")
+    t = t.replace("borough", "")
+    t = t.replace(" census area", "")
+    t = t.replace(" municipality", "")
+    t = t.replace(" charter township", "")
+    t = t.replace(" township", "")
+    t = t.replace(" village", "")
+    t = t.replace(" town", "")
+    t = t.replace(" city", "")
     t = t.replace(" county", "")
     t = t.replace(" parish", "")
-    t = t.replace(" census area", "")
-    t = t.replace(" city and borough", "")
-    t = t.replace(" borough", "")
-    t = t.replace(" city", "")
     t = re.sub(r"[^a-z0-9]+", " ", t)
     return re.sub(r"\s+", " ", t).strip()
 
 
+def split_city_and_state(area_text: str) -> tuple[str, str | None]:
+    txt = str(area_text)
+    if "," in txt:
+        city, state = txt.rsplit(",", 1)
+        state = state.strip().lower()
+        return normalize(city), STATE_NAME_TO_ABBR.get(state, state.upper())
+    return normalize(txt), None
 
-def load_region_names():
-    out = {}
+
+def load_region_names() -> dict[str, pd.DataFrame]:
+    out: dict[str, pd.DataFrame] = {}
 
     region_files = {
         "states": Path("data/regions/us_states_contiguous.geojson"),
@@ -96,12 +216,17 @@ def load_region_names():
         rows = []
         for feature in geojson["features"]:
             props = feature["properties"]
-            rows.append(
-                {
-                    "region_id": str(props["region_id"]),
-                    "region_name": str(props["region_name"]),
-                }
-            )
+            row = {
+                "region_id": str(props["region_id"]),
+                "region_name": str(props["region_name"]),
+            }
+
+            if dataset == "cities":
+                rid = str(props["region_id"]).zfill(7)
+                state_fips = rid[:2]
+                row["state_abbr"] = STATE_FIPS_TO_ABBR.get(state_fips)
+
+            rows.append(row)
 
         rdf = pd.DataFrame(rows)
         rdf["region_name_norm"] = rdf["region_name"].map(normalize)
@@ -109,20 +234,20 @@ def load_region_names():
 
     return out
 
-def parse_bls_area_keys(area_code: str):
+
+def parse_bls_area_keys(area_code: str) -> dict[str, str]:
     area_code = str(area_code)
 
     if area_code.startswith("ST") and len(area_code) >= 4:
         return {"state_fips": area_code[2:4]}
 
     if area_code.startswith("CN") and len(area_code) >= 7:
-        # BLS county codes look like CN + 5-digit fips + padding
         return {"county_fips": area_code[2:7]}
 
     return {}
 
 
-def build_dataset(dataset_name: str, data_file_key: str):
+def build_dataset(dataset_name: str, data_file_key: str) -> None:
     area = read_bls_tsv(download(FILES["area"]))
     series = read_bls_tsv(download(FILES["series"]))
     data = read_bls_tsv(download(FILES[data_file_key]))
@@ -132,6 +257,7 @@ def build_dataset(dataset_name: str, data_file_key: str):
 
     area_small = area[["area_code", "area_text"]].drop_duplicates()
     series = series.merge(area_small, on="area_code", how="left")
+
     data = data.merge(
         series[["series_id", "area_code", "area_text", "measure_code"]],
         on="series_id",
@@ -172,6 +298,19 @@ def build_dataset(dataset_name: str, data_file_key: str):
             how="inner",
         )
 
+    elif dataset_name == "cities":
+        data[["city_name_norm", "state_abbr"]] = data["area_text"].apply(
+            lambda x: pd.Series(split_city_and_state(x))
+        )
+
+        regions["city_name_norm"] = regions["region_name"].map(normalize)
+
+        merged = data.merge(
+            regions[["region_id", "region_name", "city_name_norm", "state_abbr"]],
+            on=["city_name_norm", "state_abbr"],
+            how="inner",
+        )
+
     else:
         data["area_text_norm"] = data["area_text"].map(normalize)
         merged = data.merge(
@@ -180,6 +319,22 @@ def build_dataset(dataset_name: str, data_file_key: str):
             right_on="region_name_norm",
             how="inner",
         )
+
+    if merged.empty:
+        print(f"{dataset_name}: no matched rows found")
+        out_path = DATA_DIR / f"{dataset_name}_laus_monthly.csv"
+        pd.DataFrame(columns=[
+            "date",
+            "region_id",
+            "region_name",
+            "bls_unemployment_rate",
+            "bls_unemployment",
+            "bls_employment",
+            "bls_labor_force",
+            "dataset_name",
+        ]).to_csv(out_path, index=False)
+        print(f"Saved empty {out_path}")
+        return
 
     pivot = (
         merged.pivot_table(
@@ -199,6 +354,11 @@ def build_dataset(dataset_name: str, data_file_key: str):
         "06": "bls_labor_force",
     }
     pivot = pivot.rename(columns=rename)
+
+    for col in rename.values():
+        if col not in pivot.columns:
+            pivot[col] = pd.NA
+
     pivot["dataset_name"] = dataset_name
     pivot = pivot.sort_values(["region_id", "date"]).reset_index(drop=True)
 
@@ -207,7 +367,7 @@ def build_dataset(dataset_name: str, data_file_key: str):
     print(f"Saved {out_path} with {len(pivot)} rows.")
 
 
-def check_required_files():
+def check_required_files() -> None:
     required = [
         FILES["area"],
         FILES["series"],
@@ -231,7 +391,7 @@ def check_required_files():
         print("All required local BLS files found.")
 
 
-def main():
+def main() -> None:
     check_required_files()
     build_dataset("states", "states_u")
     build_dataset("metros", "metro")
