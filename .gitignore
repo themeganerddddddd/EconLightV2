@@ -1,4 +1,19 @@
-.env
+# Raw data
 data/raw/
+data/blackmarble_tiles/
+data/tiles/
+data/downloads/
+
+# Large intermediate data
+data/derived/
+data/bls/
+data/v2/
+
+# Python
 __pycache__/
 *.pyc
+.env
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,284 @@
+{
+  "counties": {
+    "top_employment_nowcasts": [
+      {
+        "region_id": "13225",
+        "region_name": "Peach, Georgia",
+        "employment_yoy_nowcast": 0.02552517461198438,
+        "labor_force_yoy_nowcast": 0.02901558944475897,
+        "unemployment_rate_yoy_change_nowcast": 0.08842816771181654,
+        "trend_label": "Very weak",
+        "confidence": "High"
+      },
+      {
+        "region_id": "26039",
+        "region_name": "Crawford, Michigan",
+        "employment_yoy_nowcast": 0.01769622321093862,
+        "labor_force_yoy_nowcast": 0.01953209261390591,
+        "unemployment_rate_yoy_change_nowcast": 0.4144866998970607,
+        "trend_label": "Stable",
+        "confidence": "High"
+      },
+      {
+        "region_id": "22089",
+        "region_name": "St. Charles, Louisiana",
+        "employment_yoy_nowcast": 0.014158897084643548,
+        "labor_force_yoy_nowcast": 0.015142799555548474,
+        "unemployment_rate_yoy_change_nowcast": 0.4270274764603109,
+        "trend_label": "Strong",
+        "confidence": "High"
+      },
+      {
+        "region_id": "48227",
+        "region_name": "Howard, Texas",
+        "employment_yoy_nowcast": 0.013976329565126252,
+        "labor_force_yoy_nowcast": 0.01476765061696167,
+        "unemployment_rate_yoy_change_nowcast": 0.35836667469486305,
+        "trend_label": "Stable",
+        "confidence": "High"
+      },
+      {
+        "region_id": "19139",
+        "region_name": "Muscatine, Iowa",
+        "employment_yoy_nowcast": 0.013976329565126252,
+        "labor_force_yoy_nowcast": 0.01476765061696167,
+        "unemployment_rate_yoy_change_nowcast": 0.2965752747537696,
+        "trend_label": "Weak",
+        "confidence": "High"
+      },
+      {
+        "region_id": "25005",
+        "region_name": "Bristol, Massachusetts",
+        "employment_yoy_nowcast": 0.01362442569472052,
+        "labor_force_yoy_nowcast": 0.014853106545598562,
+        "unemployment_rate_yoy_change_nowcast": 0.4034511843936879,
+        "trend_label": "Very strong",
+        "confidence": "High"
+      },
+      {
+        "region_id": "42007",
+        "region_name": "Beaver, Pennsylvania",
+        "employment_yoy_nowcast": 0.013360393370326748,
+        "labor_force_yoy_nowcast": 0.014080984067126939,
+        "unemployment_rate_yoy_change_nowcast": 0.3597552651027157,
+        "trend_label": "Stable",
+        "confidence": "High"
+      },
+      {
+        "region_id": "39051",
+        "region_name": "Fulton, Ohio",
+        "employment_yoy_nowcast": 0.013221169610955067,
+        "labor_force_yoy_nowcast": 0.007700734663923898,
+        "unemployment_rate_yoy_change_nowcast": 0.23858779076042785,
+        "trend_label": "Stable",
+        "confidence": "High"
+      },
+      {
+        "region_id": "22019",
+        "region_name": "Calcasieu, Louisiana",
+        "employment_yoy_nowcast": 0.01274912778892729,
+        "labor_force_yoy_nowcast": 0.014580562089250735,
+        "unemployment_rate_yoy_change_nowcast": 0.3439820531262759,
+        "trend_label": "Stable",
+        "confidence": "High"
+      },
+      {
+        "region_id": "48461",
+        "region_name": "Upton, Texas",
+        "employment_yoy_nowcast": 0.012681379159217483,
+        "labor_force_yoy_nowcast": 0.01436579673981616,
+        "unemployment_rate_yoy_change_nowcast": 0.30546356769387967,
+        "trend_label": "Stable",
+        "confidence": "High"
+      }
+    ]
+  },
+  "metros": {
+    "top_employment_nowcasts": [
+      {
+        "region_id": "24740",
+        "region_name": "Greenville, MS",
+        "employment_yoy_nowcast": 0.017499586959201955,
+        "labor_force_yoy_nowcast": 0.013617397352412231,
+        "unemployment_rate_yoy_change_nowcast": 0.13513241697048978,
+        "trend_label": "Stable",
+        "confidence": "High"
+      },
+      {
+        "region_id": "17740",
+        "region_name": "Coldwater, MI",
+        "employment_yoy_nowcast": 0.017480080646245,
+        "labor_force_yoy_nowcast": 0.014920256904208173,
+        "unemployment_rate_yoy_change_nowcast": 0.45940418739981,
+        "trend_label": "Very strong",
+        "confidence": "High"
+      },
+      {
+        "region_id": "21340",
+        "region_name": "El Paso, TX",
+        "employment_yoy_nowcast": 0.01722748491599118,
+        "labor_force_yoy_nowcast": 0.019412505350627735,
+        "unemployment_rate_yoy_change_nowcast": -0.014786688676077363,
+        "trend_label": "Stable",
+        "confidence": "High"
+      },
+      {
+        "region_id": "21140",
+        "region_name": "Elkhart-Goshen, IN",
+        "employment_yoy_nowcast": 0.016984822633754008,
+        "labor_force_yoy_nowcast": 0.018340525892147973,
+        "unemployment_rate_yoy_change_nowcast": 0.3402144233939268,
+        "trend_label": "Strong",
+        "confidence": "High"
+      },
+      {
+        "region_id": "BOS",
+        "region_name": "Boston",
+        "employment_yoy_nowcast": 0.01577279171777742,
+        "labor_force_yoy_nowcast": 0.016504165352967004,
+        "unemployment_rate_yoy_change_nowcast": 0.40107489613229774,
+        "trend_label": "Strong",
+        "confidence": "High"
+      },
+      {
+        "region_id": "35300",
+        "region_name": "New Haven, CT",
+        "employment_yoy_nowcast": 0.015002606000368075,
+        "labor_force_yoy_nowcast": 0.012954683085699355,
+        "unemployment_rate_yoy_change_nowcast": 0.4216485366391456,
+        "trend_label": "Very strong",
+        "confidence": "High"
+      },
+      {
+        "region_id": "22420",
+        "region_name": "Flint, MI",
+        "employment_yoy_nowcast": 0.014769152732975764,
+        "labor_force_yoy_nowcast": 0.013616347865379002,
+        "unemployment_rate_yoy_change_nowcast": 0.4697269968426802,
+        "trend_label": "Very strong",
+        "confidence": "High"
+      },
+      {
+        "region_id": "33260",
+        "region_name": "Midland, TX",
+        "employment_yoy_nowcast": 0.014630304719521772,
+        "labor_force_yoy_nowcast": 0.015544089958432587,
+        "unemployment_rate_yoy_change_nowcast": 0.3176459283531358,
+        "trend_label": "Stable",
+        "confidence": "High"
+      },
+      {
+        "region_id": "11460",
+        "region_name": "Ann Arbor, MI",
+        "employment_yoy_nowcast": 0.01412702782156377,
+        "labor_force_yoy_nowcast": 0.017170021628889212,
+        "unemployment_rate_yoy_change_nowcast": 0.563824757281503,
+        "trend_label": "Very strong",
+        "confidence": "High"
+      },
+      {
+        "region_id": "43780",
+        "region_name": "South Bend-Mishawaka, IN-MI",
+        "employment_yoy_nowcast": 0.013535653324125761,
+        "labor_force_yoy_nowcast": 0.015642548591242544,
+        "unemployment_rate_yoy_change_nowcast": 0.515960436355908,
+        "trend_label": "Strong",
+        "confidence": "High"
+      }
+    ]
+  },
+  "states": {
+    "top_employment_nowcasts": [
+      {
+        "region_id": "ID",
+        "region_name": "Idaho",
+        "employment_yoy_nowcast": 0.014305175138469494,
+        "labor_force_yoy_nowcast": 0.015095437363396604,
+        "unemployment_rate_yoy_change_nowcast": 0.4395280864145671,
+        "trend_label": "Stable",
+        "confidence": "High"
+      },
+      {
+        "region_id": "16",
+        "region_name": "Idaho",
+        "employment_yoy_nowcast": 0.01407285836723213,
+        "labor_force_yoy_nowcast": 0.013224604810540105,
+        "unemployment_rate_yoy_change_nowcast": 0.28501928041412194,
+        "trend_label": "Stable",
+        "confidence": "High"
+      },
+      {
+        "region_id": "FL",
+        "region_name": "Florida",
+        "employment_yoy_nowcast": 0.0134748270195192,
+        "labor_force_yoy_nowcast": 0.01795538454400736,
+        "unemployment_rate_yoy_change_nowcast": 0.28044865138481084,
+        "trend_label": "Stable",
+        "confidence": "High"
+      },
+      {
+        "region_id": "41",
+        "region_name": "Oregon",
+        "employment_yoy_nowcast": 0.012947687539151891,
+        "labor_force_yoy_nowcast": 0.015809460218733726,
+        "unemployment_rate_yoy_change_nowcast": 0.45786886259154547,
+        "trend_label": "Stable",
+        "confidence": "High"
+      },
+      {
+        "region_id": "UT",
+        "region_name": "Utah",
+        "employment_yoy_nowcast": 0.012698171284335726,
+        "labor_force_yoy_nowcast": 0.015691370066773104,
+        "unemployment_rate_yoy_change_nowcast": 0.3125546835374231,
+        "trend_label": "Stable",
+        "confidence": "High"
+      },
+      {
+        "region_id": "48",
+        "region_name": "Texas",
+        "employment_yoy_nowcast": 0.012648870953972031,
+        "labor_force_yoy_nowcast": 0.0128551401341644,
+        "unemployment_rate_yoy_change_nowcast": 0.18799639635923915,
+        "trend_label": "Stable",
+        "confidence": "High"
+      },
+      {
+        "region_id": "CT",
+        "region_name": "Connecticut",
+        "employment_yoy_nowcast": 0.012637600436314315,
+        "labor_force_yoy_nowcast": 0.016281536356069423,
+        "unemployment_rate_yoy_change_nowcast": 0.40252026848633987,
+        "trend_label": "Very strong",
+        "confidence": "High"
+      },
+      {
+        "region_id": "OR",
+        "region_name": "Oregon",
+        "employment_yoy_nowcast": 0.01158646734144589,
+        "labor_force_yoy_nowcast": 0.013884334116225187,
+        "unemployment_rate_yoy_change_nowcast": 0.34705834797368795,
+        "trend_label": "Stable",
+        "confidence": "High"
+      },
+      {
+        "region_id": "53",
+        "region_name": "Washington",
+        "employment_yoy_nowcast": 0.011574057039933788,
+        "labor_force_yoy_nowcast": 0.013705290017801996,
+        "unemployment_rate_yoy_change_nowcast": 0.13545561330825803,
+        "trend_label": "Stable",
+        "confidence": "High"
+      },
+      {
+        "region_id": "46",
+        "region_name": "South Dakota",
+        "employment_yoy_nowcast": 0.01088719788189349,
+        "labor_force_yoy_nowcast": 0.014367470113328059,
+        "unemployment_rate_yoy_change_nowcast": 0.32439758637667326,
+        "trend_label": "Very strong",
+        "confidence": "High"
+      }
+    ]
+  }
+}

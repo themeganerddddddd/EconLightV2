@@ -6,3 +6,4 @@ pyarrow
 matplotlib
 python-dotenv
 requests
+scikit-learn
