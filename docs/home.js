@@ -19,10 +19,14 @@ function valueClass(v) {
   return "neutral";
 }
 
-async function loadJson(path) {
-  const res = await fetch(path);
-  if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
-  return await res.json();
+async function safeLoadJson(path, fallback = null) {
+  try {
+    const res = await fetch(path);
+    if (!res.ok) return fallback;
+    return await res.json();
+  } catch {
+    return fallback;
+  }
 }
 
 function showStatus(msg) {
@@ -53,8 +57,9 @@ function renderNowcasts(nowcastPayload) {
   box.innerHTML = "";
 
   const rows = [
-    ...(nowcastPayload?.metros?.top_employment_nowcasts || []).slice(0, 3),
-    ...(nowcastPayload?.states?.top_employment_nowcasts || []).slice(0, 3)
+    ...(nowcastPayload?.states?.top_employment_nowcasts || []).slice(0, 2),
+    ...(nowcastPayload?.metros?.top_employment_nowcasts || []).slice(0, 2),
+    ...(nowcastPayload?.counties?.top_employment_nowcasts || []).slice(0, 2)
   ].slice(0, 6);
 
   rows.forEach(r => {
@@ -67,8 +72,6 @@ function renderNowcasts(nowcastPayload) {
         Implied employment YoY: ${fmtPct(r.employment_yoy_nowcast)}
       </div>
       <div class="body-copy">Trend: ${r.trend_label || "--"}</div>
-      <div class="body-copy">Industry: ${r.industry_proxy || "--"}</div>
-      <div class="body-copy">Population proxy: ${r.population_growth_proxy == null ? "N/A" : fmtPct(r.population_growth_proxy)}</div>
     `;
     box.appendChild(card);
   });
@@ -100,7 +103,13 @@ function populateGlobalSearch(results) {
 
 function attachGlobalSearch() {
   const input = document.getElementById("globalSearch");
-  if (!input) return;
+  const sel = document.getElementById("globalSearchResults");
+  if (!input || !sel) return;
+
+  if (!profileIndex || profileIndex.length === 0) {
+    sel.innerHTML = `<option>Search index unavailable</option>`;
+    return;
+  }
 
   input.oninput = () => {
     const q = input.value.trim().toLowerCase();
@@ -133,18 +142,12 @@ function setMapMode(mode) {
   const intro = document.getElementById("mapIntroText");
 
   if (mode === "states") {
-    if (title) title.textContent = "U.S. State Economic Activity Map";
-    if (intro) {
-      intro.textContent =
-        "This national map shows state-level light-based economic momentum across the United States, including Alaska and Hawaii. Click a state to open its profile with trend history, ranking, percentile, and nowcast.";
-    }
+    if (title) title.textContent = "U.S. State Momentum Map";
+    if (intro) intro.textContent = "Start with the cleaner state-level view. Click a state to open its full profile.";
     renderStateMap();
   } else {
-    if (title) title.textContent = "U.S. County Economic Activity Map";
-    if (intro) {
-      intro.textContent =
-        "This county map shows more local variation in light-based momentum. Click a county to open its profile. County mode emphasizes detail over simplicity.";
-    }
+    if (title) title.textContent = "U.S. County Momentum Map";
+    if (intro) intro.textContent = "Switch to counties for more local detail. Click a county to open its profile.";
     renderCountyMap();
   }
 }
@@ -159,9 +162,7 @@ function renderStateMap() {
     locationmode: "USA-states",
     locations: usable.map(r => fipsToStateAbbr(r.region_id)),
     z: usable.map(r => Number(r.yoy_pct_display)),
-    text: usable.map(r =>
-      `${r.region_name}<br>Light YoY: ${fmtPct(r.yoy_pct_display)}<br>Trend: ${r.trend_label || "N/A"}`
-    ),
+    text: usable.map(r => `${r.region_name}<br>Light YoY: ${fmtPct(r.yoy_pct_display)}<br>Trend: ${r.trend_label || "N/A"}`),
     hovertemplate: "%{text}<extra></extra>",
     colorscale: [
       [0.0, "#fb7185"],
@@ -171,14 +172,8 @@ function renderStateMap() {
       [1.0, "#4ade80"]
     ],
     zmid: 0,
-    marker: {
-      line: { color: "rgba(255,255,255,0.38)", width: 0.9 }
-    },
-    colorbar: {
-      title: "Light YoY",
-      tickfont: { color: "#e5ecff" },
-      titlefont: { color: "#e5ecff" }
-    }
+    marker: { line: { color: "rgba(255,255,255,0.4)", width: 1 } },
+    colorbar: { title: "Light YoY", tickfont: { color: "#e5ecff" }, titlefont: { color: "#e5ecff" } }
   };
 
   const layout = {
@@ -201,8 +196,7 @@ function renderStateMap() {
     displayModeBar: false
   });
 
-  const mapEl = document.getElementById("countyMap");
-  mapEl.on("plotly_click", (data) => {
+  document.getElementById("countyMap").on("plotly_click", (data) => {
     const point = data.points?.[0];
     if (!point) return;
     const abbr = point.location;
@@ -223,9 +217,7 @@ function renderCountyMap() {
     featureidkey: "id",
     locations: usable.map(r => r.region_id),
     z: usable.map(r => Number(r.trend_score)),
-    text: usable.map(r =>
-      `${r.region_name}<br>Trend: ${r.trend_label || "N/A"}<br>Light YoY: ${fmtPct(r.yoy_pct_display)}`
-    ),
+    text: usable.map(r => `${r.region_name}<br>Trend: ${r.trend_label || "N/A"}<br>Light YoY: ${fmtPct(r.yoy_pct_display)}`),
     hovertemplate: "%{text}<extra></extra>",
     colorscale: [
       [0.0, "#fb7185"],
@@ -235,14 +227,8 @@ function renderCountyMap() {
       [1.0, "#4ade80"]
     ],
     zmid: 0,
-    marker: {
-      line: { color: "rgba(255,255,255,0.08)", width: 0.18 }
-    },
-    colorbar: {
-      title: "Trend",
-      tickfont: { color: "#e5ecff" },
-      titlefont: { color: "#e5ecff" }
-    }
+    marker: { line: { color: "rgba(255,255,255,0.08)", width: 0.15 } },
+    colorbar: { title: "Trend", tickfont: { color: "#e5ecff" }, titlefont: { color: "#e5ecff" } }
   };
 
   const layout = {
@@ -265,8 +251,7 @@ function renderCountyMap() {
     displayModeBar: false
   });
 
-  const mapEl = document.getElementById("countyMap");
-  mapEl.on("plotly_click", (data) => {
+  document.getElementById("countyMap").on("plotly_click", (data) => {
     const point = data.points?.[0];
     if (!point) return;
     const fips = String(point.location).padStart(5, "0");
@@ -276,32 +261,26 @@ function renderCountyMap() {
 
 async function init() {
   try {
-    const [
-      home,
-      profileIdx,
-      states,
-      counties,
-      nowcastPayload
-    ] = await Promise.all([
-      loadJson("data/homepage_summary.json"),
-      loadJson("data/profile_index.json"),
-      loadJson("data/states_latest.json"),
-      loadJson("data/counties_latest.json"),
-      loadJson("data/v2_nowcasts.json").catch(() => ({}))
+    const [home, profileIdx, states, counties, nowcastPayload] = await Promise.all([
+      safeLoadJson("data/homepage_summary.json", {}),
+      safeLoadJson("data/profile_index.json", []),
+      safeLoadJson("data/states_latest.json", []),
+      safeLoadJson("data/counties_latest.json", []),
+      safeLoadJson("data/v2_nowcasts.json", {})
     ]);
 
-    homepageSummary = home;
-    profileIndex = profileIdx;
-    stateLatest = states;
-    countyLatest = counties;
-    nowcasts = nowcastPayload;
+    homepageSummary = home || {};
+    profileIndex = profileIdx || [];
+    stateLatest = states || [];
+    countyLatest = counties || [];
+    nowcasts = nowcastPayload || {};
 
     const latestMonthEl = document.getElementById("homeLatestMonth");
     if (latestMonthEl) {
       latestMonthEl.textContent =
         homepageSummary?.metros?.summary?.latest_month
           ? `Latest available month: ${String(homepageSummary.metros.summary.latest_month).slice(0, 7)}`
-          : "Latest available month: --";
+          : "Latest available month: unavailable";
     }
 
     const national = homepageSummary?.counties?.summary?.national_yoy_pct;
@@ -336,21 +315,16 @@ async function init() {
     if (topTrendText) {
       const tr = metroSummary.top_region;
       if (tr?.region_name) {
-        const yoy = tr.yoy_pct_display ?? tr.yoy_pct;
-        topTrendText.innerHTML = `${tr.region_name} <span class="${valueClass(yoy)}">${fmtPct(yoy)}</span>`;
+        topTrendText.textContent = tr.region_name;
       } else {
         topTrendText.textContent = "--";
       }
     }
 
     renderMiniList("top5Metros", homepageSummary?.metros?.top5 || []);
-    renderMiniList("bottom5Metros", homepageSummary?.metros?.bottom5 || []);
     renderMiniList("top5States", homepageSummary?.states?.top5 || []);
-    renderMiniList("bottom5States", homepageSummary?.states?.bottom5 || []);
     renderMiniList("top5Counties", homepageSummary?.counties?.top5 || []);
-    renderMiniList("bottom5Counties", homepageSummary?.counties?.bottom5 || []);
     renderMiniList("top5Cities", homepageSummary?.cities?.top5 || []);
-    renderMiniList("bottom5Cities", homepageSummary?.cities?.bottom5 || []);
 
     renderNowcasts(nowcasts);
     attachGlobalSearch();
@@ -359,7 +333,12 @@ async function init() {
     document.getElementById("countyMapBtn")?.addEventListener("click", () => setMapMode("counties"));
 
     setMapMode("states");
-    showStatus("Loaded homepage data.");
+
+    if (!profileIndex.length) {
+      showStatus("Homepage loaded. Search index is missing, so search is temporarily unavailable.");
+    } else {
+      showStatus("Loaded homepage data.");
+    }
   } catch (err) {
     console.error(err);
     showStatus(`Error loading homepage data: ${err.message}`);

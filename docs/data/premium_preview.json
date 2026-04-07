@@ -1,11 +1,13 @@
 {
   "title": "Premium Preview",
   "features": [
-    "Full nowcast downloads",
+    "Watchlists for counties, metros, and states",
+    "Faster profile search",
     "Historical exports",
-    "Divergence alerts",
-    "Custom watchlists",
-    "API access",
+    "Full API access",
+    "Alerts on ranking changes",
+    "Nowcast downloads",
+    "Report builder",
     "Weekly market notes"
   ]
 }

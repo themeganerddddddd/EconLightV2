@@ -2,27 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Econ Light Monitor | U.S. Economic Growth Tracker from Nighttime Lights</title>
+  <title>Econ Light Monitor | U.S. Economic Growth Tracker</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <meta name="description" content="Econ Light Monitor is a U.S. economic growth tracker built from NASA nighttime lights and BLS labor-market data. Explore county, metro, state, and city trends, rankings, nowcasts, and regional economic momentum." />
-  <meta name="keywords" content="economic growth tracker, nighttime lights data, satellite economic indicators, BLS employment tracker, regional growth, county economic data, metro growth tracker, state growth tracker, city growth tracker, economic nowcast, economic intelligence, alternative data, local economic trends" />
-  <meta name="author" content="Econ Light Monitor" />
-  <meta name="robots" content="index,follow" />
+  <meta name="description" content="Track U.S. economic momentum across states, counties, metros, and cities using nighttime lights and labor-market nowcasts." />
   <meta name="theme-color" content="#081223" />
-
-  <meta property="og:title" content="Econ Light Monitor | U.S. Economic Growth Tracker from Nighttime Lights" />
-  <meta property="og:description" content="Track county, metro, state, and city growth signals using NASA nighttime lights and BLS labor data." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/top_metro_nowcasts.png" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Econ Light Monitor" />
-  <meta name="twitter:description" content="Satellite-based U.S. economic growth tracking with regional nowcasts and rankings." />
-
-  <link rel="canonical" href="./index.html" />
   <link rel="stylesheet" href="styles.css" />
-
   <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min"></script>
 </head>
 <body>
@@ -40,32 +24,24 @@
         <div class="eyebrow">Satellite Economic Intelligence</div>
         <h1>Econ Light Monitor</h1>
         <p class="hero-main-copy">
-          A U.S. economic growth tracker built from <strong>NASA nighttime lights</strong> and
-          <strong>BLS labor-market data</strong>, designed to surface regional momentum,
-          economic divergence, and current growth estimates across
-          <strong>counties, metros, states, and cities</strong>.
+          A U.S. economic growth tracker built from nighttime lights and labor-market data,
+          designed to show where regional momentum appears to be strengthening or weakening.
         </p>
 
         <div id="homeLatestMonth" class="hero-subtext">Latest available month: --</div>
 
         <div class="homepage-nav">
-          <a class="dataset-link" href="nowcast.html">Nowcasts</a>
-          <a class="dataset-link" href="dashboard.html?dataset=metros">Metros</a>
+          <a class="dataset-link primary-link" href="nowcast.html">View Nowcasts</a>
           <a class="dataset-link" href="dashboard.html?dataset=states">States</a>
+          <a class="dataset-link" href="dashboard.html?dataset=metros">Metros</a>
           <a class="dataset-link" href="dashboard.html?dataset=counties">Counties</a>
           <a class="dataset-link" href="dashboard.html?dataset=cities">Cities</a>
-          <a class="dataset-link" href="premium.html">Premium</a>
         </div>
 
-        <div class="region-controls home-search-controls">
-          <div class="region-picker-wrap">
-            <label for="globalSearch">Search any county, state, metro, or city</label>
-            <input id="globalSearch" type="text" placeholder="Search a place name..." />
-          </div>
-          <div class="region-picker-wrap">
-            <label for="globalSearchResults">Results</label>
-            <select id="globalSearchResults"></select>
-          </div>
+        <div class="search-card">
+          <label for="globalSearch">Search any county, state, metro, or city</label>
+          <input id="globalSearch" type="text" placeholder="Try California, Austin, Montgomery County, or Raleigh" />
+          <select id="globalSearchResults"></select>
         </div>
       </div>
 
@@ -76,14 +52,14 @@
         </div>
 
         <div class="hero-stat glass">
-          <div class="stat-label">Top Implied Growth</div>
+          <div class="stat-label">Top Current Nowcast</div>
           <div id="topNowcastRegion" class="stat-value small">--</div>
         </div>
 
         <div class="hero-stat glass">
-          <div class="stat-label">What this measures</div>
+          <div class="stat-label">What this is</div>
           <div class="stat-note">
-            Directional economic activity and momentum — not official GDP.
+            A directional signal of local economic activity and momentum, not an official GDP estimate.
           </div>
         </div>
       </div>
@@ -95,138 +71,103 @@
   <main class="wrap">
     <section id="statusMount"></section>
 
-    <section class="intro-grid">
-      <div class="card intro-card-wide">
+    <section class="summary-grid compact-summary-grid">
+      <div class="summary-card">
+        <div class="summary-title">National Light YoY</div>
+        <div id="nationalLightYoy" class="summary-number">--</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-title">Average Regional YoY</div>
+        <div id="avgYoy" class="summary-number">--</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-title">Average Regional MoM</div>
+        <div id="avgMom" class="summary-number">--</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-title">Top Trend</div>
+        <div id="topTrendText" class="summary-number small">--</div>
+      </div>
+    </section>
+
+    <section class="home-main-grid">
+      <div class="card home-map-card">
         <div class="card-header">
-          <h2 id="mapTitle">U.S. State Economic Activity Map</h2>
+          <h2 id="mapTitle">U.S. State Momentum Map</h2>
           <div class="map-toggle">
             <button class="dataset-btn active" id="stateMapBtn" type="button">States</button>
             <button class="dataset-btn" id="countyMapBtn" type="button">Counties</button>
           </div>
         </div>
         <p class="intro-text" id="mapIntroText">
-          This national map shows state-level light-based economic momentum across the United States, including Alaska and Hawaii.
-          Click a state to open its profile with trend history, ranking, percentile, and nowcast.
+          Start with the cleaner state-level view, then switch to counties for local detail.
+          Click a region to open its full profile.
         </p>
         <div id="countyMap" class="map-box"></div>
       </div>
 
-      <div class="card">
+      <div class="card home-side-card">
         <div class="card-header">
-          <h2>How the tracker works</h2>
+          <h2>How to use this</h2>
         </div>
-        <p class="body-copy">
-          Econ Light Monitor uses nighttime lights as a proxy for changes in local activity,
-          infrastructure intensity, and regional momentum. It then combines that signal with
-          official BLS labor-market data to produce more interpretable U.S. nowcasts.
-        </p>
-        <p class="body-copy">
-          The platform is best used as a <strong>directional economic indicator</strong> for
-          finding where activity appears to be strengthening, weakening, or diverging from
-          labor-market trends.
-        </p>
-        <div class="callout">
-          Best for: economic development, regional research, investment scouting, and local growth monitoring.
+        <div class="simple-steps">
+          <div class="step-item">
+            <div class="step-num">1</div>
+            <div>Use the map to scan where momentum looks strongest or weakest.</div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">2</div>
+            <div>Search any state, county, metro, or city to open its profile.</div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">3</div>
+            <div>Use the nowcast page when you want implied employment and labor-force estimates.</div>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <section class="summary-grid">
-      <div class="summary-card">
-        <div class="summary-title">Estimated U.S. Light YoY</div>
-        <div id="nationalLightYoy" class="summary-number">--</div>
-        <div class="summary-sub">Using all contiguous U.S. counties as a national proxy</div>
-      </div>
+        <div class="mini-divider"></div>
 
-      <div class="summary-card">
-        <div class="summary-title">Average Metro/Region MoM</div>
-        <div id="avgMom" class="summary-number">--</div>
-      </div>
-
-      <div class="summary-card">
-        <div class="summary-title">Average Metro/Region YoY</div>
-        <div id="avgYoy" class="summary-number">--</div>
-      </div>
-
-      <div class="summary-card">
-        <div class="summary-title">Current Top Trend</div>
-        <div id="topTrendText" class="summary-number small">--</div>
-      </div>
-    </section>
-
-    <section class="insight-grid">
-      <div class="insight-card">
-        <h3>Counties, metros, states, and cities</h3>
-        <p>
-          Explore regional economic momentum across multiple U.S. geographies with comparable rankings,
-          trend labels, percentiles, and profiles.
-        </p>
-      </div>
-
-      <div class="insight-card">
-        <h3>AI-linked economic nowcasts</h3>
-        <p>
-          V2 translates recent nighttime-light momentum into implied employment and labor-force direction
-          where the historical relationship to BLS data is strong enough to support a usable estimate.
-        </p>
-      </div>
-
-      <div class="insight-card">
-        <h3>Profiles, rankings, and percentiles</h3>
-        <p>
-          Each profile shows not only whether a place is up or down, but where it ranks
-          nationally within its peer group and how strong the signal looks relative to everyone else.
-        </p>
+        <div class="card-header less-top-gap">
+          <h2>What’s on each profile</h2>
+        </div>
+        <ul class="clean-list">
+          <li>Trend label and direction</li>
+          <li>Rank and percentile</li>
+          <li>Light YoY and MoM</li>
+          <li>Employment nowcast</li>
+          <li>History chart and outline map</li>
+        </ul>
       </div>
     </section>
 
     <section class="homepage-lists">
       <div class="home-list-card">
-        <div class="card-header"><h2>Top 5 Metros</h2></div>
-        <ol id="top5Metros" class="mini-list"></ol>
-        <h3 class="subhead">Bottom 5</h3>
-        <ol id="bottom5Metros" class="mini-list"></ol>
-      </div>
-
-      <div class="home-list-card">
-        <div class="card-header"><h2>Top 5 States</h2></div>
+        <div class="card-header"><h2>Top States</h2></div>
         <ol id="top5States" class="mini-list"></ol>
-        <h3 class="subhead">Bottom 5</h3>
-        <ol id="bottom5States" class="mini-list"></ol>
       </div>
 
       <div class="home-list-card">
-        <div class="card-header"><h2>Top 5 Counties</h2></div>
+        <div class="card-header"><h2>Top Metros</h2></div>
+        <ol id="top5Metros" class="mini-list"></ol>
+      </div>
+
+      <div class="home-list-card">
+        <div class="card-header"><h2>Top Counties</h2></div>
         <ol id="top5Counties" class="mini-list"></ol>
-        <h3 class="subhead">Bottom 5</h3>
-        <ol id="bottom5Counties" class="mini-list"></ol>
       </div>
 
       <div class="home-list-card">
-        <div class="card-header"><h2>Top 5 Cities</h2></div>
+        <div class="card-header"><h2>Top Cities</h2></div>
         <ol id="top5Cities" class="mini-list"></ol>
-        <h3 class="subhead">Bottom 5</h3>
-        <ol id="bottom5Cities" class="mini-list"></ol>
       </div>
     </section>
 
     <section class="card">
       <div class="card-header">
-        <h2>Top AI Growth Nowcasts</h2>
-        <span class="badge">V2</span>
+        <h2>Top Nowcasts</h2>
+        <a class="text-link" href="nowcast.html">Open full nowcast page</a>
       </div>
       <div id="nowcastCards" class="nowcast-grid"></div>
-    </section>
-
-    <section class="footer-strip">
-      <div>
-        <strong>Econ Light Monitor</strong> combines nighttime lights and labor-market data for regional economic monitoring.
-      </div>
-      <div class="footer-links">
-        <a href="nowcast.html">Nowcasts</a>
-        <a href="profile.html?dataset=states&id=06">Sample Profile</a>
-        <a href="premium.html">Premium</a>
-      </div>
     </section>
   </main>
 

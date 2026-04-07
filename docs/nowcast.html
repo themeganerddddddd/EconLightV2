@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Econ Light Monitor Nowcasts</title>
+  <title>Econ Light Monitor | Nowcasts</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Economic growth nowcasts for U.S. states, metros, and counties using nighttime lights and BLS labor market data." />
+  <meta name="description" content="Economic nowcasts for U.S. states, metros, counties, and cities using nighttime lights and labor-market modeling." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -12,12 +12,15 @@
     <div class="wrap sub-hero-inner">
       <div>
         <a class="back-link" href="index.html">← Home</a>
-        <h1>Economic Growth Nowcasts</h1>
-        <p class="body-copy">Implied employment, labor-force, and unemployment-rate direction from nighttime lights and BLS-linked modeling.</p>
+        <h1>Economic Nowcasts</h1>
+        <p class="body-copy">
+          This page focuses only on model-based current estimates, not the full raw light dashboard.
+        </p>
       </div>
       <div class="homepage-nav">
-        <a class="dataset-link" href="dashboard.html?dataset=metros">Metros</a>
+        <a class="dataset-link" href="index.html">Home</a>
         <a class="dataset-link" href="dashboard.html?dataset=states">States</a>
+        <a class="dataset-link" href="dashboard.html?dataset=metros">Metros</a>
         <a class="dataset-link" href="dashboard.html?dataset=counties">Counties</a>
         <a class="dataset-link" href="dashboard.html?dataset=cities">Cities</a>
       </div>
@@ -26,19 +29,19 @@
 
   <main class="wrap">
     <section class="dataset-toggle">
-      <button class="dataset-btn active" data-dataset="metros">Metros</button>
-      <button class="dataset-btn" data-dataset="states">States</button>
+      <button class="dataset-btn active" data-dataset="states">States</button>
+      <button class="dataset-btn" data-dataset="metros">Metros</button>
       <button class="dataset-btn" data-dataset="counties">Counties</button>
       <button class="dataset-btn" data-dataset="cities">Cities</button>
     </section>
 
-    <section class="summary-grid">
+    <section class="summary-grid compact-summary-grid">
       <div class="summary-card">
-        <div class="summary-title">Top Implied Employment Growth</div>
+        <div class="summary-title">Top Region</div>
         <div class="summary-number small" id="topNowcastName">--</div>
       </div>
       <div class="summary-card">
-        <div class="summary-title">Implied Employment YoY</div>
+        <div class="summary-title">Employment Nowcast</div>
         <div class="summary-number" id="topNowcastValue">--</div>
       </div>
       <div class="summary-card">
@@ -81,11 +84,14 @@
       </div>
     </section>
 
-    <section class="grid">
-      <div class="card">
-        <div class="card-header">
-          <h2>Positive Divergence</h2>
-        </div>
+    <section class="card">
+      <div class="card-header">
+        <h2>Divergence</h2>
+      </div>
+      <p class="body-copy less-bottom-gap">
+        Divergence compares modeled employment direction with the light-based yearly trend.
+      </p>
+      <div class="grid">
         <div class="table-wrap">
           <table id="positiveDivTable">
             <thead>
@@ -93,12 +99,6 @@
             </thead>
             <tbody></tbody>
           </table>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <h2>Negative Divergence</h2>
         </div>
         <div class="table-wrap">
           <table id="negativeDivTable">
