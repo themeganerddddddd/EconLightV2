@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Region Profile | Econ Light Monitor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="View regional light trends, rankings, percentile, and economic nowcasts for U.S. counties, states, metros, and cities." />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="sub-hero">
+    <div class="wrap sub-hero-inner">
+      <div>
+        <a class="back-link" href="index.html">← Home</a>
+        <h1 id="profileName">Region Profile</h1>
+        <p id="profileSubtitle" class="body-copy">Trend, ranking, percentile, and nowcast.</p>
+      </div>
+      <div class="homepage-nav">
+        <a class="dataset-link" href="index.html">Home</a>
+        <a class="dataset-link" href="nowcast.html">Nowcasts</a>
+        <a class="dataset-link" href="dashboard.html?dataset=metros">Dashboards</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="summary-grid">
+      <div class="summary-card">
+        <div class="summary-title">Overall Rank</div>
+        <div class="summary-number" id="profileRank">--</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-title">Percentile</div>
+        <div class="summary-number" id="profilePercentile">--</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-title">Direction</div>
+        <div class="summary-number small" id="profileDirection">--</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-title">Trend</div>
+        <div class="summary-number small" id="profileTrend">--</div>
+      </div>
+    </section>
+
+    <section class="summary-grid">
+      <div class="summary-card">
+        <div class="summary-title">Light YoY</div>
+        <div class="summary-number" id="profileYoy">--</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-title">Light MoM</div>
+        <div class="summary-number" id="profileMom">--</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-title">Employment Nowcast</div>
+        <div class="summary-number" id="profileEmpNowcast">--</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-title">Confidence</div>
+        <div class="summary-number small" id="profileConfidence">--</div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <div class="card-header">
+          <h2>Region Profile</h2>
+        </div>
+        <div class="body-copy">
+          <p><strong>Industry proxy:</strong> <span id="profileIndustry">--</span></p>
+          <p><strong>Population growth proxy:</strong> <span id="profilePopulation">--</span></p>
+          <p><strong>Unemployment-rate nowcast direction:</strong> <span id="profileUrate">--</span></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Search another region</h2>
+        </div>
+        <div class="region-controls">
+          <div class="region-picker-wrap">
+            <label for="globalSearch">Search</label>
+            <input id="globalSearch" type="text" placeholder="Search county, state, metro, or city..." />
+          </div>
+          <div class="region-picker-wrap">
+            <label for="globalSearchResults">Results</label>
+            <select id="globalSearchResults"></select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <h2>Light Trend History</h2>
+      </div>
+      <div class="chart-box large">
+        <canvas id="profileChart"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <script src="profile.js"></script>
+</body>
+</html>
