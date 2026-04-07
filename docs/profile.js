@@ -1,8 +1,9 @@
 let profileChart = null;
 let profileIndex = [];
-let profiles = {};
 let statesGeo = null;
 let countiesGeo = null;
+let countyShardCache = {};
+let datasetProfilesCache = {};
 
 function fmtPct(v) {
   if (v === null || v === undefined || Number.isNaN(Number(v))) return "N/A";
@@ -32,6 +33,26 @@ function getParams() {
   };
 }
 
+async function getProfile(dataset, id) {
+  if (dataset === "counties") {
+    if (!datasetProfilesCache.countiesIndex) {
+      datasetProfilesCache.countiesIndex = await loadJson("data/profiles/counties_index.json");
+    }
+    const statefp = datasetProfilesCache.countiesIndex[String(id).padStart(5, "0")];
+    if (!statefp) return null;
+
+    if (!countyShardCache[statefp]) {
+      countyShardCache[statefp] = await loadJson(`data/profiles/counties_by_state/${statefp}.json`);
+    }
+    return countyShardCache[statefp][String(id).padStart(5, "0")] || null;
+  }
+
+  if (!datasetProfilesCache[dataset]) {
+    datasetProfilesCache[dataset] = await loadJson(`data/profiles/${dataset}.json`);
+  }
+  return datasetProfilesCache[dataset][String(id)] || null;
+}
+
 function populateSearch(results) {
   const sel = document.getElementById("globalSearchResults");
   sel.innerHTML = "";
@@ -58,10 +79,7 @@ function renderMiniMap(dataset, regionId, regionName) {
 
     const trace = {
       type: "choropleth",
-      geojson: {
-        type: "FeatureCollection",
-        features: [feature]
-      },
+      geojson: { type: "FeatureCollection", features: [feature] },
       featureidkey: "properties.region_id",
       locations: [String(regionId)],
       z: [1],
@@ -73,12 +91,7 @@ function renderMiniMap(dataset, regionId, regionName) {
     };
 
     const layout = {
-      geo: {
-        fitbounds: "locations",
-        bgcolor: "rgba(0,0,0,0)",
-        showland: true,
-        landcolor: "rgba(255,255,255,0.03)"
-      },
+      geo: { fitbounds: "locations", bgcolor: "rgba(0,0,0,0)", showland: true, landcolor: "rgba(255,255,255,0.03)" },
       paper_bgcolor: "rgba(0,0,0,0)",
       plot_bgcolor: "rgba(0,0,0,0)",
       margin: { t: 0, r: 0, b: 0, l: 0 },
@@ -99,10 +112,7 @@ function renderMiniMap(dataset, regionId, regionName) {
 
     const trace = {
       type: "choropleth",
-      geojson: {
-        type: "FeatureCollection",
-        features: [feature]
-      },
+      geojson: { type: "FeatureCollection", features: [feature] },
       featureidkey: "properties.region_id",
       locations: [targetId],
       z: [1],
@@ -114,12 +124,7 @@ function renderMiniMap(dataset, regionId, regionName) {
     };
 
     const layout = {
-      geo: {
-        fitbounds: "locations",
-        bgcolor: "rgba(0,0,0,0)",
-        showland: true,
-        landcolor: "rgba(255,255,255,0.03)"
-      },
+      geo: { fitbounds: "locations", bgcolor: "rgba(0,0,0,0)", showland: true, landcolor: "rgba(255,255,255,0.03)" },
       paper_bgcolor: "rgba(0,0,0,0)",
       plot_bgcolor: "rgba(0,0,0,0)",
       margin: { t: 0, r: 0, b: 0, l: 0 },
@@ -187,12 +192,11 @@ function renderProfile(p) {
 
 async function init() {
   profileIndex = await loadJson("data/profile_index.json");
-  profiles = await loadJson("data/profiles.json");
   statesGeo = await loadJson("data/regions/us_states_contiguous.geojson").catch(() => null);
   countiesGeo = await loadJson("data/regions/us_counties_contiguous.geojson").catch(() => null);
 
   const params = getParams();
-  const p = profiles?.[params.dataset]?.[params.id];
+  const p = await getProfile(params.dataset, params.id);
 
   if (!p) {
     document.getElementById("profileName").textContent = "Profile not found";

@@ -9,6 +9,11 @@ DOCS.mkdir(parents=True, exist_ok=True)
 DERIVED = Path("data/derived")
 V2 = Path("data/v2")
 
+PROFILE_DIR = DOCS / "profiles"
+COUNTY_PROFILE_DIR = PROFILE_DIR / "counties_by_state"
+PROFILE_DIR.mkdir(parents=True, exist_ok=True)
+COUNTY_PROFILE_DIR.mkdir(parents=True, exist_ok=True)
+
 DATASETS = ["states", "metros", "counties", "cities"]
 
 def clean_value(x):
@@ -33,6 +38,7 @@ def clean_records(records):
     return [{k: clean_value(v) for k, v in row.items()} for row in records]
 
 def write_json(path: Path, payload):
+    path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2, allow_nan=False)
 
@@ -89,7 +95,13 @@ def build_profile_payloads():
     else:
         nowcasts = pd.DataFrame()
 
-    all_profiles = {}
+    # clear old shard files
+    for old in PROFILE_DIR.glob("*.json"):
+        old.unlink()
+    for old in COUNTY_PROFILE_DIR.glob("*.json"):
+        old.unlink()
+
+    county_index = {}
 
     for dataset in DATASETS:
         latest_path = DERIVED / f"{dataset}_latest_rankings.csv"
@@ -106,11 +118,18 @@ def build_profile_payloads():
         hist["region_id"] = hist["region_id"].astype(str)
         hist["date"] = hist["date"].astype(str)
 
+        if dataset == "counties":
+            latest["region_id"] = latest["region_id"].str.zfill(5)
+            hist["region_id"] = hist["region_id"].str.zfill(5)
+
         latest = add_rank_percentile(latest, "trend_score", ascending=False)
 
         if len(nowcasts) > 0:
             ds_now = nowcasts[nowcasts["dataset_name"] == dataset].copy()
             ds_now["region_id"] = ds_now["region_id"].astype(str)
+            if dataset == "counties":
+                ds_now["region_id"] = ds_now["region_id"].str.zfill(5)
+
             latest = latest.merge(
                 ds_now[
                     [
@@ -151,15 +170,24 @@ def build_profile_payloads():
                 "confidence": clean_value(row.get("confidence")),
                 "industry_proxy": clean_value(row.get("industry_proxy")),
                 "population_growth_proxy": clean_value(row.get("population_growth_proxy")),
-                "history": clean_records(
-                    sub.sort_values("date").to_dict(orient="records")
-                ),
+                "history": clean_records(sub.sort_values("date").to_dict(orient="records")),
             }
 
-        all_profiles[dataset] = payload
+        if dataset == "counties":
+            by_state = {}
+            for region_id, obj in payload.items():
+                statefp = str(region_id).zfill(5)[:2]
+                by_state.setdefault(statefp, {})[region_id] = obj
+                county_index[region_id] = statefp
 
-    write_json(DOCS / "profiles.json", all_profiles)
-    print("Saved docs/data/profiles.json")
+            for statefp, state_payload in by_state.items():
+                write_json(COUNTY_PROFILE_DIR / f"{statefp}.json", state_payload)
+
+            write_json(PROFILE_DIR / "counties_index.json", county_index)
+            print("Saved docs/data/profiles/counties_index.json and county profile shards")
+        else:
+            write_json(PROFILE_DIR / f"{dataset}.json", payload)
+            print(f"Saved docs/data/profiles/{dataset}.json")
 
 def build_api_payload():
     api = {"datasets": {}}
@@ -170,6 +198,8 @@ def build_api_payload():
             continue
         df = pd.read_csv(latest_path, low_memory=False)
         df["region_id"] = df["region_id"].astype(str)
+        if dataset == "counties":
+            df["region_id"] = df["region_id"].str.zfill(5)
         df = add_rank_percentile(df, "trend_score", ascending=False)
 
         api["datasets"][dataset] = {
