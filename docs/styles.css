@@ -723,4 +723,53 @@ tbody tr:hover {
 }
 
 
+.simple-hero {
+  min-height: 430px;
 }
+
+.single-column-hero {
+  display: block;
+}
+
+.narrow-hero-copy {
+  max-width: 820px;
+}
+
+.three-up {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.state-picker-card {
+  margin-bottom: 18px;
+}
+
+.profile-metric-list {
+  display: grid;
+  gap: 10px;
+  color: #d7e1f5;
+  line-height: 1.6;
+}
+
+.clickable-card {
+  cursor: pointer;
+}
+
+.clickable-card:hover {
+  background: rgba(255,255,255,0.04);
+}
+
+.neg,
+.pos,
+.neutral {
+  font-weight: 700;
+}
+
+@media (max-width: 1100px) {
+  .three-up {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+}
+

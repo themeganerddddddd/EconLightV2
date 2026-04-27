@@ -53,35 +53,17 @@ async function getProfile(dataset, id) {
   return datasetProfilesCache[dataset][String(id)] || null;
 }
 
-function populateSearch(results) {
-  const sel = document.getElementById("globalSearchResults");
-  sel.innerHTML = "";
-
-  results.forEach(r => {
-    const opt = document.createElement("option");
-    opt.value = `${r.dataset}|${r.region_id}`;
-    opt.textContent = `${r.region_name} (${r.dataset})`;
-    sel.appendChild(opt);
-  });
-
-  sel.onchange = () => {
-    const [dataset, id] = sel.value.split("|");
-    window.location.href = `profile.html?dataset=${encodeURIComponent(dataset)}&id=${encodeURIComponent(id)}`;
-  };
-}
-
 function renderMiniMap(dataset, regionId, regionName) {
   const boxId = "profileMiniMap";
 
   if (dataset === "states" && statesGeo?.features) {
-    const feature = statesGeo.features.find(f => String(f.properties.region_id) === String(regionId));
+    const feature = statesGeo.features.find(f => String(f.properties.region_id).padStart(2, "0") === String(regionId).padStart(2, "0"));
     if (!feature) return;
-
     const trace = {
       type: "choropleth",
       geojson: { type: "FeatureCollection", features: [feature] },
       featureidkey: "properties.region_id",
-      locations: [String(regionId)],
+      locations: [String(regionId).padStart(2, "0")],
       z: [1],
       text: [regionName],
       hovertemplate: "%{text}<extra></extra>",
@@ -89,7 +71,6 @@ function renderMiniMap(dataset, regionId, regionName) {
       showscale: false,
       marker: { line: { color: "rgba(255,255,255,0.75)", width: 1.2 } }
     };
-
     const layout = {
       geo: { fitbounds: "locations", bgcolor: "rgba(0,0,0,0)", showland: true, landcolor: "rgba(255,255,255,0.03)" },
       paper_bgcolor: "rgba(0,0,0,0)",
@@ -97,7 +78,6 @@ function renderMiniMap(dataset, regionId, regionName) {
       margin: { t: 0, r: 0, b: 0, l: 0 },
       font: { color: "#e5ecff" }
     };
-
     Plotly.newPlot(boxId, [trace], layout, { responsive: true, displayModeBar: false });
     return;
   }
@@ -109,7 +89,6 @@ function renderMiniMap(dataset, regionId, regionName) {
       document.getElementById(boxId).innerHTML = `<div class="mini-map-fallback">County outline unavailable</div>`;
       return;
     }
-
     const trace = {
       type: "choropleth",
       geojson: { type: "FeatureCollection", features: [feature] },
@@ -122,7 +101,6 @@ function renderMiniMap(dataset, regionId, regionName) {
       showscale: false,
       marker: { line: { color: "rgba(255,255,255,0.75)", width: 1.0 } }
     };
-
     const layout = {
       geo: { fitbounds: "locations", bgcolor: "rgba(0,0,0,0)", showland: true, landcolor: "rgba(255,255,255,0.03)" },
       paper_bgcolor: "rgba(0,0,0,0)",
@@ -130,7 +108,6 @@ function renderMiniMap(dataset, regionId, regionName) {
       margin: { t: 0, r: 0, b: 0, l: 0 },
       font: { color: "#e5ecff" }
     };
-
     Plotly.newPlot(boxId, [trace], layout, { responsive: true, displayModeBar: false });
     return;
   }
@@ -140,29 +117,26 @@ function renderMiniMap(dataset, regionId, regionName) {
 
 function renderProfile(p) {
   document.getElementById("profileName").textContent = p.region_name;
-  document.getElementById("profileSubtitle").textContent = `${p.dataset} profile with trend, ranking, percentile, and nowcast.`;
+  document.getElementById("profileSubtitle").textContent = `${p.dataset} profile with light data and nowcast.`;
 
   document.getElementById("profileRank").textContent = p.rank_overall ?? "--";
   document.getElementById("profilePercentile").textContent = p.percentile != null ? `${p.percentile}%` : "--";
-  document.getElementById("profileDirection").textContent = p.direction || "--";
   document.getElementById("profileTrend").textContent = p.trend_label || "--";
+  document.getElementById("profileLatestDate").textContent = p.history?.length ? String(p.history[p.history.length - 1].date).slice(0, 7) : "--";
 
-  const yoy = document.getElementById("profileYoy");
-  yoy.textContent = fmtPct(p.yoy_pct_display);
-  yoy.className = `summary-number ${valueClass(p.yoy_pct_display)}`;
+  document.getElementById("profileDirection").textContent = p.direction || "--";
+  document.getElementById("profileYoy").textContent = fmtPct(p.yoy_pct_display);
+  document.getElementById("profileYoy").className = valueClass(p.yoy_pct_display);
+  document.getElementById("profileMom").textContent = fmtPct(p.mom_pct_display);
+  document.getElementById("profileMom").className = valueClass(p.mom_pct_display);
+  document.getElementById("profileTrendScore").textContent = p.trend_score != null ? Number(p.trend_score).toFixed(2) : "--";
 
-  const mom = document.getElementById("profileMom");
-  mom.textContent = fmtPct(p.mom_pct_display);
-  mom.className = `summary-number ${valueClass(p.mom_pct_display)}`;
-
-  const emp = document.getElementById("profileEmpNowcast");
-  emp.textContent = fmtPct(p.employment_yoy_nowcast);
-  emp.className = `summary-number ${valueClass(p.employment_yoy_nowcast)}`;
-
+  document.getElementById("profileEmpNowcast").textContent = fmtPct(p.employment_yoy_nowcast);
+  document.getElementById("profileLaborNowcast").textContent = fmtPct(p.labor_force_yoy_nowcast);
+  document.getElementById("profileUrate").textContent = fmtPct(p.unemployment_rate_yoy_change_nowcast);
   document.getElementById("profileConfidence").textContent = p.confidence || "--";
   document.getElementById("profileIndustry").textContent = p.industry_proxy || "--";
   document.getElementById("profilePopulation").textContent = p.population_growth_proxy != null ? fmtPct(p.population_growth_proxy) : "--";
-  document.getElementById("profileUrate").textContent = fmtPct(p.unemployment_rate_yoy_change_nowcast);
 
   const ctx = document.getElementById("profileChart").getContext("2d");
   if (profileChart) profileChart.destroy();
@@ -192,8 +166,8 @@ function renderProfile(p) {
 
 async function init() {
   profileIndex = await loadJson("data/profile_index.json");
-  statesGeo = await loadJson("data/regions/us_states_contiguous.geojson").catch(() => null);
-  countiesGeo = await loadJson("data/regions/us_counties_contiguous.geojson").catch(() => null);
+  statesGeo = await loadJson("data/regions/us_states_all.geojson").catch(() => null);
+  countiesGeo = await loadJson("data/regions/us_counties_all.geojson").catch(() => null);
 
   const params = getParams();
   const p = await getProfile(params.dataset, params.id);
@@ -204,17 +178,6 @@ async function init() {
   }
 
   renderProfile(p);
-
-  const input = document.getElementById("globalSearch");
-  input.oninput = () => {
-    const q = input.value.trim().toLowerCase();
-    const matches = profileIndex.filter(r =>
-      r.region_name.toLowerCase().includes(q)
-    ).slice(0, 100);
-    populateSearch(matches);
-  };
-
-  populateSearch(profileIndex.slice(0, 50));
 }
 
 init().catch(console.error);

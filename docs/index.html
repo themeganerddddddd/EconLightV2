@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <title>Econ Light Monitor | U.S. Economic Growth Tracker</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Track U.S. economic momentum across states, counties, metros, and cities using nighttime lights and labor-market nowcasts." />
+  <meta name="description" content="Track U.S. economic momentum with nighttime lights, rankings, and regional nowcasts across states, counties, metros, and cities." />
   <meta name="theme-color" content="#081223" />
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min"></script>
@@ -15,52 +15,31 @@
   <div class="stars stars-3"></div>
   <div class="moon"></div>
 
-  <header class="hero">
+  <header class="hero simple-hero">
     <div class="hero-overlay"></div>
-    <div class="hero-globe"></div>
 
-    <div class="wrap hero-inner">
-      <div class="hero-copy">
+    <div class="wrap hero-inner single-column-hero">
+      <div class="hero-copy narrow-hero-copy">
         <div class="eyebrow">Satellite Economic Intelligence</div>
         <h1>Econ Light Monitor</h1>
         <p class="hero-main-copy">
           A U.S. economic growth tracker built from nighttime lights and labor-market data,
-          designed to show where regional momentum appears to be strengthening or weakening.
+          designed to show where momentum appears to be strengthening or weakening.
         </p>
 
         <div id="homeLatestMonth" class="hero-subtext">Latest available month: --</div>
 
         <div class="homepage-nav">
-          <a class="dataset-link primary-link" href="nowcast.html">View Nowcasts</a>
-          <a class="dataset-link" href="dashboard.html?dataset=states">States</a>
+          <a class="dataset-link primary-link" href="states.html">Browse States</a>
           <a class="dataset-link" href="dashboard.html?dataset=metros">Metros</a>
           <a class="dataset-link" href="dashboard.html?dataset=counties">Counties</a>
           <a class="dataset-link" href="dashboard.html?dataset=cities">Cities</a>
         </div>
 
         <div class="search-card">
-          <label for="globalSearch">Search any county, state, metro, or city</label>
+          <label for="globalSearch">Search any state, county, metro, or city</label>
           <input id="globalSearch" type="text" placeholder="Try California, Austin, Montgomery County, or Raleigh" />
           <select id="globalSearchResults"></select>
-        </div>
-      </div>
-
-      <div class="hero-stat-grid">
-        <div class="hero-stat glass">
-          <div class="stat-label">U.S. Light YoY Proxy</div>
-          <div id="usLightYoy" class="stat-value">--</div>
-        </div>
-
-        <div class="hero-stat glass">
-          <div class="stat-label">Top Current Nowcast</div>
-          <div id="topNowcastRegion" class="stat-value small">--</div>
-        </div>
-
-        <div class="hero-stat glass">
-          <div class="stat-label">What this is</div>
-          <div class="stat-note">
-            A directional signal of local economic activity and momentum, not an official GDP estimate.
-          </div>
         </div>
       </div>
     </div>
@@ -73,6 +52,10 @@
 
     <section class="summary-grid compact-summary-grid">
       <div class="summary-card">
+        <div class="summary-title">Latest Data</div>
+        <div id="latestDataDate" class="summary-number small">--</div>
+      </div>
+      <div class="summary-card">
         <div class="summary-title">National Light YoY</div>
         <div id="nationalLightYoy" class="summary-number">--</div>
       </div>
@@ -83,10 +66,6 @@
       <div class="summary-card">
         <div class="summary-title">Average Regional MoM</div>
         <div id="avgMom" class="summary-number">--</div>
-      </div>
-      <div class="summary-card">
-        <div class="summary-title">Top Trend</div>
-        <div id="topTrendText" class="summary-number small">--</div>
       </div>
     </section>
 
@@ -100,8 +79,7 @@
           </div>
         </div>
         <p class="intro-text" id="mapIntroText">
-          Start with the cleaner state-level view, then switch to counties for local detail.
-          Click a region to open its full profile.
+          Start with the national state view, then switch to counties for local detail. Click any region to open more information.
         </p>
         <div id="countyMap" class="map-box"></div>
       </div>
@@ -113,39 +91,28 @@
         <div class="simple-steps">
           <div class="step-item">
             <div class="step-num">1</div>
-            <div>Use the map to scan where momentum looks strongest or weakest.</div>
+            <div>Scan the map to see where momentum looks strongest or weakest.</div>
           </div>
           <div class="step-item">
             <div class="step-num">2</div>
-            <div>Search any state, county, metro, or city to open its profile.</div>
+            <div>Search any place or open a state to see more detail.</div>
           </div>
           <div class="step-item">
             <div class="step-num">3</div>
-            <div>Use the nowcast page when you want implied employment and labor-force estimates.</div>
+            <div>Open a place profile to see both the light trend and the nowcast together.</div>
           </div>
         </div>
 
         <div class="mini-divider"></div>
 
         <div class="card-header less-top-gap">
-          <h2>What’s on each profile</h2>
+          <h2>Top States Right Now</h2>
         </div>
-        <ul class="clean-list">
-          <li>Trend label and direction</li>
-          <li>Rank and percentile</li>
-          <li>Light YoY and MoM</li>
-          <li>Employment nowcast</li>
-          <li>History chart and outline map</li>
-        </ul>
+        <ol id="top5States" class="mini-list"></ol>
       </div>
     </section>
 
-    <section class="homepage-lists">
-      <div class="home-list-card">
-        <div class="card-header"><h2>Top States</h2></div>
-        <ol id="top5States" class="mini-list"></ol>
-      </div>
-
+    <section class="homepage-lists three-up">
       <div class="home-list-card">
         <div class="card-header"><h2>Top Metros</h2></div>
         <ol id="top5Metros" class="mini-list"></ol>
@@ -160,14 +127,6 @@
         <div class="card-header"><h2>Top Cities</h2></div>
         <ol id="top5Cities" class="mini-list"></ol>
       </div>
-    </section>
-
-    <section class="card">
-      <div class="card-header">
-        <h2>Top Nowcasts</h2>
-        <a class="text-link" href="nowcast.html">Open full nowcast page</a>
-      </div>
-      <div id="nowcastCards" class="nowcast-grid"></div>
     </section>
   </main>
 

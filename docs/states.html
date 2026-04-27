@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>States | Econ Light Monitor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Browse U.S. states and see state-level momentum, top counties, and top cities." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="sub-hero">
+    <div class="wrap sub-hero-inner">
+      <div>
+        <a class="back-link" href="index.html">← Home</a>
+        <h1>States</h1>
+        <p class="body-copy">Select a state to see its trend, plus the top counties and cities inside it.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="search-card state-picker-card">
+      <label for="stateSelect">Choose a state</label>
+      <select id="stateSelect"></select>
+    </section>
+
+    <section class="summary-grid compact-summary-grid">
+      <div class="summary-card">
+        <div class="summary-title">State</div>
+        <div id="stateName" class="summary-number small">--</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-title">Light YoY</div>
+        <div id="stateYoy" class="summary-number">--</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-title">Trend</div>
+        <div id="stateTrend" class="summary-number small">--</div>
+      </div>
+      <div class="summary-card">
+        <div class="summary-title">Latest Data</div>
+        <div id="stateLatestDate" class="summary-number small">--</div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <div class="card-header"><h2>Top Counties in State</h2></div>
+        <ol id="stateTopCounties" class="mini-list"></ol>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><h2>Top Cities in State</h2></div>
+        <ol id="stateTopCities" class="mini-list"></ol>
+      </div>
+    </section>
+  </main>
+
+  <script src="states.js"></script>
+</body>
+</html>
