@@ -14,6 +14,16 @@
   <div class="stars stars-3"></div>
   <div class="moon"></div>
 
+  <button id="prevRankBtn" class="side-rank-arrow side-rank-arrow-left" type="button">
+    <span>←</span>
+    <small>Previous in national ranking</small>
+  </button>
+
+  <button id="nextRankBtn" class="side-rank-arrow side-rank-arrow-right" type="button">
+    <small>Next in national ranking</small>
+    <span>→</span>
+  </button>
+
   <header class="sub-hero profile-hero">
     <div class="wrap sub-hero-inner">
       <div>
@@ -42,17 +52,12 @@
         <h2 id="profileTitleName">--</h2>
         <p id="profileTypeText" class="body-copy">--</p>
 
-        <div class="profile-pill-row">
+        <div class="profile-pill-row centered-pill-row">
           <span id="profileLatestDate" class="profile-pill">Latest: --</span>
           <span id="profileRank" class="profile-pill">National Rank: --</span>
           <span id="profilePercentile" class="profile-pill">Percentile: --</span>
           <span id="profileStateRank" class="profile-pill">State Rank: --</span>
           <span id="profileVsState" class="profile-pill">Vs. State: --</span>
-        </div>
-
-        <div class="profile-nav-inline">
-          <button id="prevRankBtn" class="dataset-btn" type="button">← Previous in Ranking</button>
-          <button id="nextRankBtn" class="dataset-btn" type="button">Next in Ranking →</button>
         </div>
       </div>
     </section>
@@ -61,13 +66,13 @@
       <div class="profile-info-card">
         <div class="summary-title">Light YoY</div>
         <div id="profileYoy" class="summary-number">--</div>
-        <div class="summary-sub">Change versus same month last year</div>
+        <div class="summary-sub">Versus same month last year</div>
       </div>
 
       <div class="profile-info-card">
         <div class="summary-title">Light MoM</div>
         <div id="profileMom" class="summary-number">--</div>
-        <div class="summary-sub">Change versus previous month</div>
+        <div class="summary-sub">Versus previous month</div>
       </div>
 
       <div class="profile-info-card">
@@ -84,23 +89,49 @@
     <section class="grid">
       <div class="card">
         <div class="card-header"><h2>Nowcast</h2></div>
-        <div class="profile-metric-list">
-          <div><strong>Employment nowcast:</strong> <span id="profileEmpNowcast">--</span></div>
-          <div><strong>Labor force nowcast:</strong> <span id="profileLaborNowcast">--</span></div>
-          <div><strong>Unemployment-rate change:</strong> <span id="profileUrate">--</span></div>
-          <div><strong>Confidence:</strong> <span id="profileConfidence">--</span></div>
-          <div><strong>Industry proxy:</strong> <span id="profileIndustry">--</span></div>
-          <div><strong>Population growth proxy:</strong> <span id="profilePopulation">--</span></div>
+        <div class="friendly-metric-grid">
+          <div class="friendly-metric">
+            <span>Employment nowcast</span>
+            <strong id="profileEmpNowcast">--</strong>
+          </div>
+          <div class="friendly-metric">
+            <span>Labor force nowcast</span>
+            <strong id="profileLaborNowcast">--</strong>
+          </div>
+          <div class="friendly-metric">
+            <span>Unemployment-rate change</span>
+            <strong id="profileUrate">--</strong>
+          </div>
+          <div class="friendly-metric">
+            <span>Confidence</span>
+            <strong id="profileConfidence">--</strong>
+          </div>
+          <div class="friendly-metric wide">
+            <span>Industry proxy</span>
+            <strong id="profileIndustry">--</strong>
+          </div>
+          <div class="friendly-metric wide">
+            <span>Population growth proxy</span>
+            <strong id="profilePopulation">--</strong>
+          </div>
         </div>
       </div>
 
       <div class="card">
         <div class="card-header"><h2>Peer Comparison</h2></div>
-        <div class="profile-metric-list">
-          <div><strong>Compared against:</strong> <span id="profilePeerGroup">--</span></div>
-          <div><strong>State average:</strong> <span id="profileStateAverage">--</span></div>
-          <div><strong>Difference from state:</strong> <span id="profileStateDifference">--</span></div>
-          <div><strong>State rank:</strong> <span id="profileStateRankDetail">--</span></div>
+        <div class="friendly-metric-grid">
+          <div class="friendly-metric wide">
+            <span id="peerRankLabel">Peer rank</span>
+            <strong id="profileStateRankDetail">--</strong>
+          </div>
+          <div class="friendly-metric wide">
+            <span id="peerAverageLabel">Peer average</span>
+            <strong id="profileStateAverage">--</strong>
+          </div>
+          <div class="friendly-metric wide">
+            <span id="peerDifferenceLabel">Difference from peer average</span>
+            <strong id="profileStateDifference">--</strong>
+          </div>
         </div>
       </div>
     </section>
