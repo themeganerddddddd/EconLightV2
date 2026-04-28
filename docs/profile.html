@@ -14,9 +14,6 @@
   <div class="stars stars-3"></div>
   <div class="moon"></div>
 
-  <button id="prevRankBtn" class="rank-arrow rank-arrow-left" type="button">‹</button>
-  <button id="nextRankBtn" class="rank-arrow rank-arrow-right" type="button">›</button>
-
   <header class="sub-hero profile-hero">
     <div class="wrap sub-hero-inner">
       <div>
@@ -47,9 +44,15 @@
 
         <div class="profile-pill-row">
           <span id="profileLatestDate" class="profile-pill">Latest: --</span>
-          <span id="profileRank" class="profile-pill">Rank: --</span>
+          <span id="profileRank" class="profile-pill">National Rank: --</span>
           <span id="profilePercentile" class="profile-pill">Percentile: --</span>
-          <span id="profileTrend" class="profile-pill">Trend: --</span>
+          <span id="profileStateRank" class="profile-pill">State Rank: --</span>
+          <span id="profileVsState" class="profile-pill">Vs. State: --</span>
+        </div>
+
+        <div class="profile-nav-inline">
+          <button id="prevRankBtn" class="dataset-btn" type="button">← Previous in Ranking</button>
+          <button id="nextRankBtn" class="dataset-btn" type="button">Next in Ranking →</button>
         </div>
       </div>
     </section>
@@ -58,7 +61,7 @@
       <div class="profile-info-card">
         <div class="summary-title">Light YoY</div>
         <div id="profileYoy" class="summary-number">--</div>
-        <div class="summary-sub">Change versus the same month last year</div>
+        <div class="summary-sub">Change versus same month last year</div>
       </div>
 
       <div class="profile-info-card">
@@ -92,10 +95,13 @@
       </div>
 
       <div class="card">
-        <div class="card-header"><h2>How to read this</h2></div>
-        <p class="body-copy">
-          The light signal is a directional proxy for activity. The nowcast translates recent light trends into labor-market direction where historical relationships are available.
-        </p>
+        <div class="card-header"><h2>Peer Comparison</h2></div>
+        <div class="profile-metric-list">
+          <div><strong>Compared against:</strong> <span id="profilePeerGroup">--</span></div>
+          <div><strong>State average:</strong> <span id="profileStateAverage">--</span></div>
+          <div><strong>Difference from state:</strong> <span id="profileStateDifference">--</span></div>
+          <div><strong>State rank:</strong> <span id="profileStateRankDetail">--</span></div>
+        </div>
       </div>
     </section>
 

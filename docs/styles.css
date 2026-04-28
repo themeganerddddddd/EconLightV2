@@ -1189,5 +1189,120 @@ body::before {
     font-size: 32px;
   }
 }
+
+.profile-nav-inline {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 22px;
+  max-width: 520px;
+}
+
+.profile-nav-inline .dataset-btn {
+  flex: 1;
+  justify-content: center;
+}
+
+.profile-nav-inline .dataset-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.profile-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.profile-pill {
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.10);
+  color: #dbe7ff;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.profile-top-card {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 18px;
+  align-items: stretch;
+  margin-bottom: 18px;
+}
+
+.profile-map-panel,
+.profile-title-panel,
+.profile-info-card {
+  background: rgba(12, 22, 44, 0.84);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.profile-map-panel {
+  padding: 12px;
+  min-height: 360px;
+}
+
+.profile-shape-map {
+  height: 360px;
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255,255,255,0.06), transparent 12%),
+    linear-gradient(180deg, rgba(6,10,20,0.75), rgba(9,20,38,0.9));
+}
+
+.profile-title-panel {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-title-panel h2 {
+  font-size: 42px;
+  line-height: 1.05;
+  margin: 4px 0 10px;
+}
+
+.profile-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.profile-info-card {
+  padding: 20px;
+}
+
+.profile-metric-list {
+  display: grid;
+  gap: 10px;
+  color: #d7e1f5;
+  line-height: 1.6;
+}
+
+@media (max-width: 1100px) {
+  .profile-top-card,
+  .profile-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-title-panel h2 {
+    font-size: 32px;
+  }
+
+  .profile-nav-inline {
+    flex-direction: column;
+  }
+}
+
 }
 
