@@ -4,13 +4,20 @@
   <meta charset="utf-8" />
   <title>Region Profile | Econ Light Monitor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="View light trend, ranking, percentile, and nowcast for a U.S. place." />
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min"></script>
 </head>
 <body>
-  <header class="sub-hero">
+  <div class="stars"></div>
+  <div class="stars stars-2"></div>
+  <div class="stars stars-3"></div>
+  <div class="moon"></div>
+
+  <button id="prevRankBtn" class="rank-arrow rank-arrow-left" type="button">‹</button>
+  <button id="nextRankBtn" class="rank-arrow rank-arrow-right" type="button">›</button>
+
+  <header class="sub-hero profile-hero">
     <div class="wrap sub-hero-inner">
       <div>
         <a class="back-link" href="index.html">← Home</a>
@@ -27,37 +34,51 @@
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="summary-grid compact-summary-grid">
-      <div class="summary-card">
-        <div class="summary-title">Rank</div>
-        <div class="summary-number" id="profileRank">--</div>
+  <main class="wrap profile-layout">
+    <section class="profile-top-card">
+      <div class="profile-map-panel">
+        <div id="profileMiniMap" class="profile-shape-map"></div>
       </div>
-      <div class="summary-card">
-        <div class="summary-title">Percentile</div>
-        <div class="summary-number" id="profilePercentile">--</div>
+
+      <div class="profile-title-panel">
+        <div class="eyebrow">Place Profile</div>
+        <h2 id="profileTitleName">--</h2>
+        <p id="profileTypeText" class="body-copy">--</p>
+
+        <div class="profile-pill-row">
+          <span id="profileLatestDate" class="profile-pill">Latest: --</span>
+          <span id="profileRank" class="profile-pill">Rank: --</span>
+          <span id="profilePercentile" class="profile-pill">Percentile: --</span>
+          <span id="profileTrend" class="profile-pill">Trend: --</span>
+        </div>
       </div>
-      <div class="summary-card">
-        <div class="summary-title">Trend</div>
-        <div class="summary-number small" id="profileTrend">--</div>
+    </section>
+
+    <section class="profile-info-grid">
+      <div class="profile-info-card">
+        <div class="summary-title">Light YoY</div>
+        <div id="profileYoy" class="summary-number">--</div>
+        <div class="summary-sub">Change versus the same month last year</div>
       </div>
-      <div class="summary-card">
-        <div class="summary-title">Latest Data</div>
-        <div class="summary-number small" id="profileLatestDate">--</div>
+
+      <div class="profile-info-card">
+        <div class="summary-title">Light MoM</div>
+        <div id="profileMom" class="summary-number">--</div>
+        <div class="summary-sub">Change versus previous month</div>
+      </div>
+
+      <div class="profile-info-card">
+        <div class="summary-title">Direction</div>
+        <div id="profileDirection" class="summary-number small">--</div>
+      </div>
+
+      <div class="profile-info-card">
+        <div class="summary-title">Trend Score</div>
+        <div id="profileTrendScore" class="summary-number small">--</div>
       </div>
     </section>
 
     <section class="grid">
-      <div class="card">
-        <div class="card-header"><h2>Light Data</h2></div>
-        <div class="profile-metric-list">
-          <div><strong>Direction:</strong> <span id="profileDirection">--</span></div>
-          <div><strong>Light YoY:</strong> <span id="profileYoy">--</span></div>
-          <div><strong>Light MoM:</strong> <span id="profileMom">--</span></div>
-          <div><strong>Trend score:</strong> <span id="profileTrendScore">--</span></div>
-        </div>
-      </div>
-
       <div class="card">
         <div class="card-header"><h2>Nowcast</h2></div>
         <div class="profile-metric-list">
@@ -69,27 +90,22 @@
           <div><strong>Population growth proxy:</strong> <span id="profilePopulation">--</span></div>
         </div>
       </div>
+
+      <div class="card">
+        <div class="card-header"><h2>How to read this</h2></div>
+        <p class="body-copy">
+          The light signal is a directional proxy for activity. The nowcast translates recent light trends into labor-market direction where historical relationships are available.
+        </p>
+      </div>
     </section>
 
-    <section class="grid">
-      <div class="card">
-        <div class="card-header"><h2>Trend History</h2></div>
-        <div class="chart-box large">
-          <canvas id="profileChart"></canvas>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header"><h2>Region Outline</h2></div>
-        <div id="profileMiniMap" class="mini-map-box"></div>
+    <section class="card">
+      <div class="card-header"><h2>Light Trend History</h2></div>
+      <div class="chart-box large">
+        <canvas id="profileChart"></canvas>
       </div>
     </section>
   </main>
-
-<div class="profile-nav-arrows">
-  <button id="prevRankBtn" class="dataset-btn" type="button">← Previous Rank</button>
-  <button id="nextRankBtn" class="dataset-btn" type="button">Next Rank →</button>
-</div>
 
   <script src="profile.js"></script>
 </body>
