@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <title>States | Econ Light Monitor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Browse U.S. states and see state-level momentum, top counties, and top cities." />
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min"></script>
 </head>
 <body>
   <header class="sub-hero">
@@ -13,21 +13,31 @@
       <div>
         <a class="back-link" href="index.html">← Home</a>
         <h1>States</h1>
-        <p class="body-copy">Select a state to see its trend, plus the top counties and cities inside it.</p>
+        <p class="body-copy">Click a state to see its trend, top counties, and top cities.</p>
+      </div>
+      <div class="homepage-nav">
+        <a class="dataset-link" href="index.html">Home</a>
+        <a class="dataset-link" href="states.html">States</a>
+        <a class="dataset-link" href="metros.html">Metros</a>
+        <a class="dataset-link" href="counties.html">Counties</a>
+        <a class="dataset-link" href="cities.html">Cities</a>
       </div>
     </div>
   </header>
 
   <main class="wrap">
-    <section class="search-card state-picker-card">
-      <label for="stateSelect">Choose a state</label>
-      <select id="stateSelect"></select>
+    <section class="card">
+      <div class="card-header">
+        <h2>U.S. State Map</h2>
+        <span class="badge">Click a state</span>
+      </div>
+      <div id="statesMap" class="map-box"></div>
     </section>
 
     <section class="summary-grid compact-summary-grid">
       <div class="summary-card">
-        <div class="summary-title">State</div>
-        <div id="stateName" class="summary-number small">--</div>
+        <div class="summary-title">Selected State</div>
+        <div id="stateName" class="summary-number small">California</div>
       </div>
       <div class="summary-card">
         <div class="summary-title">Light YoY</div>
@@ -53,6 +63,13 @@
         <div class="card-header"><h2>Top Cities in State</h2></div>
         <ol id="stateTopCities" class="mini-list"></ol>
       </div>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <h2>State Profile</h2>
+      </div>
+      <a id="stateProfileLink" class="dataset-link primary-link" href="profile.html?dataset=states&id=06">Open full state profile</a>
     </section>
   </main>
 

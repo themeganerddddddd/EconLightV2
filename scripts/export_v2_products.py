@@ -42,7 +42,7 @@ def write_json(path: Path, payload):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2, allow_nan=False)
 
-def add_rank_percentile(df, value_col="trend_score", ascending=False):
+def add_rank_percentile(df, value_col="yoy_pct_display", ascending=False):
     out = df.copy()
     out = out.sort_values(value_col, ascending=ascending).reset_index(drop=True)
     out["rank_overall"] = np.arange(1, len(out) + 1)

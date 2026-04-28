@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Counties | Econ Light Monitor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="sub-hero">
+    <div class="wrap sub-hero-inner">
+      <div>
+        <a class="back-link" href="index.html">← Home</a>
+        <h1>Counties</h1>
+        <p class="body-copy">Top county light trends, with an expanded full ranking.</p>
+      </div>
+      <div class="homepage-nav">
+        <a class="dataset-link" href="index.html">Home</a>
+        <a class="dataset-link" href="states.html">States</a>
+        <a class="dataset-link" href="metros.html">Metros</a>
+        <a class="dataset-link" href="counties.html">Counties</a>
+        <a class="dataset-link" href="cities.html">Cities</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <div class="card-header"><h2>Top Counties</h2></div>
+      <div class="table-wrap">
+        <table id="topTable">
+          <thead><tr><th>Rank</th><th>County</th><th>Light YoY</th><th>Trend</th><th>Percentile</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <details class="card expanded-list">
+      <summary>See all counties</summary>
+      <div class="table-wrap">
+        <table id="fullRankingTable">
+          <thead><tr><th>Rank</th><th>County</th><th>Light YoY</th><th>Trend</th><th>Percentile</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </details>
+  </main>
+
+  <script src="ranking_page.js" data-dataset="counties"></script>
+</body>
+</html>

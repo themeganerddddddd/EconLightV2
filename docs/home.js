@@ -2,7 +2,6 @@ let homepageSummary = {};
 let profileIndex = [];
 let stateLatest = [];
 let countyLatest = [];
-let currentMapMode = "states";
 let statesGeo = null;
 let countiesGeo = null;
 
@@ -18,6 +17,16 @@ function valueClass(v) {
   if (n > 0) return "pos";
   if (n < 0) return "neg";
   return "neutral";
+}
+
+function setText(id, value) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = value;
+}
+
+function setClass(id, className) {
+  const el = document.getElementById(id);
+  if (el) el.className = className;
 }
 
 async function safeLoadJson(path, fallback = null) {
@@ -40,6 +49,7 @@ function renderMiniList(id, rows) {
   const el = document.getElementById(id);
   if (!el) return;
   el.innerHTML = "";
+
   (rows || []).slice(0, 5).forEach(row => {
     const yoy = row.yoy_pct_display ?? row.yoy_pct;
     const li = document.createElement("li");
@@ -69,7 +79,11 @@ function populateGlobalSearch(results) {
 
   sel.onchange = () => {
     const [dataset, id] = sel.value.split("|");
-    window.location.href = `profile.html?dataset=${encodeURIComponent(dataset)}&id=${encodeURIComponent(id)}`;
+    if (dataset === "states") {
+      window.location.href = `state.html?id=${encodeURIComponent(String(id).padStart(2, "0"))}`;
+    } else {
+      window.location.href = `profile.html?dataset=${encodeURIComponent(dataset)}&id=${encodeURIComponent(id)}`;
+    }
   };
 }
 
@@ -92,35 +106,21 @@ function attachGlobalSearch() {
   populateGlobalSearch(profileIndex.slice(0, 50));
 }
 
-function setMapMode(mode) {
-  currentMapMode = mode;
-  document.getElementById("stateMapBtn")?.classList.toggle("active", mode === "states");
-  document.getElementById("countyMapBtn")?.classList.toggle("active", mode === "counties");
-
-  const title = document.getElementById("mapTitle");
-  const intro = document.getElementById("mapIntroText");
-
-  if (mode === "states") {
-    if (title) title.textContent = "U.S. State Momentum Map";
-    if (intro) intro.textContent = "Click a state to open more detail and see the top counties and cities inside it.";
-    renderStateMap();
-  } else {
-    if (title) title.textContent = "U.S. County Momentum Map";
-    if (intro) intro.textContent = "Click a county to open its profile and view both its light trend and nowcast.";
-    renderCountyMap();
-  }
-}
-
 function renderStateMap() {
   if (!statesGeo?.features) return;
+
+  const rows = stateLatest.map(r => ({
+    ...r,
+    region_id: String(r.region_id).padStart(2, "0")
+  }));
 
   const trace = {
     type: "choropleth",
     geojson: statesGeo,
     featureidkey: "properties.region_id",
-    locations: stateLatest.map(r => String(r.region_id).padStart(2, "0")),
-    z: stateLatest.map(r => Number(r.yoy_pct_display ?? 0)),
-    text: stateLatest.map(r => `${r.region_name}<br>Light YoY: ${fmtPct(r.yoy_pct_display)}<br>Trend: ${r.trend_label || "N/A"}`),
+    locations: rows.map(r => r.region_id),
+    z: rows.map(r => Number(r.yoy_pct_display ?? 0)),
+    text: rows.map(r => `${r.region_name}<br>Light YoY: ${fmtPct(r.yoy_pct_display)}<br>Trend: ${r.trend_label || "N/A"}`),
     hovertemplate: "%{text}<extra></extra>",
     colorscale: [
       [0.0, "#fb7185"],
@@ -151,7 +151,7 @@ function renderStateMap() {
 
   Plotly.newPlot("countyMap", [trace], layout, { responsive: true, displayModeBar: false });
 
-  document.getElementById("countyMap").on("plotly_click", (data) => {
+  document.getElementById("countyMap").on("plotly_click", data => {
     const point = data.points?.[0];
     if (!point) return;
     const id = String(point.location).padStart(2, "0");
@@ -162,15 +162,18 @@ function renderStateMap() {
 function renderCountyMap() {
   if (!countiesGeo?.features) return;
 
-  const countyRows = countyLatest.map(r => ({ ...r, region_id: String(r.region_id).padStart(5, "0") }));
+  const rows = countyLatest.map(r => ({
+    ...r,
+    region_id: String(r.region_id).padStart(5, "0")
+  }));
 
   const trace = {
     type: "choropleth",
     geojson: countiesGeo,
     featureidkey: "properties.region_id",
-    locations: countyRows.map(r => r.region_id),
-    z: countyRows.map(r => Number(r.trend_score ?? 0)),
-    text: countyRows.map(r => `${r.region_name}<br>Trend: ${r.trend_label || "N/A"}<br>Light YoY: ${fmtPct(r.yoy_pct_display)}`),
+    locations: rows.map(r => r.region_id),
+    z: rows.map(r => Number(r.yoy_pct_display ?? 0)),
+    text: rows.map(r => `${r.region_name}<br>Light YoY: ${fmtPct(r.yoy_pct_display)}<br>Trend: ${r.trend_label || "N/A"}`),
     hovertemplate: "%{text}<extra></extra>",
     colorscale: [
       [0.0, "#fb7185"],
@@ -181,7 +184,7 @@ function renderCountyMap() {
     ],
     zmid: 0,
     marker: { line: { color: "rgba(255,255,255,0.08)", width: 0.18 } },
-    colorbar: { title: "Trend", tickfont: { color: "#e5ecff" }, titlefont: { color: "#e5ecff" } }
+    colorbar: { title: "Light YoY", tickfont: { color: "#e5ecff" }, titlefont: { color: "#e5ecff" } }
   };
 
   const layout = {
@@ -201,12 +204,30 @@ function renderCountyMap() {
 
   Plotly.newPlot("countyMap", [trace], layout, { responsive: true, displayModeBar: false });
 
-  document.getElementById("countyMap").on("plotly_click", (data) => {
+  document.getElementById("countyMap").on("plotly_click", data => {
     const point = data.points?.[0];
     if (!point) return;
     const id = String(point.location).padStart(5, "0");
     window.location.href = `profile.html?dataset=counties&id=${encodeURIComponent(id)}`;
   });
+}
+
+function setMapMode(mode) {
+  const stateBtn = document.getElementById("stateMapBtn");
+  const countyBtn = document.getElementById("countyMapBtn");
+
+  if (stateBtn) stateBtn.classList.toggle("active", mode === "states");
+  if (countyBtn) countyBtn.classList.toggle("active", mode === "counties");
+
+  if (mode === "states") {
+    setText("mapTitle", "U.S. State Momentum Map");
+    setText("mapIntroText", "Click a state to open its state view. Switch to counties for local detail.");
+    renderStateMap();
+  } else {
+    setText("mapTitle", "U.S. County Momentum Map");
+    setText("mapIntroText", "Click a county to open its profile and view both its light trend and nowcast.");
+    renderCountyMap();
+  }
 }
 
 async function init() {
@@ -227,20 +248,25 @@ async function init() {
     statesGeo = statesGeoJson;
     countiesGeo = countiesGeoJson;
 
-    const latestDate = homepageSummary?.metros?.summary?.latest_month || homepageSummary?.states?.summary?.latest_month || null;
-    document.getElementById("homeLatestMonth").textContent = latestDate ? `Latest available month: ${String(latestDate).slice(0, 7)}` : "Latest available month: unavailable";
-    document.getElementById("latestDataDate").textContent = latestDate ? String(latestDate).slice(0, 7) : "--";
+    const latestDate =
+      homepageSummary?.metros?.summary?.latest_month ||
+      homepageSummary?.states?.summary?.latest_month ||
+      homepageSummary?.counties?.summary?.latest_month ||
+      null;
+
+    setText("homeLatestMonth", latestDate ? `Latest available month: ${String(latestDate).slice(0, 7)}` : "Latest available month: unavailable");
+    setText("latestDataDate", latestDate ? String(latestDate).slice(0, 7) : "--");
 
     const national = homepageSummary?.counties?.summary?.national_yoy_pct;
-    document.getElementById("nationalLightYoy").textContent = fmtPct(national);
-    document.getElementById("nationalLightYoy").className = `summary-number ${valueClass(national)}`;
+    setText("nationalLightYoy", fmtPct(national));
+    setClass("nationalLightYoy", `summary-number ${valueClass(national)}`);
 
     const metroSummary = homepageSummary?.metros?.summary || {};
-    document.getElementById("avgMom").textContent = fmtPct(metroSummary.avg_mom);
-    document.getElementById("avgMom").className = `summary-number ${valueClass(metroSummary.avg_mom)}`;
-    document.getElementById("avgYoy").textContent = fmtPct(metroSummary.avg_yoy);
-    document.getElementById("avgYoy").className = `summary-number ${valueClass(metroSummary.avg_yoy)}`;
-    document.getElementById("topTrendText").textContent = metroSummary?.top_region?.region_name || "--";
+    setText("avgMom", fmtPct(metroSummary.avg_mom));
+    setClass("avgMom", `summary-number ${valueClass(metroSummary.avg_mom)}`);
+
+    setText("avgYoy", fmtPct(metroSummary.avg_yoy));
+    setClass("avgYoy", `summary-number ${valueClass(metroSummary.avg_yoy)}`);
 
     renderMiniList("top5States", homepageSummary?.states?.top5 || []);
     renderMiniList("top5Metros", homepageSummary?.metros?.top5 || []);
@@ -251,8 +277,8 @@ async function init() {
 
     document.getElementById("stateMapBtn")?.addEventListener("click", () => setMapMode("states"));
     document.getElementById("countyMapBtn")?.addEventListener("click", () => setMapMode("counties"));
-    setMapMode("states");
 
+    setMapMode("states");
     showStatus("Loaded homepage data.");
   } catch (err) {
     console.error(err);

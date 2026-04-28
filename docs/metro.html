@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Metros | Econ Light Monitor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min"></script>
+</head>
+<body>
+  <header class="sub-hero">
+    <div class="wrap sub-hero-inner">
+      <div>
+        <a class="back-link" href="index.html">← Home</a>
+        <h1>Metros</h1>
+        <p class="body-copy">Click a metro area to open its light trend and nowcast profile.</p>
+      </div>
+      <div class="homepage-nav">
+        <a class="dataset-link" href="index.html">Home</a>
+        <a class="dataset-link" href="states.html">States</a>
+        <a class="dataset-link" href="metros.html">Metros</a>
+        <a class="dataset-link" href="counties.html">Counties</a>
+        <a class="dataset-link" href="cities.html">Cities</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <div class="card-header">
+        <h2>Metro Momentum Map</h2>
+        <span class="badge">Click a metro</span>
+      </div>
+      <div id="metrosMap" class="map-box"></div>
+    </section>
+
+    <section class="card">
+      <div class="card-header"><h2>Top Metros</h2></div>
+      <div class="table-wrap">
+        <table id="metrosTable">
+          <thead>
+            <tr><th>Rank</th><th>Metro</th><th>Light YoY</th><th>Trend</th><th>Percentile</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="metros.js"></script>
+</body>
+</html>
