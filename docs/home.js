@@ -57,7 +57,11 @@ function renderMiniList(id, rows) {
     li.style.cursor = "pointer";
     li.onclick = () => {
       const match = profileIndex.find(r => r.region_name === row.region_name);
-      if (match) {
+      if (!match) return;
+
+      if (match.dataset === "states") {
+        window.location.href = `states.html?id=${encodeURIComponent(String(match.region_id).padStart(2, "0"))}`;
+      } else {
         window.location.href = `profile.html?dataset=${encodeURIComponent(match.dataset)}&id=${encodeURIComponent(match.region_id)}`;
       }
     };
@@ -80,7 +84,7 @@ function populateGlobalSearch(results) {
   sel.onchange = () => {
     const [dataset, id] = sel.value.split("|");
     if (dataset === "states") {
-      window.location.href = `state.html?id=${encodeURIComponent(String(id).padStart(2, "0"))}`;
+      window.location.href = `states.html?id=${encodeURIComponent(String(id).padStart(2, "0"))}`;
     } else {
       window.location.href = `profile.html?dataset=${encodeURIComponent(dataset)}&id=${encodeURIComponent(id)}`;
     }
@@ -99,7 +103,9 @@ function attachGlobalSearch() {
 
   input.oninput = () => {
     const q = input.value.trim().toLowerCase();
-    const matches = profileIndex.filter(r => r.region_name.toLowerCase().includes(q)).slice(0, 100);
+    const matches = profileIndex
+      .filter(r => r.region_name.toLowerCase().includes(q))
+      .slice(0, 100);
     populateGlobalSearch(matches);
   };
 
@@ -109,10 +115,7 @@ function attachGlobalSearch() {
 function renderStateMap() {
   if (!statesGeo?.features) return;
 
-  const rows = stateLatest.map(r => ({
-    ...r,
-    region_id: String(r.region_id).padStart(2, "0")
-  }));
+  const rows = stateLatest.map(r => ({ ...r, region_id: String(r.region_id).padStart(2, "0") }));
 
   const trace = {
     type: "choropleth",
@@ -155,17 +158,14 @@ function renderStateMap() {
     const point = data.points?.[0];
     if (!point) return;
     const id = String(point.location).padStart(2, "0");
-    window.location.href = `state.html?id=${encodeURIComponent(id)}`;
+    window.location.href = `states.html?id=${encodeURIComponent(id)}`;
   });
 }
 
 function renderCountyMap() {
   if (!countiesGeo?.features) return;
 
-  const rows = countyLatest.map(r => ({
-    ...r,
-    region_id: String(r.region_id).padStart(5, "0")
-  }));
+  const rows = countyLatest.map(r => ({ ...r, region_id: String(r.region_id).padStart(5, "0") }));
 
   const trace = {
     type: "choropleth",

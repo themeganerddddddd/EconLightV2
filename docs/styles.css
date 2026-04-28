@@ -933,7 +933,42 @@ tbody tr:hover {
     grid-template-columns: 1fr;
   }
 }
+.hero-globe,
+.extra-circle,
+.decorative-circle {
+  display: none !important;
+}
 
+.city-glow {
+  opacity: 0.28;
+  height: 80px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 18%, rgba(255,255,255,0.08), transparent 2px),
+    radial-gradient(circle at 70% 22%, rgba(255,255,255,0.07), transparent 1.5px),
+    radial-gradient(circle at 40% 75%, rgba(255,255,255,0.06), transparent 1.5px),
+    radial-gradient(circle at 85% 65%, rgba(255,255,255,0.05), transparent 2px);
+  background-size: 260px 220px;
+  z-index: 0;
+}
+
+.profile-nav-arrows {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.profile-nav-arrows button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
 
 }
 

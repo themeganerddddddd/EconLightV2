@@ -164,6 +164,48 @@ function renderProfile(p) {
   renderMiniMap(p.dataset, p.region_id, p.region_name);
 }
 
+function setupRankArrows(p) {
+  const sameDataset = profileIndex
+    .filter(r => r.dataset === p.dataset)
+    .sort((a, b) => (a.rank_overall ?? 999999) - (b.rank_overall ?? 999999));
+
+  const idx = sameDataset.findIndex(r => String(r.region_id) === String(p.region_id));
+
+  const prev = document.getElementById("prevRankBtn");
+  const next = document.getElementById("nextRankBtn");
+
+  if (prev) {
+    prev.disabled = idx <= 0;
+    prev.onclick = () => {
+      if (idx > 0) {
+        const r = sameDataset[idx - 1];
+        if (r.dataset === "states") {
+          window.location.href = `states.html?id=${encodeURIComponent(String(r.region_id).padStart(2, "0"))}`;
+        } else {
+          window.location.href = `profile.html?dataset=${encodeURIComponent(r.dataset)}&id=${encodeURIComponent(r.region_id)}`;
+        }
+      }
+    };
+  }
+
+  if (next) {
+    next.disabled = idx < 0 || idx >= sameDataset.length - 1;
+    next.onclick = () => {
+      if (idx >= 0 && idx < sameDataset.length - 1) {
+        const r = sameDataset[idx + 1];
+        if (r.dataset === "states") {
+          window.location.href = `states.html?id=${encodeURIComponent(String(r.region_id).padStart(2, "0"))}`;
+        } else {
+          window.location.href = `profile.html?dataset=${encodeURIComponent(r.dataset)}&id=${encodeURIComponent(r.region_id)}`;
+        }
+      }
+    };
+  }
+}
+
+
+
+
 async function init() {
   profileIndex = await loadJson("data/profile_index.json");
   statesGeo = await loadJson("data/regions/us_states_all.geojson").catch(() => null);
@@ -178,6 +220,9 @@ async function init() {
   }
 
   renderProfile(p);
+setupRankArrows(p);
+
 }
+
 
 init().catch(console.error);

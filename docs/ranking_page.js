@@ -34,6 +34,7 @@ function withRanks(rows) {
 
 function fillTable(tableId, rows, dataset, limit = null) {
   const body = document.querySelector(`#${tableId} tbody`);
+  if (!body) return;
   body.innerHTML = "";
 
   const visible = limit ? rows.slice(0, limit) : rows;
@@ -54,6 +55,57 @@ function fillTable(tableId, rows, dataset, limit = null) {
   });
 }
 
+async function renderCountyMap(rows) {
+  const mapEl = document.getElementById("countiesMap");
+  if (!mapEl) return;
+
+  const geo = await loadJson("data/regions/us_counties_all.geojson");
+
+  const trace = {
+    type: "choropleth",
+    geojson: geo,
+    featureidkey: "properties.region_id",
+    locations: rows.map(r => String(r.region_id).padStart(5, "0")),
+    z: rows.map(r => Number(r.yoy_pct_display ?? 0)),
+    text: rows.map(r => `${r.region_name}<br>Light YoY: ${fmtPct(r.yoy_pct_display)}<br>Rank: ${r.rank_overall}`),
+    hovertemplate: "%{text}<extra></extra>",
+    colorscale: [
+      [0.0, "#fb7185"],
+      [0.35, "#f59e0b"],
+      [0.5, "#cbd5e1"],
+      [0.65, "#60a5fa"],
+      [1.0, "#4ade80"]
+    ],
+    zmid: 0,
+    marker: { line: { color: "rgba(255,255,255,0.08)", width: 0.15 } },
+    colorbar: { title: "Light YoY", tickfont: { color: "#e5ecff" }, titlefont: { color: "#e5ecff" } }
+  };
+
+  const layout = {
+    geo: {
+      fitbounds: "locations",
+      projection: { type: "albers usa" },
+      bgcolor: "rgba(0,0,0,0)",
+      showlakes: false,
+      showland: true,
+      landcolor: "rgba(255,255,255,0.02)"
+    },
+    paper_bgcolor: "rgba(0,0,0,0)",
+    plot_bgcolor: "rgba(0,0,0,0)",
+    margin: { t: 0, r: 0, b: 0, l: 0 },
+    font: { color: "#e5ecff" }
+  };
+
+  Plotly.newPlot("countiesMap", [trace], layout, { responsive: true, displayModeBar: false });
+
+  mapEl.on("plotly_click", data => {
+    const point = data.points?.[0];
+    if (!point) return;
+    const id = String(point.location).padStart(5, "0");
+    window.location.href = `profile.html?dataset=counties&id=${encodeURIComponent(id)}`;
+  });
+}
+
 async function init() {
   const dataset = getDataset();
   const rows = await loadJson(`data/${dataset}_latest.json`);
@@ -70,6 +122,10 @@ async function init() {
   const ranked = withRanks(cleanRows);
   fillTable("topTable", ranked, dataset, 50);
   fillTable("fullRankingTable", ranked, dataset, null);
+
+  if (dataset === "counties") {
+    renderCountyMap(ranked);
+  }
 }
 
 init().catch(console.error);

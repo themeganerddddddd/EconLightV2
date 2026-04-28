@@ -8,6 +8,11 @@
   <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min"></script>
 </head>
 <body>
+  <div class="stars"></div>
+  <div class="stars stars-2"></div>
+  <div class="stars stars-3"></div>
+  <div class="moon"></div>
+
   <header class="sub-hero">
     <div class="wrap sub-hero-inner">
       <div>
@@ -51,6 +56,14 @@
         <div class="summary-title">Latest Data</div>
         <div id="stateLatestDate" class="summary-number small">--</div>
       </div>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <h2>Counties in Selected State</h2>
+        <span class="badge">Click a county</span>
+      </div>
+      <div id="stateCountyMap" class="map-box"></div>
     </section>
 
     <section class="grid">

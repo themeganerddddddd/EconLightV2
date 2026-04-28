@@ -5,14 +5,20 @@
   <title>Counties | Econ Light Monitor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min"></script>
 </head>
 <body>
+  <div class="stars"></div>
+  <div class="stars stars-2"></div>
+  <div class="stars stars-3"></div>
+  <div class="moon"></div>
+
   <header class="sub-hero">
     <div class="wrap sub-hero-inner">
       <div>
         <a class="back-link" href="index.html">← Home</a>
         <h1>Counties</h1>
-        <p class="body-copy">Top county light trends, with an expanded full ranking.</p>
+        <p class="body-copy">Top county light trends, with a national county map and expanded full ranking.</p>
       </div>
       <div class="homepage-nav">
         <a class="dataset-link" href="index.html">Home</a>
@@ -25,6 +31,14 @@
   </header>
 
   <main class="wrap">
+    <section class="card">
+      <div class="card-header">
+        <h2>County Momentum Map</h2>
+        <span class="badge">Click a county</span>
+      </div>
+      <div id="countiesMap" class="map-box"></div>
+    </section>
+
     <section class="card">
       <div class="card-header"><h2>Top Counties</h2></div>
       <div class="table-wrap">
