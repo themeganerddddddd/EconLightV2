@@ -1,8 +1,10 @@
 let profileChart = null;
+
 let profileIndex = [];
 let statesGeo = null;
 let countiesGeo = null;
 let metrosGeo = null;
+let citiesGeo = null;
 
 let statesLatest = [];
 let countiesLatest = [];
@@ -64,7 +66,19 @@ function featureId(feature) {
   return String(
     feature?.properties?.region_id ??
     feature?.properties?.GEOID ??
+    feature?.properties?.GEOID20 ??
+    feature?.properties?.GEOID10 ??
+    feature?.properties?.CBSAFP ??
     feature?.id ??
+    ""
+  );
+}
+
+function featureName(feature) {
+  return String(
+    feature?.properties?.region_name ??
+    feature?.properties?.NAME ??
+    feature?.properties?.NAMELSAD ??
     ""
   );
 }
@@ -86,15 +100,18 @@ function getLatestRowsForDataset(dataset) {
 
 async function getProfile(dataset, id) {
   if (dataset === "counties") {
+    const countyId = normalizedId("counties", id);
+
     if (!datasetProfilesCache.countiesIndex) {
       datasetProfilesCache.countiesIndex = await loadJson("data/profiles/counties_index.json");
     }
-    const countyId = normalizedId("counties", id);
+
     const statefp = datasetProfilesCache.countiesIndex[countyId] || countyId.slice(0, 2);
 
     if (!countyShardCache[statefp]) {
       countyShardCache[statefp] = await loadJson(`data/profiles/counties_by_state/${statefp}.json`);
     }
+
     return countyShardCache[statefp][countyId] || null;
   }
 
@@ -125,23 +142,39 @@ function computePeerStats(p) {
   const nationalRank = nationalIndex >= 0 ? nationalIndex + 1 : p.rank_overall;
 
   let peerRows = rows;
-  let peerLabel = `${dataset}`;
-  let peerAverageLabel = `${dataset} average`;
-  let peerDifferenceLabel = `Difference from ${dataset} average`;
+  let peerLabel = dataset;
+  let peerRankLabel = `${capitalize(dataset)} Ranking`;
+  let peerAverageLabel = `${capitalize(dataset)} Average`;
+  let peerDifferenceLabel = `Difference from ${capitalize(dataset)} Average`;
 
-  if (dataset === "counties" || dataset === "cities") {
+  if (dataset === "counties") {
     peerRows = rows.filter(r => r.region_id.slice(0, 2) === stateId);
-    peerLabel = dataset === "counties" ? "counties in state" : "cities in state";
-    peerAverageLabel = dataset === "counties" ? "State county average" : "State city average";
-    peerDifferenceLabel = dataset === "counties" ? "Difference from state county average" : "Difference from state city average";
-  } else if (dataset === "states") {
+    peerLabel = "counties in this state";
+    peerRankLabel = "State County Ranking";
+    peerAverageLabel = "State County Average";
+    peerDifferenceLabel = "Difference from State County Average";
+  }
+
+  if (dataset === "cities") {
+    peerRows = rows.filter(r => r.region_id.slice(0, 2) === stateId);
+    peerLabel = "cities in this state";
+    peerRankLabel = "State City Ranking";
+    peerAverageLabel = "State City Average";
+    peerDifferenceLabel = "Difference from State City Average";
+  }
+
+  if (dataset === "states") {
     peerLabel = "states";
-    peerAverageLabel = "State average";
-    peerDifferenceLabel = "Difference from state average";
-  } else if (dataset === "metros") {
+    peerRankLabel = "State Ranking";
+    peerAverageLabel = "Average State Growth";
+    peerDifferenceLabel = "Difference from Average State";
+  }
+
+  if (dataset === "metros") {
     peerLabel = "metros";
-    peerAverageLabel = "Metro average";
-    peerDifferenceLabel = "Difference from metro average";
+    peerRankLabel = "Metro Ranking";
+    peerAverageLabel = "Average Metro Growth";
+    peerDifferenceLabel = "Difference from Average Metro";
   }
 
   const peerIndex = peerRows.findIndex(r => r.region_id === id);
@@ -151,11 +184,6 @@ function computePeerStats(p) {
   const peerAvg = valid.length ? valid.reduce((a, b) => a + b, 0) / valid.length : null;
   const peerDiff = Number.isFinite(value) && peerAvg !== null ? value - peerAvg : null;
 
-  let stateLatest = null;
-  if (stateId) {
-    stateLatest = statesLatest.find(r => normalizedId("states", r.region_id) === stateId);
-  }
-
   return {
     nationalRank,
     nationalCount: rows.length,
@@ -164,10 +192,14 @@ function computePeerStats(p) {
     peerAvg,
     peerDiff,
     peerLabel,
+    peerRankLabel,
     peerAverageLabel,
-    peerDifferenceLabel,
-    stateLatest
+    peerDifferenceLabel
   };
+}
+
+function capitalize(s) {
+  return String(s || "").charAt(0).toUpperCase() + String(s || "").slice(1);
 }
 
 function getStateCountyFeatures(stateId) {
@@ -176,42 +208,153 @@ function getStateCountyFeatures(stateId) {
   ) || [];
 }
 
-function makeProfileMapForState(p) {
+function getStateCityPoints(stateId) {
+  return citiesLatest
+    .filter(r => normalizedId("cities", r.region_id).slice(0, 2) === stateId)
+    .map(r => ({
+      id: normalizedId("cities", r.region_id),
+      name: r.region_name,
+      value: Number(r.yoy_pct_display ?? 0)
+    }));
+}
+
+function getMetroFeaturesInState(stateId) {
+  if (!metrosGeo?.features) return [];
+
+  return metrosGeo.features.filter(f => {
+    const id = featureId(f);
+    const matching = metrosLatest.find(m => normalizedId("metros", m.region_id) === id);
+    if (!matching) return false;
+
+    const name = matching.region_name || featureName(f);
+    return name.includes(",") && name.split(",").slice(1).join(",").includes(stateAbbrFromFips(stateId));
+  });
+}
+
+function stateAbbrFromFips(fips) {
+  const map = {
+    "01":"AL","02":"AK","04":"AZ","05":"AR","06":"CA","08":"CO","09":"CT","10":"DE","11":"DC","12":"FL","13":"GA",
+    "15":"HI","16":"ID","17":"IL","18":"IN","19":"IA","20":"KS","21":"KY","22":"LA","23":"ME","24":"MD","25":"MA",
+    "26":"MI","27":"MN","28":"MS","29":"MO","30":"MT","31":"NE","32":"NV","33":"NH","34":"NJ","35":"NM","36":"NY",
+    "37":"NC","38":"ND","39":"OH","40":"OK","41":"OR","42":"PA","44":"RI","45":"SC","46":"SD","47":"TN","48":"TX",
+    "49":"UT","50":"VT","51":"VA","53":"WA","54":"WV","55":"WI","56":"WY"
+  };
+  return map[String(fips).padStart(2, "0")] || "";
+}
+
+function makeStateCountyMap(p) {
   const stateId = normalizedId("states", p.region_id);
   const features = getStateCountyFeatures(stateId);
 
   if (features.length) {
     const locations = features.map(f => featureId(f).padStart(5, "0"));
     const rowsById = new Map(countiesLatest.map(r => [normalizedId("counties", r.region_id), r]));
+
     const z = locations.map(loc => Number(rowsById.get(loc)?.yoy_pct_display ?? 0));
-    return { features, locations, z, selectedId: null, mapType: "state-counties" };
+    const text = locations.map(loc => {
+      const r = rowsById.get(loc);
+      return `${r?.region_name || loc}<br>Light YoY: ${fmtPct(r?.yoy_pct_display)}<br>Click county`;
+    });
+
+    return {
+      geo: { type: "FeatureCollection", features },
+      locations,
+      z,
+      text,
+      selectedId: null,
+      clickDataset: "counties",
+      colorscale: lightScale()
+    };
   }
 
   const stateFeatures = statesGeo?.features?.filter(f => featureId(f).padStart(2, "0") === stateId) || [];
-  return { features: stateFeatures, locations: [stateId], z: [1], selectedId: stateId, mapType: "state" };
+  return {
+    geo: { type: "FeatureCollection", features: stateFeatures },
+    locations: [stateId],
+    z: [1],
+    text: [p.region_name],
+    selectedId: stateId,
+    clickDataset: null,
+    colorscale: [[0, "#60a5fa"], [1, "#60a5fa"]]
+  };
 }
 
-function makeProfileMapForMetro(p) {
-  const id = normalizedId("metros", p.region_id);
-  const features = metrosGeo?.features?.filter(f => featureId(f) === id) || [];
-  return { features, locations: [id], z: [1], selectedId: id, mapType: "metro" };
-}
-
-function makeProfileMapForCounty(p) {
+function makeCountyInStateMap(p) {
   const countyId = normalizedId("counties", p.region_id);
   const stateId = countyId.slice(0, 2);
   const features = getStateCountyFeatures(stateId);
+
   const locations = features.map(f => featureId(f).padStart(5, "0"));
-  const z = locations.map(loc => loc === countyId ? 1 : 0.18);
-  return { features, locations, z, selectedId: countyId, mapType: "county-in-state" };
+  const rowsById = new Map(countiesLatest.map(r => [normalizedId("counties", r.region_id), r]));
+
+  const z = locations.map(loc => loc === countyId ? 999 : Number(rowsById.get(loc)?.yoy_pct_display ?? 0));
+  const text = locations.map(loc => {
+    const r = rowsById.get(loc);
+    const selected = loc === countyId ? "<br><b>Selected county</b>" : "<br>Click county";
+    return `${r?.region_name || loc}<br>Light YoY: ${fmtPct(r?.yoy_pct_display)}${selected}`;
+  });
+
+  return {
+    geo: { type: "FeatureCollection", features },
+    locations,
+    z,
+    text,
+    selectedId: countyId,
+    clickDataset: "counties",
+    colorscale: [
+      [0, "rgba(96,165,250,0.22)"],
+      [0.45, "rgba(96,165,250,0.50)"],
+      [0.998, "#60a5fa"],
+      [1, "#ffd36b"]
+    ]
+  };
 }
 
-function makeProfileMapForCity(p) {
+function makeMetroMap(p) {
+  const id = normalizedId("metros", p.region_id);
+  let features = metrosGeo?.features?.filter(f => featureId(f) === id) || [];
+
+  if (!features.length) {
+    const row = metrosLatest.find(r => normalizedId("metros", r.region_id) === id);
+    const name = row?.region_name || p.region_name;
+    features = metrosGeo?.features?.filter(f => featureName(f) === name) || [];
+  }
+
+  return {
+    geo: { type: "FeatureCollection", features },
+    locations: features.map(f => featureId(f)),
+    z: features.map(() => 1),
+    text: features.map(() => p.region_name),
+    selectedId: id,
+    clickDataset: null,
+    colorscale: [[0, "#60a5fa"], [1, "#ffd36b"]]
+  };
+}
+
+function makeCityBackgroundMap(p) {
   const stateId = normalizedId("cities", p.region_id).slice(0, 2);
-  const features = getStateCountyFeatures(stateId);
-  const locations = features.map(f => featureId(f).padStart(5, "0"));
-  const z = locations.map(() => 0.35);
-  return { features, locations, z, selectedId: null, mapType: "city-state-background" };
+  const countyFeatures = getStateCountyFeatures(stateId);
+  const countyLocations = countyFeatures.map(f => featureId(f).padStart(5, "0"));
+
+  return {
+    geo: { type: "FeatureCollection", features: countyFeatures },
+    locations: countyLocations,
+    z: countyLocations.map(() => 0.4),
+    text: countyLocations.map(() => "County background"),
+    selectedId: null,
+    clickDataset: "counties",
+    colorscale: [[0, "rgba(96,165,250,0.22)"], [1, "rgba(96,165,250,0.45)"]]
+  };
+}
+
+function lightScale() {
+  return [
+    [0.0, "#fb7185"],
+    [0.35, "#f59e0b"],
+    [0.5, "#cbd5e1"],
+    [0.65, "#60a5fa"],
+    [1.0, "#4ade80"]
+  ];
 }
 
 function renderShapeMap(p) {
@@ -220,38 +363,57 @@ function renderShapeMap(p) {
 
   let mapData = null;
 
-  if (p.dataset === "states") mapData = makeProfileMapForState(p);
-  if (p.dataset === "counties") mapData = makeProfileMapForCounty(p);
-  if (p.dataset === "metros") mapData = makeProfileMapForMetro(p);
-  if (p.dataset === "cities") mapData = makeProfileMapForCity(p);
+  if (p.dataset === "states") mapData = makeStateCountyMap(p);
+  if (p.dataset === "counties") mapData = makeCountyInStateMap(p);
+  if (p.dataset === "metros") mapData = makeMetroMap(p);
+  if (p.dataset === "cities") mapData = makeCityBackgroundMap(p);
 
-  if (!mapData || !mapData.features.length) {
+  if (!mapData || !mapData.geo.features.length) {
     el.innerHTML = `<div class="mini-map-fallback">Outline unavailable</div>`;
     return;
   }
 
-  const geo = { type: "FeatureCollection", features: mapData.features };
+  const traces = [
+    {
+      type: "choropleth",
+      geojson: mapData.geo,
+      featureidkey: "properties.region_id",
+      locations: mapData.locations,
+      z: mapData.z,
+      text: mapData.text,
+      hovertemplate: "%{text}<extra></extra>",
+      colorscale: mapData.colorscale,
+      zmid: 0,
+      showscale: false,
+      marker: { line: { color: "rgba(255,255,255,0.55)", width: 0.65 } }
+    }
+  ];
 
-  const trace = {
-    type: "choropleth",
-    geojson: geo,
-    featureidkey: "properties.region_id",
-    locations: mapData.locations,
-    z: mapData.z,
-    text: mapData.locations.map(loc => {
-      if (loc === mapData.selectedId) return p.region_name;
-      if (mapData.mapType === "county-in-state") return "Other county in state";
-      return "Click to open";
-    }),
-    hovertemplate: "%{text}<extra></extra>",
-    colorscale: [
-      [0, "rgba(96,165,250,0.22)"],
-      [0.45, "rgba(96,165,250,0.42)"],
-      [1, "#ffd36b"]
-    ],
-    showscale: false,
-    marker: { line: { color: "rgba(255,255,255,0.55)", width: 0.7 } }
-  };
+  if (p.dataset === "states") {
+    const stateId = normalizedId("states", p.region_id);
+    const cityPoints = getStateCityPoints(stateId);
+
+    if (cityPoints.length && citiesGeo?.features) {
+      const cityFeatures = citiesGeo.features.filter(f =>
+        cityPoints.some(c => c.id === featureId(f).padStart(7, "0"))
+      );
+
+      if (cityFeatures.length) {
+        traces.push({
+          type: "choropleth",
+          geojson: { type: "FeatureCollection", features: cityFeatures },
+          featureidkey: "properties.region_id",
+          locations: cityFeatures.map(f => featureId(f).padStart(7, "0")),
+          z: cityFeatures.map(() => 1),
+          text: cityFeatures.map(f => featureName(f) || "City"),
+          hovertemplate: "%{text}<extra></extra>",
+          colorscale: [[0, "#ffd36b"], [1, "#ffd36b"]],
+          showscale: false,
+          marker: { line: { color: "rgba(255,211,107,0.95)", width: 1.2 } }
+        });
+      }
+    }
+  }
 
   const layout = {
     geo: {
@@ -266,9 +428,9 @@ function renderShapeMap(p) {
     font: { color: "#e5ecff" }
   };
 
-  Plotly.newPlot(boxId, [trace], layout, { responsive: true, displayModeBar: false });
+  Plotly.newPlot(boxId, traces, layout, { responsive: true, displayModeBar: false });
 
-  if (mapData.mapType === "county-in-state" || mapData.mapType === "state-counties") {
+  if (mapData.clickDataset === "counties") {
     el.on("plotly_click", data => {
       const point = data.points?.[0];
       if (!point) return;
@@ -329,15 +491,16 @@ function renderProfile(p) {
   document.getElementById("profileSubtitle").textContent = `${p.dataset} profile with light data and nowcast.`;
   document.getElementById("profileTypeText").textContent = `${p.dataset} · latest available data: ${latestDate}`;
 
-  document.getElementById("profileLatestDate").textContent = `Latest: ${latestDate}`;
-  document.getElementById("profileRank").textContent = `National Rank: ${peer.nationalRank ?? "--"} of ${peer.nationalCount || "--"}`;
-  document.getElementById("profilePercentile").textContent = p.percentile != null ? `Percentile: ${p.percentile}%` : "Percentile: --";
+  document.getElementById("profileLatestDate").textContent = latestDate;
+  document.getElementById("profileRank").textContent = `${peer.nationalRank ?? "--"} of ${peer.nationalCount || "--"}`;
+  document.getElementById("profilePercentile").textContent = p.percentile != null ? `${p.percentile}%` : "--";
 
-  document.getElementById("profileStateRank").textContent =
-    peer.peerRank ? `${peer.peerLabel} Rank: ${peer.peerRank} of ${peer.peerCount}` : `${peer.peerLabel} Rank: --`;
+  document.getElementById("peerRankTopLabel").textContent = peer.peerRankLabel;
+  document.getElementById("profilePeerRankTop").textContent = peer.peerRank ? `${peer.peerRank} of ${peer.peerCount}` : "--";
 
-  document.getElementById("profileVsState").textContent =
-    peer.peerDiff !== null && peer.peerDiff !== undefined ? `Vs. Peer Avg: ${fmtPct(peer.peerDiff)}` : "Vs. Peer Avg: --";
+  document.getElementById("peerDiffTopLabel").textContent = "Vs. Peer Avg.";
+  document.getElementById("profileVsPeerTop").textContent = peer.peerDiff !== null && peer.peerDiff !== undefined ? fmtPct(peer.peerDiff) : "--";
+  document.getElementById("profileVsPeerTop").className = valueClass(peer.peerDiff);
 
   const yoy = document.getElementById("profileYoy");
   yoy.textContent = fmtPct(p.yoy_pct_display);
@@ -358,13 +521,14 @@ function renderProfile(p) {
   document.getElementById("profileIndustry").textContent = p.industry_proxy || "--";
   document.getElementById("profilePopulation").textContent = p.population_growth_proxy != null ? fmtPct(p.population_growth_proxy) : "--";
 
-  document.getElementById("peerRankLabel").textContent = `${peer.peerLabel} ranking`;
+  document.getElementById("peerRankLabel").textContent = peer.peerRankLabel;
   document.getElementById("peerAverageLabel").textContent = peer.peerAverageLabel;
   document.getElementById("peerDifferenceLabel").textContent = peer.peerDifferenceLabel;
-  document.getElementById("profileStateRankDetail").textContent = peer.peerRank ? `${peer.peerRank} of ${peer.peerCount}` : "--";
-  document.getElementById("profileStateAverage").textContent = peer.peerAvg !== null && peer.peerAvg !== undefined ? fmtPct(peer.peerAvg) : "--";
-  document.getElementById("profileStateDifference").textContent = peer.peerDiff !== null && peer.peerDiff !== undefined ? fmtPct(peer.peerDiff) : "--";
-  document.getElementById("profileStateDifference").className = valueClass(peer.peerDiff);
+
+  document.getElementById("profilePeerRank").textContent = peer.peerRank ? `${peer.peerRank} of ${peer.peerCount}` : "--";
+  document.getElementById("profilePeerAverage").textContent = peer.peerAvg !== null && peer.peerAvg !== undefined ? fmtPct(peer.peerAvg) : "--";
+  document.getElementById("profilePeerDifference").textContent = peer.peerDiff !== null && peer.peerDiff !== undefined ? fmtPct(peer.peerDiff) : "--";
+  document.getElementById("profilePeerDifference").className = valueClass(peer.peerDiff);
 
   const ctx = document.getElementById("profileChart").getContext("2d");
   if (profileChart) profileChart.destroy();
@@ -401,10 +565,11 @@ function renderProfile(p) {
 async function init() {
   profileIndex = await loadJson("data/profile_index.json");
 
-  const [stateGeo, countyGeo, metroGeo, states, counties, cities, metros] = await Promise.all([
+  const [stateGeo, countyGeo, metroGeo, cityGeo, states, counties, cities, metros] = await Promise.all([
     safeLoadJson("data/regions/us_states_all.geojson", null),
     safeLoadJson("data/regions/us_counties_all.geojson", null),
     safeLoadJson("data/regions/us_metros_all.geojson", null),
+    safeLoadJson("data/regions/us_cities_top200.geojson", null),
     safeLoadJson("data/states_latest.json", []),
     safeLoadJson("data/counties_latest.json", []),
     safeLoadJson("data/cities_latest.json", []),
@@ -414,6 +579,7 @@ async function init() {
   statesGeo = stateGeo;
   countiesGeo = countyGeo;
   metrosGeo = metroGeo;
+  citiesGeo = cityGeo;
 
   statesLatest = states.map(r => ({ ...r, region_id: normalizedId("states", r.region_id) }));
   countiesLatest = counties.map(r => ({ ...r, region_id: normalizedId("counties", r.region_id) }));

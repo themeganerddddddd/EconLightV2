@@ -8,6 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min"></script>
 </head>
+
 <body>
   <div class="stars"></div>
   <div class="stars stars-2"></div>
@@ -31,6 +32,7 @@
         <h1 id="profileName">Region Profile</h1>
         <p id="profileSubtitle" class="body-copy">Light trend and nowcast in one place.</p>
       </div>
+
       <div class="homepage-nav">
         <a class="dataset-link" href="index.html">Home</a>
         <a class="dataset-link" href="states.html">States</a>
@@ -52,12 +54,27 @@
         <h2 id="profileTitleName">--</h2>
         <p id="profileTypeText" class="body-copy">--</p>
 
-        <div class="profile-pill-row centered-pill-row">
-          <span id="profileLatestDate" class="profile-pill">Latest: --</span>
-          <span id="profileRank" class="profile-pill">National Rank: --</span>
-          <span id="profilePercentile" class="profile-pill">Percentile: --</span>
-          <span id="profileStateRank" class="profile-pill">State Rank: --</span>
-          <span id="profileVsState" class="profile-pill">Vs. State: --</span>
+        <div class="profile-button-grid">
+          <div class="profile-button-stat">
+            <span>Latest Data</span>
+            <strong id="profileLatestDate">--</strong>
+          </div>
+          <div class="profile-button-stat">
+            <span>National Rank</span>
+            <strong id="profileRank">--</strong>
+          </div>
+          <div class="profile-button-stat">
+            <span>Percentile</span>
+            <strong id="profilePercentile">--</strong>
+          </div>
+          <div class="profile-button-stat">
+            <span id="peerRankTopLabel">Peer Rank</span>
+            <strong id="profilePeerRankTop">--</strong>
+          </div>
+          <div class="profile-button-stat">
+            <span id="peerDiffTopLabel">Vs. Peer Avg.</span>
+            <strong id="profileVsPeerTop">--</strong>
+          </div>
         </div>
       </div>
     </section>
@@ -88,18 +105,21 @@
 
     <section class="grid">
       <div class="card">
-        <div class="card-header"><h2>Nowcast</h2></div>
+        <div class="card-header">
+          <h2>Nowcast</h2>
+        </div>
+
         <div class="friendly-metric-grid">
           <div class="friendly-metric">
-            <span>Employment nowcast</span>
+            <span>Employment Nowcast</span>
             <strong id="profileEmpNowcast">--</strong>
           </div>
           <div class="friendly-metric">
-            <span>Labor force nowcast</span>
+            <span>Labor Force Nowcast</span>
             <strong id="profileLaborNowcast">--</strong>
           </div>
           <div class="friendly-metric">
-            <span>Unemployment-rate change</span>
+            <span>Unemployment-Rate Change</span>
             <strong id="profileUrate">--</strong>
           </div>
           <div class="friendly-metric">
@@ -107,37 +127,42 @@
             <strong id="profileConfidence">--</strong>
           </div>
           <div class="friendly-metric wide">
-            <span>Industry proxy</span>
+            <span>Industry Proxy</span>
             <strong id="profileIndustry">--</strong>
           </div>
           <div class="friendly-metric wide">
-            <span>Population growth proxy</span>
+            <span>Population Growth Proxy</span>
             <strong id="profilePopulation">--</strong>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-header"><h2>Peer Comparison</h2></div>
+        <div class="card-header">
+          <h2>Peer Ranking</h2>
+        </div>
+
         <div class="friendly-metric-grid">
           <div class="friendly-metric wide">
-            <span id="peerRankLabel">Peer rank</span>
-            <strong id="profileStateRankDetail">--</strong>
+            <span id="peerRankLabel">Peer Rank</span>
+            <strong id="profilePeerRank">--</strong>
           </div>
           <div class="friendly-metric wide">
-            <span id="peerAverageLabel">Peer average</span>
-            <strong id="profileStateAverage">--</strong>
+            <span id="peerAverageLabel">Peer Average</span>
+            <strong id="profilePeerAverage">--</strong>
           </div>
           <div class="friendly-metric wide">
-            <span id="peerDifferenceLabel">Difference from peer average</span>
-            <strong id="profileStateDifference">--</strong>
+            <span id="peerDifferenceLabel">Difference from Peer Average</span>
+            <strong id="profilePeerDifference">--</strong>
           </div>
         </div>
       </div>
     </section>
 
     <section class="card">
-      <div class="card-header"><h2>Light Trend History</h2></div>
+      <div class="card-header">
+        <h2>Light Trend History</h2>
+      </div>
       <div class="chart-box large">
         <canvas id="profileChart"></canvas>
       </div>

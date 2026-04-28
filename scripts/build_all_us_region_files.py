@@ -14,11 +14,10 @@ DOCS_REGIONS.mkdir(parents=True, exist_ok=True)
 STATE_URL = "https://www2.census.gov/geo/tiger/GENZ2024/shp/cb_2024_us_state_500k.zip"
 COUNTY_URL = "https://www2.census.gov/geo/tiger/GENZ2024/shp/cb_2024_us_county_500k.zip"
 
-# Keep 50 states + DC. Exclude territories.
+# Exclude only territories. Keep Alaska, Hawaii, and DC.
 EXCLUDE_STATEFP = {"60", "66", "69", "72", "78"}
 
-
-def download(url: str) -> Path:
+def download(url):
     out = TMP / url.split("/")[-1]
     if out.exists() and out.stat().st_size > 0:
         return out
@@ -29,12 +28,10 @@ def download(url: str) -> Path:
     out.write_bytes(r.content)
     return out
 
-
-def read_zip(path: Path) -> gpd.GeoDataFrame:
+def read_zip(path):
     return gpd.read_file(f"zip://{path.resolve()}").to_crs(4326)
 
-
-def save_geojson(gdf: gpd.GeoDataFrame, filename: str):
+def save(gdf, filename):
     local = REGIONS / filename
     docs = DOCS_REGIONS / filename
 
@@ -44,28 +41,25 @@ def save_geojson(gdf: gpd.GeoDataFrame, filename: str):
     print(f"Saved {local}")
     print(f"Copied {docs}")
 
-
 def build_states():
     zip_path = download(STATE_URL)
     gdf = read_zip(zip_path)
 
+    gdf["STATEFP"] = gdf["STATEFP"].astype(str).str.zfill(2)
     gdf = gdf[~gdf["STATEFP"].isin(EXCLUDE_STATEFP)].copy()
 
     out = gdf[["STATEFP", "NAME", "geometry"]].copy()
-    out = out.rename(columns={
-        "STATEFP": "region_id",
-        "NAME": "region_name",
-    })
-
+    out = out.rename(columns={"STATEFP": "region_id", "NAME": "region_name"})
     out["region_id"] = out["region_id"].astype(str).str.zfill(2)
 
-    save_geojson(out, "us_states_all.geojson")
-
+    save(out, "us_states_all.geojson")
 
 def build_counties():
     zip_path = download(COUNTY_URL)
     gdf = read_zip(zip_path)
 
+    gdf["STATEFP"] = gdf["STATEFP"].astype(str).str.zfill(2)
+    gdf["COUNTYFP"] = gdf["COUNTYFP"].astype(str).str.zfill(3)
     gdf = gdf[~gdf["STATEFP"].isin(EXCLUDE_STATEFP)].copy()
 
     state_names = {
@@ -87,19 +81,16 @@ def build_counties():
         "55": "Wisconsin", "56": "Wyoming",
     }
 
-    gdf["region_id"] = (gdf["STATEFP"].astype(str) + gdf["COUNTYFP"].astype(str)).str.zfill(5)
+    gdf["region_id"] = gdf["STATEFP"] + gdf["COUNTYFP"]
     gdf["state_name"] = gdf["STATEFP"].map(state_names)
     gdf["region_name"] = gdf["NAME"] + ", " + gdf["state_name"]
 
     out = gdf[["region_id", "region_name", "geometry"]].copy()
-
-    save_geojson(out, "us_counties_all.geojson")
-
+    save(out, "us_counties_all.geojson")
 
 def main():
     build_states()
     build_counties()
-
 
 if __name__ == "__main__":
     main()

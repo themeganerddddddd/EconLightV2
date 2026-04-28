@@ -21,6 +21,16 @@ async function loadJson(path) {
   return await res.json();
 }
 
+function featureId(feature) {
+  return String(
+    feature?.properties?.region_id ??
+    feature?.properties?.GEOID ??
+    feature?.properties?.CBSAFP ??
+    feature?.id ??
+    ""
+  );
+}
+
 function withRanks(rows) {
   const sorted = [...rows].sort((a, b) => (b.yoy_pct_display ?? -999) - (a.yoy_pct_display ?? -999));
   return sorted.map((r, i) => ({
@@ -34,7 +44,7 @@ function renderTable(rows) {
   const body = document.querySelector("#metrosTable tbody");
   body.innerHTML = "";
 
-  rows.slice(0, 50).forEach(r => {
+  rows.slice(0, 80).forEach(r => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td>${r.rank_overall}</td>
@@ -51,15 +61,26 @@ function renderTable(rows) {
 }
 
 function renderMap(rows) {
-  if (!metrosGeo?.features) return;
+  if (!metrosGeo?.features) {
+    document.getElementById("metrosMap").innerHTML = `<div class="mini-map-fallback">Metro map geometry unavailable.</div>`;
+    return;
+  }
+
+  const ids = new Set(rows.map(r => String(r.region_id)));
+  const features = metrosGeo.features.filter(f => ids.has(featureId(f)));
+
+  const rowsById = new Map(rows.map(r => [String(r.region_id), r]));
 
   const trace = {
     type: "choropleth",
-    geojson: metrosGeo,
+    geojson: { type: "FeatureCollection", features },
     featureidkey: "properties.region_id",
-    locations: rows.map(r => String(r.region_id)),
-    z: rows.map(r => Number(r.yoy_pct_display ?? 0)),
-    text: rows.map(r => `${r.region_name}<br>Light YoY: ${fmtPct(r.yoy_pct_display)}<br>Trend: ${r.trend_label || "N/A"}`),
+    locations: features.map(f => featureId(f)),
+    z: features.map(f => Number(rowsById.get(featureId(f))?.yoy_pct_display ?? 0)),
+    text: features.map(f => {
+      const r = rowsById.get(featureId(f));
+      return `${r?.region_name || featureId(f)}<br>Light YoY: ${fmtPct(r?.yoy_pct_display)}<br>Trend: ${r?.trend_label || "N/A"}`;
+    }),
     hovertemplate: "%{text}<extra></extra>",
     colorscale: [
       [0.0, "#fb7185"],
@@ -75,7 +96,7 @@ function renderMap(rows) {
 
   const layout = {
     geo: {
-      fitbounds: "locations",
+      scope: "usa",
       projection: { type: "albers usa" },
       bgcolor: "rgba(0,0,0,0)",
       showlakes: false,
