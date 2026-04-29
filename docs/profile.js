@@ -33,6 +33,14 @@ function valueClass(v) {
   return "neutral";
 }
 
+function normalizeText(s) {
+  return String(s || "").trim().toLowerCase();
+}
+
+function capitalize(s) {
+  return String(s || "").charAt(0).toUpperCase() + String(s || "").slice(1);
+}
+
 async function loadJson(path) {
   const res = await fetch(path);
   if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
@@ -69,6 +77,7 @@ function featureId(feature) {
     feature?.properties?.GEOID20 ??
     feature?.properties?.GEOID10 ??
     feature?.properties?.CBSAFP ??
+    feature?.properties?.PLACEFP ??
     feature?.id ??
     ""
   );
@@ -88,6 +97,17 @@ function getStateIdForProfile(p) {
   if (p.dataset === "counties") return normalizedId("counties", p.region_id).slice(0, 2);
   if (p.dataset === "cities") return normalizedId("cities", p.region_id).slice(0, 2);
   return null;
+}
+
+function stateAbbrFromFips(fips) {
+  const map = {
+    "01":"AL","02":"AK","04":"AZ","05":"AR","06":"CA","08":"CO","09":"CT","10":"DE","11":"DC","12":"FL","13":"GA",
+    "15":"HI","16":"ID","17":"IL","18":"IN","19":"IA","20":"KS","21":"KY","22":"LA","23":"ME","24":"MD","25":"MA",
+    "26":"MI","27":"MN","28":"MS","29":"MO","30":"MT","31":"NE","32":"NV","33":"NH","34":"NJ","35":"NM","36":"NY",
+    "37":"NC","38":"ND","39":"OH","40":"OK","41":"OR","42":"PA","44":"RI","45":"SC","46":"SD","47":"TN","48":"TX",
+    "49":"UT","50":"VT","51":"VA","53":"WA","54":"WV","55":"WI","56":"WY"
+  };
+  return map[String(fips).padStart(2, "0")] || "";
 }
 
 function getLatestRowsForDataset(dataset) {
@@ -142,36 +162,31 @@ function computePeerStats(p) {
   const nationalRank = nationalIndex >= 0 ? nationalIndex + 1 : p.rank_overall;
 
   let peerRows = rows;
-  let peerLabel = dataset;
   let peerRankLabel = `${capitalize(dataset)} Ranking`;
   let peerAverageLabel = `${capitalize(dataset)} Average`;
   let peerDifferenceLabel = `Difference from ${capitalize(dataset)} Average`;
 
   if (dataset === "counties") {
     peerRows = rows.filter(r => r.region_id.slice(0, 2) === stateId);
-    peerLabel = "counties in this state";
-    peerRankLabel = "State County Ranking";
-    peerAverageLabel = "State County Average";
+    peerRankLabel = "County Ranking in State";
+    peerAverageLabel = "Average County Growth in State";
     peerDifferenceLabel = "Difference from State County Average";
   }
 
   if (dataset === "cities") {
     peerRows = rows.filter(r => r.region_id.slice(0, 2) === stateId);
-    peerLabel = "cities in this state";
-    peerRankLabel = "State City Ranking";
-    peerAverageLabel = "State City Average";
+    peerRankLabel = "City Ranking in State";
+    peerAverageLabel = "Average City Growth in State";
     peerDifferenceLabel = "Difference from State City Average";
   }
 
   if (dataset === "states") {
-    peerLabel = "states";
     peerRankLabel = "State Ranking";
     peerAverageLabel = "Average State Growth";
     peerDifferenceLabel = "Difference from Average State";
   }
 
   if (dataset === "metros") {
-    peerLabel = "metros";
     peerRankLabel = "Metro Ranking";
     peerAverageLabel = "Average Metro Growth";
     peerDifferenceLabel = "Difference from Average Metro";
@@ -191,15 +206,10 @@ function computePeerStats(p) {
     peerCount: peerRows.length,
     peerAvg,
     peerDiff,
-    peerLabel,
     peerRankLabel,
     peerAverageLabel,
     peerDifferenceLabel
   };
-}
-
-function capitalize(s) {
-  return String(s || "").charAt(0).toUpperCase() + String(s || "").slice(1);
 }
 
 function getStateCountyFeatures(stateId) {
@@ -208,38 +218,28 @@ function getStateCountyFeatures(stateId) {
   ) || [];
 }
 
-function getStateCityPoints(stateId) {
-  return citiesLatest
-    .filter(r => normalizedId("cities", r.region_id).slice(0, 2) === stateId)
-    .map(r => ({
-      id: normalizedId("cities", r.region_id),
-      name: r.region_name,
-      value: Number(r.yoy_pct_display ?? 0)
-    }));
-}
+function getCityFeaturesForState(stateId) {
+  if (!citiesGeo?.features) return [];
 
-function getMetroFeaturesInState(stateId) {
-  if (!metrosGeo?.features) return [];
-
-  return metrosGeo.features.filter(f => {
-    const id = featureId(f);
-    const matching = metrosLatest.find(m => normalizedId("metros", m.region_id) === id);
-    if (!matching) return false;
-
-    const name = matching.region_name || featureName(f);
-    return name.includes(",") && name.split(",").slice(1).join(",").includes(stateAbbrFromFips(stateId));
+  return citiesGeo.features.filter(f => {
+    const fid = featureId(f).padStart(7, "0");
+    return fid.slice(0, 2) === stateId;
   });
 }
 
-function stateAbbrFromFips(fips) {
-  const map = {
-    "01":"AL","02":"AK","04":"AZ","05":"AR","06":"CA","08":"CO","09":"CT","10":"DE","11":"DC","12":"FL","13":"GA",
-    "15":"HI","16":"ID","17":"IL","18":"IN","19":"IA","20":"KS","21":"KY","22":"LA","23":"ME","24":"MD","25":"MA",
-    "26":"MI","27":"MN","28":"MS","29":"MO","30":"MT","31":"NE","32":"NV","33":"NH","34":"NJ","35":"NM","36":"NY",
-    "37":"NC","38":"ND","39":"OH","40":"OK","41":"OR","42":"PA","44":"RI","45":"SC","46":"SD","47":"TN","48":"TX",
-    "49":"UT","50":"VT","51":"VA","53":"WA","54":"WV","55":"WI","56":"WY"
-  };
-  return map[String(fips).padStart(2, "0")] || "";
+function getMetroFeaturesForState(stateId) {
+  if (!metrosGeo?.features) return [];
+
+  const abbr = stateAbbrFromFips(stateId);
+  if (!abbr) return [];
+
+  return metrosGeo.features.filter(f => {
+    const id = featureId(f);
+    const name = featureName(f);
+    const matching = metrosLatest.find(m => normalizedId("metros", m.region_id) === id);
+    const metroName = matching?.region_name || name;
+    return metroName.includes(abbr);
+  });
 }
 
 function makeStateCountyMap(p) {
@@ -261,7 +261,6 @@ function makeStateCountyMap(p) {
       locations,
       z,
       text,
-      selectedId: null,
       clickDataset: "counties",
       colorscale: lightScale()
     };
@@ -273,7 +272,6 @@ function makeStateCountyMap(p) {
     locations: [stateId],
     z: [1],
     text: [p.region_name],
-    selectedId: stateId,
     clickDataset: null,
     colorscale: [[0, "#60a5fa"], [1, "#60a5fa"]]
   };
@@ -299,7 +297,6 @@ function makeCountyInStateMap(p) {
     locations,
     z,
     text,
-    selectedId: countyId,
     clickDataset: "counties",
     colorscale: [
       [0, "rgba(96,165,250,0.22)"],
@@ -315,9 +312,8 @@ function makeMetroMap(p) {
   let features = metrosGeo?.features?.filter(f => featureId(f) === id) || [];
 
   if (!features.length) {
-    const row = metrosLatest.find(r => normalizedId("metros", r.region_id) === id);
-    const name = row?.region_name || p.region_name;
-    features = metrosGeo?.features?.filter(f => featureName(f) === name) || [];
+    const targetName = normalizeText(p.region_name);
+    features = metrosGeo?.features?.filter(f => normalizeText(featureName(f)) === targetName) || [];
   }
 
   return {
@@ -325,7 +321,6 @@ function makeMetroMap(p) {
     locations: features.map(f => featureId(f)),
     z: features.map(() => 1),
     text: features.map(() => p.region_name),
-    selectedId: id,
     clickDataset: null,
     colorscale: [[0, "#60a5fa"], [1, "#ffd36b"]]
   };
@@ -341,7 +336,6 @@ function makeCityBackgroundMap(p) {
     locations: countyLocations,
     z: countyLocations.map(() => 0.4),
     text: countyLocations.map(() => "County background"),
-    selectedId: null,
     clickDataset: "counties",
     colorscale: [[0, "rgba(96,165,250,0.22)"], [1, "rgba(96,165,250,0.45)"]]
   };
@@ -391,27 +385,37 @@ function renderShapeMap(p) {
 
   if (p.dataset === "states") {
     const stateId = normalizedId("states", p.region_id);
-    const cityPoints = getStateCityPoints(stateId);
 
-    if (cityPoints.length && citiesGeo?.features) {
-      const cityFeatures = citiesGeo.features.filter(f =>
-        cityPoints.some(c => c.id === featureId(f).padStart(7, "0"))
-      );
+    const cityFeatures = getCityFeaturesForState(stateId);
+    if (cityFeatures.length) {
+      traces.push({
+        type: "choropleth",
+        geojson: { type: "FeatureCollection", features: cityFeatures },
+        featureidkey: "properties.region_id",
+        locations: cityFeatures.map(f => featureId(f).padStart(7, "0")),
+        z: cityFeatures.map(() => 1),
+        text: cityFeatures.map(f => `${featureName(f)}<br>City`),
+        hovertemplate: "%{text}<extra></extra>",
+        colorscale: [[0, "#ffd36b"], [1, "#ffd36b"]],
+        showscale: false,
+        marker: { line: { color: "rgba(255,211,107,0.9)", width: 1.1 } }
+      });
+    }
 
-      if (cityFeatures.length) {
-        traces.push({
-          type: "choropleth",
-          geojson: { type: "FeatureCollection", features: cityFeatures },
-          featureidkey: "properties.region_id",
-          locations: cityFeatures.map(f => featureId(f).padStart(7, "0")),
-          z: cityFeatures.map(() => 1),
-          text: cityFeatures.map(f => featureName(f) || "City"),
-          hovertemplate: "%{text}<extra></extra>",
-          colorscale: [[0, "#ffd36b"], [1, "#ffd36b"]],
-          showscale: false,
-          marker: { line: { color: "rgba(255,211,107,0.95)", width: 1.2 } }
-        });
-      }
+    const metroFeatures = getMetroFeaturesForState(stateId);
+    if (metroFeatures.length) {
+      traces.push({
+        type: "choropleth",
+        geojson: { type: "FeatureCollection", features: metroFeatures },
+        featureidkey: "properties.region_id",
+        locations: metroFeatures.map(f => featureId(f)),
+        z: metroFeatures.map(() => 1),
+        text: metroFeatures.map(f => `${featureName(f)}<br>Metro`),
+        hovertemplate: "%{text}<extra></extra>",
+        colorscale: [[0, "rgba(255,255,255,0.0)"], [1, "rgba(255,255,255,0.0)"]],
+        showscale: false,
+        marker: { line: { color: "rgba(255,255,255,0.85)", width: 1.6 } }
+      });
     }
   }
 
@@ -437,48 +441,6 @@ function renderShapeMap(p) {
       const clickedId = String(point.location).padStart(5, "0");
       window.location.href = `profile.html?dataset=counties&id=${encodeURIComponent(clickedId)}`;
     });
-  }
-}
-
-function setupRankArrows(p) {
-  const dataset = p.dataset;
-  const currentId = normalizedId(dataset, p.region_id);
-
-  const sameDataset = profileIndex
-    .filter(r => r.dataset === dataset)
-    .sort((a, b) => (a.rank_overall ?? 999999) - (b.rank_overall ?? 999999));
-
-  const idx = sameDataset.findIndex(r => normalizedId(dataset, r.region_id) === currentId);
-
-  const prev = document.getElementById("prevRankBtn");
-  const next = document.getElementById("nextRankBtn");
-
-  if (prev) {
-    prev.disabled = idx <= 0;
-    prev.onclick = () => {
-      if (idx > 0) {
-        const r = sameDataset[idx - 1];
-        if (r.dataset === "states") {
-          window.location.href = `states.html?id=${encodeURIComponent(normalizedId("states", r.region_id))}`;
-        } else {
-          window.location.href = `profile.html?dataset=${encodeURIComponent(r.dataset)}&id=${encodeURIComponent(r.region_id)}`;
-        }
-      }
-    };
-  }
-
-  if (next) {
-    next.disabled = idx < 0 || idx >= sameDataset.length - 1;
-    next.onclick = () => {
-      if (idx >= 0 && idx < sameDataset.length - 1) {
-        const r = sameDataset[idx + 1];
-        if (r.dataset === "states") {
-          window.location.href = `states.html?id=${encodeURIComponent(normalizedId("states", r.region_id))}`;
-        } else {
-          window.location.href = `profile.html?dataset=${encodeURIComponent(r.dataset)}&id=${encodeURIComponent(r.region_id)}`;
-        }
-      }
-    };
   }
 }
 
@@ -559,7 +521,6 @@ function renderProfile(p) {
   });
 
   renderShapeMap(p);
-  setupRankArrows(p);
 }
 
 async function init() {

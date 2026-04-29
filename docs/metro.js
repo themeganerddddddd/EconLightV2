@@ -21,12 +21,29 @@ async function loadJson(path) {
   return await res.json();
 }
 
+async function safeLoadJson(path, fallback = null) {
+  try {
+    return await loadJson(path);
+  } catch {
+    return fallback;
+  }
+}
+
 function featureId(feature) {
   return String(
     feature?.properties?.region_id ??
     feature?.properties?.GEOID ??
     feature?.properties?.CBSAFP ??
     feature?.id ??
+    ""
+  );
+}
+
+function featureName(feature) {
+  return String(
+    feature?.properties?.region_name ??
+    feature?.properties?.NAME ??
+    feature?.properties?.NAMELSAD ??
     ""
   );
 }
@@ -42,9 +59,11 @@ function withRanks(rows) {
 
 function renderTable(rows) {
   const body = document.querySelector("#metrosTable tbody");
+  if (!body) return;
+
   body.innerHTML = "";
 
-  rows.slice(0, 80).forEach(r => {
+  rows.slice(0, 100).forEach(r => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td>${r.rank_overall}</td>
@@ -61,15 +80,21 @@ function renderTable(rows) {
 }
 
 function renderMap(rows) {
-  if (!metrosGeo?.features) {
-    document.getElementById("metrosMap").innerHTML = `<div class="mini-map-fallback">Metro map geometry unavailable.</div>`;
+  const mapEl = document.getElementById("metrosMap");
+  if (!mapEl) return;
+
+  if (!metrosGeo?.features?.length) {
+    mapEl.innerHTML = `<div class="mini-map-fallback">Metro map geometry unavailable. Rankings below still work.</div>`;
     return;
   }
 
-  const ids = new Set(rows.map(r => String(r.region_id)));
-  const features = metrosGeo.features.filter(f => ids.has(featureId(f)));
-
   const rowsById = new Map(rows.map(r => [String(r.region_id), r]));
+  const features = metrosGeo.features.filter(f => rowsById.has(featureId(f)));
+
+  if (!features.length) {
+    mapEl.innerHTML = `<div class="mini-map-fallback">Metro map IDs did not match the metro data. Rankings below still work.</div>`;
+    return;
+  }
 
   const trace = {
     type: "choropleth",
@@ -79,7 +104,7 @@ function renderMap(rows) {
     z: features.map(f => Number(rowsById.get(featureId(f))?.yoy_pct_display ?? 0)),
     text: features.map(f => {
       const r = rowsById.get(featureId(f));
-      return `${r?.region_name || featureId(f)}<br>Light YoY: ${fmtPct(r?.yoy_pct_display)}<br>Trend: ${r?.trend_label || "N/A"}`;
+      return `${r?.region_name || featureName(f)}<br>Light YoY: ${fmtPct(r?.yoy_pct_display)}<br>Trend: ${r?.trend_label || "N/A"}`;
     }),
     hovertemplate: "%{text}<extra></extra>",
     colorscale: [
@@ -111,7 +136,7 @@ function renderMap(rows) {
 
   Plotly.newPlot("metrosMap", [trace], layout, { responsive: true, displayModeBar: false });
 
-  document.getElementById("metrosMap").on("plotly_click", data => {
+  mapEl.on("plotly_click", data => {
     const point = data.points?.[0];
     if (!point) return;
     const id = String(point.location);
@@ -122,7 +147,7 @@ function renderMap(rows) {
 async function init() {
   const [metros, geo] = await Promise.all([
     loadJson("data/metros_latest.json"),
-    loadJson("data/regions/us_metros_all.geojson")
+    safeLoadJson("data/regions/us_metros_all.geojson", null)
   ]);
 
   metrosLatest = withRanks(metros.map(r => ({ ...r, region_id: String(r.region_id) })));

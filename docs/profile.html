@@ -15,16 +15,6 @@
   <div class="stars stars-3"></div>
   <div class="moon"></div>
 
-  <button id="prevRankBtn" class="side-rank-arrow side-rank-arrow-left" type="button">
-    <span>←</span>
-    <small>Previous in national ranking</small>
-  </button>
-
-  <button id="nextRankBtn" class="side-rank-arrow side-rank-arrow-right" type="button">
-    <small>Next in national ranking</small>
-    <span>→</span>
-  </button>
-
   <header class="sub-hero profile-hero">
     <div class="wrap sub-hero-inner">
       <div>
@@ -44,7 +34,7 @@
   </header>
 
   <main class="wrap profile-layout">
-    <section class="profile-top-card">
+    <section class="profile-top-card clean-profile-top">
       <div class="profile-map-panel">
         <div id="profileMiniMap" class="profile-shape-map"></div>
       </div>
@@ -52,25 +42,29 @@
       <div class="profile-title-panel">
         <div class="eyebrow">Place Profile</div>
         <h2 id="profileTitleName">--</h2>
-        <p id="profileTypeText" class="body-copy">--</p>
+        <p id="profileTypeText" class="profile-subtitle-text">--</p>
 
         <div class="profile-button-grid">
           <div class="profile-button-stat">
             <span>Latest Data</span>
             <strong id="profileLatestDate">--</strong>
           </div>
+
           <div class="profile-button-stat">
             <span>National Rank</span>
             <strong id="profileRank">--</strong>
           </div>
+
           <div class="profile-button-stat">
             <span>Percentile</span>
             <strong id="profilePercentile">--</strong>
           </div>
+
           <div class="profile-button-stat">
             <span id="peerRankTopLabel">Peer Rank</span>
             <strong id="profilePeerRankTop">--</strong>
           </div>
+
           <div class="profile-button-stat">
             <span id="peerDiffTopLabel">Vs. Peer Avg.</span>
             <strong id="profileVsPeerTop">--</strong>

@@ -7,14 +7,21 @@
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min"></script>
 </head>
+
 <body>
+  <div class="stars"></div>
+  <div class="stars stars-2"></div>
+  <div class="stars stars-3"></div>
+  <div class="moon"></div>
+
   <header class="sub-hero">
     <div class="wrap sub-hero-inner">
       <div>
         <a class="back-link" href="index.html">← Home</a>
         <h1>Metros</h1>
-        <p class="body-copy">Click a metro area to open its light trend and nowcast profile.</p>
+        <p class="body-copy">Metro-area light trends and rankings.</p>
       </div>
+
       <div class="homepage-nav">
         <a class="dataset-link" href="index.html">Home</a>
         <a class="dataset-link" href="states.html">States</a>
@@ -35,11 +42,20 @@
     </section>
 
     <section class="card">
-      <div class="card-header"><h2>Top Metros</h2></div>
+      <div class="card-header">
+        <h2>Top Metros</h2>
+      </div>
+
       <div class="table-wrap">
         <table id="metrosTable">
           <thead>
-            <tr><th>Rank</th><th>Metro</th><th>Light YoY</th><th>Trend</th><th>Percentile</th></tr>
+            <tr>
+              <th>Rank</th>
+              <th>Metro</th>
+              <th>Light YoY</th>
+              <th>Trend</th>
+              <th>Percentile</th>
+            </tr>
           </thead>
           <tbody></tbody>
         </table>
