@@ -1,19 +1,31 @@
-name: Pilot data source probe
+name: Public patent and permitting forecast experiments
 on:
   push:
     branches: [research-patents-permits-forecasting-2026]
-    paths: ['research_2026/**','.github/workflows/research-2026.yml']
+    paths: ['research_2026/*.py','.github/workflows/research-2026.yml']
   workflow_dispatch:
 permissions:
   contents: write
 jobs:
   research:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: research-patents-permits-forecasting-2026
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - run: pip install requests pandas openpyxl beautifulsoup4 scikit-learn scipy
-      - run: python research_2026/probe.py
+      - run: python research_2026/run_full.py
+      - name: Store reproducible derived research results
+        if: always()
+        run: |
+          if [ -d research_2026/results ]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add research_2026/results
+            git commit -m 'Save public-data forecasting experiment results' || true
+            git push || true
+          fi
