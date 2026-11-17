@@ -1,0 +1,19 @@
+name: Pilot data source probe
+on:
+  push:
+    branches: [research-patents-permits-forecasting-2026]
+    paths: ['research_2026/**','.github/workflows/research-2026.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests pandas openpyxl beautifulsoup4 scikit-learn scipy
+      - run: python research_2026/probe.py
