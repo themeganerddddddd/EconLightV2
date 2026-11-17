@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-11-17T23:21:46.799018+00:00",
+  "timestamp_utc": "2026-11-17T23:25:55.721619+00:00",
   "sources": {
     "patents": "https://ncses.nsf.gov/pubs/nsb20241/assets/data/swbinv-1.xlsx",
     "qcew": "https://data.bls.gov/cew/data/api/{year}/{qtr}/area/{fips}.csv",
@@ -93,6 +93,24 @@
     },
     {
       "N": 192,
+      "MAE": 6.4592,
+      "RMSE": 9.681,
+      "direction_accuracy": 0.375,
+      "study": "permits",
+      "model": "gbdt-plus-timing",
+      "construction_MAE": 4.3339
+    },
+    {
+      "N": 192,
+      "MAE": 5.5145,
+      "RMSE": 9.0744,
+      "direction_accuracy": 0.4375,
+      "study": "permits",
+      "model": "gbdt-plus-volume",
+      "construction_MAE": 3.958
+    },
+    {
+      "N": 192,
       "MAE": 5.1947,
       "RMSE": 8.9515,
       "direction_accuracy": 0.4115,
@@ -110,5 +128,63 @@
       "construction_MAE": 4.3008
     }
   ],
-  "permit_panel_rows": 304
+  "permit_panel_rows": 304,
+  "business_industrial_records": 10703,
+  "business_industrial_backtest": [
+    {
+      "N": 192,
+      "MAE": 5.1309,
+      "RMSE": 8.6914,
+      "direction_accuracy": 0.4271,
+      "study": "permits_business_only",
+      "model": "gbdt-economic-only",
+      "construction_MAE": 3.5563
+    },
+    {
+      "N": 192,
+      "MAE": 5.9907,
+      "RMSE": 9.2596,
+      "direction_accuracy": 0.4219,
+      "study": "permits_business_only",
+      "model": "gbdt-plus-permits",
+      "construction_MAE": 3.8665
+    },
+    {
+      "N": 192,
+      "MAE": 5.5965,
+      "RMSE": 8.9636,
+      "direction_accuracy": 0.4062,
+      "study": "permits_business_only",
+      "model": "gbdt-plus-timing",
+      "construction_MAE": 3.1078
+    },
+    {
+      "N": 192,
+      "MAE": 5.3088,
+      "RMSE": 8.8473,
+      "direction_accuracy": 0.4219,
+      "study": "permits_business_only",
+      "model": "gbdt-plus-volume",
+      "construction_MAE": 3.1476
+    },
+    {
+      "N": 192,
+      "MAE": 5.1947,
+      "RMSE": 8.9515,
+      "direction_accuracy": 0.4115,
+      "study": "permits_business_only",
+      "model": "ridge-economic-only",
+      "construction_MAE": 2.4618
+    },
+    {
+      "N": 192,
+      "MAE": 6.5877,
+      "RMSE": 12.7062,
+      "direction_accuracy": 0.5573,
+      "study": "permits_business_only",
+      "model": "trend-naive",
+      "construction_MAE": 4.3008
+    }
+  ],
+  "business_industrial_panel_rows": 304
 }
