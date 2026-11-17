@@ -61,8 +61,8 @@ def qcew_one(item):
  return rows
 def download_qcew():
  print("QCEW fetch start",flush=True)
- tasks=[(f,y,0) for f in COUNTIES for y in range(2007,2025)]
- tasks += [("24031",y,q) for y in range(2008,2026) for q in range(1,5)]
+ tasks=[(f,y,0) for f in COUNTIES for y in range(2014,2025)]
+ tasks += [("24031",y,q) for y in range(2014,2026) for q in range(1,5)]
  allrows=[];errs=[]
  with ThreadPoolExecutor(max_workers=10) as ex:
   futures={ex.submit(qcew_one,x):x for x in tasks}
@@ -197,7 +197,7 @@ def permit_download():
  b=fetch(src)
  print("PERMITS source bytes",len(b),flush=True)
  r=pd.read_csv(io.BytesIO(b),low_memory=False)
- r.columns=r.columns.str.lower().str.strip()
+ r.columns=[re.sub(r"[^a-z0-9]","",str(x).lower()).replace("issuedate","issueddate").replace("finaldate","finaleddate") for x in r.columns]
  print("PERMIT SOURCE COLUMNS",list(r.columns),flush=True)
  date_cols=["addeddate","issueddate","finaleddate"]
  for c in date_cols:
@@ -299,6 +299,23 @@ def permit_study(qcew,features):
  print("PERMIT METRICS",json.dumps(stats),flush=True)
  return p,stats,current
 
+def probe_archive():
+ import zipfile
+ u="https://data.bls.gov/cew/data/files/2013/csv/2013_all_county_high_level.zip"
+ try:
+  b=fetch(u,2)
+  print("ARCHIVE_PROBE downloaded",len(b),"bytes",flush=True)
+  z=zipfile.ZipFile(io.BytesIO(b))
+  names=z.namelist()
+  print("ARCHIVE_FILES",len(names),"FIRST_15",names[:15],flush=True)
+  choices=[x for x in names if x.lower().endswith(".csv")]
+  if choices:
+   with z.open(choices[0]) as f:print("ARCHIVE_CSV_SAMPLE",f.readline()[:350],flush=True)
+  else:
+   sheets=[x for x in names if x.lower().endswith((".xls",".xlsx"))]
+   print("ARCHIVE_EXCEL_FILES",len(sheets),"EXAMPLES",sheets[:15],flush=True)
+ except Exception as e:print("ARCHIVE_PROBE_FAILED",repr(e),flush=True)
+
 def main():
  result={"timestamp_utc":pd.Timestamp.utcnow().isoformat(),"sources":{
  "patents":"https://ncses.nsf.gov/pubs/nsb20241/assets/data/swbinv-1.xlsx",
@@ -310,6 +327,7 @@ def main():
  "Patent county is INVENTOR geography; private QCEW county is establishment geography.",
  "Permit data relate only to Montgomery County; no causal effect identified.",
  "Patent technology fields are input features without asserted 1:1 NAICS crosswalk."]}
+ probe_archive()
  q,errors=download_qcew()
  result["qcew_rows"]=len(q);result["qcew_fetch_failures"]=len(errors)
  patents,fields=download_patents()
