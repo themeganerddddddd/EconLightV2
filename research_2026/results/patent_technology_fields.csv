@@ -1,0 +1,38 @@
+column,title,source_table
+pat_02,All technologies,2
+pat_03,"electrical machinery, apparatus, energy",3
+pat_04,audio-visual technology,4
+pat_05,telecommunications,5
+pat_06,digital communication,6
+pat_07,basic communication processes,7
+pat_08,computer technology,8
+pat_09,IT methods for management,9
+pat_10,semiconductors,10
+pat_11,optics,11
+pat_12,measurement,12
+pat_13,analysis of biological materials,13
+pat_14,control,14
+pat_15,medical technology,15
+pat_16,organic fine chemistry,16
+pat_17,biotechnology,17
+pat_18,pharmaceuticals,18
+pat_19,"macromolecular chemistry, polymers",19
+pat_20,food chemistry,20
+pat_21,basic materials chemistry,21
+pat_22,"materials, metallurgy",22
+pat_23,"surface technology, coating",23
+pat_24,microstructural technology and nanotechnology,24
+pat_25,chemical engineering,25
+pat_26,environmental technology,26
+pat_27,handling,27
+pat_28,machine tools,28
+pat_29,"engines, pumps, turbines",29
+pat_30,textile and paper machines,30
+pat_31,other special machines,31
+pat_32,thermal processes and apparatus,32
+pat_33,mechanical elements,33
+pat_34,transport,34
+pat_35,"furniture, games",35
+pat_36,other consumer goods,36
+pat_37,civil engineering,37
+pat_38,unassigned under the WIPO classification,38
