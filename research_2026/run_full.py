@@ -235,7 +235,7 @@ def permit_download():
  print("PERMIT records",len(r),"valid issued",len(issued),"quarterly",len(agg),flush=True)
  return r,agg
 
-def permit_study(qcew,features):
+def permit_study(qcew,features,suffix=''):
  # Use only county private employment; one observation per sector and time.
  q=qcew[(qcew.county=="24031")&(qcew.quarter>0)&qcew.sector.isin(["10","23","31-33","54","56","62","53","72"])].copy()
  q["q_index"]=q.year*4+q.quarter-1
@@ -282,6 +282,8 @@ def permit_study(qcew,features):
   for name,fn,feats in [("trend-naive",None,None),
     ("ridge-economic-only",regress_predict,base),
     ("gbdt-economic-only",tree_predict,base),
+    ("gbdt-plus-volume",tree_predict,base+["permit_count","valuation_m","new_construction","alteration"]),
+    ("gbdt-plus-timing",tree_predict,base+["review_median","review_p90"]),
     ("gbdt-plus-permits",tree_predict,base+extra)]:
    try:
     pred=te.lag_growth.to_numpy() if fn is None else fn(tr,te,feats)
@@ -290,8 +292,8 @@ def permit_study(qcew,features):
      "truth":float(r.target),"pred":float(v),"model":name,
      "observed_employment_lag2":float(r.emp_lag2)})
    except Exception as e:print("PERMIT MODEL ERROR",y,name,repr(e),flush=True)
- p=pd.DataFrame(results);p.to_csv(ROOT/"permit_employment_model_predictions.csv",index=False)
- stats=eval_forecasts(p,"permits")
+ p=pd.DataFrame(results);p.to_csv(ROOT/f"permit_employment_model_predictions{suffix}.csv",index=False)
+ stats=eval_forecasts(p,"permits"+suffix)
  # Additional construction-only stats
  for s in stats:
   g=p[(p.model==s["model"])&(p.sector=="23")]
@@ -343,6 +345,20 @@ def main():
  d2,rs,panel2=permit_study(q,features)
  result["permit_employment_backtest"]=rs
  result["permit_panel_rows"]=len(panel2)
+ # Separate analysis for actual commercial/industrial/bioscience premises rather than residential uses
+ commercial=permit[permit.usecode.isin(["BUSINESS BUILDING","INDUSTRIAL BUILDING","BIOSCIENCE"])].copy()
+ issued_com=commercial[(commercial.approval_days>=0)&(commercial.approval_days<3650)&commercial.q_index.notna()].copy()
+ ag=issued_com.groupby("q_index").agg(permit_count=("approval_days","count"),
+ review_median=("approval_days","median"),review_p90=("approval_days",lambda x:x.quantile(.9)),
+ valuation_m=("valuation",lambda x:x.sum()/1e6),
+ new_construction=("worktype",lambda x:(x=="CONSTRUCT").sum()),
+ alteration=("worktype",lambda x:(x=="ALTER").sum())).reset_index()
+ ag["q_index"]=ag.q_index.astype(int)
+ ag.to_csv(ROOT/"permits_business_industrial_quarterly.csv",index=False)
+ prediction_com,stats_com,panel_com=permit_study(q,ag,"_business_only")
+ result["business_industrial_records"]=len(commercial)
+ result["business_industrial_backtest"]=stats_com
+ result["business_industrial_panel_rows"]=len(panel_com)
  (ROOT/"summary.json").write_text(json.dumps(result,indent=2))
  print("SUMMARY",json.dumps(result),flush=True)
 if __name__=="__main__":main()
