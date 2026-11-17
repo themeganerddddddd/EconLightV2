@@ -1,0 +1,114 @@
+{
+  "timestamp_utc": "2026-11-17T23:21:46.799018+00:00",
+  "sources": {
+    "patents": "https://ncses.nsf.gov/pubs/nsb20241/assets/data/swbinv-1.xlsx",
+    "qcew": "https://data.bls.gov/cew/data/api/{year}/{qtr}/area/{fips}.csv",
+    "permits": "https://data.montgomerycountymd.gov/api/views/i26v-w6bd/rows.csv?accessType=DOWNLOAD",
+    "patent_naics_bridge": "https://github.com/CommerceDataService/cpc-naics (experimental crosswalk; not directly applied to NSF WIPO aggregates)"
+  },
+  "notes": [
+    "Exploratory 8-county panel not a representative national estimate.",
+    "Historical revised releases; patent workbook assembled in 2024. Not a genuine real-time vintage backtest.",
+    "Patent county is INVENTOR geography; private QCEW county is establishment geography.",
+    "Permit data relate only to Montgomery County; no causal effect identified.",
+    "Patent technology fields are input features without asserted 1:1 NAICS crosswalk."
+  ],
+  "qcew_rows": 2514,
+  "qcew_fetch_failures": 0,
+  "patent_technology_fields": 37,
+  "patent_rows": 200,
+  "patent_backtest": [
+    {
+      "N": 541,
+      "MAE": 11.2193,
+      "RMSE": 15.7318,
+      "direction_accuracy": 0.4196,
+      "study": "patents",
+      "model": "gbdt-economic-only",
+      "top10_actual_fast_growth_rate": 0.3273,
+      "top10_count": 55,
+      "overall_fast_growth_rate": 0.2237
+    },
+    {
+      "N": 541,
+      "MAE": 10.5757,
+      "RMSE": 15.0341,
+      "direction_accuracy": 0.4529,
+      "study": "patents",
+      "model": "gbdt-plus-patents",
+      "top10_actual_fast_growth_rate": 0.2909,
+      "top10_count": 55,
+      "overall_fast_growth_rate": 0.2237
+    },
+    {
+      "N": 541,
+      "MAE": 12.3605,
+      "RMSE": 18.3333,
+      "direction_accuracy": 0.427,
+      "study": "patents",
+      "model": "ridge-economic-only",
+      "top10_actual_fast_growth_rate": 0.2545,
+      "top10_count": 55,
+      "overall_fast_growth_rate": 0.2237
+    },
+    {
+      "N": 541,
+      "MAE": 15.0323,
+      "RMSE": 23.8869,
+      "direction_accuracy": 0.4603,
+      "study": "patents",
+      "model": "trend-naive",
+      "top10_actual_fast_growth_rate": 0.3636,
+      "top10_count": 55,
+      "overall_fast_growth_rate": 0.2237
+    }
+  ],
+  "patent_panel_rows": 944,
+  "permit_rows": 42089,
+  "permit_approval": {
+    "n": 39517,
+    "median": 59.0,
+    "p90": 208.40000000000146,
+    "negative": 0,
+    "missing": 2572
+  },
+  "permit_employment_backtest": [
+    {
+      "N": 192,
+      "MAE": 5.1309,
+      "RMSE": 8.6914,
+      "direction_accuracy": 0.4271,
+      "study": "permits",
+      "model": "gbdt-economic-only",
+      "construction_MAE": 3.5563
+    },
+    {
+      "N": 192,
+      "MAE": 6.0776,
+      "RMSE": 9.4858,
+      "direction_accuracy": 0.3542,
+      "study": "permits",
+      "model": "gbdt-plus-permits",
+      "construction_MAE": 3.9638
+    },
+    {
+      "N": 192,
+      "MAE": 5.1947,
+      "RMSE": 8.9515,
+      "direction_accuracy": 0.4115,
+      "study": "permits",
+      "model": "ridge-economic-only",
+      "construction_MAE": 2.4618
+    },
+    {
+      "N": 192,
+      "MAE": 6.5877,
+      "RMSE": 12.7062,
+      "direction_accuracy": 0.5573,
+      "study": "permits",
+      "model": "trend-naive",
+      "construction_MAE": 4.3008
+    }
+  ],
+  "permit_panel_rows": 304
+}
